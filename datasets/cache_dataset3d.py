@@ -43,12 +43,14 @@ TEMPLATE={
     '10_10': [31],
     '58': [6,2,3,1],
     '59': [1,2,3,4,5,6,7,8,9,10,11,12,13,14],
-    '60': np.arange(200).tolist(), # for debug
+    '60': (np.ones(200)*(-1)).tolist(), # for debug
+    "65": np.zeros(200).tolist(),
 }
 
+
 class Dataset3D(basic_3d_dataset):
-    def __init__(self, config=..., use_cache=True, *args, **kwargs) -> None:
-        super().__init__(config, use_cache=use_cache, *args, **kwargs)
+    def __init__(self, config, use_cache=True, *args, **kwargs) -> None:
+        super().__init__(config=config, use_cache=use_cache, *args, **kwargs)
         self.basic_dir = config['data_root_path']
         self.cache_dir = config['cache_data_path']
 
@@ -93,6 +95,13 @@ class Dataset3D(basic_3d_dataset):
         
         dataset_name = self.img_names[index]['img_path'].replace(self.basic_dir,"").split("/")[0]
         assert dataset_name[0] in ['0','1','2','3','4','5','6','7','8','9'], f"Got {dataset_name}"
+        if dataset_name[:2] == "10":
+            subname = self.img_names[index]['img_path'].replace(self.basic_dir,"")[17:19]
+            assert subname in ['10', '03', '06', '07']
+            all_labels = TEMPLATE[dataset_name[:2] + "_" + subname]
+        else:
+            all_labels = TEMPLATE[dataset_name[:2]]
+
         all_labels = TEMPLATE[dataset_name[:2]]
 
         num = 0
@@ -152,7 +161,7 @@ class Dataset3D(basic_3d_dataset):
                 self.save_img_rgb(rearrange(img_rgb, "c h w -> h w c"), save_image_name)
 
                 # Save cache data
-                save_label_name = tfilename(self.cache_dir, dataset_name, f"label/label_{index:04d}_{num:08d}.npz")
+                save_label_name = tfilename(self.cache_dir, dataset_name, f"label_jpg/label_{index:04d}_{num:08d}")
                 self.save_slice_mask(masks_data, save_label_name)
                 print("Save ", save_image_name)
 
@@ -257,11 +266,24 @@ class Dataset3D(basic_3d_dataset):
             label_path = name.replace("image/image_", "label/label_").replace(".jpg", ".npz")
             self._convert_one_mask_from_npz_to_jpg(label_path)
 
+
+# EX_CONFIG={
+#     "dataset":{
+#         "split": 'train',
+#         "data_root_path": '/home1/quanquan/datasets/',
+#         "dataset_list": ["decathlon_colon"],
+#         "data_txt_path": './datasets/dataset_list/',
+#         "cache_data_path": '/home1/quanquan/datasets/cached_dataset2/',
+#         "cache_prefix": ['10'] # '07'
+#     }    
+# }
+
 if __name__ == "__main__":
     # def go_cache():
     from tutils.new.manager import ConfigManager
     config  = ConfigManager()
-    config.add_config("configs/vit_b.yaml")
+    config.add_config("configs/vit_sub.yaml")
+    # config.add_config(EX_CONFIG)
     
     # Caching data
     dataset = Dataset3D(config=config['dataset'], use_cache=False)
