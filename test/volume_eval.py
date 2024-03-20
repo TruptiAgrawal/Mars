@@ -140,28 +140,22 @@ if __name__ == "__main__":
             'prompt': 'box',
             'dataset_list': ['word'], # ["sabs"], chaos, word
             'label_idx': 1,
-        }       
+        },
+        'pth': "model_latest.pth"
     }
 
     config = ConfigManager()
     config.add_config("configs/vit_b_103.yaml")
     config.add_config(EX_CONFIG)
     
+    print(config)
+
     # Init Model
     model_type = "vit_b"
     sam = sam_model_registry[model_type](checkpoint=None)
     learner = SamLearner(sam_model=sam, config=config, data_engine=DataManager(img_size=(1024,1024)))
     learner.use_lora()
-    # pth = "/home1/quanquan/code/projects/finetune_large/runs/sam/ddp_b3/lora+edge2/ckpt_v/model_latest.pth"
-    # pth = "/home1/quanquan/code/projects/finetune_large/runs/sam/ddp_b3/lora+edge2/ckpt/model_epoch_20.pth"
-    # pth = "/home1/quanquan/code/projects/finetune_large/runs/sam/ddp_b3/lora+edge2/ckpt/model_epoch_16.pth"
-    # pth = "/home1/quanquan/code/projects/finetune_large/runs/sam/ddp_b3/lora_small/ckpt/model_epoch_6.pth"
-    # pth = "/home1/quanquan/code/projects/finetune_large/runs/sam/ddp_b9/lora/ckpt/model_epoch_50.pth"
-    # pth = "/home1/quanquan/code/projects/finetune_large/runs/sam/ddp_b11/spec_8/ckpt_v/model_latest.pth"
-    # pth = "/home1/quanquan/code/projects/finetune_large/runs/sam/ddp_b11/spec_5/ckpt/model_epoch_100.pth"
-    pth = "/home1/quanquan/code/projects/finetune_large/runs/sam/ddp_b9/lora3/ckpt/model_iter_360000.pth"
-    # pth = "/home1/quanquan/code/projects/finetune_large/runs/sam/ddp_b9/lora3/ckpt/model_iter_500000.pth"
-    learner.load_well_trained_model(pth)
+    learner.load_well_trained_model(EX_CONFIG['pth'])
     learner.cuda()
     predictor = VolumePredictor(
         model=learner.model, 
