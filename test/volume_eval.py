@@ -137,21 +137,31 @@ if __name__ == "__main__":
 
     EX_CONFIG = {       
         'dataset':{
-            'prompt': 'box',
-            'dataset_list': ['word'], # ["sabs"], chaos, word
-            'label_idx': 1,
+            'prompt': 'box', # box / point
+            'dataset_list': ['example'], # ["sabs"], chaos, word
+            'label_idx': 5,
         },
-        'pth': "model.pth"
+        'model_type': "vit_b",
+        'pth': "/home1/quanquan/code/projects/finetune_large/runs/sam/ddp_b9/lora3/ckpt/model_iter_360000.pth",
+    }
+
+    EX_CONFIG = {       
+        'dataset':{
+            'prompt': 'box', # box / point
+            'dataset_list': ['example'], # ["sabs"], chaos, word
+            'label_idx': 5,
+        },
+        'model_type': "vit_h",
+        'pth': "/home1/quanquan/code/projects/finetune_large/segment_anything/model_iter_3935000.pth",
     }
 
     config = ConfigManager()
-    config.add_config("configs/vit_b_103.yaml")
+    config.add_config("configs/vit_b.yaml")
     config.add_config(EX_CONFIG)
-    
-    print(config)
+    config.print()
 
     # Init Model
-    model_type = "vit_b"
+    model_type = config['model_type']
     sam = sam_model_registry[model_type](checkpoint=None)
     learner = SamLearner(sam_model=sam, config=config, data_engine=DataManager(img_size=(1024,1024)))
     learner.use_lora()
