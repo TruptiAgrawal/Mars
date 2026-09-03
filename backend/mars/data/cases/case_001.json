@@ -1,0 +1,10 @@
+{
+  "case_id": "case_001",
+  "expected_site": "anterior",
+  "expected_size_range_mm3": [
+    50.0,
+    5000.0
+  ],
+  "prior_history": "none",
+  "label": "Clean anterior lesion, high confidence"
+}

@@ -1,0 +1,10 @@
+{
+  "case_id": "case_002",
+  "expected_site": "anterior",
+  "expected_size_range_mm3": [
+    30.0,
+    5000.0
+  ],
+  "prior_history": "prior lung nodule",
+  "label": "Clean anterior lesion, matches history"
+}
