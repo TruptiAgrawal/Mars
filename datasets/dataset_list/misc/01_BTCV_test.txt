@@ -1,0 +1,10 @@
+01_BTCV/Training/image/img0039/81.jpg	01_BTCV/Training/mask/img0039/81.npy
+01_BTCV/Training/image/img0039/82.jpg	01_BTCV/Training/mask/img0039/82.npy
+01_BTCV/Training/image/img0039/83.jpg	01_BTCV/Training/mask/img0039/83.npy
+01_BTCV/Training/image/img0039/84.jpg	01_BTCV/Training/mask/img0039/84.npy
+01_BTCV/Training/image/img0039/85.jpg	01_BTCV/Training/mask/img0039/85.npy
+01_BTCV/Training/image/img0039/86.jpg	01_BTCV/Training/mask/img0039/86.npy
+01_BTCV/Training/image/img0039/87.jpg	01_BTCV/Training/mask/img0039/87.npy
+01_BTCV/Training/image/img0039/88.jpg	01_BTCV/Training/mask/img0039/88.npy
+01_BTCV/Training/image/img0039/89.jpg	01_BTCV/Training/mask/img0039/89.npy
+01_BTCV/Training/image/img0039/9.jpg	01_BTCV/Training/mask/img0039/9.npy
