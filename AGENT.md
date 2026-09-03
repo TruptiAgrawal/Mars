@@ -48,7 +48,7 @@ regenerate: `cd backend && python -m mars.data.generate_fixtures`.
 Backend:
 ```bash
 cd backend
-pip install -e ".[dev]"
+pip install -e ".[dev]" --break-system-packages
 python -m uvicorn mars.api:app --reload --port 8000
 ```
 
