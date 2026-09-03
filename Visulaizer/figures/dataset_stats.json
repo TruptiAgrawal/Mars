@@ -1,0 +1,175 @@
+{
+  "splits": {
+    "Tr": {
+      "name": "train",
+      "n_cases": 100,
+      "n_labelled": 100,
+      "total_slices": 20115,
+      "z_range": [
+        159,
+        343
+      ],
+      "inplane": [
+        [
+          512,
+          512
+        ]
+      ],
+      "spacing_xy": [
+        0.955,
+        0.977
+      ],
+      "spacing_z": [
+        2.5,
+        3.0
+      ]
+    },
+    "Ts": {
+      "name": "test",
+      "n_cases": 30,
+      "n_labelled": 30,
+      "total_slices": 6277,
+      "z_range": [
+        161,
+        307
+      ],
+      "inplane": [
+        [
+          512,
+          512
+        ]
+      ],
+      "spacing_xy": [
+        0.717,
+        0.977
+      ],
+      "spacing_z": [
+        2.5,
+        3.0
+      ]
+    },
+    "Va": {
+      "name": "validation",
+      "n_cases": 20,
+      "n_labelled": 20,
+      "total_slices": 4103,
+      "z_range": [
+        151,
+        246
+      ],
+      "inplane": [
+        [
+          512,
+          512
+        ]
+      ],
+      "spacing_xy": [
+        0.977,
+        0.977
+      ],
+      "spacing_z": [
+        2.5,
+        3.0
+      ]
+    }
+  },
+  "organs": {
+    "1": {
+      "name": "liver",
+      "voxels": 1880293,
+      "frac": 0.00889919176882609,
+      "cases_seen": 4
+    },
+    "2": {
+      "name": "spleen",
+      "voxels": 267588,
+      "frac": 0.0012664605606874226,
+      "cases_seen": 4
+    },
+    "3": {
+      "name": "kidney (L)",
+      "voxels": 216217,
+      "frac": 0.0010233280380665516,
+      "cases_seen": 4
+    },
+    "4": {
+      "name": "kidney (R)",
+      "voxels": 194464,
+      "frac": 0.0009203738077698512,
+      "cases_seen": 4
+    },
+    "5": {
+      "name": "stomach",
+      "voxels": 682146,
+      "frac": 0.0032285117629739842,
+      "cases_seen": 4
+    },
+    "6": {
+      "name": "gallbladder",
+      "voxels": 16712,
+      "frac": 7.909580732397643e-05,
+      "cases_seen": 4
+    },
+    "7": {
+      "name": "esophagus",
+      "voxels": 24825,
+      "frac": 0.00011749362235625387,
+      "cases_seen": 4
+    },
+    "8": {
+      "name": "pancreas",
+      "voxels": 106758,
+      "frac": 0.0005052722713195952,
+      "cases_seen": 4
+    },
+    "9": {
+      "name": "duodenum",
+      "voxels": 114049,
+      "frac": 0.0005397796630859375,
+      "cases_seen": 4
+    },
+    "10": {
+      "name": "colon",
+      "voxels": 1177233,
+      "frac": 0.00557169665769667,
+      "cases_seen": 4
+    },
+    "11": {
+      "name": "intestine",
+      "voxels": 1298211,
+      "frac": 0.006144270411791932,
+      "cases_seen": 4
+    },
+    "12": {
+      "name": "adrenal",
+      "voxels": 8140,
+      "frac": 3.852560265780087e-05,
+      "cases_seen": 4
+    },
+    "13": {
+      "name": "rectum",
+      "voxels": 62852,
+      "frac": 0.00029747066071843985,
+      "cases_seen": 4
+    },
+    "14": {
+      "name": "bladder",
+      "voxels": 329983,
+      "frac": 0.001561768297522003,
+      "cases_seen": 4
+    },
+    "15": {
+      "name": "head of femur (L)",
+      "voxels": 182069,
+      "frac": 0.0008617098219045634,
+      "cases_seen": 4
+    },
+    "16": {
+      "name": "head of femur (R)",
+      "voxels": 185868,
+      "frac": 0.0008796900141032103,
+      "cases_seen": 4
+    }
+  },
+  "n_label_cases": 4
+}

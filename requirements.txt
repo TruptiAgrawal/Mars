@@ -1,0 +1,24 @@
+# PyTorch (install separately)
+# torch==2.5.1+cu121
+# torchvision==0.20.1+cu121
+# torchaudio==2.5.1+cu121
+
+monai
+timm
+einops
+tensorboardX
+SimpleITK
+opencv-python
+MedPy
+h5py
+openpyxl
+xlwt
+termcolor
+yamlloader
+matplotlib
+pandas
+scikit-image
+scipy
+tqdm
+pillow
+pyyaml

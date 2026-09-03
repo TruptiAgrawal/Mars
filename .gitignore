@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model weights
+*.pth
+*.pt
+*.ckpt
+*.bin
+*.safetensors
+
+# Large datasets / caches
+cached_dataset2/
+datasets/
+
+# Training outputs
+runs/
+logs/
+
+# Temporary files
+tmp/
+tmp_*
+*.tmp
+
+# IDE
+.vscode/
+.idea/

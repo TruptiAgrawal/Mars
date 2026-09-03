@@ -1,0 +1,31 @@
+word_0001
+  shape (Z,H,W): (173, 512, 512)
+  spacing (mm):  (0.977, 0.977, 3.0)
+  HU range:      -1024 .. 3065
+  labels present: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  organs: ['liver', 'spleen', 'kidney (L)', 'kidney (R)', 'stomach', 'gallbladder', 'esophagus', 'pancreas', 'duodenum', 'colon', 'intestine', 'adrenal', 'rectum', 'bladder', 'head of femur (L)', 'head of femur (R)']
+  richest slice: z=134 (11 organs)
+
+word_0007
+  shape (Z,H,W): (223, 512, 512)
+  spacing (mm):  (0.977, 0.977, 3.0)
+  HU range:      -1024 .. 2618
+  labels present: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  organs: ['liver', 'spleen', 'kidney (L)', 'kidney (R)', 'stomach', 'gallbladder', 'esophagus', 'pancreas', 'duodenum', 'colon', 'intestine', 'adrenal', 'rectum', 'bladder', 'head of femur (L)', 'head of femur (R)']
+  richest slice: z=169 (10 organs)
+
+word_0015
+  shape (Z,H,W): (224, 512, 512)
+  spacing (mm):  (0.977, 0.977, 3.0)
+  HU range:      -1024 .. 3071
+  labels present: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  organs: ['liver', 'spleen', 'kidney (L)', 'kidney (R)', 'stomach', 'gallbladder', 'esophagus', 'pancreas', 'duodenum', 'colon', 'intestine', 'adrenal', 'rectum', 'bladder', 'head of femur (L)', 'head of femur (R)']
+  richest slice: z=179 (11 organs)
+
+word_0025
+  shape (Z,H,W): (152, 512, 512)
+  spacing (mm):  (0.977, 0.977, 3.0)
+  HU range:      -3024 .. 3071
+  labels present: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  organs: ['liver', 'spleen', 'kidney (L)', 'kidney (R)', 'stomach', 'gallbladder', 'esophagus', 'pancreas', 'duodenum', 'colon', 'intestine', 'adrenal', 'rectum', 'bladder', 'head of femur (L)', 'head of femur (R)']
+  richest slice: z=120 (11 organs)
