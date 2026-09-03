@@ -7,6 +7,7 @@ import { ConfidenceBadge } from "./components/ConfidenceBadge";
 import { TauSlider } from "./components/TauSlider";
 import { ReportView } from "./components/ReportView";
 import { EscalationPanel } from "./components/EscalationPanel";
+import { AgentPipeline } from "./components/AgentPipeline";
 
 export function App() {
   const [cases, setCases] = useState<CaseSummary[]>([]);
@@ -26,19 +27,42 @@ export function App() {
   }, [selectedId, tau]);
 
   return (
-    <div>
-      <h1>MARS Mock Pipeline</h1>
-      <CaseList cases={cases} selectedId={selectedId} onSelect={setSelectedId} />
-      {volume && result && (
-        <div>
-          <SliceViewer volume={volume} mask={result.segmentation.mask} />
-          <ConfidenceBadge label="Segmentation confidence" value={result.segmentation.aggregate_confidence} />
-          <ConfidenceBadge label="Clinical consistency" value={result.validation.consistency_score} />
-          <TauSlider tau={tau} onChange={setTau} />
-          {result.decision === "auto" && result.report && <ReportView report={result.report} />}
-          {result.decision === "escalate" && result.escalation && <EscalationPanel escalation={result.escalation} />}
-        </div>
-      )}
+    <div className="app">
+      <header className="app-header">
+        <h1>MARS</h1>
+        <span className="subtitle">Segmentation review pipeline</span>
+      </header>
+      <div className="app-body">
+        <CaseList cases={cases} selectedId={selectedId} onSelect={setSelectedId} />
+        {volume && result ? (
+          <>
+            <div className="main-pane">
+              <AgentPipeline result={result} />
+              <div className="viewer-pane">
+                <SliceViewer volume={volume} mask={result.segmentation.mask} />
+              </div>
+            </div>
+            <div className="metrics-pane">
+              <div className="metrics-section">
+                <p className="pane-label">Confidence</p>
+                <ConfidenceBadge label="Segmentation confidence" value={result.segmentation.aggregate_confidence} />
+                <ConfidenceBadge label="Clinical consistency" value={result.validation.consistency_score} />
+              </div>
+              <div className="metrics-section">
+                <TauSlider tau={tau} onChange={setTau} />
+              </div>
+              <div className="metrics-section">
+                {result.decision === "auto" && result.report && <ReportView report={result.report} />}
+                {result.decision === "escalate" && result.escalation && (
+                  <EscalationPanel escalation={result.escalation} />
+                )}
+              </div>
+            </div>
+          </>
+        ) : (
+          <div className="app-empty">Select a case to begin review.</div>
+        )}
+      </div>
     </div>
   );
 }

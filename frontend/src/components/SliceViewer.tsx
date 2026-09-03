@@ -9,22 +9,8 @@ export function SliceViewer({ volume, mask }: { volume: VolumePayload; mask: num
 
   return (
     <div>
-      <label htmlFor="slice-slider">
-        Slice
-        <input
-          id="slice-slider"
-          aria-label="slice"
-          type="range"
-          min={0}
-          max={depth - 1}
-          value={sliceIndex}
-          onChange={(e) => setSliceIndex(Number(e.target.value))}
-        />
-      </label>
-      <p>
-        Slice {sliceIndex} / {depth - 1}
-      </p>
-      <svg width={slice[0].length * 10} height={slice.length * 10} data-testid="slice-svg">
+      <div className="viewer-frame">
+        <svg width={slice[0].length * 10} height={slice.length * 10} data-testid="slice-svg">
         {slice.map((row, y) =>
           row.map((value, x) => {
             const isMasked = maskSlice?.[y]?.[x] === 1;
@@ -36,12 +22,28 @@ export function SliceViewer({ volume, mask }: { volume: VolumePayload; mask: num
                 y={y * 10}
                 width={10}
                 height={10}
-                fill={isMasked ? "rgba(255,0,0,0.5)" : `rgb(${gray},${gray},${gray})`}
+                fill={isMasked ? "rgba(79,209,197,0.55)" : `rgb(${gray},${gray},${gray})`}
               />
             );
           })
         )}
-      </svg>
+        </svg>
+      </div>
+      <div className="viewer-controls">
+        <label htmlFor="slice-slider">Slice</label>
+        <input
+          id="slice-slider"
+          aria-label="slice"
+          type="range"
+          min={0}
+          max={depth - 1}
+          value={sliceIndex}
+          onChange={(e) => setSliceIndex(Number(e.target.value))}
+        />
+        <p className="mono">
+          Slice {sliceIndex} / {depth - 1}
+        </p>
+      </div>
     </div>
   );
 }

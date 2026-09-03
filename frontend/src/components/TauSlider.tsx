@@ -1,7 +1,10 @@
 export function TauSlider({ tau, onChange }: { tau: number; onChange: (tau: number) => void }) {
   return (
-    <label htmlFor="tau-slider">
-      Threshold (τ): {tau.toFixed(2)}
+    <label htmlFor="tau-slider" className="tau-slider">
+      <span className="tau-readout">
+        <span>Threshold (τ)</span>
+        <span className="value">{tau.toFixed(2)}</span>
+      </span>
       <input
         id="tau-slider"
         aria-label="threshold"
