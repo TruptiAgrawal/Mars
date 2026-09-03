@@ -18,9 +18,7 @@ def segment(volume: np.ndarray, threshold: float = 120.0) -> SegmentationResult:
         largest_label = int(np.argmax(sizes)) + 1
         mask = (labeled == largest_label).astype(np.uint8)
 
-        vmax = float(volume.max())
-        span = max(vmax - threshold, 1e-6)
-        voxel_confidence = np.clip((volume - threshold) / span, 0.0, 1.0)
+        voxel_confidence = np.clip((volume - threshold) / threshold, 0.0, 1.0)
         confidence = np.where(mask == 1, voxel_confidence, 0.0).astype(np.float32)
 
     aggregate = float(confidence[mask == 1].mean()) if mask.sum() > 0 else 0.0
