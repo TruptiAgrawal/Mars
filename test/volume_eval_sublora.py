@@ -195,13 +195,21 @@ if __name__ == "__main__":
     from core.learner_sub1 import SamLearner
     from modeling.build_sam3d2 import sam_model_registry
 
-    EX_CONFIG = {       
-        'dataset':{
+    # EX_CONFIG = {       
+    #     'dataset':{
+    #         'prompt': 'box',
+    #         'dataset_list': ['guangdong'], # ["sabs"], chaos, word, decathlon_colon, pancreas
+    #         'label_idx': 2,
+    #     },       
+    #     "pth": "./model_latest.pth"
+    # }
+    EX_CONFIG = {
+        'dataset': {
             'prompt': 'box',
-            'dataset_list': ['guangdong'], # ["sabs"], chaos, word, decathlon_colon, pancreas
+            'dataset_list': ['01_BTCV'],
             'label_idx': 2,
-        },       
-        "pth": "./model_latest.pth"
+        },
+        "pth": "../runs/sam/ddp_sub/btcv_liver_run2/ckpt_v/model_latest.pth"
     }
 
     config = ConfigManager()
