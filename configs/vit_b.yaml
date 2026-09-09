@@ -78,7 +78,7 @@ training:
   save_mode: ['all', 'best', 'latest']
   batch_size: 4             # Reduced from 8 to 4 to prevent Attention OOM
   num_workers: 8            # 8 workers is optimal for batch_size 4
-  num_epochs: 4
+  num_epochs: 21
   use_amp: true
   
   save_interval: 1

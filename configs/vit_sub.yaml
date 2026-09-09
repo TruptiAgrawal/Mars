@@ -13,7 +13,7 @@ training:
   batch_size : 2 # 8 for A100
   num_workers : 8
   # num_epochs : 100  # epochs
-  num_epochs : 4  # epochs
+  num_epochs : 21  # epochs
   use_amp: false
   save_interval : 1
   val_check_interval: 6
