@@ -14,7 +14,7 @@ from tutils import tfilename, tdir
 
 from datasets.dataset3d_2dmask import Dataset2D
 # from datasets.dataset3d import Dataset3D
-from datasets.cache_dataset3d3 import Dataset3D
+from datasets.cache_dataset3d_e2 import Dataset3D
 from datasets.dataset_merged import DatasetMerged, TestsetMerged
 from datasets.data_engine import DataEngine
 from modeling.build_sam3d2 import sam_model_registry
@@ -56,9 +56,20 @@ def ddp_train(rank, world_size, config):
     sam = sam_model_registry[model_type](checkpoint=None)
 
     learner = SamLearner(sam_model=sam, config=config, data_engine=data_engine)
-    learner.use_lora()
-    learner.load_well_trained_model(config['training']['breakpoint_path']) # use preset path
-    learner.use_lora_sub()
+    
+    checkpoint_path = config['training']['breakpoint_path']
+    
+    # Official Slide-SAM-B checkpoint already contains rank-8 LoRA.
+    if checkpoint_path.endswith("slidesam_b.pth"):
+        learner.use_lora()
+        learner.load_well_trained_model(checkpoint_path)
+        learner.use_lora_sub()
+    
+    # E2 recovery checkpoint already contains nested rank-8 + rank-1 LoRA.
+    else:
+        learner.use_lora()
+        learner.use_lora_sub()
+        learner.load_well_trained_model(checkpoint_path)
 
     ddp_trainer = DDPTrainer(config=config, rank=rank, world_size=world_size)
     ddp_trainer.fit(learner, trainset=data_engine, validset=None)

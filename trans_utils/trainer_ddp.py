@@ -158,7 +158,19 @@ class DDPTrainer(AbstractTrainer):
 
         if self.load_optimizer:
             start_epoch = model.module.load_optim(optimizer)
-            print(f"[DDPTrainer] Continue training, from epoch {start_epoch}")
+
+            # MARS recovery:
+            # restart the interrupted epoch while keeping the restored
+            # model and optimizer state. Some batches may be repeated.
+            recovery_epoch = self.config['training'].get('resume_epoch', None)
+            if recovery_epoch is not None:
+                print(
+                    f"[MARS Recovery] Overriding checkpoint start epoch "
+                    f"{start_epoch} -> {recovery_epoch}"
+                )
+                start_epoch = recovery_epoch
+            else:
+                print(f"[DDPTrainer] Continue training, from epoch {start_epoch}")
         else:
             start_epoch = self.start_epoch
         return optimizer, scheduler, start_epoch
