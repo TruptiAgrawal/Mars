@@ -43,4 +43,34 @@ describe("api client", () => {
     expect(global.fetch).toHaveBeenCalledWith(expect.stringContaining("/cases/case_001/run?tau=0.7"));
     expect(result).toEqual(mockResult);
   });
+
+  it("fetchCases throws when the response is not ok", async () => {
+    (global.fetch as jest.Mock).mockResolvedValueOnce({
+      ok: false,
+      status: 500,
+      json: async () => ({}),
+    });
+
+    await expect(fetchCases()).rejects.toThrow(/500/);
+  });
+
+  it("fetchVolume throws when the response is not ok", async () => {
+    (global.fetch as jest.Mock).mockResolvedValueOnce({
+      ok: false,
+      status: 404,
+      json: async () => ({}),
+    });
+
+    await expect(fetchVolume("case_001")).rejects.toThrow(/404/);
+  });
+
+  it("runCase throws when the response is not ok", async () => {
+    (global.fetch as jest.Mock).mockResolvedValueOnce({
+      ok: false,
+      status: 503,
+      json: async () => ({}),
+    });
+
+    await expect(runCase("case_001", 0.7)).rejects.toThrow(/503/);
+  });
 });

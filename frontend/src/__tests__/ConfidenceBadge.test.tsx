@@ -17,4 +17,14 @@ describe("ConfidenceBadge", () => {
     render(<ConfidenceBadge label="Confidence" value={0.6} />);
     expect(screen.getByTestId("confidence-badge")).toHaveAttribute("data-level", "high");
   });
+
+  it("applies a low-value style hint just below the 0.3 split", () => {
+    render(<ConfidenceBadge label="Confidence" value={0.29} />);
+    expect(screen.getByTestId("confidence-badge")).toHaveAttribute("data-level", "low");
+  });
+
+  it("applies a high-value style hint at exactly the 0.3 split", () => {
+    render(<ConfidenceBadge label="Confidence" value={0.3} />);
+    expect(screen.getByTestId("confidence-badge")).toHaveAttribute("data-level", "high");
+  });
 });
