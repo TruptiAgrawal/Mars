@@ -1,0 +1,260 @@
+BTCV 5-Fold Cross-Validation -- Session Summary
+=================================================
+(See also: btcv_cross_validation/5foldClaudeRoadmap.txt for the full plan
+this session executed against.)
+
+CONTEXT / BACKGROUND
+---------------------
+- Repo: Slide-SAM (Medical SAM + sliding window), nested working copy at
+  /home/jupyter-team2pop/Slide-SAM/Slide-SAM (untracked in git; the outer
+  Slide-SAM/ is the actual git repo).
+- Existing live experiment (still running at session start): LoRA finetuning
+  of the official Slide-SAM-B checkpoint on BTCV using a FIXED split --
+  24 train volumes (img0001-10, img0021-34) vs. a fixed bottom-6 test set
+  (img0035-40) -- via `core.ddp_sub` + `datasets/cache_dataset3d_e2.py`
+  (a BTCV + WORD-50 combined loader).
+- Goal: replace that single fixed split with proper 5-fold cross-validation
+  (BTCV-only, no WORD-50), without touching any existing files, isolated
+  entirely inside a new btcv_cross_validation/ folder (plus a small number
+  of clearly-justified new files under datasets/ and core/ and test/, never
+  edits to existing files).
+
+INFRASTRUCTURE / GPU FINDINGS (still relevant)
+-----------------------------------------------
+- Single NVIDIA RTX A6000 (49140 MiB), SHARED with other users on the same
+  JupyterHub node. At various checks during this session it was ~85-99%
+  utilized with 6-9 GB free, because of: (a) this project's own live
+  finetuning job, and (b) unrelated jobs from other users.
+- Conclusion carried through the whole plan: GPU training must run
+  SEQUENTIALLY, one fold at a time, never in parallel. Caching (CPU/IO-bound,
+  no CUDA calls) is safe to run regardless of GPU load.
+- Batch size recommendation carried into all fold configs: batch_size=2
+  (safer under GPU contention than bs=4, which uses ~33.7GB alone).
+
+KEY TECHNICAL DISCOVERIES (why the plan looks the way it does)
+-----------------------------------------------------------------
+1. Train/test split for BTCV is baked in at CACHING time, not training time.
+   The main repo's cached_dataset2/01_BCV-Abdomen/ only ever contained the
+   24 "train" volumes -- the 6 "test" volumes (35-40) were never cached
+   there. Confirmed by reading meta .npy files directly.
+2. `datasets/cache_dataset3d_e2.py` (used by the live job) hardcodes the
+   filenames "01_BTCV_train_4to1.txt" and "WORD_50_train.txt" inside
+   data_txt_path, ignoring whatever `dataset_list` is set in the yaml
+   config. It also unconditionally mixes in WORD-50 data. This is why a
+   dedicated CV-only loader was needed instead of just changing yaml keys.
+3. Only `core/learner_sub1.py` (used by `core/ddp_sub.py`) supports the
+   LoRA + LoRA-sub finetuning-from-checkpoint recipe (loading the official
+   weights/slidesam_b.pth). The generic `core/ddp.py` + `core/learner5.py`
+   path has no LoRA support -- so all CV training must go through the
+   ddp_sub-style entrypoint, not core/ddp.py.
+4. `datasets/cache_dataset3d.py` is the CACHE WRITER (raw .nii.gz -> 2D
+   slice cache: image/*.jpg, label_jpg/*.jpg, meta/*.npy). Its own
+   `_get_cached_data` reader is a separate, legacy path expecting a
+   different on-disk format (.npz masks under label/) that this project's
+   actual cache never uses.
+5. `datasets/cache_dataset3d3.py` is the CORRECT reader for what
+   cache_dataset3d.py actually writes (jpg-based). Any new "read from cache"
+   loader must subclass cache_dataset3d3.Dataset3D, not cache_dataset3d.py's
+   class directly (cache_dataset3d_e2.py already does this correctly; the
+   new CV loader follows the same pattern).
+6. `datasets/eval_dataloader/loader_abstract.py`'s AbstractLoader resolves
+   its manifest generically as data_txt_path + dataset_list[i] + "_{split}.txt".
+   With dataset_list=['01_BTCV'] and split='test' this would silently
+   resolve to the OLD FIXED "01_BTCV_test.txt" (only img0038-40), not a
+   given fold's actual 6 held-out volumes. This required a dedicated
+   fold-aware eval loader too (see Step 6 below).
+7. The `specific_label` config key (present in old configs like
+   vit_sub_btcv_bs4.yaml) is NOT consumed anywhere in the actual
+   dataset/training pipeline (grepped the whole repo) -- it's a dead/
+   vestigial key only referenced in a comment inside a standalone
+   visualization script. Intentionally omitted from the new fold configs.
+8. Correct BTCV label mapping (verified, important -- an earlier example
+   snippet in test/volume_eval_sublora.py used label_idx=2 with a WRONG
+   comment "2 = liver"):
+       1 = Spleen, 2 = Right Kidney, 3 = Left Kidney,
+       6 = Liver,  7 = Stomach
+   Paper-aligned 4-organ evaluation set = Liver(6), Stomach(7),
+   Left Kidney(3), Spleen(1). Right Kidney(2) is NOT one of the four.
+
+STEPS COMPLETED THIS SESSION
+------------------------------
+
+Step 0 -- Folder skeleton
+  Created btcv_cross_validation/{cache,dataset_list,configs,scripts,logs,runs}/
+  No existing files touched.
+
+Step 1 -- Generate 5 BTCV-only volume-level folds
+  Script: btcv_cross_validation/scripts/make_folds.py
+  - Reads the real 30 volume IDs from
+    datasets/01_BCV-Abdomen/Training/img/*.nii.gz (read-only).
+  - Writes dataset_list/01_BTCV_all30_train.txt (all 30, 2-column format,
+    for the shared cache build).
+  - Writes dataset_list/fold{1..5}/01_BTCV_train_4to1.txt (24 volumes,
+    bare filenames) and 01_BTCV_test_4to1.txt (6 volumes, bare filenames),
+    as contiguous 6-volume chunks of the sorted 30-volume list.
+  - Deliberately does NOT write any WORD_50_train.txt anywhere (BTCV-only).
+  Resulting fold test sets (held-out volumes):
+    fold1: img0001-0006
+    fold2: img0007-0010, img0021-0022
+    fold3: img0023-0028
+    fold4: img0029-0034
+    fold5: img0035-0040
+
+Step 2 -- Mathematically verify the folds
+  Script: btcv_cross_validation/scripts/verify_folds.py (re-runnable gate,
+  exits non-zero on any failure)
+  Checks performed and PASSED:
+    2.1 |V| = 30 unique volumes on disk
+    2.2 every fold has |Train_k|=24, |Test_k|=6
+    2.3 Train_k ∩ Test_k = ∅ for every fold
+    2.4 Test_1 ∪ ... ∪ Test_5 = V, |union|=30, pairwise disjoint (each
+        volume held out exactly once); Train_k == V \ Test_k for every fold
+    2.5 re-running the generator reproduces byte-identical manifests
+        (verified via backup + in-place re-run + restore, non-destructive)
+    2.6 every manifest volume has a real image+label file on disk, and the
+        manifest volume set matches the disk volume set exactly
+  Result: ALL CHECKS PASSED.
+
+Step 3 -- Build one shared BTCV cache (all 30 volumes)
+  Script: btcv_cross_validation/scripts/cache_all30.py
+  - CPU/IO-only (no CUDA calls) -- run in background while GPU was busy.
+  - Uses datasets/cache_dataset3d.Dataset3D(use_cache=False) against
+    dataset_list=["01_BTCV_all30"], writing to
+    btcv_cross_validation/cache/all30/01_BCV-Abdomen/{image,label_jpg,meta}/
+  - Took ~25 minutes for all 30 volumes (~47s/volume observed).
+  Result: 30/30 volumes confirmed cached (verified by reading img_name out
+  of every meta .npy file, not just trusting the log), 2074 total cached
+  slice samples, 667 MB on disk, log ended "CACHE BUILD DONE." with no
+  errors. Log: btcv_cross_validation/logs/cache_all30.log
+
+Step 4 -- Dedicated BTCV-only CV dataset loader
+  NEW FILE: datasets/cache_dataset3d_cv.py
+  - Subclasses cache_dataset3d3.Dataset3D (correct jpg-based reader).
+  - Reads ONLY 01_BTCV_train_4to1.txt from the fold's data_txt_path --
+    never opens or references WORD_50_train.txt.
+  - Also reads that fold's 01_BTCV_test_4to1.txt purely as a safety check.
+  - Scans the shared cache/all30/ pool, selects only samples whose source
+    volume is in that fold's 24 training volumes.
+  - HARD-FAILS (raises RuntimeError) if any selected sample's volume is
+    also in the held-out set, or if any train volume has zero cached
+    samples -- leakage becomes a crash, not a silent bug.
+  - Prints a "CV DATASET AUDIT" block (fold path, #train/#held-out volumes,
+    #cached samples, #leaked samples, first/last 3 sample paths).
+  Smoke-tested against ALL 5 folds (instantiated directly, no training):
+    fold1: 24 train / 6 held-out / 7623 cached samples / 0 leaked
+    fold2: 24 train / 6 held-out / 7617 cached samples / 0 leaked
+    fold3: 24 train / 6 held-out / 8395 cached samples / 0 leaked
+    fold4: 24 train / 6 held-out / 7794 cached samples / 0 leaked
+    fold5: 24 train / 6 held-out / 8159 cached samples / 0 leaked
+  All 5 passed with 0 leaked samples.
+
+Step 5 -- Fold-specific training configs + CV-aware entrypoint
+  NEW FILES: btcv_cross_validation/configs/fold{1..5}.yaml
+  - Identical hyperparameters across all folds: batch_size=2, num_workers=8,
+    num_epochs=21, use_amp=false, lr=0.00002, weight_decay=0.0001,
+    load_pretrain_model/continue_training/load_optimizer=false,
+    breakpoint_path=weights/slidesam_b.pth (every fold starts fresh from
+    the official checkpoint -- no fold resumes from another).
+  - Each fold has its own base_dir (btcv_cross_validation/runs/foldN/),
+    its own data_txt_path (dataset_list/foldN/), shared cache_data_path
+    (cache/all30/).
+  - specific_label intentionally omitted (dead key, see finding #7 above).
+
+  IMPORTANT CORRECTION MADE MID-STEP: core/ddp_sub.py uses a RELATIVE
+  import (`from .learner_sub1 import SamLearner`), which only resolves if
+  the file lives inside the core/ package. So the CV-aware training
+  entrypoint could NOT live under btcv_cross_validation/scripts/ as
+  originally proposed -- it had to be a new sibling file inside core/.
+
+  NEW FILE: core/ddp_sub_cv.py
+  - Identical to core/ddp_sub.py except ONE import line:
+    `from datasets.cache_dataset3d_cv import Dataset3D`
+    (instead of `from datasets.cache_dataset3d_e2 import Dataset3D`).
+  - Verified via `python -c "import core.ddp_sub_cv"`: imports cleanly,
+    and core.ddp_sub_cv.Dataset3D.__module__ == 'datasets.cache_dataset3d_cv'.
+  Run command (NOT yet executed for real -- would start real GPU training):
+    cd /home/jupyter-team2pop/Slide-SAM/Slide-SAM
+    python -m core.ddp_sub_cv --config btcv_cross_validation/configs/fold1.yaml --tag cv_fold1
+
+Step 6 -- Fold-specific evaluation path
+  Problem found: datasets/eval_dataloader/loader_abstract.py's
+  AbstractLoader resolves its test manifest generically as
+  data_txt_path + dataset_list[i] + "_test.txt" -- with dataset_list=
+  ['01_BTCV'] this resolves to the OLD FIXED "01_BTCV_test.txt"
+  (only img0038-40), NOT a given fold's actual 6 held-out volumes.
+
+  NEW FILE: datasets/eval_dataloader/loader_cv.py
+  - FoldTestLoader(AbstractLoader) subclass: reads exactly
+    01_BTCV_test_4to1.txt from the fold's data_txt_path directly, converts
+    bare volume IDs to full img/label paths using the known BTCV naming
+    convention.
+
+  NEW FILE: test/volume_eval_cv.py
+  - Parametrized copy of test/volume_eval_sublora.py's Evaluater +
+    eval_step logic, but:
+      * Uses FoldTestLoader instead of AbstractLoader.
+      * Takes --config / --pth / --label_idx / --prompt from the CLI
+        instead of a hand-edited EX_CONFIG dict.
+      * Deliberately has NO default --label_idx (the original file's
+        example used label_idx=2 with an incorrect "2 = liver" comment --
+        see finding #8 above). Caller must pass the organ explicitly.
+  Example (not yet run for real -- needs a GPU + a trained checkpoint):
+    python -m test.volume_eval_cv \
+      --config btcv_cross_validation/configs/fold1.yaml \
+      --pth btcv_cross_validation/runs/fold1/ddp_sub_cv/cv_fold1/ckpt/model_latest.pth \
+      --label_idx 6   # Liver
+
+  Verification performed (CPU-only, no GPU/model touched):
+    - FoldTestLoader instantiated for all 5 folds; each returned exactly
+      its 6 held-out volumes, matching Steps 1/2 exactly.
+    - Every resolved image/label .nii.gz path confirmed to exist on disk.
+    - test/volume_eval_cv.py import-checked cleanly (no syntax/dependency
+      errors); __main__ (GPU-touching) block was never triggered.
+
+FILE INVENTORY (created this session)
+----------------------------------------
+New, isolated (inside btcv_cross_validation/):
+  btcv_cross_validation/scripts/make_folds.py
+  btcv_cross_validation/scripts/verify_folds.py
+  btcv_cross_validation/scripts/cache_all30.py
+  btcv_cross_validation/dataset_list/01_BTCV_all30_train.txt
+  btcv_cross_validation/dataset_list/fold{1..5}/01_BTCV_train_4to1.txt
+  btcv_cross_validation/dataset_list/fold{1..5}/01_BTCV_test_4to1.txt
+  btcv_cross_validation/cache/all30/01_BCV-Abdomen/{image,label_jpg,meta}/
+  btcv_cross_validation/configs/fold{1..5}.yaml
+  btcv_cross_validation/logs/cache_all30.log
+  btcv_cross_validation/runs/  (empty until training actually runs)
+
+New, inside the main repo (new files only -- no existing file was edited):
+  datasets/cache_dataset3d_cv.py       (Step 4 -- BTCV-only train loader)
+  datasets/eval_dataloader/loader_cv.py (Step 6 -- BTCV-only fold eval loader)
+  core/ddp_sub_cv.py                    (Step 5 -- CV-aware training entrypoint)
+  test/volume_eval_cv.py                (Step 6 -- CV-aware eval entrypoint)
+
+STATUS / NEXT STEPS (per 5foldClaudeRoadmap.txt)
+---------------------------------------------------
+Steps 1-6: DONE and verified.
+Step 7 (define evaluation targets): effectively already satisfied by
+  design -- test/volume_eval_cv.py requires --label_idx with no default,
+  and the correct 4 paper-aligned organs to evaluate are Liver=6,
+  Stomach=7, Left Kidney=3, Spleen=1 (Right Kidney=2 is excluded).
+Step 8 (run folds sequentially on GPU): NOT started. No GPU training has
+  been run yet for any fold. GPU is shared -- check `nvidia-smi` before
+  starting, and run folds strictly one at a time via core.ddp_sub_cv.
+Step 9 (aggregate mean +/- SD across folds per organ): NOT started,
+  depends on Step 8 producing checkpoints for all 5 folds first.
+
+USER PREFERENCES / GROUND RULES OBSERVED THIS SESSION
+---------------------------------------------------------
+- No modifications to any existing file, ever -- only new files, or new
+  files inside an isolated folder. When a new file was needed at a
+  specific location for technical reasons (e.g. relative imports forcing
+  core/ddp_sub_cv.py to live in core/), that was flagged explicitly before
+  or immediately after creating it.
+- Prefers step-by-step execution with explicit "go ahead" / "yes create"
+  confirmation before creating new Python files that affect execution
+  (established during Step 4, followed through Steps 5-6).
+- Wants GPU utilization checked before any GPU-touching operation.
+- Wants independent/mathematical verification, not just "it should work"
+  assumptions (Step 2's explicit disjointness/coverage proofs, Step 4/6's
+  leakage audits and smoke tests against all 5 folds).

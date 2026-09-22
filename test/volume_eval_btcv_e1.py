@@ -207,9 +207,9 @@ if __name__ == "__main__":
         'dataset': {
             'prompt': 'box',
             'dataset_list': ['01_BTCV_E1'],
-            'label_idx': 1,
+            'label_idx': 1,  # 1=spleen, 3=left kidney, 6=liver, 7=stomach
         },
-        "pth": "../runs/sam/ddp_sub/btcv_4to1_20epoch/ckpt_v/model_latest.pth"
+        "pth": "../runs/sam/ddp_sub/btcv_word50_smoketest/ckpt_v/model_latest.pth"
     }
 
     config = ConfigManager()

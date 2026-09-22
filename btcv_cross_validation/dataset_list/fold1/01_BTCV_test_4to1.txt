@@ -1,0 +1,6 @@
+img0001.nii.gz
+img0002.nii.gz
+img0003.nii.gz
+img0004.nii.gz
+img0005.nii.gz
+img0006.nii.gz
