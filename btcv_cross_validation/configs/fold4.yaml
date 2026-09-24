@@ -9,7 +9,7 @@ logger:
 
 training:
   save_mode: ['all', 'best', 'latest']
-  batch_size: 2
+  batch_size: 4
   num_workers: 8
   num_epochs: 21
   use_amp: false
