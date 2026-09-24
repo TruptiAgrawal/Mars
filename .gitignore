@@ -19,7 +19,6 @@ datasets/07_WORD
 
 # Training outputs
 runs/
-logs/
 
 # Temporary files
 tmp/
@@ -29,3 +28,4 @@ tmp_*
 # IDE
 .vscode/
 .idea/
+
