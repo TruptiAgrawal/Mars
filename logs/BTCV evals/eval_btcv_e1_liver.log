@@ -1,0 +1,36 @@
+Loading model from ../runs/sam/ddp_sub/btcv_4to1_20epoch/ckpt_v/model_latest.pth
+/home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/learner2.py:126: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(model_path, map_location="cpu")
+Load datalist from  01_BTCV_E1
+train len 6
+template_slice.area  22887 0.08730697631835938
+Checking Data range: [-200.0, 400.0]
+No masks
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0035.nii.gz'] 0.8126854286716576 0
+template_slice.area  48830 0.18627166748046875
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0036.nii.gz'] 0.7692922006521574 0
+template_slice.area  39499 0.15067672729492188
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0037.nii.gz'] 0.8337003476650877 0
+template_slice.area  23953 0.09137344360351562
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0038.nii.gz'] 0.8103938555031155 0
+template_slice.area  20166 0.07692718505859375
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0039.nii.gz'] 0.8357015720012484 0
+template_slice.area  31997 0.12205886840820312
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0040.nii.gz'] 0.738258540633644 0
+{'dice': 0.8000053241878183, 'nsd': 0.0}
+prompt: box  class_idx: 6
+Time:  63.52107000350952
