@@ -1,0 +1,9 @@
+PREFLIGHT 5 ['img0035', 'img0036', 'img0037', 'img0038', 'img0039', 'img0040'] /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold5/ddp_sub_cv/cv_fold5/ckpt/model_epoch_20.pth
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/five_box/evaluate.py", line 44, in main
+    import torch
+  File "/home/jupyter-team2pop/.local/lib/python3.12/site-packages/torch/__init__.py", line 445, in <module>
+    from torch._C import *  # noqa: F403
+    ^^^^^^^^^^^^^^^^^^^^^^
+ImportError: /home/jupyter-team2pop/.local/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so: undefined symbol: ncclCommResume

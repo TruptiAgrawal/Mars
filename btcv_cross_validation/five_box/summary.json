@@ -1,0 +1,28 @@
+{
+  "organs": {
+    "Liver": {
+      "one_box_percent": 90.15275834237164,
+      "five_box_percent": 91.02974188292059,
+      "authors_five_box_percent": 95.62
+    },
+    "Stomach": {
+      "one_box_percent": 66.8928056751252,
+      "five_box_percent": 80.98061355197454,
+      "authors_five_box_percent": 90.88
+    },
+    "Left kidney": {
+      "one_box_percent": 68.84547912485455,
+      "five_box_percent": 82.76587184195711,
+      "authors_five_box_percent": 93.49
+    },
+    "Spleen": {
+      "one_box_percent": 86.34544312032133,
+      "five_box_percent": 87.37729810550861,
+      "authors_five_box_percent": 91.88
+    }
+  },
+  "one_box_mean_percent": 78.05912156566818,
+  "five_box_mean_percent": 85.53838134559021,
+  "authors_reported_mean_percent": 92.96,
+  "cases": 120
+}

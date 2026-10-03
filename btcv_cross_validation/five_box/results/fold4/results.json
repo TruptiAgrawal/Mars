@@ -1,0 +1,2797 @@
+{
+  "status": "complete",
+  "fold": 4,
+  "training_ids": [
+    "img0001",
+    "img0002",
+    "img0003",
+    "img0004",
+    "img0005",
+    "img0006",
+    "img0007",
+    "img0008",
+    "img0009",
+    "img0010",
+    "img0021",
+    "img0022",
+    "img0023",
+    "img0024",
+    "img0025",
+    "img0026",
+    "img0027",
+    "img0028",
+    "img0035",
+    "img0036",
+    "img0037",
+    "img0038",
+    "img0039",
+    "img0040"
+  ],
+  "evaluation_ids": [
+    "img0029",
+    "img0030",
+    "img0031",
+    "img0032",
+    "img0033",
+    "img0034"
+  ],
+  "checkpoint": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold4/ddp_sub_cv/cv_fold4/ckpt/model_epoch_20.pth",
+  "checkpoint_sha256": "ce675b35442c900ef90d219f608955685f2dba41beb67c891aa74272ecf4fb2e",
+  "protocol": "gt-cropped; corrected-zero propagated boxes; initial GT max-area box plus four lowest-Dice unused interior-slice boxes; unchanged authors confidence merge",
+  "prompt_budget": 5,
+  "cudnn_enabled": false,
+  "torch_version": "2.5.1+cu121",
+  "gpu": "NVIDIA RTX A6000",
+  "cases": [
+    {
+      "crop_start_z": 48,
+      "crop_stop_z": 95,
+      "original_shape_zyx": [
+        100,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        47,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 77,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0029",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        3.0,
+        0.875,
+        0.875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0029.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0029.nii.gz",
+      "organ": "Liver",
+      "dice_by_prompt_count": [
+        0.9229744866298393,
+        0.9229744866298393,
+        0.9229744866298393,
+        0.9229744866298393,
+        0.9228863289358806
+      ],
+      "one_box_dice": 0.9229744866298393,
+      "five_box_dice": 0.9228863289358806,
+      "prompt_slices_cropped": [
+        29,
+        1,
+        45,
+        2,
+        3
+      ],
+      "prompt_slices_original": [
+        77,
+        49,
+        93,
+        50,
+        51
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            110.0,
+            137.0,
+            307.0,
+            339.0
+          ]
+        ],
+        [
+          [
+            107.0,
+            215.0,
+            129.0,
+            251.0
+          ]
+        ],
+        [
+          [
+            156.0,
+            219.0,
+            203.0,
+            297.0
+          ]
+        ],
+        [
+          [
+            105.0,
+            207.0,
+            141.0,
+            260.0
+          ]
+        ],
+        [
+          [
+            103.0,
+            203.0,
+            155.0,
+            271.0
+          ]
+        ]
+      ],
+      "total_seconds": 7.279253290966153
+    },
+    {
+      "crop_start_z": 85,
+      "crop_stop_z": 146,
+      "original_shape_zyx": [
+        153,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        61,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 126,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0030",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        3.0,
+        0.7421875,
+        0.7421875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0030.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0030.nii.gz",
+      "organ": "Liver",
+      "dice_by_prompt_count": [
+        0.9306009295911696,
+        0.9305909633568142,
+        0.9305876413261325,
+        0.9305644301363255,
+        0.9305030271168274
+      ],
+      "one_box_dice": 0.9306009295911696,
+      "five_box_dice": 0.9305030271168274,
+      "prompt_slices_cropped": [
+        41,
+        59,
+        1,
+        58,
+        2
+      ],
+      "prompt_slices_original": [
+        126,
+        144,
+        86,
+        143,
+        87
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            59.0,
+            146.0,
+            337.0,
+            359.0
+          ]
+        ],
+        [
+          [
+            198.0,
+            272.0,
+            271.0,
+            342.0
+          ]
+        ],
+        [
+          [
+            108.0,
+            269.0,
+            141.0,
+            299.0
+          ]
+        ],
+        [
+          [
+            168.0,
+            270.0,
+            279.0,
+            347.0
+          ]
+        ],
+        [
+          [
+            102.0,
+            260.0,
+            146.0,
+            302.0
+          ]
+        ]
+      ],
+      "total_seconds": 9.47312566707842
+    },
+    {
+      "crop_start_z": 21,
+      "crop_stop_z": 83,
+      "original_shape_zyx": [
+        93,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        62,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 67,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0031",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        3.0,
+        0.837890625,
+        0.837890625
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0031.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0031.nii.gz",
+      "organ": "Liver",
+      "dice_by_prompt_count": [
+        0.9011672738550206,
+        0.9056207580034837,
+        0.9046836044798149,
+        0.9034105840323302,
+        0.9027378974617686
+      ],
+      "one_box_dice": 0.9011672738550206,
+      "five_box_dice": 0.9027378974617686,
+      "prompt_slices_cropped": [
+        46,
+        60,
+        57,
+        56,
+        55
+      ],
+      "prompt_slices_original": [
+        67,
+        81,
+        78,
+        77,
+        76
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            77.0,
+            166.0,
+            381.0,
+            330.0
+          ]
+        ],
+        [
+          [
+            116.0,
+            219.0,
+            167.0,
+            263.0
+          ]
+        ],
+        [
+          [
+            97.0,
+            192.0,
+            354.0,
+            279.0
+          ]
+        ],
+        [
+          [
+            94.0,
+            183.0,
+            368.0,
+            284.0
+          ]
+        ],
+        [
+          [
+            90.0,
+            175.0,
+            376.0,
+            289.0
+          ]
+        ]
+      ],
+      "total_seconds": 9.857738703023642
+    },
+    {
+      "crop_start_z": 78,
+      "crop_stop_z": 137,
+      "original_shape_zyx": [
+        144,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        59,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 121,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0032",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        3.0,
+        0.740234375,
+        0.740234375
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0032.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0032.nii.gz",
+      "organ": "Liver",
+      "dice_by_prompt_count": [
+        0.9150094390783952,
+        0.918221214968769,
+        0.9179761882395587,
+        0.9173547147306341,
+        0.9173995316510983
+      ],
+      "one_box_dice": 0.9150094390783952,
+      "five_box_dice": 0.9173995316510983,
+      "prompt_slices_cropped": [
+        43,
+        56,
+        55,
+        54,
+        1
+      ],
+      "prompt_slices_original": [
+        121,
+        134,
+        133,
+        132,
+        79
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            83.0,
+            145.0,
+            303.0,
+            382.0
+          ]
+        ],
+        [
+          [
+            122.0,
+            240.0,
+            185.0,
+            314.0
+          ]
+        ],
+        [
+          [
+            115.0,
+            229.0,
+            190.0,
+            318.0
+          ]
+        ],
+        [
+          [
+            108.0,
+            220.0,
+            194.0,
+            323.0
+          ]
+        ],
+        [
+          [
+            78.0,
+            245.0,
+            98.0,
+            296.0
+          ]
+        ]
+      ],
+      "total_seconds": 9.127804395044222
+    },
+    {
+      "crop_start_z": 56,
+      "crop_stop_z": 94,
+      "original_shape_zyx": [
+        104,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        38,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 79,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0033",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        5.0,
+        0.8144530057907104,
+        0.8144530057907104
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0033.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0033.nii.gz",
+      "organ": "Liver",
+      "dice_by_prompt_count": [
+        0.9225780097334966,
+        0.9225780097334966,
+        0.9225780097334966,
+        0.9225736862535899,
+        0.9225736862535899
+      ],
+      "one_box_dice": 0.9225780097334966,
+      "five_box_dice": 0.9225736862535899,
+      "prompt_slices_cropped": [
+        23,
+        1,
+        2,
+        3,
+        36
+      ],
+      "prompt_slices_original": [
+        79,
+        57,
+        58,
+        59,
+        92
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            79.0,
+            163.0,
+            270.0,
+            404.0
+          ]
+        ],
+        [
+          [
+            102.0,
+            280.0,
+            124.0,
+            322.0
+          ]
+        ],
+        [
+          [
+            98.0,
+            264.0,
+            129.0,
+            326.0
+          ]
+        ],
+        [
+          [
+            93.0,
+            243.0,
+            139.0,
+            329.0
+          ]
+        ],
+        [
+          [
+            140.0,
+            282.0,
+            288.0,
+            365.0
+          ]
+        ]
+      ],
+      "total_seconds": 5.866584247909486
+    },
+    {
+      "crop_start_z": 61,
+      "crop_stop_z": 93,
+      "original_shape_zyx": [
+        98,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        32,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 81,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0034",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        5.0,
+        0.671875,
+        0.671875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0034.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0034.nii.gz",
+      "organ": "Liver",
+      "dice_by_prompt_count": [
+        0.8836863351033416,
+        0.8880885596631635,
+        0.8880885596631635,
+        0.8880842330903532,
+        0.8894672393266432
+      ],
+      "one_box_dice": 0.8836863351033416,
+      "five_box_dice": 0.8894672393266432,
+      "prompt_slices_cropped": [
+        20,
+        30,
+        1,
+        2,
+        29
+      ],
+      "prompt_slices_original": [
+        81,
+        91,
+        62,
+        63,
+        90
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            62.0,
+            155.0,
+            399.0,
+            426.0
+          ]
+        ],
+        [
+          [
+            113.0,
+            256.0,
+            179.0,
+            323.0
+          ]
+        ],
+        [
+          [
+            63.0,
+            251.0,
+            90.0,
+            323.0
+          ]
+        ],
+        [
+          [
+            62.0,
+            231.0,
+            103.0,
+            331.0
+          ]
+        ],
+        [
+          [
+            99.0,
+            240.0,
+            197.0,
+            331.0
+          ]
+        ]
+      ],
+      "total_seconds": 5.5757728109601885
+    },
+    {
+      "crop_start_z": 44,
+      "crop_stop_z": 87,
+      "original_shape_zyx": [
+        100,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        43,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 78,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0029",
+      "label_idx": 7,
+      "spacing_zyx_mm": [
+        3.0,
+        0.875,
+        0.875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0029.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0029.nii.gz",
+      "organ": "Stomach",
+      "dice_by_prompt_count": [
+        0.5855758353969855,
+        0.6184643349262658,
+        0.6950639444766993,
+        0.6953560053426487,
+        0.7225347010372178
+      ],
+      "one_box_dice": 0.5855758353969855,
+      "five_box_dice": 0.7225347010372178,
+      "prompt_slices_cropped": [
+        34,
+        1,
+        16,
+        15,
+        14
+      ],
+      "prompt_slices_original": [
+        78,
+        45,
+        60,
+        59,
+        58
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            268.0,
+            230.0,
+            333.0,
+            311.0
+          ]
+        ],
+        [
+          [
+            205.0,
+            299.0,
+            248.0,
+            313.0
+          ]
+        ],
+        [
+          [
+            251.0,
+            287.0,
+            305.0,
+            337.0
+          ]
+        ],
+        [
+          [
+            249.0,
+            290.0,
+            300.0,
+            335.0
+          ]
+        ],
+        [
+          [
+            236.0,
+            293.0,
+            297.0,
+            334.0
+          ]
+        ]
+      ],
+      "total_seconds": 8.222860202891752
+    },
+    {
+      "crop_start_z": 105,
+      "crop_stop_z": 139,
+      "original_shape_zyx": [
+        153,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        34,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 131,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0030",
+      "label_idx": 7,
+      "spacing_zyx_mm": [
+        3.0,
+        0.7421875,
+        0.7421875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0030.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0030.nii.gz",
+      "organ": "Stomach",
+      "dice_by_prompt_count": [
+        0.6914961422341496,
+        0.7175394291704389,
+        0.7308981272558766,
+        0.7401365926305135,
+        0.7461040628101326
+      ],
+      "one_box_dice": 0.6914961422341496,
+      "five_box_dice": 0.7461040628101326,
+      "prompt_slices_cropped": [
+        26,
+        1,
+        11,
+        13,
+        12
+      ],
+      "prompt_slices_original": [
+        131,
+        106,
+        116,
+        118,
+        117
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            278.0,
+            208.0,
+            384.0,
+            358.0
+          ]
+        ],
+        [
+          [
+            227.0,
+            287.0,
+            293.0,
+            326.0
+          ]
+        ],
+        [
+          [
+            280.0,
+            296.0,
+            338.0,
+            332.0
+          ]
+        ],
+        [
+          [
+            296.0,
+            295.0,
+            347.0,
+            336.0
+          ]
+        ],
+        [
+          [
+            292.0,
+            296.0,
+            343.0,
+            334.0
+          ]
+        ]
+      ],
+      "total_seconds": 5.823386742034927
+    },
+    {
+      "crop_start_z": 46,
+      "crop_stop_z": 73,
+      "original_shape_zyx": [
+        93,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        27,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 64,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0031",
+      "label_idx": 7,
+      "spacing_zyx_mm": [
+        3.0,
+        0.837890625,
+        0.837890625
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0031.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0031.nii.gz",
+      "organ": "Stomach",
+      "dice_by_prompt_count": [
+        0.6385266370699223,
+        0.652491352448472,
+        0.688870121189826,
+        0.6927511675001033,
+        0.7102164036346246
+      ],
+      "one_box_dice": 0.6385266370699223,
+      "five_box_dice": 0.7102164036346246,
+      "prompt_slices_cropped": [
+        18,
+        1,
+        9,
+        25,
+        24
+      ],
+      "prompt_slices_original": [
+        64,
+        47,
+        55,
+        71,
+        70
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            269.0,
+            195.0,
+            355.0,
+            334.0
+          ]
+        ],
+        [
+          [
+            206.0,
+            272.0,
+            231.0,
+            284.0
+          ]
+        ],
+        [
+          [
+            206.0,
+            270.0,
+            280.0,
+            302.0
+          ]
+        ],
+        [
+          [
+            295.0,
+            197.0,
+            336.0,
+            228.0
+          ]
+        ],
+        [
+          [
+            290.0,
+            194.0,
+            341.0,
+            235.0
+          ]
+        ]
+      ],
+      "total_seconds": 4.770110525889322
+    },
+    {
+      "crop_start_z": 94,
+      "crop_stop_z": 134,
+      "original_shape_zyx": [
+        144,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        40,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 120,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0032",
+      "label_idx": 7,
+      "spacing_zyx_mm": [
+        3.0,
+        0.740234375,
+        0.740234375
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0032.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0032.nii.gz",
+      "organ": "Stomach",
+      "dice_by_prompt_count": [
+        0.7935847519317203,
+        0.7935847519317203,
+        0.8282935272614542,
+        0.8522331900448655,
+        0.8542212507298669
+      ],
+      "one_box_dice": 0.7935847519317203,
+      "five_box_dice": 0.8542212507298669,
+      "prompt_slices_cropped": [
+        26,
+        1,
+        2,
+        14,
+        9
+      ],
+      "prompt_slices_original": [
+        120,
+        95,
+        96,
+        108,
+        103
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            271.0,
+            183.0,
+            408.0,
+            364.0
+          ]
+        ],
+        [
+          [
+            238.0,
+            313.0,
+            284.0,
+            342.0
+          ]
+        ],
+        [
+          [
+            238.0,
+            307.0,
+            289.0,
+            348.0
+          ]
+        ],
+        [
+          [
+            270.0,
+            328.0,
+            324.0,
+            386.0
+          ]
+        ],
+        [
+          [
+            234.0,
+            303.0,
+            314.0,
+            371.0
+          ]
+        ]
+      ],
+      "total_seconds": 7.128313599154353
+    },
+    {
+      "crop_start_z": 64,
+      "crop_stop_z": 89,
+      "original_shape_zyx": [
+        104,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        25,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 82,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0033",
+      "label_idx": 7,
+      "spacing_zyx_mm": [
+        5.0,
+        0.8144530057907104,
+        0.8144530057907104
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0033.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0033.nii.gz",
+      "organ": "Stomach",
+      "dice_by_prompt_count": [
+        0.707054548778537,
+        0.746981335762825,
+        0.7700124799429489,
+        0.821550396875051,
+        0.8289137030103478
+      ],
+      "one_box_dice": 0.707054548778537,
+      "five_box_dice": 0.8289137030103478,
+      "prompt_slices_cropped": [
+        18,
+        1,
+        11,
+        10,
+        4
+      ],
+      "prompt_slices_original": [
+        82,
+        65,
+        75,
+        74,
+        68
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            242.0,
+            229.0,
+            376.0,
+            405.0
+          ]
+        ],
+        [
+          [
+            163.0,
+            286.0,
+            215.0,
+            345.0
+          ]
+        ],
+        [
+          [
+            199.0,
+            331.0,
+            296.0,
+            405.0
+          ]
+        ],
+        [
+          [
+            194.0,
+            331.0,
+            294.0,
+            404.0
+          ]
+        ],
+        [
+          [
+            166.0,
+            270.0,
+            231.0,
+            368.0
+          ]
+        ]
+      ],
+      "total_seconds": 4.2917918330058455
+    },
+    {
+      "crop_start_z": 64,
+      "crop_stop_z": 86,
+      "original_shape_zyx": [
+        98,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        22,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 78,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0034",
+      "label_idx": 7,
+      "spacing_zyx_mm": [
+        5.0,
+        0.671875,
+        0.671875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0034.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0034.nii.gz",
+      "organ": "Stomach",
+      "dice_by_prompt_count": [
+        0.681697132985325,
+        0.7249844177014911,
+        0.8089509811838811,
+        0.8079628069321252,
+        0.8079576980532568
+      ],
+      "one_box_dice": 0.681697132985325,
+      "five_box_dice": 0.8079576980532568,
+      "prompt_slices_cropped": [
+        14,
+        1,
+        6,
+        18,
+        20
+      ],
+      "prompt_slices_original": [
+        78,
+        65,
+        70,
+        82,
+        84
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            304.0,
+            232.0,
+            434.0,
+            442.0
+          ]
+        ],
+        [
+          [
+            220.0,
+            407.0,
+            286.0,
+            463.0
+          ]
+        ],
+        [
+          [
+            191.0,
+            368.0,
+            370.0,
+            465.0
+          ]
+        ],
+        [
+          [
+            284.0,
+            221.0,
+            423.0,
+            321.0
+          ]
+        ],
+        [
+          [
+            340.0,
+            236.0,
+            404.0,
+            306.0
+          ]
+        ]
+      ],
+      "total_seconds": 3.984153146157041
+    },
+    {
+      "crop_start_z": 36,
+      "crop_stop_z": 71,
+      "original_shape_zyx": [
+        100,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        35,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 59,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0029",
+      "label_idx": 3,
+      "spacing_zyx_mm": [
+        3.0,
+        0.875,
+        0.875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0029.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0029.nii.gz",
+      "organ": "Left kidney",
+      "dice_by_prompt_count": [
+        0.5609995950714409,
+        0.5609995950714409,
+        0.6054434652792478,
+        0.6284992541457519,
+        0.7352424644277983
+      ],
+      "one_box_dice": 0.5609995950714409,
+      "five_box_dice": 0.7352424644277983,
+      "prompt_slices_cropped": [
+        23,
+        1,
+        2,
+        33,
+        8
+      ],
+      "prompt_slices_original": [
+        59,
+        37,
+        38,
+        69,
+        44
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            295.0,
+            192.0,
+            357.0,
+            247.0
+          ]
+        ],
+        [
+          [
+            322.0,
+            219.0,
+            342.0,
+            237.0
+          ]
+        ],
+        [
+          [
+            316.0,
+            216.0,
+            344.0,
+            242.0
+          ]
+        ],
+        [
+          [
+            302.0,
+            199.0,
+            337.0,
+            221.0
+          ]
+        ],
+        [
+          [
+            303.0,
+            204.0,
+            356.0,
+            254.0
+          ]
+        ]
+      ],
+      "total_seconds": 5.517330346861854
+    },
+    {
+      "crop_start_z": 91,
+      "crop_stop_z": 126,
+      "original_shape_zyx": [
+        153,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        35,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 105,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0030",
+      "label_idx": 3,
+      "spacing_zyx_mm": [
+        3.0,
+        0.7421875,
+        0.7421875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0030.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0030.nii.gz",
+      "organ": "Left kidney",
+      "dice_by_prompt_count": [
+        0.7181025194762142,
+        0.7329812535331055,
+        0.8685282370323605,
+        0.8745796043386137,
+        0.8765707248965858
+      ],
+      "one_box_dice": 0.7181025194762142,
+      "five_box_dice": 0.8765707248965858,
+      "prompt_slices_cropped": [
+        14,
+        32,
+        28,
+        1,
+        2
+      ],
+      "prompt_slices_original": [
+        105,
+        123,
+        119,
+        92,
+        93
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            319.0,
+            135.0,
+            401.0,
+            217.0
+          ]
+        ],
+        [
+          [
+            304.0,
+            129.0,
+            353.0,
+            176.0
+          ]
+        ],
+        [
+          [
+            299.0,
+            129.0,
+            370.0,
+            190.0
+          ]
+        ],
+        [
+          [
+            330.0,
+            163.0,
+            365.0,
+            202.0
+          ]
+        ],
+        [
+          [
+            326.0,
+            159.0,
+            369.0,
+            205.0
+          ]
+        ]
+      ],
+      "total_seconds": 5.74658461404033
+    },
+    {
+      "crop_start_z": 18,
+      "crop_stop_z": 56,
+      "original_shape_zyx": [
+        93,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        38,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 45,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0031",
+      "label_idx": 3,
+      "spacing_zyx_mm": [
+        3.0,
+        0.837890625,
+        0.837890625
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0031.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0031.nii.gz",
+      "organ": "Left kidney",
+      "dice_by_prompt_count": [
+        0.6715269153519464,
+        0.6756572965456116,
+        0.8096396279311561,
+        0.8538587659338629,
+        0.8492013366558341
+      ],
+      "one_box_dice": 0.6715269153519464,
+      "five_box_dice": 0.8492013366558341,
+      "prompt_slices_cropped": [
+        27,
+        1,
+        8,
+        16,
+        2
+      ],
+      "prompt_slices_original": [
+        45,
+        19,
+        26,
+        34,
+        20
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            302.0,
+            163.0,
+            370.0,
+            225.0
+          ]
+        ],
+        [
+          [
+            336.0,
+            198.0,
+            351.0,
+            210.0
+          ]
+        ],
+        [
+          [
+            317.0,
+            179.0,
+            375.0,
+            229.0
+          ]
+        ],
+        [
+          [
+            319.0,
+            166.0,
+            381.0,
+            234.0
+          ]
+        ],
+        [
+          [
+            331.0,
+            194.0,
+            358.0,
+            214.0
+          ]
+        ]
+      ],
+      "total_seconds": 6.33723837393336
+    },
+    {
+      "crop_start_z": 81,
+      "crop_stop_z": 115,
+      "original_shape_zyx": [
+        144,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        34,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 99,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0032",
+      "label_idx": 3,
+      "spacing_zyx_mm": [
+        3.0,
+        0.740234375,
+        0.740234375
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0032.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0032.nii.gz",
+      "organ": "Left kidney",
+      "dice_by_prompt_count": [
+        0.6067173013280798,
+        0.6307572605334821,
+        0.667556414371336,
+        0.7353565030992123,
+        0.8335041714782473
+      ],
+      "one_box_dice": 0.6067173013280798,
+      "five_box_dice": 0.8335041714782473,
+      "prompt_slices_cropped": [
+        18,
+        1,
+        32,
+        4,
+        27
+      ],
+      "prompt_slices_original": [
+        99,
+        82,
+        113,
+        85,
+        108
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            308.0,
+            171.0,
+            379.0,
+            235.0
+          ]
+        ],
+        [
+          [
+            338.0,
+            213.0,
+            371.0,
+            237.0
+          ]
+        ],
+        [
+          [
+            297.0,
+            173.0,
+            326.0,
+            204.0
+          ]
+        ],
+        [
+          [
+            328.0,
+            201.0,
+            377.0,
+            245.0
+          ]
+        ],
+        [
+          [
+            291.0,
+            167.0,
+            352.0,
+            218.0
+          ]
+        ]
+      ],
+      "total_seconds": 5.586926877032965
+    },
+    {
+      "crop_start_z": 51,
+      "crop_stop_z": 71,
+      "original_shape_zyx": [
+        104,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        20,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 62,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0033",
+      "label_idx": 3,
+      "spacing_zyx_mm": [
+        5.0,
+        0.8144530057907104,
+        0.8144530057907104
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0033.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0033.nii.gz",
+      "organ": "Left kidney",
+      "dice_by_prompt_count": [
+        0.8125110101116866,
+        0.8259024093241715,
+        0.8719135802469136,
+        0.8709915253535244,
+        0.8621663697497873
+      ],
+      "one_box_dice": 0.8125110101116866,
+      "five_box_dice": 0.8621663697497873,
+      "prompt_slices_cropped": [
+        11,
+        18,
+        17,
+        1,
+        14
+      ],
+      "prompt_slices_original": [
+        62,
+        69,
+        68,
+        52,
+        65
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            309.0,
+            205.0,
+            389.0,
+            274.0
+          ]
+        ],
+        [
+          [
+            326.0,
+            195.0,
+            377.0,
+            240.0
+          ]
+        ],
+        [
+          [
+            323.0,
+            194.0,
+            381.0,
+            245.0
+          ]
+        ],
+        [
+          [
+            331.0,
+            246.0,
+            388.0,
+            274.0
+          ]
+        ],
+        [
+          [
+            322.0,
+            192.0,
+            386.0,
+            263.0
+          ]
+        ]
+      ],
+      "total_seconds": 3.687517898855731
+    },
+    {
+      "crop_start_z": 50,
+      "crop_stop_z": 74,
+      "original_shape_zyx": [
+        98,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        24,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 68,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0034",
+      "label_idx": 3,
+      "spacing_zyx_mm": [
+        5.0,
+        0.671875,
+        0.671875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0034.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0034.nii.gz",
+      "organ": "Left kidney",
+      "dice_by_prompt_count": [
+        0.8075068499706857,
+        0.8152303609908995,
+        0.8670495875099796,
+        0.8642170405569676,
+        0.8851759392577093
+      ],
+      "one_box_dice": 0.8075068499706857,
+      "five_box_dice": 0.8851759392577093,
+      "prompt_slices_cropped": [
+        18,
+        1,
+        2,
+        22,
+        6
+      ],
+      "prompt_slices_original": [
+        68,
+        51,
+        52,
+        72,
+        56
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            319.0,
+            186.0,
+            411.0,
+            263.0
+          ]
+        ],
+        [
+          [
+            336.0,
+            253.0,
+            388.0,
+            286.0
+          ]
+        ],
+        [
+          [
+            331.0,
+            243.0,
+            397.0,
+            288.0
+          ]
+        ],
+        [
+          [
+            339.0,
+            197.0,
+            378.0,
+            257.0
+          ]
+        ],
+        [
+          [
+            325.0,
+            223.0,
+            413.0,
+            291.0
+          ]
+        ]
+      ],
+      "total_seconds": 4.106769899139181
+    },
+    {
+      "crop_start_z": 60,
+      "crop_stop_z": 88,
+      "original_shape_zyx": [
+        100,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        28,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 76,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0029",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        3.0,
+        0.875,
+        0.875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0029.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0029.nii.gz",
+      "organ": "Spleen",
+      "dice_by_prompt_count": [
+        0.860661470188065,
+        0.8643936900210164,
+        0.866820970645505,
+        0.8617133952593711,
+        0.8646637652674435
+      ],
+      "one_box_dice": 0.860661470188065,
+      "five_box_dice": 0.8646637652674435,
+      "prompt_slices_cropped": [
+        16,
+        26,
+        25,
+        1,
+        22
+      ],
+      "prompt_slices_original": [
+        76,
+        86,
+        85,
+        61,
+        82
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            309.0,
+            185.0,
+            378.0,
+            284.0
+          ]
+        ],
+        [
+          [
+            309.0,
+            219.0,
+            347.0,
+            254.0
+          ]
+        ],
+        [
+          [
+            300.0,
+            205.0,
+            354.0,
+            260.0
+          ]
+        ],
+        [
+          [
+            357.0,
+            239.0,
+            381.0,
+            284.0
+          ]
+        ],
+        [
+          [
+            294.0,
+            185.0,
+            366.0,
+            271.0
+          ]
+        ]
+      ],
+      "total_seconds": 4.7969956861343235
+    },
+    {
+      "crop_start_z": 103,
+      "crop_stop_z": 139,
+      "original_shape_zyx": [
+        153,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        36,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 123,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0030",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        3.0,
+        0.7421875,
+        0.7421875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0030.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0030.nii.gz",
+      "organ": "Spleen",
+      "dice_by_prompt_count": [
+        0.9267002754306009,
+        0.9267002754306009,
+        0.926131722665221,
+        0.9235388332581512,
+        0.9235371466140697
+      ],
+      "one_box_dice": 0.9267002754306009,
+      "five_box_dice": 0.9235371466140697,
+      "prompt_slices_cropped": [
+        20,
+        1,
+        34,
+        32,
+        33
+      ],
+      "prompt_slices_original": [
+        123,
+        104,
+        137,
+        135,
+        136
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            301.0,
+            128.0,
+            451.0,
+            279.0
+          ]
+        ],
+        [
+          [
+            411.0,
+            181.0,
+            435.0,
+            225.0
+          ]
+        ],
+        [
+          [
+            324.0,
+            191.0,
+            414.0,
+            248.0
+          ]
+        ],
+        [
+          [
+            310.0,
+            172.0,
+            425.0,
+            256.0
+          ]
+        ],
+        [
+          [
+            312.0,
+            181.0,
+            422.0,
+            253.0
+          ]
+        ]
+      ],
+      "total_seconds": 5.672911174129695
+    },
+    {
+      "crop_start_z": 40,
+      "crop_stop_z": 76,
+      "original_shape_zyx": [
+        93,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        36,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 58,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0031",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        3.0,
+        0.837890625,
+        0.837890625
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0031.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0031.nii.gz",
+      "organ": "Spleen",
+      "dice_by_prompt_count": [
+        0.8522637881304082,
+        0.8522637881304082,
+        0.8655026799346375,
+        0.8655026799346375,
+        0.887119017105923
+      ],
+      "one_box_dice": 0.8522637881304082,
+      "five_box_dice": 0.887119017105923,
+      "prompt_slices_cropped": [
+        18,
+        34,
+        33,
+        1,
+        30
+      ],
+      "prompt_slices_original": [
+        58,
+        74,
+        73,
+        41,
+        70
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            326.0,
+            123.0,
+            425.0,
+            246.0
+          ]
+        ],
+        [
+          [
+            322.0,
+            166.0,
+            362.0,
+            186.0
+          ]
+        ],
+        [
+          [
+            315.0,
+            161.0,
+            372.0,
+            187.0
+          ]
+        ],
+        [
+          [
+            393.0,
+            176.0,
+            412.0,
+            209.0
+          ]
+        ],
+        [
+          [
+            306.0,
+            149.0,
+            393.0,
+            194.0
+          ]
+        ]
+      ],
+      "total_seconds": 5.4670932199805975
+    },
+    {
+      "crop_start_z": 98,
+      "crop_stop_z": 130,
+      "original_shape_zyx": [
+        144,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        32,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 116,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0032",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        3.0,
+        0.740234375,
+        0.740234375
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0032.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0032.nii.gz",
+      "organ": "Spleen",
+      "dice_by_prompt_count": [
+        0.8484022451584126,
+        0.852207388396713,
+        0.8518242923295472,
+        0.858113487331887,
+        0.8789612179315834
+      ],
+      "one_box_dice": 0.8484022451584126,
+      "five_box_dice": 0.8789612179315834,
+      "prompt_slices_cropped": [
+        18,
+        30,
+        2,
+        1,
+        28
+      ],
+      "prompt_slices_original": [
+        116,
+        128,
+        100,
+        99,
+        126
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            331.0,
+            155.0,
+            423.0,
+            241.0
+          ]
+        ],
+        [
+          [
+            332.0,
+            177.0,
+            398.0,
+            210.0
+          ]
+        ],
+        [
+          [
+            399.0,
+            227.0,
+            415.0,
+            243.0
+          ]
+        ],
+        [
+          [
+            401.0,
+            228.0,
+            415.0,
+            243.0
+          ]
+        ],
+        [
+          [
+            318.0,
+            165.0,
+            405.0,
+            214.0
+          ]
+        ]
+      ],
+      "total_seconds": 5.177844709018245
+    },
+    {
+      "crop_start_z": 63,
+      "crop_stop_z": 84,
+      "original_shape_zyx": [
+        104,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        21,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 75,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0033",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        5.0,
+        0.8144530057907104,
+        0.8144530057907104
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0033.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0033.nii.gz",
+      "organ": "Spleen",
+      "dice_by_prompt_count": [
+        0.8636620696718574,
+        0.8636620696718574,
+        0.8640402093943282,
+        0.8598649531692442,
+        0.8598649531692442
+      ],
+      "one_box_dice": 0.8636620696718574,
+      "five_box_dice": 0.8598649531692442,
+      "prompt_slices_cropped": [
+        12,
+        19,
+        18,
+        3,
+        1
+      ],
+      "prompt_slices_original": [
+        75,
+        82,
+        81,
+        66,
+        64
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            342.0,
+            168.0,
+            445.0,
+            308.0
+          ]
+        ],
+        [
+          [
+            347.0,
+            213.0,
+            409.0,
+            255.0
+          ]
+        ],
+        [
+          [
+            340.0,
+            205.0,
+            418.0,
+            285.0
+          ]
+        ],
+        [
+          [
+            403.0,
+            175.0,
+            444.0,
+            279.0
+          ]
+        ],
+        [
+          [
+            414.0,
+            193.0,
+            444.0,
+            272.0
+          ]
+        ]
+      ],
+      "total_seconds": 3.6840482680127025
+    },
+    {
+      "crop_start_z": 63,
+      "crop_stop_z": 86,
+      "original_shape_zyx": [
+        98,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        23,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 76,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0034",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        5.0,
+        0.671875,
+        0.671875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0034.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0034.nii.gz",
+      "organ": "Spleen",
+      "dice_by_prompt_count": [
+        0.9066287726087775,
+        0.9066135442106713,
+        0.9063882237171328,
+        0.9062786488328907,
+        0.905609599774502
+      ],
+      "one_box_dice": 0.9066287726087775,
+      "five_box_dice": 0.905609599774502,
+      "prompt_slices_cropped": [
+        13,
+        1,
+        2,
+        21,
+        20
+      ],
+      "prompt_slices_original": [
+        76,
+        64,
+        65,
+        84,
+        83
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            345.0,
+            154.0,
+            484.0,
+            301.0
+          ]
+        ],
+        [
+          [
+            440.0,
+            209.0,
+            476.0,
+            275.0
+          ]
+        ],
+        [
+          [
+            431.0,
+            197.0,
+            480.0,
+            286.0
+          ]
+        ],
+        [
+          [
+            351.0,
+            185.0,
+            439.0,
+            245.0
+          ]
+        ],
+        [
+          [
+            347.0,
+            175.0,
+            452.0,
+            245.0
+          ]
+        ]
+      ],
+      "total_seconds": 3.7677856418304145
+    }
+  ],
+  "source_sha256": {
+    "summarize.py": "5039121cc61cd3a1933076091556414e97322a18533d82769474a221f032df64",
+    "evaluate.py": "c029f9137f0c67f58e3ad8ac5d70e85058b00e5e91cd22115fde4d926c0a71ff",
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "author_mbox.py": "87e7a670e2f985ab3035ad686b100e8000204806e370324f2ac373fb339559ae",
+    "predictor.py": "239beab9175f067a61aa9cec700611fe09892b5e90939569ae02fa6e8ac286e0",
+    "helpers.py": "fc1d547ec89c6a257d65d521c7da88e37e3849d596256f6a729ab2dc6f32ebf9",
+    "loader.py": "6f60df861d792a5ebdded032571946568d4a1c596a10114d51950941490005d3",
+    "data_engine.py": "53e6ab80edba2230f042919cfeb6292de98985da24ebfee18af06fa453ad4469"
+  },
+  "manifest_sha256": {
+    "01_BTCV_test_4to1.txt": "1896d2532b2b3a89b22a34cf4ab4c29cafc6ce3f3f5a1041a97312a444e803ba",
+    "01_BTCV_train_4to1.txt": "ced778eb6b58f9a5947489ffb36396c63b224cf08e645e942a2de9700a9ed1b6"
+  }
+}
