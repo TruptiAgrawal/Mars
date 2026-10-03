@@ -1,0 +1,63 @@
+fold 2: 422 tensors per checkpoint, 48 LoRA tensors (0.147 MB) vs 376.9 MB full
+  packed epoch_00     (model_epoch_0.pth)
+  packed epoch_01     (model_epoch_1.pth)
+  packed epoch_02     (model_epoch_2.pth)
+  packed epoch_03     (model_epoch_3.pth)
+  packed epoch_04     (model_epoch_4.pth)
+  packed epoch_05     (model_epoch_5.pth)
+  packed epoch_06     (model_epoch_6.pth)
+  packed epoch_07     (model_epoch_7.pth)
+  packed epoch_08     (model_epoch_8.pth)
+  packed epoch_09     (model_epoch_9.pth)
+  packed epoch_10     (model_epoch_10.pth)
+  packed epoch_11     (model_epoch_11.pth)
+  packed epoch_12     (model_epoch_12.pth)
+  packed epoch_13     (model_epoch_13.pth)
+  packed epoch_14     (model_epoch_14.pth)
+  packed epoch_15     (model_epoch_15.pth)
+  packed epoch_16     (model_epoch_16.pth)
+  packed epoch_17     (model_epoch_17.pth)
+  packed epoch_18     (model_epoch_18.pth)
+  packed epoch_19     (model_epoch_19.pth)
+  packed epoch_20     (model_epoch_20.pth)
+  packed iter_00000   (model_iter_0.pth)
+  packed iter_05000   (model_iter_5000.pth)
+  packed iter_10000   (model_iter_10000.pth)
+  packed iter_15000   (model_iter_15000.pth)
+  packed iter_20000   (model_iter_20000.pth)
+  packed iter_25000   (model_iter_25000.pth)
+  packed iter_30000   (model_iter_30000.pth)
+  packed iter_35000   (model_iter_35000.pth)
+ckpt_v/model_latest.pth is bit-identical to epoch_20: True
+wrote /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/logs/fold2_analysis/fold2_lora_deltas.npz (4.77 MB, 29 checkpoints)
+  OK   epoch_00     rebuilt from pack == model_epoch_0.pth
+  OK   epoch_01     rebuilt from pack == model_epoch_1.pth
+  OK   epoch_02     rebuilt from pack == model_epoch_2.pth
+  OK   epoch_03     rebuilt from pack == model_epoch_3.pth
+  OK   epoch_04     rebuilt from pack == model_epoch_4.pth
+  OK   epoch_05     rebuilt from pack == model_epoch_5.pth
+  OK   epoch_06     rebuilt from pack == model_epoch_6.pth
+  OK   epoch_07     rebuilt from pack == model_epoch_7.pth
+  OK   epoch_08     rebuilt from pack == model_epoch_8.pth
+  OK   epoch_09     rebuilt from pack == model_epoch_9.pth
+  OK   epoch_10     rebuilt from pack == model_epoch_10.pth
+  OK   epoch_11     rebuilt from pack == model_epoch_11.pth
+  OK   epoch_12     rebuilt from pack == model_epoch_12.pth
+  OK   epoch_13     rebuilt from pack == model_epoch_13.pth
+  OK   epoch_14     rebuilt from pack == model_epoch_14.pth
+  OK   epoch_15     rebuilt from pack == model_epoch_15.pth
+  OK   epoch_16     rebuilt from pack == model_epoch_16.pth
+  OK   epoch_17     rebuilt from pack == model_epoch_17.pth
+  OK   epoch_18     rebuilt from pack == model_epoch_18.pth
+  OK   epoch_19     rebuilt from pack == model_epoch_19.pth
+  OK   epoch_20     rebuilt from pack == model_epoch_20.pth
+  OK   iter_00000   rebuilt from pack == model_iter_0.pth
+  OK   iter_05000   rebuilt from pack == model_iter_5000.pth
+  OK   iter_10000   rebuilt from pack == model_iter_10000.pth
+  OK   iter_15000   rebuilt from pack == model_iter_15000.pth
+  OK   iter_20000   rebuilt from pack == model_iter_20000.pth
+  OK   iter_25000   rebuilt from pack == model_iter_25000.pth
+  OK   iter_30000   rebuilt from pack == model_iter_30000.pth
+  OK   iter_35000   rebuilt from pack == model_iter_35000.pth
+
+RESULT: 29/29 checkpoints rebuild bit-exactly from model_epoch_0.pth + fold2_lora_deltas.npz

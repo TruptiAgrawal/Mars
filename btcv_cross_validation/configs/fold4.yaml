@@ -13,7 +13,7 @@ training:
   num_workers: 8
   num_epochs: 21
   use_amp: false
-  save_interval: 1
+  save_interval: 5
   val_check_interval: 6
   load_pretrain_model: false
   lr: 0.00002

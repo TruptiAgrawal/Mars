@@ -1,0 +1,147 @@
+{
+  "epoch": 20,
+  "prompt": "box",
+  "n_folds": 5,
+  "n_volumes": 30,
+  "sd_ddof": 1,
+  "aggregation": "mean and sample SD across fold means",
+  "sources": [
+    {
+      "fold": 1,
+      "path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/logs/fold1_evaluation.json",
+      "sha256": "39602e8d86cdcbea68a5a6aa579e5b17ba9e43d4cc567f744a9fb6e0873a8a0d",
+      "checkpoint": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold1/ddp_sub_cv/cv_fold1/ckpt/model_epoch_20.pth",
+      "heldout_volumes": [
+        "img0001",
+        "img0002",
+        "img0003",
+        "img0004",
+        "img0005",
+        "img0006"
+      ]
+    },
+    {
+      "fold": 2,
+      "path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/logs/fold2_evaluation.json",
+      "sha256": "0d706f598155e7d1970d81416806a4bdf2698f98ac5d058f09d1ceb7eea13e47",
+      "checkpoint": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold2/ddp_sub_cv/cv_fold2/ckpt/model_epoch_20.pth",
+      "heldout_volumes": [
+        "img0007",
+        "img0008",
+        "img0009",
+        "img0010",
+        "img0021",
+        "img0022"
+      ]
+    },
+    {
+      "fold": 3,
+      "path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/logs/fold3_evaluation.json",
+      "sha256": "eebd65d27410844adcdcdd4eb5db729dbc53d07ad60e19c2ef5d01b3ab8b19df",
+      "checkpoint": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold3/ddp_sub_cv/cv_fold3/ckpt/model_epoch_20.pth",
+      "heldout_volumes": [
+        "img0023",
+        "img0024",
+        "img0025",
+        "img0026",
+        "img0027",
+        "img0028"
+      ]
+    },
+    {
+      "fold": 4,
+      "path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/logs/fold4_evaluation.json",
+      "sha256": "36f5e8dd0355a32203146decfb41d3beda3e0671fe730d79cb326a4aeba4c989",
+      "checkpoint": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold4/ddp_sub_cv/cv_fold4/ckpt/model_epoch_20.pth",
+      "heldout_volumes": [
+        "img0029",
+        "img0030",
+        "img0031",
+        "img0032",
+        "img0033",
+        "img0034"
+      ]
+    },
+    {
+      "fold": 5,
+      "path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/logs/fold5_evaluation.json",
+      "sha256": "d6ae736c75eafd617368903d855fb425a23efaa91bfc3c43f8b9edc4887bc8b8",
+      "checkpoint": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold5/ddp_sub_cv/cv_fold5/ckpt/model_epoch_20.pth",
+      "heldout_volumes": [
+        "img0035",
+        "img0036",
+        "img0037",
+        "img0038",
+        "img0039",
+        "img0040"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "organ": "Liver",
+      "metric": "dice",
+      "fold1": 0.7486740341465633,
+      "fold2": 0.6839434495348631,
+      "fold3": 0.7763923766739487,
+      "fold4": 0.7713824125827371,
+      "fold5": 0.7901969060968096,
+      "mean": 0.7541178358069843,
+      "sd": 0.04198213775001507,
+      "n_folds": 5,
+      "sd_ddof": 1
+    },
+    {
+      "organ": "Stomach",
+      "metric": "dice",
+      "fold1": 0.5782645368346009,
+      "fold2": 0.5755314058413835,
+      "fold3": 0.6126853126004298,
+      "fold4": 0.6331512627203931,
+      "fold5": 0.6156336759297925,
+      "mean": 0.6030532387853199,
+      "sd": 0.025143917368408975,
+      "n_folds": 5,
+      "sd_ddof": 1
+    },
+    {
+      "organ": "Left Kidney",
+      "metric": "dice",
+      "fold1": 0.7019289117324378,
+      "fold2": 0.617102719608693,
+      "fold3": 0.6901870245548624,
+      "fold4": 0.6961953940628154,
+      "fold5": 0.6773637328419394,
+      "mean": 0.6765555565601495,
+      "sd": 0.03446244426908809,
+      "n_folds": 5,
+      "sd_ddof": 1
+    },
+    {
+      "organ": "Spleen",
+      "metric": "dice",
+      "fold1": 0.7624626514225205,
+      "fold2": 0.6714697100352262,
+      "fold3": 0.7942553181647153,
+      "fold4": 0.7505183034852992,
+      "fold5": 0.7648082439723122,
+      "mean": 0.7487028454160146,
+      "sd": 0.04607601595804349,
+      "n_folds": 5,
+      "sd_ddof": 1
+    },
+    {
+      "organ": "Four-organ macro average",
+      "metric": "dice",
+      "fold1": 0.6978325335340306,
+      "fold2": 0.6370118212550414,
+      "fold3": 0.718380007998489,
+      "fold4": 0.7128118432128112,
+      "fold5": 0.7120006397102134,
+      "mean": 0.6956073691421172,
+      "sd": 0.03362185270478249,
+      "n_folds": 5,
+      "sd_ddof": 1
+    }
+  ]
+}

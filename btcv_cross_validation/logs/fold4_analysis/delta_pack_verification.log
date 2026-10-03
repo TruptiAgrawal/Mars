@@ -1,0 +1,15 @@
+  OK   epoch_00     rebuilt from pack == model_epoch_0.pth
+  OK   epoch_05     rebuilt from pack == model_epoch_5.pth
+  OK   epoch_10     rebuilt from pack == model_epoch_10.pth
+  OK   epoch_15     rebuilt from pack == model_epoch_15.pth
+  OK   epoch_20     rebuilt from pack == model_epoch_20.pth
+  OK   iter_00000   rebuilt from pack == model_iter_0.pth
+  OK   iter_05000   rebuilt from pack == model_iter_5000.pth
+  OK   iter_10000   rebuilt from pack == model_iter_10000.pth
+  OK   iter_15000   rebuilt from pack == model_iter_15000.pth
+  OK   iter_20000   rebuilt from pack == model_iter_20000.pth
+  OK   iter_25000   rebuilt from pack == model_iter_25000.pth
+  OK   iter_30000   rebuilt from pack == model_iter_30000.pth
+  OK   iter_35000   rebuilt from pack == model_iter_35000.pth
+
+RESULT: 13/13 checkpoints rebuild bit-exactly from model_epoch_0.pth + fold4_lora_deltas.npz

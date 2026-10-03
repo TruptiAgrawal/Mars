@@ -1,0 +1,579 @@
+Loading from  /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold5/ddp_sub_cv/cv_fold5/ckpt/model_epoch_0.pth
+/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/checkpoint_trajectory/author_source/core/learner2.py:102: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(pth, map_location="cpu")
+Load datalist from  matched
+train len 6
+template_slice.area  22887 0.08730697631835938
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0035.nii.gz'] 0.8860886113688481 0
+MATCHED_CASE bs4_fold5_epoch0 Liver {"patient": "img0035", "dice": 0.8860886113688481, "seconds": 8.009673175867647, "template_slice": 30, "cropped_shape": [39, 512, 512], "spacing_xyz": [0.9199219942092896, 0.9199219942092896, 5.0]}
+template_slice.area  48830 0.18627166748046875
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0036.nii.gz'] 0.8420087699761305 0
+MATCHED_CASE bs4_fold5_epoch0 Liver {"patient": "img0036", "dice": 0.8420087699761305, "seconds": 13.994417698122561, "template_slice": 45, "cropped_shape": [68, 512, 512], "spacing_xyz": [0.74609375, 0.74609375, 3.0]}
+template_slice.area  39499 0.15067672729492188
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0037.nii.gz'] 0.9019805085937416 0
+MATCHED_CASE bs4_fold5_epoch0 Liver {"patient": "img0037", "dice": 0.9019805085937416, "seconds": 6.7924786598887295, "template_slice": 23, "cropped_shape": [34, 512, 512], "spacing_xyz": [0.703125, 0.703125, 5.0]}
+template_slice.area  23953 0.09137344360351562
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0038.nii.gz'] 0.9064611866782563 0
+MATCHED_CASE bs4_fold5_epoch0 Liver {"patient": "img0038", "dice": 0.9064611866782563, "seconds": 9.41745582781732, "template_slice": 28, "cropped_shape": [43, 512, 512], "spacing_xyz": [0.9765620231628418, 0.9765620231628418, 5.0]}
+template_slice.area  20166 0.07692718505859375
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0039.nii.gz'] 0.9291466143047475 0
+MATCHED_CASE bs4_fold5_epoch0 Liver {"patient": "img0039", "dice": 0.9291466143047475, "seconds": 8.271801016991958, "template_slice": 28, "cropped_shape": [39, 512, 512], "spacing_xyz": [0.9760000109672546, 0.9760000109672546, 5.0]}
+template_slice.area  31997 0.12205886840820312
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0040.nii.gz'] 0.5439594642762733 0
+MATCHED_CASE bs4_fold5_epoch0 Liver {"patient": "img0040", "dice": 0.5439594642762733, "seconds": 9.843135043047369, "template_slice": 46, "cropped_shape": [62, 512, 512], "spacing_xyz": [0.7421875, 0.7421875, 3.0]}
+Load datalist from  matched
+train len 6
+template_slice.area  6408 0.024444580078125
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0035.nii.gz'] 0.66011051615419 0
+MATCHED_CASE bs4_fold5_epoch0 Stomach {"patient": "img0035", "dice": 0.66011051615419, "seconds": 2.8842792161740363, "template_slice": 12, "cropped_shape": [20, 512, 512], "spacing_xyz": [0.9199219942092896, 0.9199219942092896, 5.0]}
+template_slice.area  11843 0.045177459716796875
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0036.nii.gz'] 0.6721385948026949 0
+MATCHED_CASE bs4_fold5_epoch0 Stomach {"patient": "img0036", "dice": 0.6721385948026949, "seconds": 6.246638888958842, "template_slice": 24, "cropped_shape": [37, 512, 512], "spacing_xyz": [0.74609375, 0.74609375, 3.0]}
+template_slice.area  8348 0.0318450927734375
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0037.nii.gz'] 0.8226167185952709 0
+MATCHED_CASE bs4_fold5_epoch0 Stomach {"patient": "img0037", "dice": 0.8226167185952709, "seconds": 3.956312210066244, "template_slice": 7, "cropped_shape": [18, 512, 512], "spacing_xyz": [0.703125, 0.703125, 5.0]}
+template_slice.area  16708 0.0637359619140625
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0038.nii.gz'] 0.702923954444676 0
+MATCHED_CASE bs4_fold5_epoch0 Stomach {"patient": "img0038", "dice": 0.702923954444676, "seconds": 5.170923939906061, "template_slice": 19, "cropped_shape": [30, 512, 512], "spacing_xyz": [0.9765620231628418, 0.9765620231628418, 5.0]}
+template_slice.area  5534 0.02111053466796875
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0039.nii.gz'] 0.7229334872723534 0
+MATCHED_CASE bs4_fold5_epoch0 Stomach {"patient": "img0039", "dice": 0.7229334872723534, "seconds": 3.9519346649758518, "template_slice": 16, "cropped_shape": [25, 512, 512], "spacing_xyz": [0.9760000109672546, 0.9760000109672546, 5.0]}
+template_slice.area  13757 0.052478790283203125
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0040.nii.gz'] 0.602382372840683 0
+MATCHED_CASE bs4_fold5_epoch0 Stomach {"patient": "img0040", "dice": 0.602382372840683, "seconds": 9.140112497843802, "template_slice": 38, "cropped_shape": [51, 512, 512], "spacing_xyz": [0.7421875, 0.7421875, 3.0]}
+Load datalist from  matched
+train len 6
+template_slice.area  2589 0.009876251220703125
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0035.nii.gz'] 0.7224142393836502 0
+MATCHED_CASE bs4_fold5_epoch0 Left kidney {"patient": "img0035", "dice": 0.7224142393836502, "seconds": 4.070864740991965, "template_slice": 16, "cropped_shape": [23, 512, 512], "spacing_xyz": [0.9199219942092896, 0.9199219942092896, 5.0]}
+template_slice.area  6720 0.025634765625
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0036.nii.gz'] 0.8378776025779966 0
+MATCHED_CASE bs4_fold5_epoch0 Left kidney {"patient": "img0036", "dice": 0.8378776025779966, "seconds": 8.464521300978959, "template_slice": 24, "cropped_shape": [40, 512, 512], "spacing_xyz": [0.74609375, 0.74609375, 3.0]}
+template_slice.area  4508 0.0171966552734375
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0037.nii.gz'] 0.8281803796004109 0
+MATCHED_CASE bs4_fold5_epoch0 Left kidney {"patient": "img0037", "dice": 0.8281803796004109, "seconds": 4.399933459004387, "template_slice": 8, "cropped_shape": [22, 512, 512], "spacing_xyz": [0.703125, 0.703125, 5.0]}
+template_slice.area  3250 0.01239776611328125
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0038.nii.gz'] 0.6859937724823341 0
+MATCHED_CASE bs4_fold5_epoch0 Left kidney {"patient": "img0038", "dice": 0.6859937724823341, "seconds": 4.233603137079626, "template_slice": 14, "cropped_shape": [22, 512, 512], "spacing_xyz": [0.9765620231628418, 0.9765620231628418, 5.0]}
+template_slice.area  1994 0.00760650634765625
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0039.nii.gz'] 0.6396261760929508 0
+MATCHED_CASE bs4_fold5_epoch0 Left kidney {"patient": "img0039", "dice": 0.6396261760929508, "seconds": 4.600886478088796, "template_slice": 18, "cropped_shape": [25, 512, 512], "spacing_xyz": [0.9760000109672546, 0.9760000109672546, 5.0]}
+template_slice.area  4278 0.01631927490234375
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0040.nii.gz'] 0.7824824749868958 0
+MATCHED_CASE bs4_fold5_epoch0 Left kidney {"patient": "img0040", "dice": 0.7824824749868958, "seconds": 6.4610416169743985, "template_slice": 21, "cropped_shape": [36, 512, 512], "spacing_xyz": [0.7421875, 0.7421875, 3.0]}
+Load datalist from  matched
+train len 6
+template_slice.area  4992 0.01904296875
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0035.nii.gz'] 0.7941271403267074 0
+MATCHED_CASE bs4_fold5_epoch0 Spleen {"patient": "img0035", "dice": 0.7941271403267074, "seconds": 4.466157290851697, "template_slice": 15, "cropped_shape": [24, 512, 512], "spacing_xyz": [0.9199219942092896, 0.9199219942092896, 5.0]}
+template_slice.area  10316 0.0393524169921875
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0036.nii.gz'] 0.9333705866651366 0
+MATCHED_CASE bs4_fold5_epoch0 Spleen {"patient": "img0036", "dice": 0.9333705866651366, "seconds": 6.2205321080982685, "template_slice": 21, "cropped_shape": [37, 512, 512], "spacing_xyz": [0.74609375, 0.74609375, 3.0]}
+template_slice.area  7581 0.028919219970703125
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0037.nii.gz'] 0.7960968412581316 0
+MATCHED_CASE bs4_fold5_epoch0 Spleen {"patient": "img0037", "dice": 0.7960968412581316, "seconds": 4.059413867071271, "template_slice": 13, "cropped_shape": [19, 512, 512], "spacing_xyz": [0.703125, 0.703125, 5.0]}
+template_slice.area  7460 0.0284576416015625
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0038.nii.gz'] 0.9115433592641992 0
+MATCHED_CASE bs4_fold5_epoch0 Spleen {"patient": "img0038", "dice": 0.9115433592641992, "seconds": 3.6114254351705313, "template_slice": 9, "cropped_shape": [22, 512, 512], "spacing_xyz": [0.9765620231628418, 0.9765620231628418, 5.0]}
+template_slice.area  6292 0.0240020751953125
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0039.nii.gz'] 0.930400711459394 0
+MATCHED_CASE bs4_fold5_epoch0 Spleen {"patient": "img0039", "dice": 0.930400711459394, "seconds": 3.504684323910624, "template_slice": 10, "cropped_shape": [21, 512, 512], "spacing_xyz": [0.9760000109672546, 0.9760000109672546, 5.0]}
+template_slice.area  5244 0.0200042724609375
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0040.nii.gz'] 0.9335858045994564 0
+MATCHED_CASE bs4_fold5_epoch0 Spleen {"patient": "img0040", "dice": 0.9335858045994564, "seconds": 6.161997414892539, "template_slice": 13, "cropped_shape": [28, 512, 512], "spacing_xyz": [0.7421875, 0.7421875, 3.0]}
+Loading from  /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold5/ddp_sub_cv/cv_fold5/ckpt/model_epoch_5.pth
+Load datalist from  matched
+train len 6
+template_slice.area  22887 0.08730697631835938
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0035.nii.gz'] 0.7834479041799723 0
+MATCHED_CASE bs4_fold5_epoch5 Liver {"patient": "img0035", "dice": 0.7834479041799723, "seconds": 6.17012167093344, "template_slice": 30, "cropped_shape": [39, 512, 512], "spacing_xyz": [0.9199219942092896, 0.9199219942092896, 5.0]}
+template_slice.area  48830 0.18627166748046875
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0036.nii.gz'] 0.7558840250142126 0
+MATCHED_CASE bs4_fold5_epoch5 Liver {"patient": "img0036", "dice": 0.7558840250142126, "seconds": 13.126436148071662, "template_slice": 45, "cropped_shape": [68, 512, 512], "spacing_xyz": [0.74609375, 0.74609375, 3.0]}
+template_slice.area  39499 0.15067672729492188
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0037.nii.gz'] 0.8160401957102505 0
+MATCHED_CASE bs4_fold5_epoch5 Liver {"patient": "img0037", "dice": 0.8160401957102505, "seconds": 6.270852254005149, "template_slice": 23, "cropped_shape": [34, 512, 512], "spacing_xyz": [0.703125, 0.703125, 5.0]}
+template_slice.area  23953 0.09137344360351562
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0038.nii.gz'] 0.7709523076308931 0
+MATCHED_CASE bs4_fold5_epoch5 Liver {"patient": "img0038", "dice": 0.7709523076308931, "seconds": 7.951722152996808, "template_slice": 28, "cropped_shape": [43, 512, 512], "spacing_xyz": [0.9765620231628418, 0.9765620231628418, 5.0]}
+template_slice.area  20166 0.07692718505859375
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0039.nii.gz'] 0.7401896119032755 0
+MATCHED_CASE bs4_fold5_epoch5 Liver {"patient": "img0039", "dice": 0.7401896119032755, "seconds": 6.271428589010611, "template_slice": 28, "cropped_shape": [39, 512, 512], "spacing_xyz": [0.9760000109672546, 0.9760000109672546, 5.0]}
+template_slice.area  31997 0.12205886840820312
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0040.nii.gz'] 0.6887925078567693 0
+MATCHED_CASE bs4_fold5_epoch5 Liver {"patient": "img0040", "dice": 0.6887925078567693, "seconds": 11.377726704115048, "template_slice": 46, "cropped_shape": [62, 512, 512], "spacing_xyz": [0.7421875, 0.7421875, 3.0]}
+Load datalist from  matched
+train len 6
+template_slice.area  6408 0.024444580078125
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0035.nii.gz'] 0.6158649834459369 0
+MATCHED_CASE bs4_fold5_epoch5 Stomach {"patient": "img0035", "dice": 0.6158649834459369, "seconds": 3.4320889010559767, "template_slice": 12, "cropped_shape": [20, 512, 512], "spacing_xyz": [0.9199219942092896, 0.9199219942092896, 5.0]}
+template_slice.area  11843 0.045177459716796875
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0036.nii.gz'] 0.6328823630515383 0
+MATCHED_CASE bs4_fold5_epoch5 Stomach {"patient": "img0036", "dice": 0.6328823630515383, "seconds": 5.614445000886917, "template_slice": 24, "cropped_shape": [37, 512, 512], "spacing_xyz": [0.74609375, 0.74609375, 3.0]}
+template_slice.area  8348 0.0318450927734375
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0037.nii.gz'] 0.7056582732570476 0
+MATCHED_CASE bs4_fold5_epoch5 Stomach {"patient": "img0037", "dice": 0.7056582732570476, "seconds": 2.7796498318202794, "template_slice": 7, "cropped_shape": [18, 512, 512], "spacing_xyz": [0.703125, 0.703125, 5.0]}
+template_slice.area  16708 0.0637359619140625
+Checking Data range: [-200.0, 400.0]
+No masks
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0038.nii.gz'] 0.6925835162852907 0
+MATCHED_CASE bs4_fold5_epoch5 Stomach {"patient": "img0038", "dice": 0.6925835162852907, "seconds": 5.247243584133685, "template_slice": 19, "cropped_shape": [30, 512, 512], "spacing_xyz": [0.9765620231628418, 0.9765620231628418, 5.0]}
+template_slice.area  5534 0.02111053466796875
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0039.nii.gz'] 0.622944227753428 0
+MATCHED_CASE bs4_fold5_epoch5 Stomach {"patient": "img0039", "dice": 0.622944227753428, "seconds": 3.533119887113571, "template_slice": 16, "cropped_shape": [25, 512, 512], "spacing_xyz": [0.9760000109672546, 0.9760000109672546, 5.0]}
+template_slice.area  13757 0.052478790283203125
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0040.nii.gz'] 0.5035393441213508 0
+MATCHED_CASE bs4_fold5_epoch5 Stomach {"patient": "img0040", "dice": 0.5035393441213508, "seconds": 8.270106548909098, "template_slice": 38, "cropped_shape": [51, 512, 512], "spacing_xyz": [0.7421875, 0.7421875, 3.0]}
+Load datalist from  matched
+train len 6
+template_slice.area  2589 0.009876251220703125
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0035.nii.gz'] 0.6205243526385953 0
+MATCHED_CASE bs4_fold5_epoch5 Left kidney {"patient": "img0035", "dice": 0.6205243526385953, "seconds": 4.285195134114474, "template_slice": 16, "cropped_shape": [23, 512, 512], "spacing_xyz": [0.9199219942092896, 0.9199219942092896, 5.0]}
+template_slice.area  6720 0.025634765625
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0036.nii.gz'] 0.7773741789621439 0
+MATCHED_CASE bs4_fold5_epoch5 Left kidney {"patient": "img0036", "dice": 0.7773741789621439, "seconds": 8.04159091413021, "template_slice": 24, "cropped_shape": [40, 512, 512], "spacing_xyz": [0.74609375, 0.74609375, 3.0]}
+template_slice.area  4508 0.0171966552734375
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0037.nii.gz'] 0.6748333222373339 0
+MATCHED_CASE bs4_fold5_epoch5 Left kidney {"patient": "img0037", "dice": 0.6748333222373339, "seconds": 4.120893584098667, "template_slice": 8, "cropped_shape": [22, 512, 512], "spacing_xyz": [0.703125, 0.703125, 5.0]}
+template_slice.area  3250 0.01239776611328125
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0038.nii.gz'] 0.6755846483961213 0
+MATCHED_CASE bs4_fold5_epoch5 Left kidney {"patient": "img0038", "dice": 0.6755846483961213, "seconds": 4.189697172958404, "template_slice": 14, "cropped_shape": [22, 512, 512], "spacing_xyz": [0.9765620231628418, 0.9765620231628418, 5.0]}
+template_slice.area  1994 0.00760650634765625
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0039.nii.gz'] 0.5572401959975583 0
+MATCHED_CASE bs4_fold5_epoch5 Left kidney {"patient": "img0039", "dice": 0.5572401959975583, "seconds": 4.676257384940982, "template_slice": 18, "cropped_shape": [25, 512, 512], "spacing_xyz": [0.9760000109672546, 0.9760000109672546, 5.0]}
+template_slice.area  4278 0.01631927490234375
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0040.nii.gz'] 0.7139031515580736 0
+MATCHED_CASE bs4_fold5_epoch5 Left kidney {"patient": "img0040", "dice": 0.7139031515580736, "seconds": 6.32836256083101, "template_slice": 21, "cropped_shape": [36, 512, 512], "spacing_xyz": [0.7421875, 0.7421875, 3.0]}
+Load datalist from  matched
+train len 6
+template_slice.area  4992 0.01904296875
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0035.nii.gz'] 0.6765418798814974 0
+MATCHED_CASE bs4_fold5_epoch5 Spleen {"patient": "img0035", "dice": 0.6765418798814974, "seconds": 4.59325228491798, "template_slice": 15, "cropped_shape": [24, 512, 512], "spacing_xyz": [0.9199219942092896, 0.9199219942092896, 5.0]}
+template_slice.area  10316 0.0393524169921875
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0036.nii.gz'] 0.7900813434794017 0
+MATCHED_CASE bs4_fold5_epoch5 Spleen {"patient": "img0036", "dice": 0.7900813434794017, "seconds": 6.413083750056103, "template_slice": 21, "cropped_shape": [37, 512, 512], "spacing_xyz": [0.74609375, 0.74609375, 3.0]}
+template_slice.area  7581 0.028919219970703125
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0037.nii.gz'] 0.6006532118181449 0
+MATCHED_CASE bs4_fold5_epoch5 Spleen {"patient": "img0037", "dice": 0.6006532118181449, "seconds": 3.787347595207393, "template_slice": 13, "cropped_shape": [19, 512, 512], "spacing_xyz": [0.703125, 0.703125, 5.0]}
+template_slice.area  7460 0.0284576416015625
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+No masks
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0038.nii.gz'] 0.780638505690361 0
+MATCHED_CASE bs4_fold5_epoch5 Spleen {"patient": "img0038", "dice": 0.780638505690361, "seconds": 3.7179959069471806, "template_slice": 9, "cropped_shape": [22, 512, 512], "spacing_xyz": [0.9765620231628418, 0.9765620231628418, 5.0]}
+template_slice.area  6292 0.0240020751953125
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0039.nii.gz'] 0.8515710455093788 0
+MATCHED_CASE bs4_fold5_epoch5 Spleen {"patient": "img0039", "dice": 0.8515710455093788, "seconds": 3.6885404312051833, "template_slice": 10, "cropped_shape": [21, 512, 512], "spacing_xyz": [0.9760000109672546, 0.9760000109672546, 5.0]}
+template_slice.area  5244 0.0200042724609375
+Checking Data range: [-200.0, 400.0]
+No masks
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0040.nii.gz'] 0.8249148945576728 0
+MATCHED_CASE bs4_fold5_epoch5 Spleen {"patient": "img0040", "dice": 0.8249148945576728, "seconds": 5.713145489105955, "template_slice": 13, "cropped_shape": [28, 512, 512], "spacing_xyz": [0.7421875, 0.7421875, 3.0]}
+Loading from  /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold5/ddp_sub_cv/cv_fold5/ckpt/model_epoch_10.pth
+Load datalist from  matched
+train len 6
+template_slice.area  22887 0.08730697631835938
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0035.nii.gz'] 0.7995335867911343 0
+MATCHED_CASE bs4_fold5_epoch10 Liver {"patient": "img0035", "dice": 0.7995335867911343, "seconds": 7.736127782147378, "template_slice": 30, "cropped_shape": [39, 512, 512], "spacing_xyz": [0.9199219942092896, 0.9199219942092896, 5.0]}
+template_slice.area  48830 0.18627166748046875
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0036.nii.gz'] 0.7447876158475499 0
+MATCHED_CASE bs4_fold5_epoch10 Liver {"patient": "img0036", "dice": 0.7447876158475499, "seconds": 13.990367479855195, "template_slice": 45, "cropped_shape": [68, 512, 512], "spacing_xyz": [0.74609375, 0.74609375, 3.0]}
+template_slice.area  39499 0.15067672729492188
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0037.nii.gz'] 0.8142826241188414 0
+MATCHED_CASE bs4_fold5_epoch10 Liver {"patient": "img0037", "dice": 0.8142826241188414, "seconds": 5.825526120141149, "template_slice": 23, "cropped_shape": [34, 512, 512], "spacing_xyz": [0.703125, 0.703125, 5.0]}
+template_slice.area  23953 0.09137344360351562
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0038.nii.gz'] 0.7789433076613891 0
+MATCHED_CASE bs4_fold5_epoch10 Liver {"patient": "img0038", "dice": 0.7789433076613891, "seconds": 7.8406227270606905, "template_slice": 28, "cropped_shape": [43, 512, 512], "spacing_xyz": [0.9765620231628418, 0.9765620231628418, 5.0]}
+template_slice.area  20166 0.07692718505859375
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0039.nii.gz'] 0.8065531917379658 0
+MATCHED_CASE bs4_fold5_epoch10 Liver {"patient": "img0039", "dice": 0.8065531917379658, "seconds": 6.266671305987984, "template_slice": 28, "cropped_shape": [39, 512, 512], "spacing_xyz": [0.9760000109672546, 0.9760000109672546, 5.0]}
+template_slice.area  31997 0.12205886840820312
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0040.nii.gz'] 0.6861760242677375 0
+MATCHED_CASE bs4_fold5_epoch10 Liver {"patient": "img0040", "dice": 0.6861760242677375, "seconds": 11.232578105991706, "template_slice": 46, "cropped_shape": [62, 512, 512], "spacing_xyz": [0.7421875, 0.7421875, 3.0]}
+Load datalist from  matched
+train len 6
+template_slice.area  6408 0.024444580078125
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0035.nii.gz'] 0.5969673398442377 0
+MATCHED_CASE bs4_fold5_epoch10 Stomach {"patient": "img0035", "dice": 0.5969673398442377, "seconds": 3.2849124069325626, "template_slice": 12, "cropped_shape": [20, 512, 512], "spacing_xyz": [0.9199219942092896, 0.9199219942092896, 5.0]}
+template_slice.area  11843 0.045177459716796875
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0036.nii.gz'] 0.6105784010171634 0
+MATCHED_CASE bs4_fold5_epoch10 Stomach {"patient": "img0036", "dice": 0.6105784010171634, "seconds": 6.085902986116707, "template_slice": 24, "cropped_shape": [37, 512, 512], "spacing_xyz": [0.74609375, 0.74609375, 3.0]}
+template_slice.area  8348 0.0318450927734375
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0037.nii.gz'] 0.7025211416228642 0
+MATCHED_CASE bs4_fold5_epoch10 Stomach {"patient": "img0037", "dice": 0.7025211416228642, "seconds": 2.755607329076156, "template_slice": 7, "cropped_shape": [18, 512, 512], "spacing_xyz": [0.703125, 0.703125, 5.0]}
+template_slice.area  16708 0.0637359619140625
+Checking Data range: [-200.0, 400.0]
+No masks
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0038.nii.gz'] 0.6744098279289026 0
+MATCHED_CASE bs4_fold5_epoch10 Stomach {"patient": "img0038", "dice": 0.6744098279289026, "seconds": 4.715604142053053, "template_slice": 19, "cropped_shape": [30, 512, 512], "spacing_xyz": [0.9765620231628418, 0.9765620231628418, 5.0]}
+template_slice.area  5534 0.02111053466796875
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0039.nii.gz'] 0.6268168346176645 0
+MATCHED_CASE bs4_fold5_epoch10 Stomach {"patient": "img0039", "dice": 0.6268168346176645, "seconds": 3.7786834079306573, "template_slice": 16, "cropped_shape": [25, 512, 512], "spacing_xyz": [0.9760000109672546, 0.9760000109672546, 5.0]}
+template_slice.area  13757 0.052478790283203125
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0040.nii.gz'] 0.5079672151318982 0
+MATCHED_CASE bs4_fold5_epoch10 Stomach {"patient": "img0040", "dice": 0.5079672151318982, "seconds": 7.641110198805109, "template_slice": 38, "cropped_shape": [51, 512, 512], "spacing_xyz": [0.7421875, 0.7421875, 3.0]}
+Load datalist from  matched
+train len 6
+template_slice.area  2589 0.009876251220703125
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0035.nii.gz'] 0.6224144923617683 0
+MATCHED_CASE bs4_fold5_epoch10 Left kidney {"patient": "img0035", "dice": 0.6224144923617683, "seconds": 5.062312450958416, "template_slice": 16, "cropped_shape": [23, 512, 512], "spacing_xyz": [0.9199219942092896, 0.9199219942092896, 5.0]}
+template_slice.area  6720 0.025634765625
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0036.nii.gz'] 0.7762628230099987 0
+MATCHED_CASE bs4_fold5_epoch10 Left kidney {"patient": "img0036", "dice": 0.7762628230099987, "seconds": 7.343324112007394, "template_slice": 24, "cropped_shape": [40, 512, 512], "spacing_xyz": [0.74609375, 0.74609375, 3.0]}
+template_slice.area  4508 0.0171966552734375
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0037.nii.gz'] 0.6500892233687641 0
+MATCHED_CASE bs4_fold5_epoch10 Left kidney {"patient": "img0037", "dice": 0.6500892233687641, "seconds": 3.5792718729935586, "template_slice": 8, "cropped_shape": [22, 512, 512], "spacing_xyz": [0.703125, 0.703125, 5.0]}
+template_slice.area  3250 0.01239776611328125
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0038.nii.gz'] 0.6719088567573829 0
+MATCHED_CASE bs4_fold5_epoch10 Left kidney {"patient": "img0038", "dice": 0.6719088567573829, "seconds": 3.6926074190996587, "template_slice": 14, "cropped_shape": [22, 512, 512], "spacing_xyz": [0.9765620231628418, 0.9765620231628418, 5.0]}
+template_slice.area  1994 0.00760650634765625
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0039.nii.gz'] 0.559679862986628 0
+MATCHED_CASE bs4_fold5_epoch10 Left kidney {"patient": "img0039", "dice": 0.559679862986628, "seconds": 4.880701838992536, "template_slice": 18, "cropped_shape": [25, 512, 512], "spacing_xyz": [0.9760000109672546, 0.9760000109672546, 5.0]}
+template_slice.area  4278 0.01631927490234375
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0040.nii.gz'] 0.7122384230749584 0
+MATCHED_CASE bs4_fold5_epoch10 Left kidney {"patient": "img0040", "dice": 0.7122384230749584, "seconds": 6.0115028019063175, "template_slice": 21, "cropped_shape": [36, 512, 512], "spacing_xyz": [0.7421875, 0.7421875, 3.0]}
+Load datalist from  matched
+train len 6
+template_slice.area  4992 0.01904296875
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0035.nii.gz'] 0.6711481277921053 0
+MATCHED_CASE bs4_fold5_epoch10 Spleen {"patient": "img0035", "dice": 0.6711481277921053, "seconds": 4.728821617085487, "template_slice": 15, "cropped_shape": [24, 512, 512], "spacing_xyz": [0.9199219942092896, 0.9199219942092896, 5.0]}
+template_slice.area  10316 0.0393524169921875
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0036.nii.gz'] 0.7851028615506744 0
+MATCHED_CASE bs4_fold5_epoch10 Spleen {"patient": "img0036", "dice": 0.7851028615506744, "seconds": 6.424555123783648, "template_slice": 21, "cropped_shape": [37, 512, 512], "spacing_xyz": [0.74609375, 0.74609375, 3.0]}
+template_slice.area  7581 0.028919219970703125
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0037.nii.gz'] 0.5991664998881603 0
+MATCHED_CASE bs4_fold5_epoch10 Spleen {"patient": "img0037", "dice": 0.5991664998881603, "seconds": 3.9650929630734026, "template_slice": 13, "cropped_shape": [19, 512, 512], "spacing_xyz": [0.703125, 0.703125, 5.0]}
+template_slice.area  7460 0.0284576416015625
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0038.nii.gz'] 0.800339005437295 0
+MATCHED_CASE bs4_fold5_epoch10 Spleen {"patient": "img0038", "dice": 0.800339005437295, "seconds": 3.7031988899689168, "template_slice": 9, "cropped_shape": [22, 512, 512], "spacing_xyz": [0.9765620231628418, 0.9765620231628418, 5.0]}
+template_slice.area  6292 0.0240020751953125
+Checking Data range: [-200.0, 400.0]
+No masks
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0039.nii.gz'] 0.8328919604905048 0
+MATCHED_CASE bs4_fold5_epoch10 Spleen {"patient": "img0039", "dice": 0.8328919604905048, "seconds": 4.183021067874506, "template_slice": 10, "cropped_shape": [21, 512, 512], "spacing_xyz": [0.9760000109672546, 0.9760000109672546, 5.0]}
+template_slice.area  5244 0.0200042724609375
+Checking Data range: [-200.0, 400.0]
+No masks
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0040.nii.gz'] 0.8310586682069477 0
+MATCHED_CASE bs4_fold5_epoch10 Spleen {"patient": "img0040", "dice": 0.8310586682069477, "seconds": 5.250196731183678, "template_slice": 13, "cropped_shape": [28, 512, 512], "spacing_xyz": [0.7421875, 0.7421875, 3.0]}
+Loading from  /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold5/ddp_sub_cv/cv_fold5/ckpt/model_epoch_15.pth
+Load datalist from  matched
+train len 6
+template_slice.area  22887 0.08730697631835938
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0035.nii.gz'] 0.8099005583052535 0
+MATCHED_CASE bs4_fold5_epoch15 Liver {"patient": "img0035", "dice": 0.8099005583052535, "seconds": 7.190980774117634, "template_slice": 30, "cropped_shape": [39, 512, 512], "spacing_xyz": [0.9199219942092896, 0.9199219942092896, 5.0]}
+template_slice.area  48830 0.18627166748046875
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0036.nii.gz'] 0.7579398398649546 0
+MATCHED_CASE bs4_fold5_epoch15 Liver {"patient": "img0036", "dice": 0.7579398398649546, "seconds": 13.216336332960054, "template_slice": 45, "cropped_shape": [68, 512, 512], "spacing_xyz": [0.74609375, 0.74609375, 3.0]}
+template_slice.area  39499 0.15067672729492188
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+No masks
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0037.nii.gz'] 0.8265915854894326 0
+MATCHED_CASE bs4_fold5_epoch15 Liver {"patient": "img0037", "dice": 0.8265915854894326, "seconds": 6.458360719960183, "template_slice": 23, "cropped_shape": [34, 512, 512], "spacing_xyz": [0.703125, 0.703125, 5.0]}
+template_slice.area  23953 0.09137344360351562
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0038.nii.gz'] 0.790211274102777 0
+MATCHED_CASE bs4_fold5_epoch15 Liver {"patient": "img0038", "dice": 0.790211274102777, "seconds": 8.16973090916872, "template_slice": 28, "cropped_shape": [43, 512, 512], "spacing_xyz": [0.9765620231628418, 0.9765620231628418, 5.0]}
+template_slice.area  20166 0.07692718505859375
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0039.nii.gz'] 0.8299745153623687 0
+MATCHED_CASE bs4_fold5_epoch15 Liver {"patient": "img0039", "dice": 0.8299745153623687, "seconds": 6.517101116012782, "template_slice": 28, "cropped_shape": [39, 512, 512], "spacing_xyz": [0.9760000109672546, 0.9760000109672546, 5.0]}
+template_slice.area  31997 0.12205886840820312
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0040.nii.gz'] 0.7112251679753304 0
+MATCHED_CASE bs4_fold5_epoch15 Liver {"patient": "img0040", "dice": 0.7112251679753304, "seconds": 11.580562738934532, "template_slice": 46, "cropped_shape": [62, 512, 512], "spacing_xyz": [0.7421875, 0.7421875, 3.0]}
+Load datalist from  matched
+train len 6
+template_slice.area  6408 0.024444580078125
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0035.nii.gz'] 0.5932752510617274 0
+MATCHED_CASE bs4_fold5_epoch15 Stomach {"patient": "img0035", "dice": 0.5932752510617274, "seconds": 3.3485396848991513, "template_slice": 12, "cropped_shape": [20, 512, 512], "spacing_xyz": [0.9199219942092896, 0.9199219942092896, 5.0]}
+template_slice.area  11843 0.045177459716796875
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0036.nii.gz'] 0.6100413060834696 0
+MATCHED_CASE bs4_fold5_epoch15 Stomach {"patient": "img0036", "dice": 0.6100413060834696, "seconds": 5.916490074014291, "template_slice": 24, "cropped_shape": [37, 512, 512], "spacing_xyz": [0.74609375, 0.74609375, 3.0]}
+template_slice.area  8348 0.0318450927734375
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0037.nii.gz'] 0.6933484000205454 0
+MATCHED_CASE bs4_fold5_epoch15 Stomach {"patient": "img0037", "dice": 0.6933484000205454, "seconds": 2.7375541960354894, "template_slice": 7, "cropped_shape": [18, 512, 512], "spacing_xyz": [0.703125, 0.703125, 5.0]}
+template_slice.area  16708 0.0637359619140625
+Checking Data range: [-200.0, 400.0]
+No masks
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0038.nii.gz'] 0.6754869869755304 0
+MATCHED_CASE bs4_fold5_epoch15 Stomach {"patient": "img0038", "dice": 0.6754869869755304, "seconds": 4.637593803927302, "template_slice": 19, "cropped_shape": [30, 512, 512], "spacing_xyz": [0.9765620231628418, 0.9765620231628418, 5.0]}
+template_slice.area  5534 0.02111053466796875
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0039.nii.gz'] 0.6297655053222829 0
+MATCHED_CASE bs4_fold5_epoch15 Stomach {"patient": "img0039", "dice": 0.6297655053222829, "seconds": 3.9366927288938314, "template_slice": 16, "cropped_shape": [25, 512, 512], "spacing_xyz": [0.9760000109672546, 0.9760000109672546, 5.0]}
+template_slice.area  13757 0.052478790283203125
+Checking Data range: [-200.0, 400.0]
+No masks
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0040.nii.gz'] 0.511724569554895 0
+MATCHED_CASE bs4_fold5_epoch15 Stomach {"patient": "img0040", "dice": 0.511724569554895, "seconds": 7.918745309114456, "template_slice": 38, "cropped_shape": [51, 512, 512], "spacing_xyz": [0.7421875, 0.7421875, 3.0]}
+Load datalist from  matched
+train len 6
+template_slice.area  2589 0.009876251220703125
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0035.nii.gz'] 0.6268013688358078 0
+MATCHED_CASE bs4_fold5_epoch15 Left kidney {"patient": "img0035", "dice": 0.6268013688358078, "seconds": 4.705968857044354, "template_slice": 16, "cropped_shape": [23, 512, 512], "spacing_xyz": [0.9199219942092896, 0.9199219942092896, 5.0]}
+template_slice.area  6720 0.025634765625
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0036.nii.gz'] 0.7815913195539375 0
+MATCHED_CASE bs4_fold5_epoch15 Left kidney {"patient": "img0036", "dice": 0.7815913195539375, "seconds": 8.014287679921836, "template_slice": 24, "cropped_shape": [40, 512, 512], "spacing_xyz": [0.74609375, 0.74609375, 3.0]}
+template_slice.area  4508 0.0171966552734375
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0037.nii.gz'] 0.6596282328617646 0
+MATCHED_CASE bs4_fold5_epoch15 Left kidney {"patient": "img0037", "dice": 0.6596282328617646, "seconds": 3.858470495091751, "template_slice": 8, "cropped_shape": [22, 512, 512], "spacing_xyz": [0.703125, 0.703125, 5.0]}
+template_slice.area  3250 0.01239776611328125
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0038.nii.gz'] 0.6559006211180124 0
+MATCHED_CASE bs4_fold5_epoch15 Left kidney {"patient": "img0038", "dice": 0.6559006211180124, "seconds": 3.8742295240517706, "template_slice": 14, "cropped_shape": [22, 512, 512], "spacing_xyz": [0.9765620231628418, 0.9765620231628418, 5.0]}
+template_slice.area  1994 0.00760650634765625
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0039.nii.gz'] 0.5644810543657331 0
+MATCHED_CASE bs4_fold5_epoch15 Left kidney {"patient": "img0039", "dice": 0.5644810543657331, "seconds": 4.537687469040975, "template_slice": 18, "cropped_shape": [25, 512, 512], "spacing_xyz": [0.9760000109672546, 0.9760000109672546, 5.0]}
+template_slice.area  4278 0.01631927490234375
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0040.nii.gz'] 0.7150599293890125 0
+MATCHED_CASE bs4_fold5_epoch15 Left kidney {"patient": "img0040", "dice": 0.7150599293890125, "seconds": 5.911517966073006, "template_slice": 21, "cropped_shape": [36, 512, 512], "spacing_xyz": [0.7421875, 0.7421875, 3.0]}
+Load datalist from  matched
+train len 6
+template_slice.area  4992 0.01904296875
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0035.nii.gz'] 0.6781850062010862 0
+MATCHED_CASE bs4_fold5_epoch15 Spleen {"patient": "img0035", "dice": 0.6781850062010862, "seconds": 4.3891423949971795, "template_slice": 15, "cropped_shape": [24, 512, 512], "spacing_xyz": [0.9199219942092896, 0.9199219942092896, 5.0]}
+template_slice.area  10316 0.0393524169921875
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0036.nii.gz'] 0.7907590693566036 0
+MATCHED_CASE bs4_fold5_epoch15 Spleen {"patient": "img0036", "dice": 0.7907590693566036, "seconds": 6.411841572960839, "template_slice": 21, "cropped_shape": [37, 512, 512], "spacing_xyz": [0.74609375, 0.74609375, 3.0]}
+template_slice.area  7581 0.028919219970703125
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0037.nii.gz'] 0.5954679734068278 0
+MATCHED_CASE bs4_fold5_epoch15 Spleen {"patient": "img0037", "dice": 0.5954679734068278, "seconds": 3.931168752955273, "template_slice": 13, "cropped_shape": [19, 512, 512], "spacing_xyz": [0.703125, 0.703125, 5.0]}
+template_slice.area  7460 0.0284576416015625
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+No masks
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0038.nii.gz'] 0.7615992209478468 0
+MATCHED_CASE bs4_fold5_epoch15 Spleen {"patient": "img0038", "dice": 0.7615992209478468, "seconds": 3.515213005943224, "template_slice": 9, "cropped_shape": [22, 512, 512], "spacing_xyz": [0.9765620231628418, 0.9765620231628418, 5.0]}
+template_slice.area  6292 0.0240020751953125
+Checking Data range: [-200.0, 400.0]
+No masks
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0039.nii.gz'] 0.8463970082164414 0
+MATCHED_CASE bs4_fold5_epoch15 Spleen {"patient": "img0039", "dice": 0.8463970082164414, "seconds": 3.731587906135246, "template_slice": 10, "cropped_shape": [21, 512, 512], "spacing_xyz": [0.9760000109672546, 0.9760000109672546, 5.0]}
+template_slice.area  5244 0.0200042724609375
+Checking Data range: [-200.0, 400.0]
+No masks
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0040.nii.gz'] 0.8484032940574625 0
+MATCHED_CASE bs4_fold5_epoch15 Spleen {"patient": "img0040", "dice": 0.8484032940574625, "seconds": 5.926515677943826, "template_slice": 13, "cropped_shape": [28, 512, 512], "spacing_xyz": [0.7421875, 0.7421875, 3.0]}
+MATCHED_COMPLETE {"bs4_fold5_epoch0": 0.7911854120002138, "bs4_fold5_epoch5": 0.7030266662890103, "bs4_fold5_epoch10": 0.7025765798130224, "bs4_fold5_epoch15": 0.7068232941012127}
+# Fold-5 checkpoint trajectory
+
+Post-hoc diagnostic on the six previously evaluated held-out patients. This is not validation and does not select a best checkpoint.
+
+| Checkpoint | Liver (%) | Stomach (%) | Left kidney (%) | Spleen (%) | Mean (%) |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Official pretrained | 83.4941 | 69.7184 | 74.9429 | 88.3187 | 79.1185 |
+| BS=4 epoch 0 | 83.4941 | 69.7184 | 74.9429 | 88.3187 | 79.1185 |
+| BS=4 epoch 5 | 75.9218 | 62.8912 | 66.9910 | 75.4067 | 70.3027 |
+| BS=4 epoch 10 | 77.1713 | 61.9877 | 66.5432 | 75.3285 | 70.2577 |
+| BS=4 epoch 15 | 78.7640 | 61.8940 | 66.7244 | 75.3469 | 70.6823 |
+| BS=4 epoch 20 | 79.0197 | 61.5634 | 67.7364 | 76.4808 | 71.2001 |
+
+Epoch 0 is the saved debug-training checkpoint, not untouched initialization. The official checkpoint is the pre-fine-tuning reference.
+
+All new scores use the same frozen authors’ evaluator, original thresholds, ground-truth z crop and one box prompt, with no new padding or resampling. Official and epoch-20 scores are reused from the completed matched evaluations.
+
+A decline over epochs would support performance degradation during fine-tuning on these cases, but would not by itself prove overfitting or identify its cause. Choosing training duration or other hyperparameters requires validation cases excluded from training, within each outer training fold. These test results must not be used to choose the best fold or stopping epoch.
+

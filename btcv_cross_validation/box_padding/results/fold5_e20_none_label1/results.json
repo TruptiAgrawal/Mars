@@ -1,0 +1,1578 @@
+{
+  "started_utc": "2026-10-01T05:44:04.273195+00:00",
+  "status": "complete",
+  "arguments": {
+    "data_root": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets",
+    "manifest": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/dataset_list/fold5/01_BTCV_test_4to1.txt",
+    "train_manifest": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/dataset_list/fold5/01_BTCV_train_4to1.txt",
+    "checkpoint": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold5/ddp_sub_cv/cv_fold5/ckpt/model_epoch_20.pth",
+    "checkpoint_kind": "finetuned",
+    "label_idx": 1,
+    "prompt": "box",
+    "protocol": "gt-cropped",
+    "padding_mode": "none",
+    "padding_fraction": 0.0,
+    "nsd_tolerance_mm": 1.0,
+    "output": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/box_padding/results/fold5_e20_none_label1",
+    "save_predictions": false,
+    "run_inference": true
+  },
+  "training_ids": [
+    "img0001",
+    "img0002",
+    "img0003",
+    "img0004",
+    "img0005",
+    "img0006",
+    "img0007",
+    "img0008",
+    "img0009",
+    "img0010",
+    "img0021",
+    "img0022",
+    "img0023",
+    "img0024",
+    "img0025",
+    "img0026",
+    "img0027",
+    "img0028",
+    "img0029",
+    "img0030",
+    "img0031",
+    "img0032",
+    "img0033",
+    "img0034"
+  ],
+  "evaluation_ids": [
+    "img0035",
+    "img0036",
+    "img0037",
+    "img0038",
+    "img0039",
+    "img0040"
+  ],
+  "manifest_sha256": "224f08d7cd9f1660fb5158326dc95dbbb2ca1193a56ecbc9202e54ed87680457",
+  "training_manifest_sha256": "8315f3cb35b20e023f2f923ac9f32e017955f69e3645385295a69f0c1cee4445",
+  "checkpoint_bytes": 377029836,
+  "checkpoint_mtime_ns": 1790709522627949983,
+  "checkpoint_sha256": "235b75d82b5e7e71c9e00c65b2a91d3f02b4cc60f79ccdb6518f138105730785",
+  "experiment_source_sha256": {
+    "evaluate.py": "0f2f3a896c31c250b737de99a9f6701a4a262bc2243662b59f11210da757ac48",
+    "test_cpu.py": "152d052d42699c189f6f28fe19ee51cb2afa63cf462da8370542e4a3e0588b6e",
+    "__init__.py": "c35faac239c71b6f655052d71ac9afe22e94248bbfef9487c7d157ee2a95166e",
+    "predictor.py": "239beab9175f067a61aa9cec700611fe09892b5e90939569ae02fa6e8ac286e0",
+    "helpers.py": "fc1d547ec89c6a257d65d521c7da88e37e3849d596256f6a729ab2dc6f32ebf9",
+    "loader.py": "6f60df861d792a5ebdded032571946568d4a1c596a10114d51950941490005d3",
+    "data_engine.py": "53e6ab80edba2230f042919cfeb6292de98985da24ebfee18af06fa453ad4469"
+  },
+  "warning": "Ground-truth-assisted initial prompt; gt-cropped additionally uses target extent. Historical padding is within the corrected evaluator, not an exact legacy-score reproduction.",
+  "cases": [
+    {
+      "crop_start_z": 64,
+      "crop_stop_z": 88,
+      "original_shape_zyx": [
+        94,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        24,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 79,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0035",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        5.0,
+        0.9199219942092896,
+        0.9199219942092896
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "datasets/01_BCV-Abdomen/Training/img/img0035.nii.gz",
+      "label_path": "datasets/01_BCV-Abdomen/Training/label/label0035.nii.gz",
+      "initial_prompt": {
+        "box": [
+          [
+            304.0,
+            185.0,
+            399.0,
+            281.0
+          ]
+        ]
+      },
+      "inference_seconds": 5.609263859922066,
+      "peak_gpu_allocated_bytes": 11208798720,
+      "metrics": {
+        "dice": 0.833641264457999,
+        "nsd": 0.43305150686357324,
+        "hd95_mm": 15.638673901557922,
+        "surface_status": "valid",
+        "foreground_recall": 0.8733395200848468,
+        "foreground_precision": 0.7973951146294816,
+        "false_positive_ml": 70.82320442873639
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "15": [
+          [
+            608.0,
+            370.0,
+            798.0,
+            562.0
+          ]
+        ],
+        "16": [
+          [
+            612.0,
+            372.0,
+            797.0,
+            561.0
+          ]
+        ],
+        "17": [
+          [
+            612.0,
+            378.0,
+            791.0,
+            555.0
+          ]
+        ],
+        "18": [
+          [
+            612.0,
+            388.0,
+            785.0,
+            553.0
+          ]
+        ],
+        "19": [
+          [
+            614.0,
+            396.0,
+            779.0,
+            549.0
+          ]
+        ],
+        "20": [
+          [
+            620.0,
+            406.0,
+            777.0,
+            547.0
+          ]
+        ],
+        "21": [
+          [
+            626.0,
+            416.0,
+            775.0,
+            545.0
+          ]
+        ],
+        "22": [
+          [
+            636.0,
+            430.0,
+            775.0,
+            541.0
+          ]
+        ],
+        "14": [
+          [
+            616.0,
+            370.0,
+            799.0,
+            561.0
+          ]
+        ],
+        "13": [
+          [
+            624.0,
+            370.0,
+            801.0,
+            561.0
+          ]
+        ],
+        "12": [
+          [
+            632.0,
+            372.0,
+            803.0,
+            561.0
+          ]
+        ],
+        "11": [
+          [
+            642.0,
+            374.0,
+            805.0,
+            561.0
+          ]
+        ],
+        "10": [
+          [
+            652.0,
+            378.0,
+            805.0,
+            559.0
+          ]
+        ],
+        "9": [
+          [
+            690.0,
+            386.0,
+            803.0,
+            555.0
+          ]
+        ],
+        "8": [
+          [
+            700.0,
+            392.0,
+            803.0,
+            553.0
+          ]
+        ],
+        "7": [
+          [
+            706.0,
+            400.0,
+            803.0,
+            551.0
+          ]
+        ],
+        "6": [
+          [
+            712.0,
+            406.0,
+            801.0,
+            549.0
+          ]
+        ],
+        "5": [
+          [
+            716.0,
+            412.0,
+            801.0,
+            547.0
+          ]
+        ],
+        "4": [
+          [
+            720.0,
+            418.0,
+            801.0,
+            545.0
+          ]
+        ],
+        "3": [
+          [
+            722.0,
+            424.0,
+            801.0,
+            543.0
+          ]
+        ],
+        "2": [
+          [
+            726.0,
+            430.0,
+            797.0,
+            545.0
+          ]
+        ],
+        "1": [
+          [
+            730.0,
+            440.0,
+            791.0,
+            543.0
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 125,
+      "crop_stop_z": 162,
+      "original_shape_zyx": [
+        184,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        37,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 146,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0036",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        3.0,
+        0.74609375,
+        0.74609375
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "datasets/01_BCV-Abdomen/Training/img/img0036.nii.gz",
+      "label_path": "datasets/01_BCV-Abdomen/Training/label/label0036.nii.gz",
+      "initial_prompt": {
+        "box": [
+          [
+            322.0,
+            119.0,
+            476.0,
+            248.0
+          ]
+        ]
+      },
+      "inference_seconds": 6.921852530213073,
+      "peak_gpu_allocated_bytes": 11590480384,
+      "metrics": {
+        "dice": 0.9021835044120295,
+        "nsd": 0.4080096412405248,
+        "hd95_mm": 4.787107382828023,
+        "surface_status": "valid",
+        "foreground_recall": 0.9721161729107747,
+        "foreground_precision": 0.8416373021306264,
+        "false_positive_ml": 62.96780026245117
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "21": [
+          [
+            644.0,
+            238.0,
+            952.0,
+            496.0
+          ]
+        ],
+        "22": [
+          [
+            646.0,
+            240.0,
+            951.0,
+            493.0
+          ]
+        ],
+        "23": [
+          [
+            648.0,
+            240.0,
+            951.0,
+            485.0
+          ]
+        ],
+        "24": [
+          [
+            648.0,
+            242.0,
+            947.0,
+            473.0
+          ]
+        ],
+        "25": [
+          [
+            650.0,
+            244.0,
+            945.0,
+            469.0
+          ]
+        ],
+        "26": [
+          [
+            654.0,
+            248.0,
+            941.0,
+            463.0
+          ]
+        ],
+        "27": [
+          [
+            658.0,
+            250.0,
+            933.0,
+            457.0
+          ]
+        ],
+        "28": [
+          [
+            660.0,
+            256.0,
+            929.0,
+            445.0
+          ]
+        ],
+        "29": [
+          [
+            672.0,
+            264.0,
+            915.0,
+            423.0
+          ]
+        ],
+        "30": [
+          [
+            680.0,
+            274.0,
+            907.0,
+            411.0
+          ]
+        ],
+        "31": [
+          [
+            690.0,
+            284.0,
+            897.0,
+            403.0
+          ]
+        ],
+        "32": [
+          [
+            700.0,
+            294.0,
+            885.0,
+            397.0
+          ]
+        ],
+        "33": [
+          [
+            708.0,
+            306.0,
+            877.0,
+            387.0
+          ]
+        ],
+        "34": [
+          [
+            716.0,
+            318.0,
+            873.0,
+            385.0
+          ]
+        ],
+        "35": [
+          [
+            724.0,
+            328.0,
+            873.0,
+            385.0
+          ]
+        ],
+        "20": [
+          [
+            646.0,
+            238.0,
+            953.0,
+            497.0
+          ]
+        ],
+        "19": [
+          [
+            646.0,
+            238.0,
+            953.0,
+            497.0
+          ]
+        ],
+        "18": [
+          [
+            650.0,
+            238.0,
+            953.0,
+            497.0
+          ]
+        ],
+        "17": [
+          [
+            656.0,
+            238.0,
+            951.0,
+            493.0
+          ]
+        ],
+        "16": [
+          [
+            662.0,
+            238.0,
+            951.0,
+            481.0
+          ]
+        ],
+        "15": [
+          [
+            674.0,
+            238.0,
+            951.0,
+            459.0
+          ]
+        ],
+        "14": [
+          [
+            690.0,
+            238.0,
+            949.0,
+            455.0
+          ]
+        ],
+        "13": [
+          [
+            700.0,
+            238.0,
+            947.0,
+            453.0
+          ]
+        ],
+        "12": [
+          [
+            706.0,
+            240.0,
+            945.0,
+            449.0
+          ]
+        ],
+        "11": [
+          [
+            710.0,
+            242.0,
+            943.0,
+            449.0
+          ]
+        ],
+        "10": [
+          [
+            716.0,
+            242.0,
+            941.0,
+            445.0
+          ]
+        ],
+        "9": [
+          [
+            722.0,
+            242.0,
+            939.0,
+            439.0
+          ]
+        ],
+        "8": [
+          [
+            724.0,
+            244.0,
+            937.0,
+            435.0
+          ]
+        ],
+        "7": [
+          [
+            730.0,
+            244.0,
+            933.0,
+            433.0
+          ]
+        ],
+        "6": [
+          [
+            736.0,
+            246.0,
+            931.0,
+            431.0
+          ]
+        ],
+        "5": [
+          [
+            742.0,
+            250.0,
+            925.0,
+            425.0
+          ]
+        ],
+        "4": [
+          [
+            754.0,
+            258.0,
+            919.0,
+            417.0
+          ]
+        ],
+        "3": [
+          [
+            762.0,
+            264.0,
+            915.0,
+            409.0
+          ]
+        ],
+        "2": [
+          [
+            772.0,
+            274.0,
+            907.0,
+            393.0
+          ]
+        ],
+        "1": [
+          [
+            786.0,
+            282.0,
+            901.0,
+            387.0
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 64,
+      "crop_stop_z": 83,
+      "original_shape_zyx": [
+        99,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        19,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 77,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0037",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        5.0,
+        0.703125,
+        0.703125
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "datasets/01_BCV-Abdomen/Training/img/img0037.nii.gz",
+      "label_path": "datasets/01_BCV-Abdomen/Training/label/label0037.nii.gz",
+      "initial_prompt": {
+        "box": [
+          [
+            308.0,
+            158.0,
+            432.0,
+            279.0
+          ]
+        ]
+      },
+      "inference_seconds": 3.0733680229168385,
+      "peak_gpu_allocated_bytes": 11061998080,
+      "metrics": {
+        "dice": 0.7024669201520912,
+        "nsd": 0.30173664805412137,
+        "hd95_mm": 30.812959555396493,
+        "surface_status": "valid",
+        "foreground_recall": 0.6646099298944388,
+        "foreground_precision": 0.7448971692514128,
+        "false_positive_ml": 48.8748779296875
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "13": [
+          [
+            616.0,
+            316.0,
+            864.0,
+            558.0
+          ]
+        ],
+        "14": [
+          [
+            624.0,
+            320.0,
+            855.0,
+            555.0
+          ]
+        ],
+        "15": [
+          [
+            628.0,
+            324.0,
+            845.0,
+            551.0
+          ]
+        ],
+        "16": [
+          [
+            632.0,
+            330.0,
+            831.0,
+            547.0
+          ]
+        ],
+        "17": [
+          [
+            640.0,
+            342.0,
+            803.0,
+            545.0
+          ]
+        ],
+        "12": [
+          [
+            622.0,
+            320.0,
+            863.0,
+            559.0
+          ]
+        ],
+        "11": [
+          [
+            636.0,
+            322.0,
+            861.0,
+            561.0
+          ]
+        ],
+        "10": [
+          [
+            658.0,
+            326.0,
+            859.0,
+            561.0
+          ]
+        ],
+        "9": [
+          [
+            676.0,
+            332.0,
+            853.0,
+            559.0
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 69,
+      "crop_stop_z": 91,
+      "original_shape_zyx": [
+        100,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        22,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 78,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0038",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        5.0,
+        0.9765620231628418,
+        0.9765620231628418
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "datasets/01_BCV-Abdomen/Training/img/img0038.nii.gz",
+      "label_path": "datasets/01_BCV-Abdomen/Training/label/label0038.nii.gz",
+      "initial_prompt": {
+        "box": [
+          [
+            315.0,
+            156.0,
+            422.0,
+            295.0
+          ]
+        ]
+      },
+      "inference_seconds": 4.0735142841003835,
+      "peak_gpu_allocated_bytes": 11150078464,
+      "metrics": {
+        "dice": 0.8613199275757057,
+        "nsd": 0.362626485783773,
+        "hd95_mm": 9.765620231628418,
+        "surface_status": "valid",
+        "foreground_recall": 0.9491961488325291,
+        "foreground_precision": 0.7883360715676312,
+        "false_positive_ml": 106.27736203375012
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "9": [
+          [
+            630.0,
+            312.0,
+            844.0,
+            590.0
+          ]
+        ],
+        "10": [
+          [
+            632.0,
+            314.0,
+            843.0,
+            583.0
+          ]
+        ],
+        "11": [
+          [
+            634.0,
+            320.0,
+            841.0,
+            573.0
+          ]
+        ],
+        "12": [
+          [
+            638.0,
+            324.0,
+            837.0,
+            559.0
+          ]
+        ],
+        "13": [
+          [
+            642.0,
+            328.0,
+            835.0,
+            551.0
+          ]
+        ],
+        "14": [
+          [
+            644.0,
+            332.0,
+            831.0,
+            543.0
+          ]
+        ],
+        "15": [
+          [
+            650.0,
+            342.0,
+            827.0,
+            533.0
+          ]
+        ],
+        "16": [
+          [
+            658.0,
+            354.0,
+            815.0,
+            503.0
+          ]
+        ],
+        "17": [
+          [
+            666.0,
+            368.0,
+            807.0,
+            481.0
+          ]
+        ],
+        "18": [
+          [
+            674.0,
+            378.0,
+            797.0,
+            467.0
+          ]
+        ],
+        "19": [
+          [
+            682.0,
+            388.0,
+            787.0,
+            459.0
+          ]
+        ],
+        "20": [
+          [
+            690.0,
+            402.0,
+            781.0,
+            457.0
+          ]
+        ],
+        "8": [
+          [
+            638.0,
+            314.0,
+            843.0,
+            591.0
+          ]
+        ],
+        "7": [
+          [
+            644.0,
+            316.0,
+            843.0,
+            595.0
+          ]
+        ],
+        "6": [
+          [
+            654.0,
+            320.0,
+            843.0,
+            595.0
+          ]
+        ],
+        "5": [
+          [
+            666.0,
+            326.0,
+            843.0,
+            597.0
+          ]
+        ],
+        "4": [
+          [
+            678.0,
+            332.0,
+            843.0,
+            595.0
+          ]
+        ],
+        "3": [
+          [
+            706.0,
+            338.0,
+            843.0,
+            581.0
+          ]
+        ],
+        "2": [
+          [
+            722.0,
+            342.0,
+            841.0,
+            535.0
+          ]
+        ],
+        "1": [
+          [
+            738.0,
+            348.0,
+            839.0,
+            507.0
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 65,
+      "crop_stop_z": 86,
+      "original_shape_zyx": [
+        90,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        21,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 75,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0039",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        5.0,
+        0.9760000109672546,
+        0.9760000109672546
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "datasets/01_BCV-Abdomen/Training/img/img0039.nii.gz",
+      "label_path": "datasets/01_BCV-Abdomen/Training/label/label0039.nii.gz",
+      "initial_prompt": {
+        "box": [
+          [
+            312.0,
+            173.0,
+            407.0,
+            284.0
+          ]
+        ]
+      },
+      "inference_seconds": 3.722032121848315,
+      "peak_gpu_allocated_bytes": 11120718336,
+      "metrics": {
+        "dice": 0.906791077416533,
+        "nsd": 0.5667516189063933,
+        "hd95_mm": 5.936776296282268,
+        "surface_status": "valid",
+        "foreground_recall": 0.9508818277439397,
+        "foreground_precision": 0.8666079609421155,
+        "false_positive_ml": 56.99738624095254
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "10": [
+          [
+            624.0,
+            346.0,
+            814.0,
+            568.0
+          ]
+        ],
+        "11": [
+          [
+            626.0,
+            348.0,
+            813.0,
+            567.0
+          ]
+        ],
+        "12": [
+          [
+            626.0,
+            348.0,
+            811.0,
+            563.0
+          ]
+        ],
+        "13": [
+          [
+            626.0,
+            346.0,
+            807.0,
+            557.0
+          ]
+        ],
+        "14": [
+          [
+            626.0,
+            346.0,
+            801.0,
+            551.0
+          ]
+        ],
+        "15": [
+          [
+            626.0,
+            346.0,
+            795.0,
+            541.0
+          ]
+        ],
+        "16": [
+          [
+            628.0,
+            352.0,
+            791.0,
+            535.0
+          ]
+        ],
+        "17": [
+          [
+            634.0,
+            358.0,
+            785.0,
+            525.0
+          ]
+        ],
+        "18": [
+          [
+            642.0,
+            366.0,
+            779.0,
+            521.0
+          ]
+        ],
+        "19": [
+          [
+            650.0,
+            378.0,
+            777.0,
+            519.0
+          ]
+        ],
+        "9": [
+          [
+            632.0,
+            348.0,
+            815.0,
+            567.0
+          ]
+        ],
+        "8": [
+          [
+            644.0,
+            350.0,
+            817.0,
+            565.0
+          ]
+        ],
+        "7": [
+          [
+            656.0,
+            352.0,
+            819.0,
+            563.0
+          ]
+        ],
+        "6": [
+          [
+            662.0,
+            354.0,
+            821.0,
+            561.0
+          ]
+        ],
+        "5": [
+          [
+            670.0,
+            356.0,
+            821.0,
+            553.0
+          ]
+        ],
+        "4": [
+          [
+            676.0,
+            360.0,
+            823.0,
+            545.0
+          ]
+        ],
+        "3": [
+          [
+            690.0,
+            370.0,
+            821.0,
+            513.0
+          ]
+        ],
+        "2": [
+          [
+            706.0,
+            376.0,
+            815.0,
+            497.0
+          ]
+        ],
+        "1": [
+          [
+            716.0,
+            386.0,
+            809.0,
+            485.0
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 97,
+      "crop_stop_z": 125,
+      "original_shape_zyx": [
+        195,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        28,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 110,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0040",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        3.0,
+        0.7421875,
+        0.7421875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "datasets/01_BCV-Abdomen/Training/img/img0040.nii.gz",
+      "label_path": "datasets/01_BCV-Abdomen/Training/label/label0040.nii.gz",
+      "initial_prompt": {
+        "box": [
+          [
+            327.0,
+            137.0,
+            430.0,
+            218.0
+          ]
+        ]
+      },
+      "inference_seconds": 4.778595320880413,
+      "peak_gpu_allocated_bytes": 11326239232,
+      "metrics": {
+        "dice": 0.8932445056020764,
+        "nsd": 0.5016465936823765,
+        "hd95_mm": 5.1953125,
+        "surface_status": "valid",
+        "foreground_recall": 0.9414788873559966,
+        "foreground_precision": 0.8497115978119746,
+        "false_positive_ml": 23.33698425292969
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "13": [
+          [
+            654.0,
+            274.0,
+            860.0,
+            436.0
+          ]
+        ],
+        "14": [
+          [
+            656.0,
+            274.0,
+            861.0,
+            435.0
+          ]
+        ],
+        "15": [
+          [
+            656.0,
+            274.0,
+            861.0,
+            435.0
+          ]
+        ],
+        "16": [
+          [
+            658.0,
+            274.0,
+            859.0,
+            431.0
+          ]
+        ],
+        "17": [
+          [
+            658.0,
+            276.0,
+            853.0,
+            427.0
+          ]
+        ],
+        "18": [
+          [
+            658.0,
+            276.0,
+            849.0,
+            419.0
+          ]
+        ],
+        "19": [
+          [
+            660.0,
+            276.0,
+            845.0,
+            415.0
+          ]
+        ],
+        "20": [
+          [
+            666.0,
+            278.0,
+            841.0,
+            409.0
+          ]
+        ],
+        "21": [
+          [
+            674.0,
+            282.0,
+            833.0,
+            403.0
+          ]
+        ],
+        "22": [
+          [
+            682.0,
+            288.0,
+            829.0,
+            395.0
+          ]
+        ],
+        "23": [
+          [
+            692.0,
+            294.0,
+            823.0,
+            387.0
+          ]
+        ],
+        "24": [
+          [
+            700.0,
+            298.0,
+            815.0,
+            381.0
+          ]
+        ],
+        "25": [
+          [
+            708.0,
+            304.0,
+            807.0,
+            373.0
+          ]
+        ],
+        "26": [
+          [
+            718.0,
+            310.0,
+            803.0,
+            367.0
+          ]
+        ],
+        "12": [
+          [
+            658.0,
+            276.0,
+            863.0,
+            437.0
+          ]
+        ],
+        "11": [
+          [
+            662.0,
+            276.0,
+            863.0,
+            437.0
+          ]
+        ],
+        "10": [
+          [
+            668.0,
+            278.0,
+            863.0,
+            437.0
+          ]
+        ],
+        "9": [
+          [
+            674.0,
+            280.0,
+            863.0,
+            437.0
+          ]
+        ],
+        "8": [
+          [
+            680.0,
+            284.0,
+            863.0,
+            437.0
+          ]
+        ],
+        "7": [
+          [
+            688.0,
+            288.0,
+            863.0,
+            437.0
+          ]
+        ],
+        "6": [
+          [
+            694.0,
+            292.0,
+            863.0,
+            435.0
+          ]
+        ],
+        "5": [
+          [
+            700.0,
+            296.0,
+            863.0,
+            433.0
+          ]
+        ],
+        "4": [
+          [
+            706.0,
+            300.0,
+            863.0,
+            431.0
+          ]
+        ],
+        "3": [
+          [
+            710.0,
+            306.0,
+            863.0,
+            429.0
+          ]
+        ],
+        "2": [
+          [
+            716.0,
+            312.0,
+            861.0,
+            425.0
+          ]
+        ],
+        "1": [
+          [
+            722.0,
+            318.0,
+            855.0,
+            419.0
+          ]
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "dice": {
+      "mean": 0.8499411999360724,
+      "valid_count": 6,
+      "undefined_count": 0
+    },
+    "nsd": {
+      "mean": 0.42897041575512707,
+      "valid_count": 6,
+      "undefined_count": 0
+    },
+    "hd95_mm": {
+      "mean": 12.022741644615522,
+      "valid_count": 6,
+      "undefined_count": 0
+    },
+    "foreground_recall": {
+      "mean": 0.8919370811370877,
+      "valid_count": 6,
+      "undefined_count": 0
+    },
+    "foreground_precision": {
+      "mean": 0.814764202722207,
+      "valid_count": 6,
+      "undefined_count": 0
+    },
+    "false_positive_ml": {
+      "mean": 61.546269191417906,
+      "valid_count": 6,
+      "undefined_count": 0
+    }
+  },
+  "finished_utc": "2026-10-01T05:44:51.536655+00:00"
+}

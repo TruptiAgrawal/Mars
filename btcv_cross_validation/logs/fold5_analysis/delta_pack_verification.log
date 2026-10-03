@@ -1,0 +1,33 @@
+fold 5: 422 tensors per checkpoint, 48 LoRA tensors (0.147 MB) vs 376.9 MB full
+  packed epoch_00     (model_epoch_0.pth)
+  packed epoch_05     (model_epoch_5.pth)
+  packed epoch_10     (model_epoch_10.pth)
+  packed epoch_15     (model_epoch_15.pth)
+  packed epoch_20     (model_epoch_20.pth)
+  packed iter_00000   (model_iter_0.pth)
+  packed iter_05000   (model_iter_5000.pth)
+  packed iter_10000   (model_iter_10000.pth)
+  packed iter_15000   (model_iter_15000.pth)
+  packed iter_20000   (model_iter_20000.pth)
+  packed iter_25000   (model_iter_25000.pth)
+  packed iter_30000   (model_iter_30000.pth)
+  packed iter_35000   (model_iter_35000.pth)
+  packed iter_40000   (model_iter_40000.pth)
+ckpt_v/model_latest.pth is bit-identical to epoch_20: True
+wrote /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/logs/fold5_analysis/fold5_lora_deltas.npz (2.31 MB, 14 checkpoints)
+  OK   epoch_00     rebuilt from pack == model_epoch_0.pth
+  OK   epoch_05     rebuilt from pack == model_epoch_5.pth
+  OK   epoch_10     rebuilt from pack == model_epoch_10.pth
+  OK   epoch_15     rebuilt from pack == model_epoch_15.pth
+  OK   epoch_20     rebuilt from pack == model_epoch_20.pth
+  OK   iter_00000   rebuilt from pack == model_iter_0.pth
+  OK   iter_05000   rebuilt from pack == model_iter_5000.pth
+  OK   iter_10000   rebuilt from pack == model_iter_10000.pth
+  OK   iter_15000   rebuilt from pack == model_iter_15000.pth
+  OK   iter_20000   rebuilt from pack == model_iter_20000.pth
+  OK   iter_25000   rebuilt from pack == model_iter_25000.pth
+  OK   iter_30000   rebuilt from pack == model_iter_30000.pth
+  OK   iter_35000   rebuilt from pack == model_iter_35000.pth
+  OK   iter_40000   rebuilt from pack == model_iter_40000.pth
+
+RESULT: 14/14 checkpoints rebuild bit-exactly from model_epoch_0.pth + fold5_lora_deltas.npz

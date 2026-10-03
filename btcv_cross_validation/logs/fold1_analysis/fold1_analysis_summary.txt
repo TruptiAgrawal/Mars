@@ -1,0 +1,21 @@
+=== log parse integrity ===
+epoch summary lines: 20 (epochs 1..20), missing: none
+batches per epoch: 1905 | per-100-iteration lines: 379 (expected 381), missing: 2, unexpected: 0
+
+=== loss summary ===
+epoch 1 -> 20: 0.5365 -> 0.4013  (-25.2%)
+point 0.3203 -> 0.2148 | box 0.2162 -> 0.1865
+lowest epoch loss: epoch 20 (0.4013)
+mean gain per epoch, epochs 1-5 : 0.0247   | epochs 16-20: 0.0026
+average epoch time: 42.6 min
+per-100-iteration loss: median 0.401, 95th pct 0.689, max 1.280
+epoch mean vs mean of sampled batches: mean abs diff 0.021 (sampling noise, cross-check only)
+
+=== LoRA weight-change summary ===
+48 tensors; per site A(1, 768) B(768, 1) (rank 1), 36,864 trainable values
+starting ||B0 A0|| across blocks: min 0.0003, max 0.0003
+distance from start: epoch 1 2.75 -> epoch 20 6.95
+update size: epoch 1 2.75, epoch 2 0.77, epoch 20 0.22
+consecutive-update cosine: mean epochs 2-5 0.80, mean epochs 16-20 0.63
+blocks by final change (share of total): 11 (17%), 10 (12%), 9 (10%), 3 (8%) | lowest: block 7 (5%)
+q vs v share of final change: q 41%, v 59%

@@ -1,0 +1,168 @@
+=== CPU tests ===
+test_axial_identity (btcv_cross_validation.z_spacing.test_geometry_fixes.CropOriginTests)
+Standard axial: z shift = crop_start_z * z_spacing_mm. ... ok
+test_non_axial_direction (btcv_cross_validation.z_spacing.test_geometry_fixes.CropOriginTests)
+Oblique orientation: shift applied along z-column of direction matrix. ... ok
+test_non_zero_crop_shifts_z (btcv_cross_validation.z_spacing.test_geometry_fixes.CropOriginTests)
+Shift magnitude = crop_start_z * z_spacing_mm. ... ok
+test_zero_crop_unchanged (btcv_cross_validation.z_spacing.test_geometry_fixes.CropOriginTests)
+crop_start_z=0 must leave origin unchanged. ... ok
+test_control_branch_prediction_shape (btcv_cross_validation.z_spacing.test_geometry_fixes.IntegrationTests)
+Control branch: prediction shape must equal scoring grid. ... /home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/surface_distance/metrics.py:240: DeprecationWarning: Please import `correlate` from the `scipy.ndimage` namespace; the `scipy.ndimage.filters` namespace is deprecated and will be removed in SciPy 2.0.0.
+  neighbour_code_map_gt = ndimage.filters.correlate(
+/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/surface_distance/metrics.py:242: DeprecationWarning: Please import `correlate` from the `scipy.ndimage` namespace; the `scipy.ndimage.filters` namespace is deprecated and will be removed in SciPy 2.0.0.
+  neighbour_code_map_pred = ndimage.filters.correlate(
+/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/surface_distance/metrics.py:254: DeprecationWarning: Please import `distance_transform_edt` from the `scipy.ndimage` namespace; the `scipy.ndimage.morphology` namespace is deprecated and will be removed in SciPy 2.0.0.
+  distmap_gt = ndimage.morphology.distance_transform_edt(
+/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/surface_distance/metrics.py:260: DeprecationWarning: Please import `distance_transform_edt` from the `scipy.ndimage` namespace; the `scipy.ndimage.morphology` namespace is deprecated and will be removed in SciPy 2.0.0.
+  distmap_pred = ndimage.morphology.distance_transform_edt(
+ok
+test_control_origin_fix_has_no_effect (btcv_cross_validation.z_spacing.test_geometry_fixes.IntegrationTests)
+Control branch does not resample, so crop origin is computed but ... ok
+test_proposed_branch_no_shape_mismatch (btcv_cross_validation.z_spacing.test_geometry_fixes.IntegrationTests)
+Proposed branch must not produce a shape mismatch. ... /home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/surface_distance/metrics.py:240: DeprecationWarning: Please import `correlate` from the `scipy.ndimage` namespace; the `scipy.ndimage.filters` namespace is deprecated and will be removed in SciPy 2.0.0.
+  neighbour_code_map_gt = ndimage.filters.correlate(
+/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/surface_distance/metrics.py:242: DeprecationWarning: Please import `correlate` from the `scipy.ndimage` namespace; the `scipy.ndimage.filters` namespace is deprecated and will be removed in SciPy 2.0.0.
+  neighbour_code_map_pred = ndimage.filters.correlate(
+/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/surface_distance/metrics.py:254: DeprecationWarning: Please import `distance_transform_edt` from the `scipy.ndimage` namespace; the `scipy.ndimage.morphology` namespace is deprecated and will be removed in SciPy 2.0.0.
+  distmap_gt = ndimage.morphology.distance_transform_edt(
+/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/surface_distance/metrics.py:260: DeprecationWarning: Please import `distance_transform_edt` from the `scipy.ndimage` namespace; the `scipy.ndimage.morphology` namespace is deprecated and will be removed in SciPy 2.0.0.
+  distmap_pred = ndimage.morphology.distance_transform_edt(
+ok
+test_proposed_branch_records_cropped_origin (btcv_cross_validation.z_spacing.test_geometry_fixes.IntegrationTests)
+Proposed branch must record origin_xyz_working in extra_info. ... ok
+test_different_crop_values (btcv_cross_validation.z_spacing.test_geometry_fixes.ScoringGridRestoreTests)
+Test several crop_start_z values to confirm invariance. ... ok
+test_no_prediction_shape_mismatch (btcv_cross_validation.z_spacing.test_geometry_fixes.ScoringGridRestoreTests)
+run_volume proposed branch should not set prediction_shape_mismatch ... ok
+test_restored_shape_after_crop_origin (btcv_cross_validation.z_spacing.test_geometry_fixes.ScoringGridRestoreTests)
+Crop start > 0 must not affect the restored shape. ... ok
+test_restored_shape_exact (btcv_cross_validation.z_spacing.test_geometry_fixes.ScoringGridRestoreTests) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.353s
+
+OK
+
+=== make_synthetic fold1 ===
+Manifest       : 6 volumes
+Target z spacing: 6.0 mm
+Output          : /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1
+
+  img0001: z=3.0 mm  shape=(147, 512, 512)  -> z=6.0000 mm  shape=(74, 512, 512)
+  img0002: z=3.0 mm  shape=(139, 512, 512)  -> z=6.0000 mm  shape=(70, 512, 512)
+  img0003: z=3.0 mm  shape=(198, 512, 512)  -> z=5.9697 mm  shape=(100, 512, 512)
+  img0004: z=3.0 mm  shape=(140, 512, 512)  -> z=5.9571 mm  shape=(71, 512, 512)
+  img0005: z=3.0 mm  shape=(117, 512, 512)  -> z=6.0000 mm  shape=(59, 512, 512)
+  img0006: z=3.0 mm  shape=(131, 512, 512)  -> z=6.0000 mm  shape=(66, 512, 512)
+
+Processed: 6 volumes
+Meta written   : /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/meta.json
+Manifest written: /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/synthetic_manifest.txt
+
+Next: run CPU tests, then run_z_spacing_eval.sh
+
+=== make_synthetic fold2 ===
+Manifest       : 5 volumes
+Target z spacing: 6.0 mm
+Output          : /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold2
+
+  img0007: z=3.0 mm  shape=(163, 512, 512)  -> z=6.0000 mm  shape=(82, 512, 512)
+  img0008: z=3.0 mm  shape=(148, 512, 512)  -> z=5.9595 mm  shape=(75, 512, 512)
+  SKIP img0009: z=2.500 mm (not 3 mm)
+  img0010: z=3.0 mm  shape=(148, 512, 512)  -> z=5.9595 mm  shape=(75, 512, 512)
+  img0021: z=3.0 mm  shape=(143, 512, 512)  -> z=6.0000 mm  shape=(72, 512, 512)
+
+Processed: 4 volumes
+Meta written   : /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold2/meta.json
+Manifest written: /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold2/synthetic_manifest.txt
+
+Next: run CPU tests, then run_z_spacing_eval.sh
+
+=== make_synthetic fold3 ===
+Manifest       : 1 volumes
+Target z spacing: 6.0 mm
+Output          : /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold3
+
+  img0024: z=3.0 mm  shape=(124, 512, 512)  -> z=5.9516 mm  shape=(63, 512, 512)
+
+Processed: 1 volumes
+Meta written   : /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold3/meta.json
+Manifest written: /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold3/synthetic_manifest.txt
+
+Next: run CPU tests, then run_z_spacing_eval.sh
+
+=== make_synthetic fold4 ===
+Manifest       : 4 volumes
+Target z spacing: 6.0 mm
+Output          : /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold4
+
+  img0029: z=3.0 mm  shape=(100, 512, 512)  -> z=5.9400 mm  shape=(51, 512, 512)
+  img0030: z=3.0 mm  shape=(153, 512, 512)  -> z=6.0000 mm  shape=(77, 512, 512)
+  img0031: z=3.0 mm  shape=(93, 512, 512)  -> z=6.0000 mm  shape=(47, 512, 512)
+  img0032: z=3.0 mm  shape=(144, 512, 512)  -> z=5.9583 mm  shape=(73, 512, 512)
+
+Processed: 4 volumes
+Meta written   : /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold4/meta.json
+Manifest written: /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold4/synthetic_manifest.txt
+
+Next: run CPU tests, then run_z_spacing_eval.sh
+
+=== make_synthetic fold5 ===
+Manifest       : 2 volumes
+Target z spacing: 6.0 mm
+Output          : /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold5
+
+  img0036: z=3.0 mm  shape=(184, 512, 512)  -> z=5.9674 mm  shape=(93, 512, 512)
+  img0040: z=3.0 mm  shape=(195, 512, 512)  -> z=6.0000 mm  shape=(98, 512, 512)
+
+Processed: 2 volumes
+Meta written   : /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold5/meta.json
+Manifest written: /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold5/synthetic_manifest.txt
+
+Next: run CPU tests, then run_z_spacing_eval.sh
+=== CPU tests ===
+test_axial_identity (btcv_cross_validation.z_spacing.test_geometry_fixes.CropOriginTests)
+Standard axial: z shift = crop_start_z * z_spacing_mm. ... ok
+test_non_axial_direction (btcv_cross_validation.z_spacing.test_geometry_fixes.CropOriginTests)
+Oblique orientation: shift applied along z-column of direction matrix. ... ok
+test_non_zero_crop_shifts_z (btcv_cross_validation.z_spacing.test_geometry_fixes.CropOriginTests)
+Shift magnitude = crop_start_z * z_spacing_mm. ... ok
+test_zero_crop_unchanged (btcv_cross_validation.z_spacing.test_geometry_fixes.CropOriginTests)
+crop_start_z=0 must leave origin unchanged. ... ok
+test_control_branch_prediction_shape (btcv_cross_validation.z_spacing.test_geometry_fixes.IntegrationTests)
+Control branch: prediction shape must equal scoring grid. ... /home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/surface_distance/metrics.py:240: DeprecationWarning: Please import `correlate` from the `scipy.ndimage` namespace; the `scipy.ndimage.filters` namespace is deprecated and will be removed in SciPy 2.0.0.
+  neighbour_code_map_gt = ndimage.filters.correlate(
+/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/surface_distance/metrics.py:242: DeprecationWarning: Please import `correlate` from the `scipy.ndimage` namespace; the `scipy.ndimage.filters` namespace is deprecated and will be removed in SciPy 2.0.0.
+  neighbour_code_map_pred = ndimage.filters.correlate(
+/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/surface_distance/metrics.py:254: DeprecationWarning: Please import `distance_transform_edt` from the `scipy.ndimage` namespace; the `scipy.ndimage.morphology` namespace is deprecated and will be removed in SciPy 2.0.0.
+  distmap_gt = ndimage.morphology.distance_transform_edt(
+/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/surface_distance/metrics.py:260: DeprecationWarning: Please import `distance_transform_edt` from the `scipy.ndimage` namespace; the `scipy.ndimage.morphology` namespace is deprecated and will be removed in SciPy 2.0.0.
+  distmap_pred = ndimage.morphology.distance_transform_edt(
+ok
+test_control_origin_fix_has_no_effect (btcv_cross_validation.z_spacing.test_geometry_fixes.IntegrationTests)
+Control branch does not resample, so crop origin is computed but ... ok
+test_proposed_branch_no_shape_mismatch (btcv_cross_validation.z_spacing.test_geometry_fixes.IntegrationTests)
+Proposed branch must not produce a shape mismatch. ... /home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/surface_distance/metrics.py:240: DeprecationWarning: Please import `correlate` from the `scipy.ndimage` namespace; the `scipy.ndimage.filters` namespace is deprecated and will be removed in SciPy 2.0.0.
+  neighbour_code_map_gt = ndimage.filters.correlate(
+/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/surface_distance/metrics.py:242: DeprecationWarning: Please import `correlate` from the `scipy.ndimage` namespace; the `scipy.ndimage.filters` namespace is deprecated and will be removed in SciPy 2.0.0.
+  neighbour_code_map_pred = ndimage.filters.correlate(
+/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/surface_distance/metrics.py:254: DeprecationWarning: Please import `distance_transform_edt` from the `scipy.ndimage` namespace; the `scipy.ndimage.morphology` namespace is deprecated and will be removed in SciPy 2.0.0.
+  distmap_gt = ndimage.morphology.distance_transform_edt(
+/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/surface_distance/metrics.py:260: DeprecationWarning: Please import `distance_transform_edt` from the `scipy.ndimage` namespace; the `scipy.ndimage.morphology` namespace is deprecated and will be removed in SciPy 2.0.0.
+  distmap_pred = ndimage.morphology.distance_transform_edt(
+ok
+test_proposed_branch_records_cropped_origin (btcv_cross_validation.z_spacing.test_geometry_fixes.IntegrationTests)
+Proposed branch must record origin_xyz_working in extra_info. ... ok
+test_different_crop_values (btcv_cross_validation.z_spacing.test_geometry_fixes.ScoringGridRestoreTests)
+Test several crop_start_z values to confirm invariance. ... ok
+test_no_prediction_shape_mismatch (btcv_cross_validation.z_spacing.test_geometry_fixes.ScoringGridRestoreTests)
+run_volume proposed branch should not set prediction_shape_mismatch ... ok
+test_restored_shape_after_crop_origin (btcv_cross_validation.z_spacing.test_geometry_fixes.ScoringGridRestoreTests)
+Crop start > 0 must not affect the restored shape. ... ok
+test_restored_shape_exact (btcv_cross_validation.z_spacing.test_geometry_fixes.ScoringGridRestoreTests) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 1.693s
+
+OK

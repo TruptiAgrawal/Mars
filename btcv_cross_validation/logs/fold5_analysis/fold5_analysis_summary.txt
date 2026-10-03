@@ -1,0 +1,35 @@
+=== log parse integrity ===
+epoch summary lines: 20 (epochs 1..20), missing: none
+batches per epoch: 2039 | per-100-iteration lines: 408 (expected 408), missing: 0, unexpected: 0
+
+=== validation Dice summary ===
+epoch 20, box prompts, 6 volumes; four-organ macro mean: 0.712001
+Liver: 79.02% ± 4.68% (sample SD across volumes)
+Stomach: 61.56% ± 6.44% (sample SD across volumes)
+Left Kidney: 67.74% ± 6.02% (sample SD across volumes)
+Spleen: 76.48% ± 8.81% (sample SD across volumes)
+Dice is segmentation overlap, not voxel accuracy; no per-epoch validation curve is available.
+
+=== loss summary ===
+epoch 1 -> 20: 0.5412 -> 0.4019  (-25.7%)
+point 0.3277 -> 0.2179 | box 0.2135 -> 0.1839
+lowest epoch loss: epoch 20 (0.4019)
+mean gain per epoch, epochs 1-5 : 0.0267   | epochs 16-20: 0.0016
+average epoch time: 49.9 min
+per-100-iteration loss: median 0.393, 95th pct 0.687, max 1.227
+epoch mean vs mean of sampled batches: mean abs diff 0.023 (sampling noise, cross-check only)
+
+=== LoRA weight-change summary ===
+48 tensors; per site A(1, 768) B(768, 1) (rank 1), 36,864 trainable values
+starting ||B0 A0|| across blocks: min 0.0003, max 0.0003
+distance from start: epoch 5 3.87 -> epoch 20 6.83
+checkpoint update size: epoch 5 3.87, epoch 10 1.45, epoch 20 1.21
+saved weight epochs: [0, 5, 10, 15, 20] (updates span consecutive saved checkpoints)
+consecutive checkpoint-update cosine: mean 0.78
+blocks by final change (share of total): 11 (17%), 10 (13%), 9 (10%), 2 (8%) | lowest: block 7 (6%)
+q vs v share of final change: q 39%, v 61%
+
+=== source verification and training-log notes ===
+All 24 per-volume Dice scores in fold5_evaluation.log match fold5_evaluation.json exactly.
+All 14 saved checkpoints reconstruct bit-exactly from the LoRA archive and epoch-0 base; see delta_pack_verification.log.
+The training log reports TensorBoardX event-writer thread exceptions (OSError: handle is closed) after the epoch-20 checkpoint-save message, alongside the training-completion message. These appear to be shutdown errors; the saved epoch-20 checkpoint was subsequently evaluated successfully.
