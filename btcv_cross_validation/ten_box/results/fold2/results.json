@@ -1,0 +1,4142 @@
+{
+  "status": "complete",
+  "fold": 2,
+  "training_ids": [
+    "img0001",
+    "img0002",
+    "img0003",
+    "img0004",
+    "img0005",
+    "img0006",
+    "img0023",
+    "img0024",
+    "img0025",
+    "img0026",
+    "img0027",
+    "img0028",
+    "img0029",
+    "img0030",
+    "img0031",
+    "img0032",
+    "img0033",
+    "img0034",
+    "img0035",
+    "img0036",
+    "img0037",
+    "img0038",
+    "img0039",
+    "img0040"
+  ],
+  "evaluation_ids": [
+    "img0007",
+    "img0008",
+    "img0009",
+    "img0010",
+    "img0021",
+    "img0022"
+  ],
+  "checkpoint": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold2/ddp_sub_cv/cv_fold2/ckpt/model_epoch_20.pth",
+  "recorded_checkpoint": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold2/ddp_sub_cv/cv_fold2/ckpt/model_epoch_20.pth",
+  "checkpoint_sha256": "c3e7fb35a96c86a46909d44185e7af63757c3c6a764db3a2a8eab570880c3082",
+  "protocol": "gt-cropped; corrected-zero propagated boxes; initial GT max-area box plus nine lowest-Dice unused interior-slice boxes; unchanged authors confidence merge",
+  "prompt_budget": 10,
+  "cudnn_enabled": false,
+  "torch_version": "2.5.1+cu121",
+  "gpu": "NVIDIA RTX A6000",
+  "cases": [
+    {
+      "crop_start_z": 81,
+      "crop_stop_z": 146,
+      "original_shape_zyx": [
+        163,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        65,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 116,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0007",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        3.0,
+        0.748046875,
+        0.748046875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0007.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0007.nii.gz",
+      "organ": "Liver",
+      "dice_by_prompt_count": [
+        0.9111110187110187,
+        0.9121585059707598,
+        0.9137791535632628,
+        0.9136696149071815,
+        0.9136688595539407,
+        0.9138285355714174,
+        0.9138285355714174,
+        0.9147236453752349,
+        0.9144497580842548,
+        0.9193544587878192
+      ],
+      "one_box_dice": 0.9111110187110187,
+      "five_box_dice": 0.9136688595539407,
+      "ten_box_dice": 0.9193544587878192,
+      "prompt_slices_cropped": [
+        35,
+        1,
+        5,
+        7,
+        6,
+        9,
+        8,
+        63,
+        10,
+        17
+      ],
+      "prompt_slices_original": [
+        116,
+        82,
+        86,
+        88,
+        87,
+        90,
+        89,
+        144,
+        91,
+        98
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            78.0,
+            98.0,
+            338.0,
+            335.0
+          ]
+        ],
+        [
+          [
+            78.0,
+            171.0,
+            102.0,
+            205.0
+          ]
+        ],
+        [
+          [
+            74.0,
+            151.0,
+            118.0,
+            214.0
+          ]
+        ],
+        [
+          [
+            61.0,
+            147.0,
+            126.0,
+            235.0
+          ]
+        ],
+        [
+          [
+            66.0,
+            148.0,
+            122.0,
+            223.0
+          ]
+        ],
+        [
+          [
+            59.0,
+            138.0,
+            132.0,
+            281.0
+          ]
+        ],
+        [
+          [
+            61.0,
+            142.0,
+            130.0,
+            238.0
+          ]
+        ],
+        [
+          [
+            120.0,
+            117.0,
+            195.0,
+            208.0
+          ]
+        ],
+        [
+          [
+            59.0,
+            135.0,
+            137.0,
+            290.0
+          ]
+        ],
+        [
+          [
+            76.0,
+            119.0,
+            289.0,
+            381.0
+          ]
+        ]
+      ],
+      "total_seconds": 14.5502196669986
+    },
+    {
+      "crop_start_z": 84,
+      "crop_stop_z": 138,
+      "original_shape_zyx": [
+        148,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        54,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 127,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0008",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        3.0,
+        0.728515625,
+        0.728515625
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0008.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0008.nii.gz",
+      "organ": "Liver",
+      "dice_by_prompt_count": [
+        0.8961510031950635,
+        0.8961510031950635,
+        0.8961510031950635,
+        0.8961489539892469,
+        0.8959164300096187,
+        0.8959164300096187,
+        0.8959164300096187,
+        0.8959164300096187,
+        0.8959164300096187,
+        0.8959164300096187
+      ],
+      "one_box_dice": 0.8961510031950635,
+      "five_box_dice": 0.8959164300096187,
+      "ten_box_dice": 0.8959164300096187,
+      "prompt_slices_cropped": [
+        43,
+        52,
+        51,
+        1,
+        50,
+        2,
+        3,
+        49,
+        4,
+        7
+      ],
+      "prompt_slices_original": [
+        127,
+        136,
+        135,
+        85,
+        134,
+        86,
+        87,
+        133,
+        88,
+        91
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            74.0,
+            196.0,
+            428.0,
+            376.0
+          ]
+        ],
+        [
+          [
+            125.0,
+            267.0,
+            202.0,
+            330.0
+          ]
+        ],
+        [
+          [
+            113.0,
+            253.0,
+            223.0,
+            336.0
+          ]
+        ],
+        [
+          [
+            117.0,
+            296.0,
+            129.0,
+            331.0
+          ]
+        ],
+        [
+          [
+            106.0,
+            241.0,
+            285.0,
+            354.0
+          ]
+        ],
+        [
+          [
+            115.0,
+            288.0,
+            133.0,
+            338.0
+          ]
+        ],
+        [
+          [
+            115.0,
+            281.0,
+            133.0,
+            341.0
+          ]
+        ],
+        [
+          [
+            100.0,
+            233.0,
+            394.0,
+            359.0
+          ]
+        ],
+        [
+          [
+            113.0,
+            277.0,
+            134.0,
+            345.0
+          ]
+        ],
+        [
+          [
+            108.0,
+            262.0,
+            137.0,
+            351.0
+          ]
+        ]
+      ],
+      "total_seconds": 10.59432244799973
+    },
+    {
+      "crop_start_z": 51,
+      "crop_stop_z": 132,
+      "original_shape_zyx": [
+        149,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        81,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 116,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0009",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        2.5,
+        0.9765620231628418,
+        0.9765620231628418
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0009.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0009.nii.gz",
+      "organ": "Liver",
+      "dice_by_prompt_count": [
+        0.7792246786508892,
+        0.7811557948561819,
+        0.8082336878253803,
+        0.9029882643991295,
+        0.9029882643991295,
+        0.9027491706786646,
+        0.9027491706786646,
+        0.9026552203723178,
+        0.9024340701589559,
+        0.9024340701589559
+      ],
+      "one_box_dice": 0.7792246786508892,
+      "five_box_dice": 0.9029882643991295,
+      "ten_box_dice": 0.9024340701589559,
+      "prompt_slices_cropped": [
+        65,
+        1,
+        10,
+        27,
+        79,
+        73,
+        78,
+        72,
+        74,
+        76
+      ],
+      "prompt_slices_original": [
+        116,
+        52,
+        61,
+        78,
+        130,
+        124,
+        129,
+        123,
+        125,
+        127
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            121.0,
+            162.0,
+            347.0,
+            326.0
+          ]
+        ],
+        [
+          [
+            119.0,
+            202.0,
+            134.0,
+            241.0
+          ]
+        ],
+        [
+          [
+            115.0,
+            185.0,
+            148.0,
+            283.0
+          ]
+        ],
+        [
+          [
+            109.0,
+            164.0,
+            250.0,
+            352.0
+          ]
+        ],
+        [
+          [
+            155.0,
+            221.0,
+            193.0,
+            262.0
+          ]
+        ],
+        [
+          [
+            135.0,
+            189.0,
+            363.0,
+            287.0
+          ]
+        ],
+        [
+          [
+            151.0,
+            214.0,
+            197.0,
+            267.0
+          ]
+        ],
+        [
+          [
+            132.0,
+            186.0,
+            364.0,
+            290.0
+          ]
+        ],
+        [
+          [
+            138.0,
+            195.0,
+            361.0,
+            285.0
+          ]
+        ],
+        [
+          [
+            144.0,
+            204.0,
+            357.0,
+            275.0
+          ]
+        ]
+      ],
+      "total_seconds": 15.331290952999552
+    },
+    {
+      "crop_start_z": 62,
+      "crop_stop_z": 137,
+      "original_shape_zyx": [
+        148,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        75,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 120,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0010",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        3.0,
+        0.78125,
+        0.78125
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0010.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0010.nii.gz",
+      "organ": "Liver",
+      "dice_by_prompt_count": [
+        0.9311332315142423,
+        0.9311332315142423,
+        0.9311332315142423,
+        0.9311332315142423,
+        0.9309179107237003,
+        0.9309179107237003,
+        0.9308912826000977,
+        0.9308489889210657,
+        0.9308300411676491,
+        0.9307176457149978
+      ],
+      "one_box_dice": 0.9311332315142423,
+      "five_box_dice": 0.9309179107237003,
+      "ten_box_dice": 0.9307176457149978,
+      "prompt_slices_cropped": [
+        58,
+        1,
+        2,
+        73,
+        32,
+        3,
+        33,
+        34,
+        6,
+        63
+      ],
+      "prompt_slices_original": [
+        120,
+        63,
+        64,
+        135,
+        94,
+        65,
+        95,
+        96,
+        68,
+        125
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            95.0,
+            125.0,
+            345.0,
+            337.0
+          ]
+        ],
+        [
+          [
+            100.0,
+            228.0,
+            129.0,
+            256.0
+          ]
+        ],
+        [
+          [
+            93.0,
+            222.0,
+            134.0,
+            257.0
+          ]
+        ],
+        [
+          [
+            132.0,
+            199.0,
+            189.0,
+            260.0
+          ]
+        ],
+        [
+          [
+            89.0,
+            162.0,
+            275.0,
+            355.0
+          ]
+        ],
+        [
+          [
+            88.0,
+            218.0,
+            136.0,
+            262.0
+          ]
+        ],
+        [
+          [
+            92.0,
+            162.0,
+            280.0,
+            354.0
+          ]
+        ],
+        [
+          [
+            93.0,
+            162.0,
+            294.0,
+            354.0
+          ]
+        ],
+        [
+          [
+            79.0,
+            204.0,
+            143.0,
+            277.0
+          ]
+        ],
+        [
+          [
+            97.0,
+            139.0,
+            269.0,
+            314.0
+          ]
+        ]
+      ],
+      "total_seconds": 17.568958845000452
+    },
+    {
+      "crop_start_z": 81,
+      "crop_stop_z": 134,
+      "original_shape_zyx": [
+        143,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        53,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 117,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0021",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        3.0,
+        0.68359375,
+        0.68359375
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0021.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0021.nii.gz",
+      "organ": "Liver",
+      "dice_by_prompt_count": [
+        0.9243453630765328,
+        0.9243453630765328,
+        0.9235691604817844,
+        0.9235459229072757,
+        0.9233873124718106,
+        0.9233273463320703,
+        0.9233171217289176,
+        0.9228448123047626,
+        0.9228216169251097,
+        0.9227478991833049
+      ],
+      "one_box_dice": 0.9243453630765328,
+      "five_box_dice": 0.9233873124718106,
+      "ten_box_dice": 0.9227478991833049,
+      "prompt_slices_cropped": [
+        36,
+        51,
+        50,
+        1,
+        49,
+        2,
+        3,
+        48,
+        4,
+        6
+      ],
+      "prompt_slices_original": [
+        117,
+        132,
+        131,
+        82,
+        130,
+        83,
+        84,
+        129,
+        85,
+        87
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            86.0,
+            150.0,
+            316.0,
+            356.0
+          ]
+        ],
+        [
+          [
+            153.0,
+            253.0,
+            211.0,
+            298.0
+          ]
+        ],
+        [
+          [
+            138.0,
+            235.0,
+            241.0,
+            310.0
+          ]
+        ],
+        [
+          [
+            109.0,
+            253.0,
+            129.0,
+            308.0
+          ]
+        ],
+        [
+          [
+            129.0,
+            221.0,
+            250.0,
+            316.0
+          ]
+        ],
+        [
+          [
+            108.0,
+            247.0,
+            135.0,
+            314.0
+          ]
+        ],
+        [
+          [
+            108.0,
+            240.0,
+            137.0,
+            314.0
+          ]
+        ],
+        [
+          [
+            120.0,
+            211.0,
+            260.0,
+            323.0
+          ]
+        ],
+        [
+          [
+            107.0,
+            237.0,
+            147.0,
+            327.0
+          ]
+        ],
+        [
+          [
+            106.0,
+            225.0,
+            162.0,
+            334.0
+          ]
+        ]
+      ],
+      "total_seconds": 10.660530295001081
+    },
+    {
+      "crop_start_z": 48,
+      "crop_stop_z": 84,
+      "original_shape_zyx": [
+        89,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        36,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 75,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0022",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        5.0,
+        0.7675780057907104,
+        0.7675780057907104
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0022.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0022.nii.gz",
+      "organ": "Liver",
+      "dice_by_prompt_count": [
+        0.8955050472559116,
+        0.8955050472559116,
+        0.8965467674158972,
+        0.901970905193651,
+        0.9022324475545456,
+        0.9022324475545456,
+        0.9022189229872324,
+        0.9020456355713817,
+        0.9039317620303176,
+        0.9033875859475868
+      ],
+      "one_box_dice": 0.8955050472559116,
+      "five_box_dice": 0.9022324475545456,
+      "ten_box_dice": 0.9033875859475868,
+      "prompt_slices_cropped": [
+        27,
+        1,
+        2,
+        34,
+        4,
+        3,
+        5,
+        6,
+        33,
+        7
+      ],
+      "prompt_slices_original": [
+        75,
+        49,
+        50,
+        82,
+        52,
+        51,
+        53,
+        54,
+        81,
+        55
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            64.0,
+            193.0,
+            267.0,
+            427.0
+          ]
+        ],
+        [
+          [
+            72.0,
+            273.0,
+            85.0,
+            322.0
+          ]
+        ],
+        [
+          [
+            70.0,
+            263.0,
+            89.0,
+            333.0
+          ]
+        ],
+        [
+          [
+            132.0,
+            297.0,
+            333.0,
+            407.0
+          ]
+        ],
+        [
+          [
+            68.0,
+            253.0,
+            99.0,
+            344.0
+          ]
+        ],
+        [
+          [
+            70.0,
+            256.0,
+            96.0,
+            339.0
+          ]
+        ],
+        [
+          [
+            68.0,
+            250.0,
+            108.0,
+            349.0
+          ]
+        ],
+        [
+          [
+            69.0,
+            245.0,
+            115.0,
+            357.0
+          ]
+        ],
+        [
+          [
+            119.0,
+            274.0,
+            362.0,
+            415.0
+          ]
+        ],
+        [
+          [
+            70.0,
+            239.0,
+            123.0,
+            368.0
+          ]
+        ]
+      ],
+      "total_seconds": 7.686384254000586
+    },
+    {
+      "crop_start_z": 87,
+      "crop_stop_z": 133,
+      "original_shape_zyx": [
+        163,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        46,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 96,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0007",
+      "label_idx": 7,
+      "spacing_zyx_mm": [
+        3.0,
+        0.748046875,
+        0.748046875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0007.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0007.nii.gz",
+      "organ": "Stomach",
+      "dice_by_prompt_count": [
+        0.5074936114372539,
+        0.5947204328699519,
+        0.6515109426478012,
+        0.6782734939655739,
+        0.7305379602807867,
+        0.7578238214164585,
+        0.7615946091947843,
+        0.7624902002708289,
+        0.7818229273213366,
+        0.7818229273213366
+      ],
+      "one_box_dice": 0.5074936114372539,
+      "five_box_dice": 0.7305379602807867,
+      "ten_box_dice": 0.7818229273213366,
+      "prompt_slices_cropped": [
+        9,
+        16,
+        31,
+        32,
+        26,
+        28,
+        41,
+        42,
+        38,
+        44
+      ],
+      "prompt_slices_original": [
+        96,
+        103,
+        118,
+        119,
+        113,
+        115,
+        128,
+        129,
+        125,
+        131
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            193.0,
+            285.0,
+            351.0,
+            394.0
+          ]
+        ],
+        [
+          [
+            308.0,
+            275.0,
+            363.0,
+            354.0
+          ]
+        ],
+        [
+          [
+            313.0,
+            211.0,
+            379.0,
+            292.0
+          ]
+        ],
+        [
+          [
+            306.0,
+            210.0,
+            379.0,
+            284.0
+          ]
+        ],
+        [
+          [
+            310.0,
+            228.0,
+            370.0,
+            305.0
+          ]
+        ],
+        [
+          [
+            310.0,
+            227.0,
+            378.0,
+            297.0
+          ]
+        ],
+        [
+          [
+            264.0,
+            214.0,
+            350.0,
+            247.0
+          ]
+        ],
+        [
+          [
+            258.0,
+            220.0,
+            307.0,
+            247.0
+          ]
+        ],
+        [
+          [
+            271.0,
+            205.0,
+            366.0,
+            260.0
+          ]
+        ],
+        [
+          [
+            255.0,
+            218.0,
+            303.0,
+            243.0
+          ]
+        ]
+      ],
+      "total_seconds": 10.949073173000215
+    },
+    {
+      "crop_start_z": 105,
+      "crop_stop_z": 131,
+      "original_shape_zyx": [
+        148,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        26,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 123,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0008",
+      "label_idx": 7,
+      "spacing_zyx_mm": [
+        3.0,
+        0.728515625,
+        0.728515625
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0008.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0008.nii.gz",
+      "organ": "Stomach",
+      "dice_by_prompt_count": [
+        0.660007981033309,
+        0.660007981033309,
+        0.672130137408343,
+        0.7626887837651893,
+        0.7653021966561137,
+        0.778958530649978,
+        0.7782650212018771,
+        0.7693551860691007,
+        0.7724484735646984,
+        0.749638071510336
+      ],
+      "one_box_dice": 0.660007981033309,
+      "five_box_dice": 0.7653021966561137,
+      "ten_box_dice": 0.749638071510336,
+      "prompt_slices_cropped": [
+        18,
+        1,
+        2,
+        8,
+        23,
+        10,
+        24,
+        12,
+        5,
+        7
+      ],
+      "prompt_slices_original": [
+        123,
+        106,
+        107,
+        113,
+        128,
+        115,
+        129,
+        117,
+        110,
+        112
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            277.0,
+            247.0,
+            368.0,
+            350.0
+          ]
+        ],
+        [
+          [
+            242.0,
+            350.0,
+            278.0,
+            366.0
+          ]
+        ],
+        [
+          [
+            233.0,
+            347.0,
+            283.0,
+            367.0
+          ]
+        ],
+        [
+          [
+            204.0,
+            318.0,
+            312.0,
+            364.0
+          ]
+        ],
+        [
+          [
+            255.0,
+            253.0,
+            355.0,
+            300.0
+          ]
+        ],
+        [
+          [
+            213.0,
+            314.0,
+            318.0,
+            363.0
+          ]
+        ],
+        [
+          [
+            256.0,
+            256.0,
+            348.0,
+            292.0
+          ]
+        ],
+        [
+          [
+            241.0,
+            279.0,
+            357.0,
+            360.0
+          ]
+        ],
+        [
+          [
+            201.0,
+            334.0,
+            300.0,
+            368.0
+          ]
+        ],
+        [
+          [
+            200.0,
+            317.0,
+            309.0,
+            367.0
+          ]
+        ]
+      ],
+      "total_seconds": 6.921686850000697
+    },
+    {
+      "crop_start_z": 55,
+      "crop_stop_z": 122,
+      "original_shape_zyx": [
+        149,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        67,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 105,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0009",
+      "label_idx": 7,
+      "spacing_zyx_mm": [
+        2.5,
+        0.9765620231628418,
+        0.9765620231628418
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0009.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0009.nii.gz",
+      "organ": "Stomach",
+      "dice_by_prompt_count": [
+        0.6121020987150901,
+        0.6258724551613509,
+        0.7680928527028933,
+        0.805829028333509,
+        0.8202021203632548,
+        0.8198644310136192,
+        0.8193254831125356,
+        0.8412675347559474,
+        0.8493639852721855,
+        0.8493491450965329
+      ],
+      "one_box_dice": 0.6121020987150901,
+      "five_box_dice": 0.8202021203632548,
+      "ten_box_dice": 0.8493491450965329,
+      "prompt_slices_cropped": [
+        50,
+        1,
+        21,
+        20,
+        63,
+        64,
+        65,
+        30,
+        61,
+        62
+      ],
+      "prompt_slices_original": [
+        105,
+        56,
+        76,
+        75,
+        118,
+        119,
+        120,
+        85,
+        116,
+        117
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            274.0,
+            211.0,
+            369.0,
+            333.0
+          ]
+        ],
+        [
+          [
+            272.0,
+            350.0,
+            309.0,
+            371.0
+          ]
+        ],
+        [
+          [
+            204.0,
+            308.0,
+            347.0,
+            366.0
+          ]
+        ],
+        [
+          [
+            204.0,
+            311.0,
+            348.0,
+            368.0
+          ]
+        ],
+        [
+          [
+            284.0,
+            202.0,
+            343.0,
+            256.0
+          ]
+        ],
+        [
+          [
+            290.0,
+            203.0,
+            338.0,
+            246.0
+          ]
+        ],
+        [
+          [
+            306.0,
+            208.0,
+            337.0,
+            236.0
+          ]
+        ],
+        [
+          [
+            273.0,
+            288.0,
+            356.0,
+            355.0
+          ]
+        ],
+        [
+          [
+            281.0,
+            196.0,
+            350.0,
+            269.0
+          ]
+        ],
+        [
+          [
+            281.0,
+            199.0,
+            348.0,
+            261.0
+          ]
+        ]
+      ],
+      "total_seconds": 17.45829114499793
+    },
+    {
+      "crop_start_z": 77,
+      "crop_stop_z": 132,
+      "original_shape_zyx": [
+        148,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        55,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 91,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0010",
+      "label_idx": 7,
+      "spacing_zyx_mm": [
+        3.0,
+        0.78125,
+        0.78125
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0010.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0010.nii.gz",
+      "organ": "Stomach",
+      "dice_by_prompt_count": [
+        0.6189638581283025,
+        0.6303461117673869,
+        0.6396140322929349,
+        0.8801029353749945,
+        0.8787997374153206,
+        0.8852140479608943,
+        0.8842366785358722,
+        0.8833057821620726,
+        0.8769492837096767,
+        0.8743891601761702
+      ],
+      "one_box_dice": 0.6189638581283025,
+      "five_box_dice": 0.8787997374153206,
+      "ten_box_dice": 0.8743891601761702,
+      "prompt_slices_cropped": [
+        14,
+        49,
+        50,
+        41,
+        53,
+        52,
+        1,
+        2,
+        3,
+        4
+      ],
+      "prompt_slices_original": [
+        91,
+        126,
+        127,
+        118,
+        130,
+        129,
+        78,
+        79,
+        80,
+        81
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            170.0,
+            234.0,
+            393.0,
+            358.0
+          ]
+        ],
+        [
+          [
+            313.0,
+            165.0,
+            416.0,
+            270.0
+          ]
+        ],
+        [
+          [
+            317.0,
+            167.0,
+            413.0,
+            266.0
+          ]
+        ],
+        [
+          [
+            287.0,
+            171.0,
+            426.0,
+            293.0
+          ]
+        ],
+        [
+          [
+            349.0,
+            186.0,
+            399.0,
+            239.0
+          ]
+        ],
+        [
+          [
+            333.0,
+            180.0,
+            404.0,
+            247.0
+          ]
+        ],
+        [
+          [
+            219.0,
+            314.0,
+            276.0,
+            355.0
+          ]
+        ],
+        [
+          [
+            218.0,
+            311.0,
+            296.0,
+            358.0
+          ]
+        ],
+        [
+          [
+            212.0,
+            307.0,
+            307.0,
+            361.0
+          ]
+        ],
+        [
+          [
+            212.0,
+            293.0,
+            328.0,
+            363.0
+          ]
+        ]
+      ],
+      "total_seconds": 15.446233652000956
+    },
+    {
+      "crop_start_z": 93,
+      "crop_stop_z": 127,
+      "original_shape_zyx": [
+        143,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        34,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 117,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0021",
+      "label_idx": 7,
+      "spacing_zyx_mm": [
+        3.0,
+        0.68359375,
+        0.68359375
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0021.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0021.nii.gz",
+      "organ": "Stomach",
+      "dice_by_prompt_count": [
+        0.6839554976763864,
+        0.6953209336607734,
+        0.7381293854576297,
+        0.7992194566346186,
+        0.8099146158542144,
+        0.8108228893958747,
+        0.8079476388266567,
+        0.8136633799611523,
+        0.8093922506841185,
+        0.8062425459795367
+      ],
+      "one_box_dice": 0.6839554976763864,
+      "five_box_dice": 0.8099146158542144,
+      "ten_box_dice": 0.8062425459795367,
+      "prompt_slices_cropped": [
+        24,
+        1,
+        13,
+        11,
+        12,
+        2,
+        32,
+        3,
+        18,
+        16
+      ],
+      "prompt_slices_original": [
+        117,
+        94,
+        106,
+        104,
+        105,
+        95,
+        125,
+        96,
+        111,
+        109
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            302.0,
+            204.0,
+            398.0,
+            350.0
+          ]
+        ],
+        [
+          [
+            247.0,
+            290.0,
+            273.0,
+            312.0
+          ]
+        ],
+        [
+          [
+            278.0,
+            297.0,
+            353.0,
+            357.0
+          ]
+        ],
+        [
+          [
+            279.0,
+            294.0,
+            352.0,
+            359.0
+          ]
+        ],
+        [
+          [
+            281.0,
+            295.0,
+            351.0,
+            357.0
+          ]
+        ],
+        [
+          [
+            245.0,
+            287.0,
+            285.0,
+            316.0
+          ]
+        ],
+        [
+          [
+            331.0,
+            255.0,
+            367.0,
+            297.0
+          ]
+        ],
+        [
+          [
+            241.0,
+            286.0,
+            334.0,
+            335.0
+          ]
+        ],
+        [
+          [
+            298.0,
+            291.0,
+            366.0,
+            351.0
+          ]
+        ],
+        [
+          [
+            285.0,
+            298.0,
+            350.0,
+            354.0
+          ]
+        ]
+      ],
+      "total_seconds": 9.972946419002255
+    },
+    {
+      "crop_start_z": 61,
+      "crop_stop_z": 81,
+      "original_shape_zyx": [
+        89,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        20,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 73,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0022",
+      "label_idx": 7,
+      "spacing_zyx_mm": [
+        5.0,
+        0.7675780057907104,
+        0.7675780057907104
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0022.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0022.nii.gz",
+      "organ": "Stomach",
+      "dice_by_prompt_count": [
+        0.7942165748963818,
+        0.7942165748963818,
+        0.8276658437524886,
+        0.827615545007806,
+        0.8434746101638934,
+        0.8434746101638934,
+        0.8400172778645193,
+        0.8381319697460661,
+        0.8277120300285395,
+        0.8240026056271524
+      ],
+      "one_box_dice": 0.7942165748963818,
+      "five_box_dice": 0.8434746101638934,
+      "ten_box_dice": 0.8240026056271524,
+      "prompt_slices_cropped": [
+        12,
+        1,
+        2,
+        18,
+        5,
+        3,
+        4,
+        17,
+        6,
+        11
+      ],
+      "prompt_slices_original": [
+        73,
+        62,
+        63,
+        79,
+        66,
+        64,
+        65,
+        78,
+        67,
+        72
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            239.0,
+            251.0,
+            375.0,
+            430.0
+          ]
+        ],
+        [
+          [
+            201.0,
+            385.0,
+            288.0,
+            423.0
+          ]
+        ],
+        [
+          [
+            195.0,
+            372.0,
+            309.0,
+            428.0
+          ]
+        ],
+        [
+          [
+            285.0,
+            277.0,
+            344.0,
+            379.0
+          ]
+        ],
+        [
+          [
+            179.0,
+            339.0,
+            330.0,
+            433.0
+          ]
+        ],
+        [
+          [
+            192.0,
+            355.0,
+            319.0,
+            426.0
+          ]
+        ],
+        [
+          [
+            182.0,
+            341.0,
+            327.0,
+            431.0
+          ]
+        ],
+        [
+          [
+            245.0,
+            263.0,
+            366.0,
+            425.0
+          ]
+        ],
+        [
+          [
+            176.0,
+            315.0,
+            345.0,
+            433.0
+          ]
+        ],
+        [
+          [
+            227.0,
+            257.0,
+            375.0,
+            429.0
+          ]
+        ]
+      ],
+      "total_seconds": 6.078766892002022
+    },
+    {
+      "crop_start_z": 68,
+      "crop_stop_z": 110,
+      "original_shape_zyx": [
+        163,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        42,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 94,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0007",
+      "label_idx": 3,
+      "spacing_zyx_mm": [
+        3.0,
+        0.748046875,
+        0.748046875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0007.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0007.nii.gz",
+      "organ": "Left kidney",
+      "dice_by_prompt_count": [
+        0.444363536331788,
+        0.4560690950538601,
+        0.6033810668336329,
+        0.7173074492860023,
+        0.8070573503363319,
+        0.833734052240104,
+        0.8308280180460486,
+        0.8308280180460486,
+        0.8298033503277494,
+        0.8290597877797043
+      ],
+      "one_box_dice": 0.444363536331788,
+      "five_box_dice": 0.8070573503363319,
+      "ten_box_dice": 0.8290597877797043,
+      "prompt_slices_cropped": [
+        26,
+        1,
+        7,
+        37,
+        18,
+        31,
+        11,
+        2,
+        3,
+        19
+      ],
+      "prompt_slices_original": [
+        94,
+        69,
+        75,
+        105,
+        86,
+        99,
+        79,
+        70,
+        71,
+        87
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            341.0,
+            151.0,
+            418.0,
+            220.0
+          ]
+        ],
+        [
+          [
+            377.0,
+            216.0,
+            393.0,
+            236.0
+          ]
+        ],
+        [
+          [
+            360.0,
+            196.0,
+            415.0,
+            242.0
+          ]
+        ],
+        [
+          [
+            340.0,
+            145.0,
+            393.0,
+            198.0
+          ]
+        ],
+        [
+          [
+            354.0,
+            170.0,
+            426.0,
+            235.0
+          ]
+        ],
+        [
+          [
+            335.0,
+            147.0,
+            409.0,
+            203.0
+          ]
+        ],
+        [
+          [
+            351.0,
+            184.0,
+            420.0,
+            240.0
+          ]
+        ],
+        [
+          [
+            373.0,
+            208.0,
+            402.0,
+            239.0
+          ]
+        ],
+        [
+          [
+            370.0,
+            204.0,
+            401.0,
+            240.0
+          ]
+        ],
+        [
+          [
+            355.0,
+            166.0,
+            425.0,
+            232.0
+          ]
+        ]
+      ],
+      "total_seconds": 9.984619206999923
+    },
+    {
+      "crop_start_z": 99,
+      "crop_stop_z": 120,
+      "original_shape_zyx": [
+        148,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        21,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 112,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0008",
+      "label_idx": 3,
+      "spacing_zyx_mm": [
+        3.0,
+        0.728515625,
+        0.728515625
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0008.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0008.nii.gz",
+      "organ": "Left kidney",
+      "dice_by_prompt_count": [
+        0.29901663226902997,
+        0.3485836451095671,
+        0.4116678428605034,
+        0.43753187149413564,
+        0.4531373940633741,
+        0.4552377194712961,
+        0.47749903512157466,
+        0.48118629780059774,
+        0.47265098156751084,
+        0.4638917487865863
+      ],
+      "one_box_dice": 0.29901663226902997,
+      "five_box_dice": 0.4531373940633741,
+      "ten_box_dice": 0.4638917487865863,
+      "prompt_slices_cropped": [
+        13,
+        1,
+        9,
+        5,
+        19,
+        6,
+        17,
+        11,
+        7,
+        10
+      ],
+      "prompt_slices_original": [
+        112,
+        100,
+        108,
+        104,
+        118,
+        105,
+        116,
+        110,
+        106,
+        109
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            294.0,
+            229.0,
+            332.0,
+            260.0
+          ]
+        ],
+        [
+          [
+            312.0,
+            224.0,
+            332.0,
+            246.0
+          ]
+        ],
+        [
+          [
+            311.0,
+            222.0,
+            335.0,
+            258.0
+          ]
+        ],
+        [
+          [
+            307.0,
+            218.0,
+            338.0,
+            250.0
+          ]
+        ],
+        [
+          [
+            300.0,
+            235.0,
+            322.0,
+            247.0
+          ]
+        ],
+        [
+          [
+            309.0,
+            218.0,
+            339.0,
+            255.0
+          ]
+        ],
+        [
+          [
+            295.0,
+            232.0,
+            329.0,
+            254.0
+          ]
+        ],
+        [
+          [
+            310.0,
+            224.0,
+            334.0,
+            261.0
+          ]
+        ],
+        [
+          [
+            309.0,
+            218.0,
+            339.0,
+            256.0
+          ]
+        ],
+        [
+          [
+            311.0,
+            224.0,
+            335.0,
+            262.0
+          ]
+        ]
+      ],
+      "total_seconds": 4.8986075920001895
+    },
+    {
+      "crop_start_z": 19,
+      "crop_stop_z": 66,
+      "original_shape_zyx": [
+        149,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        47,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 39,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0009",
+      "label_idx": 3,
+      "spacing_zyx_mm": [
+        2.5,
+        0.9765620231628418,
+        0.9765620231628418
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0009.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0009.nii.gz",
+      "organ": "Left kidney",
+      "dice_by_prompt_count": [
+        0.6161343933881328,
+        0.6233507398706201,
+        0.7590983161325366,
+        0.7824726429588018,
+        0.7825128062544474,
+        0.8273025022926765,
+        0.849119338225664,
+        0.8473628736456006,
+        0.8511300795456432,
+        0.847463578754818
+      ],
+      "one_box_dice": 0.6161343933881328,
+      "five_box_dice": 0.7825128062544474,
+      "ten_box_dice": 0.847463578754818,
+      "prompt_slices_cropped": [
+        20,
+        1,
+        41,
+        3,
+        45,
+        33,
+        8,
+        44,
+        13,
+        28
+      ],
+      "prompt_slices_original": [
+        39,
+        20,
+        60,
+        22,
+        64,
+        52,
+        27,
+        63,
+        32,
+        47
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            295.0,
+            187.0,
+            363.0,
+            267.0
+          ]
+        ],
+        [
+          [
+            315.0,
+            233.0,
+            338.0,
+            264.0
+          ]
+        ],
+        [
+          [
+            283.0,
+            164.0,
+            339.0,
+            213.0
+          ]
+        ],
+        [
+          [
+            307.0,
+            223.0,
+            344.0,
+            270.0
+          ]
+        ],
+        [
+          [
+            292.0,
+            173.0,
+            315.0,
+            192.0
+          ]
+        ],
+        [
+          [
+            287.0,
+            170.0,
+            354.0,
+            233.0
+          ]
+        ],
+        [
+          [
+            299.0,
+            210.0,
+            352.0,
+            271.0
+          ]
+        ],
+        [
+          [
+            286.0,
+            167.0,
+            329.0,
+            201.0
+          ]
+        ],
+        [
+          [
+            295.0,
+            197.0,
+            355.0,
+            271.0
+          ]
+        ],
+        [
+          [
+            290.0,
+            177.0,
+            358.0,
+            249.0
+          ]
+        ]
+      ],
+      "total_seconds": 10.896454024001287
+    },
+    {
+      "crop_start_z": 77,
+      "crop_stop_z": 116,
+      "original_shape_zyx": [
+        148,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        39,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 99,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0010",
+      "label_idx": 3,
+      "spacing_zyx_mm": [
+        3.0,
+        0.78125,
+        0.78125
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0010.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0010.nii.gz",
+      "organ": "Left kidney",
+      "dice_by_prompt_count": [
+        0.8127524374162868,
+        0.8185169885366106,
+        0.8201525553798691,
+        0.840719082528999,
+        0.8453588593560298,
+        0.8752681465521315,
+        0.8752681465521315,
+        0.8903273602815206,
+        0.8902140532612183,
+        0.890201812323248
+      ],
+      "one_box_dice": 0.8127524374162868,
+      "five_box_dice": 0.8453588593560298,
+      "ten_box_dice": 0.890201812323248,
+      "prompt_slices_cropped": [
+        22,
+        35,
+        37,
+        36,
+        1,
+        7,
+        2,
+        31,
+        26,
+        3
+      ],
+      "prompt_slices_original": [
+        99,
+        112,
+        114,
+        113,
+        78,
+        84,
+        79,
+        108,
+        103,
+        80
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            316.0,
+            143.0,
+            404.0,
+            207.0
+          ]
+        ],
+        [
+          [
+            318.0,
+            150.0,
+            355.0,
+            185.0
+          ]
+        ],
+        [
+          [
+            324.0,
+            155.0,
+            344.0,
+            178.0
+          ]
+        ],
+        [
+          [
+            323.0,
+            151.0,
+            350.0,
+            183.0
+          ]
+        ],
+        [
+          [
+            354.0,
+            182.0,
+            382.0,
+            206.0
+          ]
+        ],
+        [
+          [
+            335.0,
+            160.0,
+            401.0,
+            220.0
+          ]
+        ],
+        [
+          [
+            352.0,
+            179.0,
+            386.0,
+            207.0
+          ]
+        ],
+        [
+          [
+            312.0,
+            145.0,
+            380.0,
+            194.0
+          ]
+        ],
+        [
+          [
+            312.0,
+            142.0,
+            397.0,
+            202.0
+          ]
+        ],
+        [
+          [
+            348.0,
+            172.0,
+            390.0,
+            209.0
+          ]
+        ]
+      ],
+      "total_seconds": 8.52291315200273
+    },
+    {
+      "crop_start_z": 75,
+      "crop_stop_z": 108,
+      "original_shape_zyx": [
+        143,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        33,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 96,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0021",
+      "label_idx": 3,
+      "spacing_zyx_mm": [
+        3.0,
+        0.68359375,
+        0.68359375
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0021.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0021.nii.gz",
+      "organ": "Left kidney",
+      "dice_by_prompt_count": [
+        0.6693111303118372,
+        0.6942641798671436,
+        0.714118347273126,
+        0.7973374829024095,
+        0.8042121261466645,
+        0.8452300893457585,
+        0.8435145450590306,
+        0.8397944517729519,
+        0.8364717254712422,
+        0.8354905289147795
+      ],
+      "one_box_dice": 0.6693111303118372,
+      "five_box_dice": 0.8042121261466645,
+      "ten_box_dice": 0.8354905289147795,
+      "prompt_slices_cropped": [
+        21,
+        1,
+        31,
+        5,
+        30,
+        10,
+        29,
+        2,
+        24,
+        28
+      ],
+      "prompt_slices_original": [
+        96,
+        76,
+        106,
+        80,
+        105,
+        85,
+        104,
+        77,
+        99,
+        103
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            315.0,
+            163.0,
+            398.0,
+            230.0
+          ]
+        ],
+        [
+          [
+            352.0,
+            211.0,
+            389.0,
+            240.0
+          ]
+        ],
+        [
+          [
+            320.0,
+            158.0,
+            362.0,
+            184.0
+          ]
+        ],
+        [
+          [
+            334.0,
+            196.0,
+            400.0,
+            249.0
+          ]
+        ],
+        [
+          [
+            316.0,
+            156.0,
+            369.0,
+            191.0
+          ]
+        ],
+        [
+          [
+            329.0,
+            183.0,
+            405.0,
+            246.0
+          ]
+        ],
+        [
+          [
+            313.0,
+            155.0,
+            376.0,
+            196.0
+          ]
+        ],
+        [
+          [
+            347.0,
+            207.0,
+            392.0,
+            244.0
+          ]
+        ],
+        [
+          [
+            312.0,
+            159.0,
+            393.0,
+            221.0
+          ]
+        ],
+        [
+          [
+            312.0,
+            154.0,
+            382.0,
+            202.0
+          ]
+        ]
+      ],
+      "total_seconds": 8.400753679001355
+    },
+    {
+      "crop_start_z": 48,
+      "crop_stop_z": 69,
+      "original_shape_zyx": [
+        89,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        21,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 54,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0022",
+      "label_idx": 3,
+      "spacing_zyx_mm": [
+        5.0,
+        0.7675780057907104,
+        0.7675780057907104
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0022.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0022.nii.gz",
+      "organ": "Left kidney",
+      "dice_by_prompt_count": [
+        0.6112102191388613,
+        0.6804802242671705,
+        0.802754985060615,
+        0.8682403185779419,
+        0.8682403185779419,
+        0.8626599952503009,
+        0.8624975501404586,
+        0.86199012180932,
+        0.8619503427860413,
+        0.8618817754806832
+      ],
+      "one_box_dice": 0.6112102191388613,
+      "five_box_dice": 0.8682403185779419,
+      "ten_box_dice": 0.8618817754806832,
+      "prompt_slices_cropped": [
+        6,
+        18,
+        17,
+        13,
+        1,
+        2,
+        19,
+        14,
+        9,
+        8
+      ],
+      "prompt_slices_original": [
+        54,
+        66,
+        65,
+        61,
+        49,
+        50,
+        67,
+        62,
+        57,
+        56
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            315.0,
+            230.0,
+            377.0,
+            305.0
+          ]
+        ],
+        [
+          [
+            296.0,
+            198.0,
+            360.0,
+            262.0
+          ]
+        ],
+        [
+          [
+            295.0,
+            201.0,
+            361.0,
+            266.0
+          ]
+        ],
+        [
+          [
+            297.0,
+            211.0,
+            370.0,
+            287.0
+          ]
+        ],
+        [
+          [
+            330.0,
+            259.0,
+            367.0,
+            298.0
+          ]
+        ],
+        [
+          [
+            324.0,
+            253.0,
+            371.0,
+            302.0
+          ]
+        ],
+        [
+          [
+            299.0,
+            196.0,
+            359.0,
+            255.0
+          ]
+        ],
+        [
+          [
+            296.0,
+            208.0,
+            366.0,
+            282.0
+          ]
+        ],
+        [
+          [
+            320.0,
+            224.0,
+            374.0,
+            298.0
+          ]
+        ],
+        [
+          [
+            315.0,
+            226.0,
+            375.0,
+            300.0
+          ]
+        ]
+      ],
+      "total_seconds": 5.236121521000314
+    },
+    {
+      "crop_start_z": 96,
+      "crop_stop_z": 137,
+      "original_shape_zyx": [
+        163,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        41,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 123,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0007",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        3.0,
+        0.748046875,
+        0.748046875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0007.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0007.nii.gz",
+      "organ": "Spleen",
+      "dice_by_prompt_count": [
+        0.877303527797837,
+        0.8797732589144388,
+        0.897346025289445,
+        0.8968476069402167,
+        0.914744096802281,
+        0.9129393145926903,
+        0.912863433496019,
+        0.9128616187159057,
+        0.912801735019849,
+        0.9127817755337335
+      ],
+      "one_box_dice": 0.877303527797837,
+      "five_box_dice": 0.914744096802281,
+      "ten_box_dice": 0.9127817755337335,
+      "prompt_slices_cropped": [
+        27,
+        1,
+        2,
+        39,
+        10,
+        38,
+        3,
+        4,
+        6,
+        5
+      ],
+      "prompt_slices_original": [
+        123,
+        97,
+        98,
+        135,
+        106,
+        134,
+        99,
+        100,
+        102,
+        101
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            331.0,
+            139.0,
+            449.0,
+            261.0
+          ]
+        ],
+        [
+          [
+            410.0,
+            171.0,
+            440.0,
+            230.0
+          ]
+        ],
+        [
+          [
+            407.0,
+            166.0,
+            444.0,
+            239.0
+          ]
+        ],
+        [
+          [
+            340.0,
+            164.0,
+            413.0,
+            233.0
+          ]
+        ],
+        [
+          [
+            392.0,
+            142.0,
+            449.0,
+            265.0
+          ]
+        ],
+        [
+          [
+            340.0,
+            162.0,
+            419.0,
+            236.0
+          ]
+        ],
+        [
+          [
+            404.0,
+            161.0,
+            444.0,
+            242.0
+          ]
+        ],
+        [
+          [
+            403.0,
+            159.0,
+            445.0,
+            246.0
+          ]
+        ],
+        [
+          [
+            400.0,
+            151.0,
+            447.0,
+            255.0
+          ]
+        ],
+        [
+          [
+            401.0,
+            155.0,
+            447.0,
+            251.0
+          ]
+        ]
+      ],
+      "total_seconds": 11.55978713100194
+    },
+    {
+      "crop_start_z": 107,
+      "crop_stop_z": 134,
+      "original_shape_zyx": [
+        148,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        27,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 124,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0008",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        3.0,
+        0.728515625,
+        0.728515625
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0008.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0008.nii.gz",
+      "organ": "Spleen",
+      "dice_by_prompt_count": [
+        0.8770414631072495,
+        0.8770414631072495,
+        0.8741641112794177,
+        0.8740407680467852,
+        0.8731813302165733,
+        0.8744267291311132,
+        0.8733721434006503,
+        0.8790011269520419,
+        0.8752106486913117,
+        0.8750077791684242
+      ],
+      "one_box_dice": 0.8770414631072495,
+      "five_box_dice": 0.8731813302165733,
+      "ten_box_dice": 0.8750077791684242,
+      "prompt_slices_cropped": [
+        17,
+        1,
+        25,
+        24,
+        23,
+        2,
+        22,
+        3,
+        21,
+        11
+      ],
+      "prompt_slices_original": [
+        124,
+        108,
+        132,
+        131,
+        130,
+        109,
+        129,
+        110,
+        128,
+        118
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            294.0,
+            192.0,
+            430.0,
+            302.0
+          ]
+        ],
+        [
+          [
+            374.0,
+            207.0,
+            410.0,
+            247.0
+          ]
+        ],
+        [
+          [
+            311.0,
+            230.0,
+            366.0,
+            262.0
+          ]
+        ],
+        [
+          [
+            302.0,
+            221.0,
+            377.0,
+            268.0
+          ]
+        ],
+        [
+          [
+            295.0,
+            214.0,
+            389.0,
+            275.0
+          ]
+        ],
+        [
+          [
+            370.0,
+            202.0,
+            427.0,
+            269.0
+          ]
+        ],
+        [
+          [
+            291.0,
+            211.0,
+            403.0,
+            284.0
+          ]
+        ],
+        [
+          [
+            366.0,
+            199.0,
+            437.0,
+            307.0
+          ]
+        ],
+        [
+          [
+            291.0,
+            205.0,
+            410.0,
+            286.0
+          ]
+        ],
+        [
+          [
+            345.0,
+            187.0,
+            438.0,
+            317.0
+          ]
+        ]
+      ],
+      "total_seconds": 6.593808519002778
+    },
+    {
+      "crop_start_z": 30,
+      "crop_stop_z": 136,
+      "original_shape_zyx": [
+        149,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        106,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 80,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0009",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        2.5,
+        0.9765620231628418,
+        0.9765620231628418
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0009.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0009.nii.gz",
+      "organ": "Spleen",
+      "dice_by_prompt_count": [
+        0.9536677811645549,
+        0.9536677811645549,
+        0.9536677811645549,
+        0.9536677811645549,
+        0.9536677811645549,
+        0.9536649640930888,
+        0.9536649640930888,
+        0.9536311605335944,
+        0.9536311605335944,
+        0.9536311605335944
+      ],
+      "one_box_dice": 0.9536677811645549,
+      "five_box_dice": 0.9536677811645549,
+      "ten_box_dice": 0.9536311605335944,
+      "prompt_slices_cropped": [
+        50,
+        104,
+        1,
+        3,
+        2,
+        4,
+        103,
+        5,
+        102,
+        6
+      ],
+      "prompt_slices_original": [
+        80,
+        134,
+        31,
+        33,
+        32,
+        34,
+        133,
+        35,
+        132,
+        36
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            276.0,
+            133.0,
+            424.0,
+            343.0
+          ]
+        ],
+        [
+          [
+            322.0,
+            187.0,
+            350.0,
+            212.0
+          ]
+        ],
+        [
+          [
+            358.0,
+            266.0,
+            396.0,
+            306.0
+          ]
+        ],
+        [
+          [
+            353.0,
+            256.0,
+            402.0,
+            319.0
+          ]
+        ],
+        [
+          [
+            355.0,
+            261.0,
+            399.0,
+            314.0
+          ]
+        ],
+        [
+          [
+            351.0,
+            224.0,
+            406.0,
+            320.0
+          ]
+        ],
+        [
+          [
+            315.0,
+            181.0,
+            355.0,
+            216.0
+          ]
+        ],
+        [
+          [
+            350.0,
+            219.0,
+            407.0,
+            323.0
+          ]
+        ],
+        [
+          [
+            307.0,
+            176.0,
+            361.0,
+            217.0
+          ]
+        ],
+        [
+          [
+            349.0,
+            215.0,
+            408.0,
+            324.0
+          ]
+        ]
+      ],
+      "total_seconds": 19.802431046999118
+    },
+    {
+      "crop_start_z": 106,
+      "crop_stop_z": 129,
+      "original_shape_zyx": [
+        148,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        23,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 117,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0010",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        3.0,
+        0.78125,
+        0.78125
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0010.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0010.nii.gz",
+      "organ": "Spleen",
+      "dice_by_prompt_count": [
+        0.8491540033510572,
+        0.8514528744056862,
+        0.8635430207803463,
+        0.8614664325725274,
+        0.8614664325725274,
+        0.849677513925535,
+        0.8600514839762851,
+        0.8631302389590892,
+        0.8554171185708366,
+        0.8539215772026345
+      ],
+      "one_box_dice": 0.8491540033510572,
+      "five_box_dice": 0.8614664325725274,
+      "ten_box_dice": 0.8539215772026345,
+      "prompt_slices_cropped": [
+        11,
+        21,
+        20,
+        3,
+        1,
+        2,
+        19,
+        18,
+        4,
+        6
+      ],
+      "prompt_slices_original": [
+        117,
+        127,
+        126,
+        109,
+        107,
+        108,
+        125,
+        124,
+        110,
+        112
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            341.0,
+            131.0,
+            426.0,
+            196.0
+          ]
+        ],
+        [
+          [
+            342.0,
+            159.0,
+            405.0,
+            182.0
+          ]
+        ],
+        [
+          [
+            337.0,
+            151.0,
+            408.0,
+            186.0
+          ]
+        ],
+        [
+          [
+            363.0,
+            136.0,
+            429.0,
+            196.0
+          ]
+        ],
+        [
+          [
+            399.0,
+            158.0,
+            423.0,
+            190.0
+          ]
+        ],
+        [
+          [
+            367.0,
+            138.0,
+            428.0,
+            196.0
+          ]
+        ],
+        [
+          [
+            328.0,
+            146.0,
+            416.0,
+            191.0
+          ]
+        ],
+        [
+          [
+            333.0,
+            142.0,
+            417.0,
+            192.0
+          ]
+        ],
+        [
+          [
+            360.0,
+            135.0,
+            429.0,
+            197.0
+          ]
+        ],
+        [
+          [
+            353.0,
+            132.0,
+            429.0,
+            199.0
+          ]
+        ]
+      ],
+      "total_seconds": 6.164403149999998
+    },
+    {
+      "crop_start_z": 103,
+      "crop_stop_z": 124,
+      "original_shape_zyx": [
+        143,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        21,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 114,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0021",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        3.0,
+        0.68359375,
+        0.68359375
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0021.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0021.nii.gz",
+      "organ": "Spleen",
+      "dice_by_prompt_count": [
+        0.8281724253033279,
+        0.8281724253033279,
+        0.8256513026052105,
+        0.8250320864711067,
+        0.8239053912184278,
+        0.8195475446582787,
+        0.817238871665327,
+        0.8102770994797749,
+        0.8102770994797749,
+        0.8101110488281545
+      ],
+      "one_box_dice": 0.8281724253033279,
+      "five_box_dice": 0.8239053912184278,
+      "ten_box_dice": 0.8101110488281545,
+      "prompt_slices_cropped": [
+        11,
+        1,
+        19,
+        2,
+        18,
+        17,
+        3,
+        6,
+        4,
+        16
+      ],
+      "prompt_slices_original": [
+        114,
+        104,
+        122,
+        105,
+        121,
+        120,
+        106,
+        109,
+        107,
+        119
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            321.0,
+            173.0,
+            429.0,
+            279.0
+          ]
+        ],
+        [
+          [
+            413.0,
+            207.0,
+            426.0,
+            242.0
+          ]
+        ],
+        [
+          [
+            343.0,
+            211.0,
+            397.0,
+            241.0
+          ]
+        ],
+        [
+          [
+            408.0,
+            199.0,
+            428.0,
+            246.0
+          ]
+        ],
+        [
+          [
+            334.0,
+            204.0,
+            404.0,
+            248.0
+          ]
+        ],
+        [
+          [
+            331.0,
+            196.0,
+            410.0,
+            254.0
+          ]
+        ],
+        [
+          [
+            389.0,
+            178.0,
+            430.0,
+            258.0
+          ]
+        ],
+        [
+          [
+            372.0,
+            171.0,
+            431.0,
+            265.0
+          ]
+        ],
+        [
+          [
+            383.0,
+            177.0,
+            432.0,
+            262.0
+          ]
+        ],
+        [
+          [
+            326.0,
+            190.0,
+            415.0,
+            260.0
+          ]
+        ]
+      ],
+      "total_seconds": 5.101454345996899
+    },
+    {
+      "crop_start_z": 57,
+      "crop_stop_z": 82,
+      "original_shape_zyx": [
+        89,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        25,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 71,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0022",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        5.0,
+        0.7675780057907104,
+        0.7675780057907104
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0022.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0022.nii.gz",
+      "organ": "Spleen",
+      "dice_by_prompt_count": [
+        0.8681914314817163,
+        0.8694708675292467,
+        0.8933982683982684,
+        0.8929573512906847,
+        0.8927760445270173,
+        0.8927470337267603,
+        0.8921693331621797,
+        0.8916969471101587,
+        0.8851847570608408,
+        0.8877290511654606
+      ],
+      "one_box_dice": 0.8681914314817163,
+      "five_box_dice": 0.8927760445270173,
+      "ten_box_dice": 0.8877290511654606,
+      "prompt_slices_cropped": [
+        14,
+        1,
+        2,
+        23,
+        20,
+        21,
+        19,
+        22,
+        18,
+        11
+      ],
+      "prompt_slices_original": [
+        71,
+        58,
+        59,
+        80,
+        77,
+        78,
+        76,
+        79,
+        75,
+        68
+      ],
+      "boxes_original_xyxy": [
+        [
+          [
+            299.0,
+            183.0,
+            416.0,
+            299.0
+          ]
+        ],
+        [
+          [
+            372.0,
+            216.0,
+            406.0,
+            321.0
+          ]
+        ],
+        [
+          [
+            370.0,
+            210.0,
+            409.0,
+            324.0
+          ]
+        ],
+        [
+          [
+            304.0,
+            236.0,
+            372.0,
+            296.0
+          ]
+        ],
+        [
+          [
+            297.0,
+            201.0,
+            398.0,
+            288.0
+          ]
+        ],
+        [
+          [
+            296.0,
+            210.0,
+            392.0,
+            288.0
+          ]
+        ],
+        [
+          [
+            299.0,
+            196.0,
+            402.0,
+            289.0
+          ]
+        ],
+        [
+          [
+            296.0,
+            219.0,
+            385.0,
+            294.0
+          ]
+        ],
+        [
+          [
+            295.0,
+            190.0,
+            407.0,
+            290.0
+          ]
+        ],
+        [
+          [
+            352.0,
+            187.0,
+            419.0,
+            329.0
+          ]
+        ]
+      ],
+      "total_seconds": 5.921674172001076
+    }
+  ],
+  "source_sha256": {
+    "summarize.py": "f67babb150377e0b32a394a86ff9b78f77f61f7e317f35e899489abb698a53e1",
+    "evaluate.py": "a46a559c05dacbd730c6fd8ae62bb3c68e6b982dbbfe3cc2dfdee1075207088a",
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "author_mbox.py": "87e7a670e2f985ab3035ad686b100e8000204806e370324f2ac373fb339559ae",
+    "predictor.py": "239beab9175f067a61aa9cec700611fe09892b5e90939569ae02fa6e8ac286e0",
+    "helpers.py": "fc1d547ec89c6a257d65d521c7da88e37e3849d596256f6a729ab2dc6f32ebf9",
+    "loader.py": "6f60df861d792a5ebdded032571946568d4a1c596a10114d51950941490005d3",
+    "data_engine.py": "53e6ab80edba2230f042919cfeb6292de98985da24ebfee18af06fa453ad4469"
+  },
+  "manifest_sha256": {
+    "01_BTCV_test_4to1.txt": "2ae3fd92ee0e0ac08d18931bcbd2c444ae729a60fa195670078f39ebcc819ea8",
+    "01_BTCV_train_4to1.txt": "22adb7c165d7a3269b090674b119eefaea2beee3beb611a654f5dce3e8266ed8"
+  }
+}
