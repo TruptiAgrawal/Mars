@@ -1,0 +1,78 @@
+BTCV Cross-Validation — Fold Batch Count Summary
+Generated: 2026-09-26
+=======================================================
+
+WHY BATCH COUNTS DIFFER ACROSS FOLDS
+--------------------------------------
+Each fold holds out a different set of 6 subjects for testing.
+The remaining 24 subjects form the training set.
+Since CT volumes vary in number of axial slices, each fold's
+training set has a different total slice count → different batches/epoch.
+The dataloader samples each slice ~2.6x per epoch (random crop augmentation),
+so: batches/epoch ≈ total_training_slices × 2.64 / batch_size(4)
+
+FOLD DETAILS
+--------------------------------------
+
+fold1:
+  Held-out (test) : img0001, img0002, img0003, img0004, img0005, img0006
+  Training volumes: img0007-0010, img0021-0040 (24 volumes)
+  Training slices : 2907
+  Batches/epoch   : ~1904  (confirmed from train_fold1.log)
+  Epochs          : 21
+  Save interval   : 1 (every epoch saved)
+
+fold2:
+  Held-out (test) : img0007, img0008, img0009, img0010, img0021, img0022
+  Training volumes: img0001-0006, img0023-0040 (24 volumes)
+  Training slices : 2939
+  Batches/epoch   : ~1904  (confirmed from train_fold2.log)
+  Epochs          : 21
+  Save interval   : 1 (every epoch saved)
+
+fold3:
+  Held-out (test) : img0023, img0024, img0025, img0026, img0027, img0028
+  Training volumes: img0001-0010, img0021-0022, img0029-0040 (24 volumes)
+  Training slices : 3166
+  Batches/epoch   : ~2098  (confirmed from train_fold3.log)
+  Epochs          : 21
+  Save interval   : 5 (epochs 0,5,10,15,20 saved)
+
+fold4:
+  Held-out (test) : img0029, img0030, img0031, img0032, img0033, img0034
+  Training volumes: img0001-0010, img0021-0028, img0035-0040 (24 volumes)
+  Training slices : 3087
+  Batches/epoch   : ~2040  (estimated)
+  Epochs          : 21
+  Save interval   : TBD
+
+fold5:
+  Held-out (test) : img0035, img0036, img0037, img0038, img0039, img0040
+  Training volumes: img0001-0010, img0021-0034 (24 volumes)
+  Training slices : 3017
+  Batches/epoch   : ~1995  (estimated)
+  Epochs          : 21
+  Save interval   : TBD
+
+COMPARISON TABLE
+--------------------------------------
+Fold  | Held-out        | Train slices | Batches/epoch | Save interval
+------|-----------------|--------------|---------------|---------------
+fold1 | img0001-0006    | 2907         | ~1904         | 1 (all epochs)
+fold2 | img0007-0010,   | 2939         | ~1904         | 1 (all epochs)
+      | img0021-0022    |              |               |
+fold3 | img0023-0028    | 3166         | ~2098         | 5 (epochs 0,5,10,15,20)
+fold4 | img0029-0034    | 3087         | ~2040         | TBD
+fold5 | img0035-0040    | 3017         | ~1995         | TBD
+
+NOTE ON CROSS-FOLD COMPARISON
+--------------------------------------
+Because batch counts differ, comparing fold performance at the same
+EPOCH number is not strictly fair. Prefer comparing at the same
+ITERATION number (e.g. iteration 35000) using the iteration checkpoints
+saved every 5000 iterations. These are consistent across all folds
+regardless of epoch/batch differences.
+
+fold1 and fold2 have nearly identical batch counts (1904) by coincidence —
+their respective held-out sets happen to contain volumes with similar
+total slice counts.

@@ -1,0 +1,540 @@
+===== Z-SPACING SETUP LOG — 2026-10-01 12:12:42 =====
+
+=== Step 1: CPU geometry tests ===
+test_endpoints_clipped (btcv_cross_validation.z_spacing.test_cpu.CoordMappingTests) ... ok
+test_physical_consistency (btcv_cross_validation.z_spacing.test_cpu.CoordMappingTests) ... ok
+test_roundtrip_z_coord (btcv_cross_validation.z_spacing.test_cpu.CoordMappingTests) ... ok
+test_label_values_preserved_through_resample (btcv_cross_validation.z_spacing.test_cpu.PipelineGeometryTests)
+Binary label resampled from 6mm -> 3mm -> 6mm should contain ... ok
+test_proposed_branch_output_on_scoring_grid (btcv_cross_validation.z_spacing.test_cpu.PipelineGeometryTests)
+Simulate the proposed branch: resample, produce dummy prediction, ... ok
+test_absent_target_raises (btcv_cross_validation.z_spacing.test_cpu.PrepareArraysTests) ... ok
+test_cropping_removes_empty_z (btcv_cross_validation.z_spacing.test_cpu.PrepareArraysTests) ... ok
+test_full_volume_keeps_all_z (btcv_cross_validation.z_spacing.test_cpu.PrepareArraysTests) ... ok
+test_too_short_raises (btcv_cross_validation.z_spacing.test_cpu.PrepareArraysTests) ... ok
+test_empty_slice_raises (btcv_cross_validation.z_spacing.test_cpu.PromptTests) ... ok
+test_initial_prompt_box_shape (btcv_cross_validation.z_spacing.test_cpu.PromptTests) ... ok
+test_initial_prompt_inside_mask (btcv_cross_validation.z_spacing.test_cpu.PromptTests) ... ok
+test_identity_unchanged_spacing (btcv_cross_validation.z_spacing.test_cpu.ResamplingTests) ... ok
+test_image_label_same_output_shape (btcv_cross_validation.z_spacing.test_cpu.ResamplingTests) ... ok
+test_image_linear_shape (btcv_cross_validation.z_spacing.test_cpu.ResamplingTests) ... ok
+test_label_nearest_neighbour (btcv_cross_validation.z_spacing.test_cpu.ResamplingTests) ... ok
+test_source_bigger_than_target_increases_slices (btcv_cross_validation.z_spacing.test_cpu.ResamplingTests) ... ok
+test_source_smaller_than_target_decreases_slices (btcv_cross_validation.z_spacing.test_cpu.ResamplingTests) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.686s
+
+OK
+--- CPU tests passed ---
+
+=== Step 2: Dry-run synthetic volume plan ===
+Manifest: 6 volumes
+Target z spacing: 6.0 mm
+Output: btcv_cross_validation/z_spacing/synthetic_6mm
+DRY RUN — no files will be written.
+
+  SKIP img0035: z=5.000mm (not 3mm)
+  img0036: source z=3.0mm  shape=(184, 512, 512)  -> z=6.0000mm  shape=(92, 512, 512)
+  SKIP img0037: z=5.000mm (not 3mm)
+  SKIP img0038: z=5.000mm (not 3mm)
+  SKIP img0039: z=5.000mm (not 3mm)
+  img0040: source z=3.0mm  shape=(195, 512, 512)  -> z=5.9694mm  shape=(98, 512, 512)
+
+Processed: 2 volumes
+(dry run — no files written)
+
+Planned volumes:
+  img0036: 3.0mm -> 6.0000mm  [184, 512, 512] -> [92, 512, 512]
+  img0040: 3.0mm -> 5.9694mm  [195, 512, 512] -> [98, 512, 512]
+--- Dry run complete ---
+
+=== Step 3: Create synthetic 6mm volumes ===
+Manifest: 6 volumes
+Target z spacing: 6.0 mm
+Output: btcv_cross_validation/z_spacing/synthetic_6mm
+
+  SKIP img0035: z=5.000mm (not 3mm)
+  img0036: source z=3.0mm  shape=(184, 512, 512)  -> z=6.0000mm  shape=(92, 512, 512)
+  SKIP img0037: z=5.000mm (not 3mm)
+  SKIP img0038: z=5.000mm (not 3mm)
+  SKIP img0039: z=5.000mm (not 3mm)
+  img0040: source z=3.0mm  shape=(195, 512, 512)  -> z=5.9694mm  shape=(98, 512, 512)
+
+Processed: 2 volumes
+Meta written: btcv_cross_validation/z_spacing/synthetic_6mm/meta.json
+Manifest written: btcv_cross_validation/z_spacing/synthetic_6mm/synthetic_manifest.txt
+
+Next: run CPU tests, then run_z_spacing_eval.sh
+  Synthetic volumes created.
+
+=== Step 4: Preflights for all 8 arms ===
+  preflight: branch=control organ=6
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0036",
+    "img0040"
+  ],
+  "branch": "control",
+  "protocol": "gt-cropped",
+  "target_z_mm": null,
+  "gpu_inference_requested": false
+}
+Preflight only: no model imports, checkpoint reads, volume reads or GPU work.
+  preflight: branch=control organ=7
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0036",
+    "img0040"
+  ],
+  "branch": "control",
+  "protocol": "gt-cropped",
+  "target_z_mm": null,
+  "gpu_inference_requested": false
+}
+Preflight only: no model imports, checkpoint reads, volume reads or GPU work.
+  preflight: branch=control organ=3
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0036",
+    "img0040"
+  ],
+  "branch": "control",
+  "protocol": "gt-cropped",
+  "target_z_mm": null,
+  "gpu_inference_requested": false
+}
+Preflight only: no model imports, checkpoint reads, volume reads or GPU work.
+  preflight: branch=control organ=1
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0036",
+    "img0040"
+  ],
+  "branch": "control",
+  "protocol": "gt-cropped",
+  "target_z_mm": null,
+  "gpu_inference_requested": false
+}
+Preflight only: no model imports, checkpoint reads, volume reads or GPU work.
+  preflight: branch=proposed organ=6
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0036",
+    "img0040"
+  ],
+  "branch": "proposed",
+  "protocol": "gt-cropped",
+  "target_z_mm": 3.0,
+  "gpu_inference_requested": false
+}
+Preflight only: no model imports, checkpoint reads, volume reads or GPU work.
+  preflight: branch=proposed organ=7
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0036",
+    "img0040"
+  ],
+  "branch": "proposed",
+  "protocol": "gt-cropped",
+  "target_z_mm": 3.0,
+  "gpu_inference_requested": false
+}
+Preflight only: no model imports, checkpoint reads, volume reads or GPU work.
+  preflight: branch=proposed organ=3
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0036",
+    "img0040"
+  ],
+  "branch": "proposed",
+  "protocol": "gt-cropped",
+  "target_z_mm": 3.0,
+  "gpu_inference_requested": false
+}
+Preflight only: no model imports, checkpoint reads, volume reads or GPU work.
+  preflight: branch=proposed organ=1
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0036",
+    "img0040"
+  ],
+  "branch": "proposed",
+  "protocol": "gt-cropped",
+  "target_z_mm": 3.0,
+  "gpu_inference_requested": false
+}
+Preflight only: no model imports, checkpoint reads, volume reads or GPU work.
+--- All 8 preflights passed ---
+
+===== SETUP COMPLETE =====
+
+Step 5 skipped (Z_RUN_GPU not set). Run with Z_RUN_GPU=1 to launch GPU inference.
+===== Z-SPACING SETUP LOG — 2026-10-01 12:17:33 =====
+
+=== Step 1: CPU geometry tests ===
+test_endpoints_clipped (btcv_cross_validation.z_spacing.test_cpu.CoordMappingTests) ... ok
+test_physical_consistency (btcv_cross_validation.z_spacing.test_cpu.CoordMappingTests) ... ok
+test_roundtrip_z_coord (btcv_cross_validation.z_spacing.test_cpu.CoordMappingTests) ... ok
+test_label_values_preserved_through_resample (btcv_cross_validation.z_spacing.test_cpu.PipelineGeometryTests)
+Binary label resampled from 6mm -> 3mm -> 6mm should contain ... ok
+test_proposed_branch_output_on_scoring_grid (btcv_cross_validation.z_spacing.test_cpu.PipelineGeometryTests)
+Simulate the proposed branch: resample, produce dummy prediction, ... ok
+test_absent_target_raises (btcv_cross_validation.z_spacing.test_cpu.PrepareArraysTests) ... ok
+test_cropping_removes_empty_z (btcv_cross_validation.z_spacing.test_cpu.PrepareArraysTests) ... ok
+test_full_volume_keeps_all_z (btcv_cross_validation.z_spacing.test_cpu.PrepareArraysTests) ... ok
+test_too_short_raises (btcv_cross_validation.z_spacing.test_cpu.PrepareArraysTests) ... ok
+test_empty_slice_raises (btcv_cross_validation.z_spacing.test_cpu.PromptTests) ... ok
+test_initial_prompt_box_shape (btcv_cross_validation.z_spacing.test_cpu.PromptTests) ... ok
+test_initial_prompt_inside_mask (btcv_cross_validation.z_spacing.test_cpu.PromptTests) ... ok
+test_identity_unchanged_spacing (btcv_cross_validation.z_spacing.test_cpu.ResamplingTests) ... ok
+test_image_label_same_output_shape (btcv_cross_validation.z_spacing.test_cpu.ResamplingTests) ... ok
+test_image_linear_shape (btcv_cross_validation.z_spacing.test_cpu.ResamplingTests) ... ok
+test_label_nearest_neighbour (btcv_cross_validation.z_spacing.test_cpu.ResamplingTests) ... ok
+test_source_bigger_than_target_increases_slices (btcv_cross_validation.z_spacing.test_cpu.ResamplingTests) ... ok
+test_source_smaller_than_target_decreases_slices (btcv_cross_validation.z_spacing.test_cpu.ResamplingTests) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.354s
+
+OK
+--- CPU tests passed ---
+
+=== Step 2: Dry-run synthetic volume plan ===
+Manifest: 6 volumes
+Target z spacing: 6.0 mm
+Output: btcv_cross_validation/z_spacing/synthetic_6mm
+DRY RUN — no files will be written.
+
+  SKIP img0035: z=5.000mm (not 3mm)
+  img0036: source z=3.0mm  shape=(184, 512, 512)  -> z=6.0000mm  shape=(92, 512, 512)
+  SKIP img0037: z=5.000mm (not 3mm)
+  SKIP img0038: z=5.000mm (not 3mm)
+  SKIP img0039: z=5.000mm (not 3mm)
+  img0040: source z=3.0mm  shape=(195, 512, 512)  -> z=5.9694mm  shape=(98, 512, 512)
+
+Processed: 2 volumes
+(dry run — no files written)
+
+Planned volumes:
+  img0036: 3.0mm -> 6.0000mm  [184, 512, 512] -> [92, 512, 512]
+  img0040: 3.0mm -> 5.9694mm  [195, 512, 512] -> [98, 512, 512]
+--- Dry run complete ---
+
+=== Step 3: Create synthetic 6mm volumes ===
+  Synthetic directory already exists: btcv_cross_validation/z_spacing/synthetic_6mm
+  Skipping rebuild. Delete it to rebuild.
+
+=== Step 4: Preflights for all 8 arms ===
+  preflight: branch=control organ=6
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0036",
+    "img0040"
+  ],
+  "branch": "control",
+  "protocol": "gt-cropped",
+  "target_z_mm": null,
+  "gpu_inference_requested": false
+}
+Preflight only: no model imports, checkpoint reads, volume reads or GPU work.
+  preflight: branch=control organ=7
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0036",
+    "img0040"
+  ],
+  "branch": "control",
+  "protocol": "gt-cropped",
+  "target_z_mm": null,
+  "gpu_inference_requested": false
+}
+Preflight only: no model imports, checkpoint reads, volume reads or GPU work.
+  preflight: branch=control organ=3
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0036",
+    "img0040"
+  ],
+  "branch": "control",
+  "protocol": "gt-cropped",
+  "target_z_mm": null,
+  "gpu_inference_requested": false
+}
+Preflight only: no model imports, checkpoint reads, volume reads or GPU work.
+  preflight: branch=control organ=1
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0036",
+    "img0040"
+  ],
+  "branch": "control",
+  "protocol": "gt-cropped",
+  "target_z_mm": null,
+  "gpu_inference_requested": false
+}
+Preflight only: no model imports, checkpoint reads, volume reads or GPU work.
+  preflight: branch=proposed organ=6
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0036",
+    "img0040"
+  ],
+  "branch": "proposed",
+  "protocol": "gt-cropped",
+  "target_z_mm": 3.0,
+  "gpu_inference_requested": false
+}
+Preflight only: no model imports, checkpoint reads, volume reads or GPU work.
+  preflight: branch=proposed organ=7
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0036",
+    "img0040"
+  ],
+  "branch": "proposed",
+  "protocol": "gt-cropped",
+  "target_z_mm": 3.0,
+  "gpu_inference_requested": false
+}
+Preflight only: no model imports, checkpoint reads, volume reads or GPU work.
+  preflight: branch=proposed organ=3
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0036",
+    "img0040"
+  ],
+  "branch": "proposed",
+  "protocol": "gt-cropped",
+  "target_z_mm": 3.0,
+  "gpu_inference_requested": false
+}
+Preflight only: no model imports, checkpoint reads, volume reads or GPU work.
+  preflight: branch=proposed organ=1
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0036",
+    "img0040"
+  ],
+  "branch": "proposed",
+  "protocol": "gt-cropped",
+  "target_z_mm": 3.0,
+  "gpu_inference_requested": false
+}
+Preflight only: no model imports, checkpoint reads, volume reads or GPU work.
+--- All 8 preflights passed ---
+
+===== SETUP COMPLETE =====
+
+=== Step 5: GPU inference — branch=control ===
+NVIDIA RTX A6000, 48672 MiB
+--- organ=6 ---
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0036",
+    "img0040"
+  ],
+  "branch": "control",
+  "protocol": "gt-cropped",
+  "target_z_mm": null,
+  "gpu_inference_requested": true
+}
+Loading model from btcv_cross_validation/runs/fold5/ddp_sub_cv/cv_fold5/ckpt/model_epoch_20.pth
+/home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/learner2.py:126: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(model_path, map_location="cpu")
+Checking Data range: [-200.0, 400.0]
+img0036 {'dice': 0.910703006859471, 'nsd': 0.4731703334732567, 'hd95_mm': 18.0, 'surface_status': 'valid', 'foreground_recall': 0.9886734321617541, 'foreground_precision': 0.8441316763520949, 'false_positive_ml': 457.94854916381837}
+Checking Data range: [-200.0, 400.0]
+img0040 {'dice': 0.8792470066653245, 'nsd': 0.33146862891743484, 'hd95_mm': 10.84938191727476, 'surface_status': 'valid', 'foreground_recall': 0.9967948403310198, 'foreground_precision': 0.7864985341332021, 'false_positive_ml': 362.5427944721072}
+--- organ=7 ---
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0036",
+    "img0040"
+  ],
+  "branch": "control",
+  "protocol": "gt-cropped",
+  "target_z_mm": null,
+  "gpu_inference_requested": true
+}
+Loading model from btcv_cross_validation/runs/fold5/ddp_sub_cv/cv_fold5/ckpt/model_epoch_20.pth
+/home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/learner2.py:126: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(model_path, map_location="cpu")
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+img0036 {'dice': 0.6464536257236119, 'nsd': 0.24180533816015998, 'hd95_mm': 69.58869170917029, 'surface_status': 'valid', 'foreground_recall': 0.5655984726561267, 'foreground_precision': 0.7542820469657436, 'false_positive_ml': 78.00418899536133}
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+img0040 {'dice': 0.6640104852166155, 'nsd': 0.23355898130713423, 'hd95_mm': 81.04066901092887, 'surface_status': 'valid', 'foreground_recall': 0.5865981036520994, 'foreground_precision': 0.7649611419508326, 'false_positive_ml': 121.82090271370835}
+--- organ=3 ---
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0036",
+    "img0040"
+  ],
+  "branch": "control",
+  "protocol": "gt-cropped",
+  "target_z_mm": null,
+  "gpu_inference_requested": true
+}
+Loading model from btcv_cross_validation/runs/fold5/ddp_sub_cv/cv_fold5/ckpt/model_epoch_20.pth
+/home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/learner2.py:126: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(model_path, map_location="cpu")
+Checking Data range: [-200.0, 400.0]
+img0036 {'dice': 0.8595723364954134, 'nsd': 0.4835853096419735, 'hd95_mm': 7.931085352469992, 'surface_status': 'valid', 'foreground_recall': 0.8831574884199691, 'foreground_precision': 0.8372141245349759, 'false_positive_ml': 44.57477655029297}
+Checking Data range: [-200.0, 400.0]
+img0040 {'dice': 0.8505422553232794, 'nsd': 0.4898161309206257, 'hd95_mm': 15.02815148027403, 'surface_status': 'valid', 'foreground_recall': 0.9543924271229405, 'foreground_precision': 0.7670746653508842, 'false_positive_ml': 48.11938809955755}
+--- organ=1 ---
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0036",
+    "img0040"
+  ],
+  "branch": "control",
+  "protocol": "gt-cropped",
+  "target_z_mm": null,
+  "gpu_inference_requested": true
+}
+Loading model from btcv_cross_validation/runs/fold5/ddp_sub_cv/cv_fold5/ckpt/model_epoch_20.pth
+/home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/learner2.py:126: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(model_path, map_location="cpu")
+Checking Data range: [-200.0, 400.0]
+img0036 {'dice': 0.8307706226585022, 'nsd': 0.2964204733297837, 'hd95_mm': 11.108329026225448, 'surface_status': 'valid', 'foreground_recall': 0.9823196467819423, 'foreground_precision': 0.7197326511853271, 'false_positive_ml': 131.36967526245118}
+Checking Data range: [-200.0, 400.0]
+img0040 {'dice': 0.8640900837013399, 'nsd': 0.5039142438878792, 'hd95_mm': 6.151175224234172, 'surface_status': 'valid', 'foreground_recall': 0.9530694477364304, 'foreground_precision': 0.7903064132549775, 'false_positive_ml': 35.081710512107385}
+--- branch=control done ---
+=== Step 5: GPU inference — branch=proposed ===
+NVIDIA RTX A6000, 48672 MiB
+--- organ=6 ---
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0036",
+    "img0040"
+  ],
+  "branch": "proposed",
+  "protocol": "gt-cropped",
+  "target_z_mm": 3.0,
+  "gpu_inference_requested": true
+}
+Loading model from btcv_cross_validation/runs/fold5/ddp_sub_cv/cv_fold5/ckpt/model_epoch_20.pth
+/home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/learner2.py:126: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(model_path, map_location="cpu")
+Checking Data range: [-200.0, 400.0]
+img0036 {'dice': 0.9442512523555227, 'nsd': 0.6036805528154202, 'hd95_mm': 8.263536849301612, 'surface_status': 'valid', 'foreground_recall': 0.9880689579877134, 'foreground_precision': 0.9041548688308081, 'false_positive_ml': 262.7426904602051}
+Checking Data range: [-200.0, 400.0]
+img0040 {'dice': 0.9133608837212455, 'nsd': 0.5080077793514035, 'hd95_mm': 6.6796875, 'surface_status': 'valid', 'foreground_recall': 0.992072997143334, 'foreground_precision': 0.8462208340834586, 'false_positive_ml': 241.55051590771473}
+--- organ=7 ---
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0036",
+    "img0040"
+  ],
+  "branch": "proposed",
+  "protocol": "gt-cropped",
+  "target_z_mm": 3.0,
+  "gpu_inference_requested": true
+}
+Loading model from btcv_cross_validation/runs/fold5/ddp_sub_cv/cv_fold5/ckpt/model_epoch_20.pth
+/home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/learner2.py:126: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(model_path, map_location="cpu")
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+img0036 {'dice': 0.6629878148002795, 'nsd': 0.3387318190939046, 'hd95_mm': 70.54902805494254, 'surface_status': 'valid', 'foreground_recall': 0.5464277825112815, 'foreground_precision': 0.8427591073905532, 'false_positive_ml': 43.16198391723633}
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+Ends for no mask.
+img0040 {'dice': 0.6537576358539302, 'nsd': 0.30604322980876014, 'hd95_mm': 93.7395256664791, 'surface_status': 'valid', 'foreground_recall': 0.5196080816139876, 'foreground_precision': 0.881282231115145, 'false_positive_ml': 47.31049309665396}
+--- organ=3 ---
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0036",
+    "img0040"
+  ],
+  "branch": "proposed",
+  "protocol": "gt-cropped",
+  "target_z_mm": 3.0,
+  "gpu_inference_requested": true
+}
+Loading model from btcv_cross_validation/runs/fold5/ddp_sub_cv/cv_fold5/ckpt/model_epoch_20.pth
+/home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/learner2.py:126: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(model_path, map_location="cpu")
+Checking Data range: [-200.0, 400.0]
+img0036 {'dice': 0.8567689805874581, 'nsd': 0.5047766857895348, 'hd95_mm': 9.689799374293695, 'surface_status': 'valid', 'foreground_recall': 0.8677045805455481, 'foreground_precision': 0.8461055906855365, 'false_positive_ml': 40.96764642333984}
+Checking Data range: [-200.0, 400.0]
+img0040 {'dice': 0.8292073349679545, 'nsd': 0.4878465371018428, 'hd95_mm': 13.104540858332676, 'surface_status': 'valid', 'foreground_recall': 0.8672964195183777, 'foreground_precision': 0.7943230253015326, 'false_positive_ml': 37.288086719214334}
+--- organ=1 ---
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0036",
+    "img0040"
+  ],
+  "branch": "proposed",
+  "protocol": "gt-cropped",
+  "target_z_mm": 3.0,
+  "gpu_inference_requested": true
+}
+Loading model from btcv_cross_validation/runs/fold5/ddp_sub_cv/cv_fold5/ckpt/model_epoch_20.pth
+/home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/learner2.py:126: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(model_path, map_location="cpu")
+Checking Data range: [-200.0, 400.0]
+No masks
+img0036 {'dice': 0.9002894143937867, 'nsd': 0.5679399501826522, 'hd95_mm': 6.015200116894621, 'surface_status': 'valid', 'foreground_recall': 0.9559741699570148, 'foreground_precision': 0.8507347722984785, 'false_positive_ml': 57.60386416625977}
+Checking Data range: [-200.0, 400.0]
+img0040 {'dice': 0.9013494543313861, 'nsd': 0.6464013721801699, 'hd95_mm': 5.1953125, 'surface_status': 'valid', 'foreground_recall': 0.9435648257881014, 'foreground_precision': 0.8627497724415933, 'false_positive_ml': 20.824114038164407}
+--- branch=proposed done ---
+
+All 8 arms complete.
+Results: btcv_cross_validation/z_spacing/results
+Logs: btcv_cross_validation/z_spacing/logs/

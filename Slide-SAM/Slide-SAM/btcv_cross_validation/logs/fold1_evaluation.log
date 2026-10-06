@@ -1,0 +1,180 @@
+======================================================================
+BTCV CV EVALUATION  fold=1  epoch=20  prompt=box
+started:    2026-09-24 09:34:12
+config:     /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/configs/fold1.yaml
+checkpoint: /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold1/ddp_sub_cv/cv_fold1/ckpt/model_epoch_20.pth
+======================================================================
+Loading model from /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold1/ddp_sub_cv/cv_fold1/ckpt/model_epoch_20.pth
+/home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/learner2.py:126: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(model_path, map_location="cpu")
+
+----------------------------------------------------------------------
+Organ: Liver (label_idx=6)
+----------------------------------------------------------------------
+[FoldTestLoader] /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/dataset_list/fold1/01_BTCV_test_4to1.txt: 6 held-out volumes
+   img0001
+   img0002
+   img0003
+   img0004
+   img0005
+   img0006
+template_slice.area  37999 0.14495468139648438
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0001.nii.gz'] 0.6382176724789682 0
+template_slice.area  26130 0.09967803955078125
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0002.nii.gz'] 0.737540278427781 0
+template_slice.area  27080 0.103302001953125
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0003.nii.gz'] 0.650801232186197 0
+template_slice.area  36656 0.13983154296875
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0004.nii.gz'] 0.8092535286873599 0
+template_slice.area  39211 0.14957809448242188
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0005.nii.gz'] 0.8550442580581805 0
+template_slice.area  28666 0.10935211181640625
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0006.nii.gz'] 0.8011872350408931 0
+[Liver] mean Dice = 0.7487 +/- 0.0890  (53s)
+
+----------------------------------------------------------------------
+Organ: Stomach (label_idx=7)
+----------------------------------------------------------------------
+[FoldTestLoader] /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/dataset_list/fold1/01_BTCV_test_4to1.txt: 6 held-out volumes
+   img0001
+   img0002
+   img0003
+   img0004
+   img0005
+   img0006
+template_slice.area  10909 0.041614532470703125
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0001.nii.gz'] 0.4852018030153878 0
+template_slice.area  7416 0.028289794921875
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0002.nii.gz'] 0.48944933724757583 0
+template_slice.area  19207 0.07326889038085938
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0003.nii.gz'] 0.647769368846258 0
+template_slice.area  5036 0.0192108154296875
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0004.nii.gz'] 0.5250007328727635 0
+template_slice.area  11953 0.045597076416015625
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0005.nii.gz'] 0.6813056235904649 0
+template_slice.area  4588 0.0175018310546875
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0006.nii.gz'] 0.6408603554351551 0
+[Stomach] mean Dice = 0.5783 +/- 0.0880  (36s)
+
+----------------------------------------------------------------------
+Organ: Left Kidney (label_idx=3)
+----------------------------------------------------------------------
+[FoldTestLoader] /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/dataset_list/fold1/01_BTCV_test_4to1.txt: 6 held-out volumes
+   img0001
+   img0002
+   img0003
+   img0004
+   img0005
+   img0006
+template_slice.area  5404 0.0206146240234375
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0001.nii.gz'] 0.6864744513256122 0
+template_slice.area  3863 0.014736175537109375
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0002.nii.gz'] 0.7030582646232556 0
+template_slice.area  3338 0.01273345947265625
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0003.nii.gz'] 0.6449578558001334 0
+template_slice.area  5371 0.020488739013671875
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0004.nii.gz'] 0.7753952075976882 0
+template_slice.area  4293 0.016376495361328125
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0005.nii.gz'] 0.7269502348052299 0
+template_slice.area  4369 0.016666412353515625
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0006.nii.gz'] 0.6747374562427071 0
+[Left Kidney] mean Dice = 0.7019 +/- 0.0453  (32s)
+
+----------------------------------------------------------------------
+Organ: Spleen (label_idx=1)
+----------------------------------------------------------------------
+[FoldTestLoader] /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/dataset_list/fold1/01_BTCV_test_4to1.txt: 6 held-out volumes
+   img0001
+   img0002
+   img0003
+   img0004
+   img0005
+   img0006
+template_slice.area  10970 0.04184722900390625
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0001.nii.gz'] 0.757131177216677 0
+template_slice.area  6085 0.023212432861328125
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0002.nii.gz'] 0.8013204793314916 0
+template_slice.area  5774 0.02202606201171875
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0003.nii.gz'] 0.8214119554958859 0
+template_slice.area  7738 0.02951812744140625
+Checking Data range: [-200.0, 400.0]
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0004.nii.gz'] 0.6581512198074944 0
+template_slice.area  6633 0.025302886962890625
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0005.nii.gz'] 0.8172982545249878 0
+template_slice.area  4108 0.0156707763671875
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+01_BCV-Abdomen ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0006.nii.gz'] 0.7194628221585859 0
+[Spleen] mean Dice = 0.7625 +/- 0.0644  (27s)
+
+======================================================================
+FOLD 1 SUMMARY (Dice over 6 held-out volumes, mean +/- SD)
+======================================================================
+  Liver        0.7487 +/- 0.0890
+  Stomach      0.5783 +/- 0.0880
+  Left Kidney  0.7019 +/- 0.0453
+  Spleen       0.7625 +/- 0.0644
+  4-organ avg  0.6978
+finished:   2026-09-24 09:36:42
+Saved /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/logs/fold1_evaluation.json
+Saved /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/logs/fold1_evaluation.log

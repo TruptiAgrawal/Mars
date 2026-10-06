@@ -1,0 +1,1327 @@
+{
+  "started_utc": "2026-10-01T09:40:13.081562+00:00",
+  "status": "complete",
+  "geometry_version": "v3_cropped_origin",
+  "arguments": {
+    "synthetic_root": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1",
+    "manifest": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/synthetic_manifest.txt",
+    "train_manifest": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/dataset_list/fold1/01_BTCV_train_4to1.txt",
+    "checkpoint": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold1/ddp_sub_cv/cv_fold1/ckpt/model_epoch_20.pth",
+    "checkpoint_kind": "finetuned",
+    "label_idx": 3,
+    "protocol": "gt-cropped",
+    "branch": "control",
+    "target_z_mm": 3.0,
+    "trigger_mm": 5.5,
+    "nsd_tolerance_mm": 1.0,
+    "output": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/results_v3/fold1/b00_control_label3",
+    "save_predictions": false,
+    "run_inference": true
+  },
+  "training_ids": [
+    "img0007",
+    "img0008",
+    "img0009",
+    "img0010",
+    "img0021",
+    "img0022",
+    "img0023",
+    "img0024",
+    "img0025",
+    "img0026",
+    "img0027",
+    "img0028",
+    "img0029",
+    "img0030",
+    "img0031",
+    "img0032",
+    "img0033",
+    "img0034",
+    "img0035",
+    "img0036",
+    "img0037",
+    "img0038",
+    "img0039",
+    "img0040"
+  ],
+  "evaluation_ids": [
+    "img0001",
+    "img0002",
+    "img0003",
+    "img0004",
+    "img0005",
+    "img0006"
+  ],
+  "manifest_sha256": "b7f26bbf6eacdc889307613756a901da66ff434430744964f673568081f9b60c",
+  "training_manifest_sha256": "dc6d60791ddaa48d01bf83fee11cfec09aa26ff29aa544cdc554ebeb81d92924",
+  "checkpoint_bytes": 377029836,
+  "checkpoint_mtime_ns": 1790188496289373751,
+  "checkpoint_sha256": "d11c3c3526284de56039b7657197842a90972476ae70189ff1928d2644cc713e",
+  "experiment_source_sha256": {
+    "run_b00_b01_all_folds.py": "5e1f6257af202097a1c03e76ee86bf1af6dcd1bd4169ef2d5e0b9c77e03817eb",
+    "evaluate.py": "d3537b295dc47a719d56dc2470cc636bfd52b161213b9fc2d918ab714031037f",
+    "test_cpu.py": "3326f9f4f4a23688cbea6d85da2b1fb11216f7bb9502b2322e432d13df9d5df9",
+    "test_geometry_fixes.py": "da609b20b87a2e955f9e273ecc08a0462cb1e8ac2135c30fc28888263c5b2998",
+    "evaluate_v3.py": "5ad5caba6da98b5a5e5a57a6952755f95dc797c5cc5692a8c07af3a4324f7856",
+    "__init__.py": "3522d6e6170abc90b754803f2bac8bc049ee3e32c43a760be2bcd6622212225c",
+    "audit_kidney.py": "306896bafc978bea3d4ddcb4a2f673403dd6c8198bf704f3578f88d2aa976a3e",
+    "helpers.py": "e08ce8822102b514d0dd48c92826db1a2527fc63bcfb04f4cc08026894b6cdab",
+    "loader.py": "3af56876091db94351df8217ab5599ff039617d03fcbc0b4b484be455f821c98",
+    "make_synthetic.py": "a4f53eadecfc63f7f58fc98c1cd25fccfd45cefbe32ad696d5a48b6abec7d78f",
+    "find_eligible_patients.py": "5ef3d13e442c3a71d0e971351bf4d6986588bd6e287710e1a039350b8d5c1230"
+  },
+  "warning": "v3: cropped z-origin passed to resampler. Scoring on declared thick-spacing grid. Proposed branch resamples only when z > trigger_mm.",
+  "cases": [
+    {
+      "crop_start_z": 44,
+      "crop_stop_z": 62,
+      "original_shape_zyx": [
+        74,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        18,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 55,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0001",
+      "label_idx": 3,
+      "spacing_zyx_mm": [
+        6.0,
+        0.66796875,
+        0.66796875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/img/img0001.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/label/img0001.nii.gz",
+      "scoring_grid": "synthetic_thick_spacing_v2",
+      "synthetic_source_spacing_z_mm": 3.0,
+      "synthetic_target_spacing_z_mm": 6.0,
+      "synthetic_actual_spacing_z_mm": 6.0,
+      "total_seconds": 3.4767059448640794,
+      "peak_gpu_allocated_bytes": 11032637952,
+      "metrics": {
+        "dice": 0.7992814238570445,
+        "nsd": 0.49790249058493724,
+        "hd95_mm": 14.04323876218163,
+        "surface_status": "valid",
+        "foreground_recall": 0.7905909980430529,
+        "foreground_precision": 0.8081650289664885,
+        "false_positive_ml": 32.09031985473633
+      },
+      "resampling_info": {
+        "branch": "control",
+        "source_z_mm": 6.0,
+        "trigger_mm": 5.5,
+        "crop_start_z": 44,
+        "resampling_triggered": false,
+        "origin_xyz_working": [
+          0.0,
+          0.0,
+          264.0
+        ],
+        "inference_seconds": 3.1104233141522855,
+        "resampling_applied": false
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "11": [
+          [
+            574.0,
+            262.0,
+            746.0,
+            414.0
+          ]
+        ],
+        "12": [
+          [
+            576.0,
+            262.0,
+            743.0,
+            413.0
+          ]
+        ],
+        "13": [
+          [
+            578.0,
+            262.0,
+            735.0,
+            413.0
+          ]
+        ],
+        "14": [
+          [
+            582.0,
+            262.0,
+            725.0,
+            409.0
+          ]
+        ],
+        "15": [
+          [
+            590.0,
+            264.0,
+            717.0,
+            397.0
+          ]
+        ],
+        "16": [
+          [
+            600.0,
+            268.0,
+            713.0,
+            389.0
+          ]
+        ],
+        "10": [
+          [
+            580.0,
+            264.0,
+            749.0,
+            417.0
+          ]
+        ],
+        "9": [
+          [
+            590.0,
+            266.0,
+            751.0,
+            419.0
+          ]
+        ],
+        "8": [
+          [
+            606.0,
+            272.0,
+            751.0,
+            421.0
+          ]
+        ],
+        "7": [
+          [
+            622.0,
+            280.0,
+            749.0,
+            423.0
+          ]
+        ],
+        "6": [
+          [
+            630.0,
+            286.0,
+            745.0,
+            425.0
+          ]
+        ],
+        "5": [
+          [
+            640.0,
+            294.0,
+            739.0,
+            425.0
+          ]
+        ],
+        "4": [
+          [
+            646.0,
+            302.0,
+            735.0,
+            425.0
+          ]
+        ],
+        "3": [
+          [
+            652.0,
+            314.0,
+            731.0,
+            427.0
+          ]
+        ],
+        "2": [
+          [
+            660.0,
+            328.0,
+            727.0,
+            429.0
+          ]
+        ],
+        "1": [
+          [
+            672.0,
+            344.0,
+            723.0,
+            427.0
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 41,
+      "crop_stop_z": 57,
+      "original_shape_zyx": [
+        70,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        16,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 51,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0002",
+      "label_idx": 3,
+      "spacing_zyx_mm": [
+        6.0,
+        0.720703125,
+        0.720703125
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/img/img0002.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/label/img0002.nii.gz",
+      "scoring_grid": "synthetic_thick_spacing_v2",
+      "synthetic_source_spacing_z_mm": 3.0,
+      "synthetic_target_spacing_z_mm": 6.0,
+      "synthetic_actual_spacing_z_mm": 6.0,
+      "total_seconds": 2.421175572089851,
+      "peak_gpu_allocated_bytes": 10973917696,
+      "metrics": {
+        "dice": 0.7905686546463245,
+        "nsd": 0.4875793773709101,
+        "hd95_mm": 11.53125,
+        "surface_status": "valid",
+        "foreground_recall": 0.7808017368380243,
+        "foreground_precision": 0.8005830131177951,
+        "false_positive_ml": 23.45149669647217
+      },
+      "resampling_info": {
+        "branch": "control",
+        "source_z_mm": 6.0,
+        "trigger_mm": 5.5,
+        "crop_start_z": 41,
+        "resampling_triggered": false,
+        "origin_xyz_working": [
+          0.0,
+          0.0,
+          246.0
+        ],
+        "inference_seconds": 2.3042951840907335,
+        "resampling_applied": false
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "10": [
+          [
+            620.0,
+            344.0,
+            772.0,
+            466.0
+          ]
+        ],
+        "11": [
+          [
+            622.0,
+            344.0,
+            765.0,
+            465.0
+          ]
+        ],
+        "12": [
+          [
+            626.0,
+            344.0,
+            753.0,
+            461.0
+          ]
+        ],
+        "13": [
+          [
+            634.0,
+            346.0,
+            747.0,
+            453.0
+          ]
+        ],
+        "14": [
+          [
+            642.0,
+            350.0,
+            743.0,
+            445.0
+          ]
+        ],
+        "9": [
+          [
+            626.0,
+            346.0,
+            773.0,
+            469.0
+          ]
+        ],
+        "8": [
+          [
+            638.0,
+            348.0,
+            771.0,
+            469.0
+          ]
+        ],
+        "7": [
+          [
+            646.0,
+            354.0,
+            769.0,
+            467.0
+          ]
+        ],
+        "6": [
+          [
+            654.0,
+            358.0,
+            765.0,
+            465.0
+          ]
+        ],
+        "5": [
+          [
+            658.0,
+            364.0,
+            761.0,
+            463.0
+          ]
+        ],
+        "4": [
+          [
+            662.0,
+            370.0,
+            755.0,
+            457.0
+          ]
+        ],
+        "3": [
+          [
+            668.0,
+            378.0,
+            751.0,
+            453.0
+          ]
+        ],
+        "2": [
+          [
+            674.0,
+            384.0,
+            745.0,
+            449.0
+          ]
+        ],
+        "1": [
+          [
+            682.0,
+            394.0,
+            743.0,
+            447.0
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 49,
+      "crop_stop_z": 71,
+      "original_shape_zyx": [
+        100,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        22,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 63,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0003",
+      "label_idx": 3,
+      "spacing_zyx_mm": [
+        5.969696998596191,
+        0.8984375,
+        0.8984375
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/img/img0003.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/label/img0003.nii.gz",
+      "scoring_grid": "synthetic_thick_spacing_v2",
+      "synthetic_source_spacing_z_mm": 3.0,
+      "synthetic_target_spacing_z_mm": 6.0,
+      "synthetic_actual_spacing_z_mm": 5.96969696969697,
+      "total_seconds": 3.55350922094658,
+      "peak_gpu_allocated_bytes": 11150078464,
+      "metrics": {
+        "dice": 0.7423662558664841,
+        "nsd": 0.3843148471901626,
+        "hd95_mm": 20.51016538952891,
+        "surface_status": "valid",
+        "foreground_recall": 0.696696102983173,
+        "foreground_precision": 0.7944440269532327,
+        "false_positive_ml": 39.54208291440445
+      },
+      "resampling_info": {
+        "branch": "control",
+        "source_z_mm": 5.969696998596191,
+        "trigger_mm": 5.5,
+        "crop_start_z": 49,
+        "resampling_triggered": false,
+        "origin_xyz_working": [
+          0.0,
+          0.0,
+          292.5151529312134
+        ],
+        "inference_seconds": 3.4391426669899374,
+        "resampling_applied": false
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "14": [
+          [
+            596.0,
+            324.0,
+            732.0,
+            454.0
+          ]
+        ],
+        "15": [
+          [
+            598.0,
+            326.0,
+            731.0,
+            451.0
+          ]
+        ],
+        "16": [
+          [
+            600.0,
+            326.0,
+            727.0,
+            445.0
+          ]
+        ],
+        "17": [
+          [
+            604.0,
+            328.0,
+            721.0,
+            441.0
+          ]
+        ],
+        "18": [
+          [
+            610.0,
+            332.0,
+            713.0,
+            435.0
+          ]
+        ],
+        "19": [
+          [
+            618.0,
+            338.0,
+            705.0,
+            431.0
+          ]
+        ],
+        "20": [
+          [
+            628.0,
+            344.0,
+            699.0,
+            429.0
+          ]
+        ],
+        "13": [
+          [
+            598.0,
+            326.0,
+            735.0,
+            455.0
+          ]
+        ],
+        "12": [
+          [
+            602.0,
+            328.0,
+            735.0,
+            457.0
+          ]
+        ],
+        "11": [
+          [
+            608.0,
+            330.0,
+            733.0,
+            457.0
+          ]
+        ],
+        "10": [
+          [
+            624.0,
+            334.0,
+            729.0,
+            455.0
+          ]
+        ],
+        "9": [
+          [
+            634.0,
+            340.0,
+            725.0,
+            453.0
+          ]
+        ],
+        "8": [
+          [
+            640.0,
+            346.0,
+            721.0,
+            451.0
+          ]
+        ],
+        "7": [
+          [
+            646.0,
+            352.0,
+            719.0,
+            449.0
+          ]
+        ],
+        "6": [
+          [
+            658.0,
+            362.0,
+            717.0,
+            449.0
+          ]
+        ],
+        "5": [
+          [
+            672.0,
+            370.0,
+            717.0,
+            451.0
+          ]
+        ],
+        "4": [
+          [
+            680.0,
+            378.0,
+            717.0,
+            451.0
+          ]
+        ],
+        "3": [
+          [
+            688.0,
+            388.0,
+            717.0,
+            449.0
+          ]
+        ],
+        "2": [
+          [
+            692.0,
+            404.0,
+            713.0,
+            443.0
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 41,
+      "crop_stop_z": 58,
+      "original_shape_zyx": [
+        71,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        17,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 52,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0004",
+      "label_idx": 3,
+      "spacing_zyx_mm": [
+        5.9571428298950195,
+        0.59375,
+        0.59375
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/img/img0004.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/label/img0004.nii.gz",
+      "scoring_grid": "synthetic_thick_spacing_v2",
+      "synthetic_source_spacing_z_mm": 3.0,
+      "synthetic_target_spacing_z_mm": 6.0,
+      "synthetic_actual_spacing_z_mm": 5.957142857142857,
+      "total_seconds": 3.363428487908095,
+      "peak_gpu_allocated_bytes": 11003277824,
+      "metrics": {
+        "dice": 0.8610626847570682,
+        "nsd": 0.5217281091237859,
+        "hd95_mm": 9.6655497289342,
+        "surface_status": "valid",
+        "foreground_recall": 0.958245466048081,
+        "foreground_precision": 0.7817768907852178,
+        "false_positive_ml": 33.29749057035428
+      },
+      "resampling_info": {
+        "branch": "control",
+        "source_z_mm": 5.9571428298950195,
+        "trigger_mm": 5.5,
+        "crop_start_z": 41,
+        "resampling_triggered": false,
+        "origin_xyz_working": [
+          0.0,
+          0.0,
+          244.2428560256958
+        ],
+        "inference_seconds": 2.893871661974117,
+        "resampling_applied": false
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "11": [
+          [
+            664.0,
+            300.0,
+            856.0,
+            440.0
+          ]
+        ],
+        "12": [
+          [
+            666.0,
+            300.0,
+            851.0,
+            439.0
+          ]
+        ],
+        "13": [
+          [
+            670.0,
+            300.0,
+            851.0,
+            433.0
+          ]
+        ],
+        "14": [
+          [
+            676.0,
+            302.0,
+            841.0,
+            421.0
+          ]
+        ],
+        "15": [
+          [
+            688.0,
+            308.0,
+            825.0,
+            407.0
+          ]
+        ],
+        "10": [
+          [
+            668.0,
+            302.0,
+            857.0,
+            441.0
+          ]
+        ],
+        "9": [
+          [
+            674.0,
+            304.0,
+            857.0,
+            441.0
+          ]
+        ],
+        "8": [
+          [
+            678.0,
+            306.0,
+            857.0,
+            441.0
+          ]
+        ],
+        "7": [
+          [
+            684.0,
+            308.0,
+            857.0,
+            441.0
+          ]
+        ],
+        "6": [
+          [
+            688.0,
+            308.0,
+            857.0,
+            441.0
+          ]
+        ],
+        "5": [
+          [
+            690.0,
+            308.0,
+            857.0,
+            441.0
+          ]
+        ],
+        "4": [
+          [
+            692.0,
+            310.0,
+            855.0,
+            439.0
+          ]
+        ],
+        "3": [
+          [
+            696.0,
+            314.0,
+            849.0,
+            439.0
+          ]
+        ],
+        "2": [
+          [
+            704.0,
+            320.0,
+            841.0,
+            435.0
+          ]
+        ],
+        "1": [
+          [
+            710.0,
+            326.0,
+            829.0,
+            431.0
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 12,
+      "crop_stop_z": 30,
+      "original_shape_zyx": [
+        59,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        18,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 19,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0005",
+      "label_idx": 3,
+      "spacing_zyx_mm": [
+        6.0,
+        0.90625,
+        0.90625
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/img/img0005.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/label/img0005.nii.gz",
+      "scoring_grid": "synthetic_thick_spacing_v2",
+      "synthetic_source_spacing_z_mm": 3.0,
+      "synthetic_target_spacing_z_mm": 6.0,
+      "synthetic_actual_spacing_z_mm": 6.0,
+      "total_seconds": 2.973041631979868,
+      "peak_gpu_allocated_bytes": 11032637952,
+      "metrics": {
+        "dice": 0.7059139677926628,
+        "nsd": 0.3465350175820322,
+        "hd95_mm": 27.730866855590723,
+        "surface_status": "valid",
+        "foreground_recall": 0.7067017397022778,
+        "foreground_precision": 0.7051279502117591,
+        "false_positive_ml": 73.07830078125
+      },
+      "resampling_info": {
+        "branch": "control",
+        "source_z_mm": 6.0,
+        "trigger_mm": 5.5,
+        "crop_start_z": 12,
+        "resampling_triggered": false,
+        "origin_xyz_working": [
+          0.0,
+          0.0,
+          72.0
+        ],
+        "inference_seconds": 2.6685607419349253,
+        "resampling_applied": false
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "7": [
+          [
+            608.0,
+            368.0,
+            756.0,
+            534.0
+          ]
+        ],
+        "8": [
+          [
+            614.0,
+            370.0,
+            757.0,
+            533.0
+          ]
+        ],
+        "9": [
+          [
+            616.0,
+            374.0,
+            755.0,
+            527.0
+          ]
+        ],
+        "10": [
+          [
+            624.0,
+            382.0,
+            753.0,
+            519.0
+          ]
+        ],
+        "11": [
+          [
+            650.0,
+            390.0,
+            751.0,
+            507.0
+          ]
+        ],
+        "12": [
+          [
+            654.0,
+            400.0,
+            745.0,
+            497.0
+          ]
+        ],
+        "13": [
+          [
+            660.0,
+            408.0,
+            737.0,
+            493.0
+          ]
+        ],
+        "14": [
+          [
+            670.0,
+            418.0,
+            731.0,
+            493.0
+          ]
+        ],
+        "15": [
+          [
+            676.0,
+            422.0,
+            729.0,
+            491.0
+          ]
+        ],
+        "16": [
+          [
+            682.0,
+            426.0,
+            727.0,
+            487.0
+          ]
+        ],
+        "6": [
+          [
+            610.0,
+            376.0,
+            755.0,
+            535.0
+          ]
+        ],
+        "5": [
+          [
+            610.0,
+            386.0,
+            753.0,
+            537.0
+          ]
+        ],
+        "4": [
+          [
+            612.0,
+            396.0,
+            749.0,
+            539.0
+          ]
+        ],
+        "3": [
+          [
+            616.0,
+            404.0,
+            739.0,
+            541.0
+          ]
+        ],
+        "2": [
+          [
+            622.0,
+            412.0,
+            731.0,
+            541.0
+          ]
+        ],
+        "1": [
+          [
+            628.0,
+            420.0,
+            721.0,
+            541.0
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 40,
+      "crop_stop_z": 55,
+      "original_shape_zyx": [
+        66,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        15,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 51,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0006",
+      "label_idx": 3,
+      "spacing_zyx_mm": [
+        6.0,
+        0.701171875,
+        0.701171875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/img/img0006.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/label/img0006.nii.gz",
+      "scoring_grid": "synthetic_thick_spacing_v2",
+      "synthetic_source_spacing_z_mm": 3.0,
+      "synthetic_target_spacing_z_mm": 6.0,
+      "synthetic_actual_spacing_z_mm": 6.0,
+      "total_seconds": 2.906950675882399,
+      "peak_gpu_allocated_bytes": 10944557568,
+      "metrics": {
+        "dice": 0.7623475130203782,
+        "nsd": 0.42701178953282526,
+        "hd95_mm": 13.344831865036873,
+        "surface_status": "valid",
+        "foreground_recall": 0.7427124954594987,
+        "foreground_precision": 0.7830489001651547,
+        "false_positive_ml": 26.737458435058592
+      },
+      "resampling_info": {
+        "branch": "control",
+        "source_z_mm": 6.0,
+        "trigger_mm": 5.5,
+        "crop_start_z": 40,
+        "resampling_triggered": false,
+        "origin_xyz_working": [
+          0.0,
+          0.0,
+          240.0
+        ],
+        "inference_seconds": 2.801904993131757,
+        "resampling_applied": false
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "11": [
+          [
+            602.0,
+            170.0,
+            762.0,
+            318.0
+          ]
+        ],
+        "12": [
+          [
+            606.0,
+            172.0,
+            753.0,
+            317.0
+          ]
+        ],
+        "13": [
+          [
+            610.0,
+            176.0,
+            749.0,
+            315.0
+          ]
+        ],
+        "10": [
+          [
+            608.0,
+            172.0,
+            761.0,
+            315.0
+          ]
+        ],
+        "9": [
+          [
+            618.0,
+            176.0,
+            755.0,
+            305.0
+          ]
+        ],
+        "8": [
+          [
+            624.0,
+            184.0,
+            751.0,
+            303.0
+          ]
+        ],
+        "7": [
+          [
+            628.0,
+            190.0,
+            751.0,
+            303.0
+          ]
+        ],
+        "6": [
+          [
+            634.0,
+            200.0,
+            749.0,
+            305.0
+          ]
+        ],
+        "5": [
+          [
+            640.0,
+            206.0,
+            745.0,
+            307.0
+          ]
+        ],
+        "4": [
+          [
+            646.0,
+            214.0,
+            741.0,
+            305.0
+          ]
+        ],
+        "3": [
+          [
+            654.0,
+            222.0,
+            735.0,
+            305.0
+          ]
+        ],
+        "2": [
+          [
+            660.0,
+            230.0,
+            731.0,
+            305.0
+          ]
+        ],
+        "1": [
+          [
+            668.0,
+            236.0,
+            729.0,
+            305.0
+          ]
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "dice": {
+      "mean": 0.7769234166566603,
+      "valid_count": 6,
+      "undefined_count": 0
+    },
+    "nsd": {
+      "mean": 0.4441786052307755,
+      "valid_count": 6,
+      "undefined_count": 0
+    },
+    "hd95_mm": {
+      "mean": 16.13765043354539,
+      "valid_count": 6,
+      "undefined_count": 0
+    },
+    "foreground_recall": {
+      "mean": 0.7792914231790179,
+      "valid_count": 6,
+      "undefined_count": 0
+    },
+    "foreground_precision": {
+      "mean": 0.7788576350332747,
+      "valid_count": 6,
+      "undefined_count": 0
+    },
+    "false_positive_ml": {
+      "mean": 38.03285820871263,
+      "valid_count": 6,
+      "undefined_count": 0
+    }
+  },
+  "finished_utc": "2026-10-01T09:40:39.450530+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "folds_complete": 5,
+  "patients": 30,
+  "patient_organ_cases": 120,
+  "prompt_stages": 1200,
+  "distinct_ten_prompts_each": true,
+  "checkpoint_sha256_matches_five_box": true,
+  "first_five_prompt_slices_match_five_box": true,
+  "max_abs_dice_diff_vs_five_box_counts_1_to_5": 0.0,
+  "no_training_test_manifest_overlap": true
+}

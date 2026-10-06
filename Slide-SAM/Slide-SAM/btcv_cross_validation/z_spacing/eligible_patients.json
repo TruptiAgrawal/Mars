@@ -1,0 +1,164 @@
+[
+  {
+    "volume_id": "img0001",
+    "fold": 1,
+    "z_spacing_mm": 3.0,
+    "n_slices": 147,
+    "checkpoint": "btcv_cross_validation/runs/fold1/ddp_sub_cv/cv_fold1/ckpt/model_epoch_20.pth",
+    "checkpoint_exists": true,
+    "test_manifest": "btcv_cross_validation/dataset_list/fold1/01_BTCV_test_4to1.txt"
+  },
+  {
+    "volume_id": "img0002",
+    "fold": 1,
+    "z_spacing_mm": 3.0,
+    "n_slices": 139,
+    "checkpoint": "btcv_cross_validation/runs/fold1/ddp_sub_cv/cv_fold1/ckpt/model_epoch_20.pth",
+    "checkpoint_exists": true,
+    "test_manifest": "btcv_cross_validation/dataset_list/fold1/01_BTCV_test_4to1.txt"
+  },
+  {
+    "volume_id": "img0003",
+    "fold": 1,
+    "z_spacing_mm": 3.0,
+    "n_slices": 198,
+    "checkpoint": "btcv_cross_validation/runs/fold1/ddp_sub_cv/cv_fold1/ckpt/model_epoch_20.pth",
+    "checkpoint_exists": true,
+    "test_manifest": "btcv_cross_validation/dataset_list/fold1/01_BTCV_test_4to1.txt"
+  },
+  {
+    "volume_id": "img0004",
+    "fold": 1,
+    "z_spacing_mm": 3.0,
+    "n_slices": 140,
+    "checkpoint": "btcv_cross_validation/runs/fold1/ddp_sub_cv/cv_fold1/ckpt/model_epoch_20.pth",
+    "checkpoint_exists": true,
+    "test_manifest": "btcv_cross_validation/dataset_list/fold1/01_BTCV_test_4to1.txt"
+  },
+  {
+    "volume_id": "img0005",
+    "fold": 1,
+    "z_spacing_mm": 3.0,
+    "n_slices": 117,
+    "checkpoint": "btcv_cross_validation/runs/fold1/ddp_sub_cv/cv_fold1/ckpt/model_epoch_20.pth",
+    "checkpoint_exists": true,
+    "test_manifest": "btcv_cross_validation/dataset_list/fold1/01_BTCV_test_4to1.txt"
+  },
+  {
+    "volume_id": "img0006",
+    "fold": 1,
+    "z_spacing_mm": 3.0,
+    "n_slices": 131,
+    "checkpoint": "btcv_cross_validation/runs/fold1/ddp_sub_cv/cv_fold1/ckpt/model_epoch_20.pth",
+    "checkpoint_exists": true,
+    "test_manifest": "btcv_cross_validation/dataset_list/fold1/01_BTCV_test_4to1.txt"
+  },
+  {
+    "volume_id": "img0007",
+    "fold": 2,
+    "z_spacing_mm": 3.0,
+    "n_slices": 163,
+    "checkpoint": "btcv_cross_validation/runs/fold2/ddp_sub_cv/cv_fold2/ckpt/model_epoch_20.pth",
+    "checkpoint_exists": true,
+    "test_manifest": "btcv_cross_validation/dataset_list/fold2/01_BTCV_test_4to1.txt"
+  },
+  {
+    "volume_id": "img0008",
+    "fold": 2,
+    "z_spacing_mm": 3.0,
+    "n_slices": 148,
+    "checkpoint": "btcv_cross_validation/runs/fold2/ddp_sub_cv/cv_fold2/ckpt/model_epoch_20.pth",
+    "checkpoint_exists": true,
+    "test_manifest": "btcv_cross_validation/dataset_list/fold2/01_BTCV_test_4to1.txt"
+  },
+  {
+    "volume_id": "img0009",
+    "fold": 2,
+    "z_spacing_mm": 2.5,
+    "n_slices": 149,
+    "checkpoint": "btcv_cross_validation/runs/fold2/ddp_sub_cv/cv_fold2/ckpt/model_epoch_20.pth",
+    "checkpoint_exists": true,
+    "test_manifest": "btcv_cross_validation/dataset_list/fold2/01_BTCV_test_4to1.txt"
+  },
+  {
+    "volume_id": "img0010",
+    "fold": 2,
+    "z_spacing_mm": 3.0,
+    "n_slices": 148,
+    "checkpoint": "btcv_cross_validation/runs/fold2/ddp_sub_cv/cv_fold2/ckpt/model_epoch_20.pth",
+    "checkpoint_exists": true,
+    "test_manifest": "btcv_cross_validation/dataset_list/fold2/01_BTCV_test_4to1.txt"
+  },
+  {
+    "volume_id": "img0021",
+    "fold": 2,
+    "z_spacing_mm": 3.0,
+    "n_slices": 143,
+    "checkpoint": "btcv_cross_validation/runs/fold2/ddp_sub_cv/cv_fold2/ckpt/model_epoch_20.pth",
+    "checkpoint_exists": true,
+    "test_manifest": "btcv_cross_validation/dataset_list/fold2/01_BTCV_test_4to1.txt"
+  },
+  {
+    "volume_id": "img0024",
+    "fold": 3,
+    "z_spacing_mm": 3.0,
+    "n_slices": 124,
+    "checkpoint": "btcv_cross_validation/runs/fold3/ddp_sub_cv/cv_fold3/ckpt/model_epoch_20.pth",
+    "checkpoint_exists": true,
+    "test_manifest": "btcv_cross_validation/dataset_list/fold3/01_BTCV_test_4to1.txt"
+  },
+  {
+    "volume_id": "img0029",
+    "fold": 4,
+    "z_spacing_mm": 3.0,
+    "n_slices": 100,
+    "checkpoint": "btcv_cross_validation/runs/fold4/ddp_sub_cv/cv_fold4/ckpt/model_epoch_20.pth",
+    "checkpoint_exists": true,
+    "test_manifest": "btcv_cross_validation/dataset_list/fold4/01_BTCV_test_4to1.txt"
+  },
+  {
+    "volume_id": "img0030",
+    "fold": 4,
+    "z_spacing_mm": 3.0,
+    "n_slices": 153,
+    "checkpoint": "btcv_cross_validation/runs/fold4/ddp_sub_cv/cv_fold4/ckpt/model_epoch_20.pth",
+    "checkpoint_exists": true,
+    "test_manifest": "btcv_cross_validation/dataset_list/fold4/01_BTCV_test_4to1.txt"
+  },
+  {
+    "volume_id": "img0031",
+    "fold": 4,
+    "z_spacing_mm": 3.0,
+    "n_slices": 93,
+    "checkpoint": "btcv_cross_validation/runs/fold4/ddp_sub_cv/cv_fold4/ckpt/model_epoch_20.pth",
+    "checkpoint_exists": true,
+    "test_manifest": "btcv_cross_validation/dataset_list/fold4/01_BTCV_test_4to1.txt"
+  },
+  {
+    "volume_id": "img0032",
+    "fold": 4,
+    "z_spacing_mm": 3.0,
+    "n_slices": 144,
+    "checkpoint": "btcv_cross_validation/runs/fold4/ddp_sub_cv/cv_fold4/ckpt/model_epoch_20.pth",
+    "checkpoint_exists": true,
+    "test_manifest": "btcv_cross_validation/dataset_list/fold4/01_BTCV_test_4to1.txt"
+  },
+  {
+    "volume_id": "img0036",
+    "fold": 5,
+    "z_spacing_mm": 3.0,
+    "n_slices": 184,
+    "checkpoint": "btcv_cross_validation/runs/fold5/ddp_sub_cv/cv_fold5/ckpt/model_epoch_20.pth",
+    "checkpoint_exists": true,
+    "test_manifest": "btcv_cross_validation/dataset_list/fold5/01_BTCV_test_4to1.txt"
+  },
+  {
+    "volume_id": "img0040",
+    "fold": 5,
+    "z_spacing_mm": 3.0,
+    "n_slices": 195,
+    "checkpoint": "btcv_cross_validation/runs/fold5/ddp_sub_cv/cv_fold5/ckpt/model_epoch_20.pth",
+    "checkpoint_exists": true,
+    "test_manifest": "btcv_cross_validation/dataset_list/fold5/01_BTCV_test_4to1.txt"
+  }
+]

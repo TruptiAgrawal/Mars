@@ -1,0 +1,11 @@
+{
+  "folds_complete": 5,
+  "patients": 30,
+  "patient_organ_cases": 120,
+  "prompt_stages": 600,
+  "distinct_five_prompts_each": true,
+  "author_mbox_source_unchanged": true,
+  "source_hashes_verified_after_run": true,
+  "fold5_one_box_matches_prior_corrected_zero": true,
+  "no_training_test_manifest_overlap": true
+}

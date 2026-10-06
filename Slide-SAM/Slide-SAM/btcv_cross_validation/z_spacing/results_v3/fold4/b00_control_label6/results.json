@@ -1,0 +1,1255 @@
+{
+  "started_utc": "2026-10-01T09:58:49.205743+00:00",
+  "status": "complete",
+  "geometry_version": "v3_cropped_origin",
+  "arguments": {
+    "synthetic_root": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold4",
+    "manifest": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold4/synthetic_manifest.txt",
+    "train_manifest": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/dataset_list/fold4/01_BTCV_train_4to1.txt",
+    "checkpoint": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold4/ddp_sub_cv/cv_fold4/ckpt/model_epoch_20.pth",
+    "checkpoint_kind": "finetuned",
+    "label_idx": 6,
+    "protocol": "gt-cropped",
+    "branch": "control",
+    "target_z_mm": 3.0,
+    "trigger_mm": 5.5,
+    "nsd_tolerance_mm": 1.0,
+    "output": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/results_v3/fold4/b00_control_label6",
+    "save_predictions": false,
+    "run_inference": true
+  },
+  "training_ids": [
+    "img0001",
+    "img0002",
+    "img0003",
+    "img0004",
+    "img0005",
+    "img0006",
+    "img0007",
+    "img0008",
+    "img0009",
+    "img0010",
+    "img0021",
+    "img0022",
+    "img0023",
+    "img0024",
+    "img0025",
+    "img0026",
+    "img0027",
+    "img0028",
+    "img0035",
+    "img0036",
+    "img0037",
+    "img0038",
+    "img0039",
+    "img0040"
+  ],
+  "evaluation_ids": [
+    "img0029",
+    "img0030",
+    "img0031",
+    "img0032"
+  ],
+  "manifest_sha256": "9d3f1c228b3d9f2f89ffda5bff17cbacd98965f986cb61aafa6a5ae39808cd1c",
+  "training_manifest_sha256": "ced778eb6b58f9a5947489ffb36396c63b224cf08e645e942a2de9700a9ed1b6",
+  "checkpoint_bytes": 377029836,
+  "checkpoint_mtime_ns": 1790534678567331084,
+  "checkpoint_sha256": "ce675b35442c900ef90d219f608955685f2dba41beb67c891aa74272ecf4fb2e",
+  "experiment_source_sha256": {
+    "run_b00_b01_all_folds.py": "5e1f6257af202097a1c03e76ee86bf1af6dcd1bd4169ef2d5e0b9c77e03817eb",
+    "evaluate.py": "d3537b295dc47a719d56dc2470cc636bfd52b161213b9fc2d918ab714031037f",
+    "test_cpu.py": "3326f9f4f4a23688cbea6d85da2b1fb11216f7bb9502b2322e432d13df9d5df9",
+    "test_geometry_fixes.py": "da609b20b87a2e955f9e273ecc08a0462cb1e8ac2135c30fc28888263c5b2998",
+    "evaluate_v3.py": "5ad5caba6da98b5a5e5a57a6952755f95dc797c5cc5692a8c07af3a4324f7856",
+    "__init__.py": "3522d6e6170abc90b754803f2bac8bc049ee3e32c43a760be2bcd6622212225c",
+    "audit_kidney.py": "306896bafc978bea3d4ddcb4a2f673403dd6c8198bf704f3578f88d2aa976a3e",
+    "helpers.py": "e08ce8822102b514d0dd48c92826db1a2527fc63bcfb04f4cc08026894b6cdab",
+    "loader.py": "3af56876091db94351df8217ab5599ff039617d03fcbc0b4b484be455f821c98",
+    "make_synthetic.py": "a4f53eadecfc63f7f58fc98c1cd25fccfd45cefbe32ad696d5a48b6abec7d78f",
+    "find_eligible_patients.py": "5ef3d13e442c3a71d0e971351bf4d6986588bd6e287710e1a039350b8d5c1230"
+  },
+  "warning": "v3: cropped z-origin passed to resampler. Scoring on declared thick-spacing grid. Proposed branch resamples only when z > trigger_mm.",
+  "cases": [
+    {
+      "crop_start_z": 24,
+      "crop_stop_z": 48,
+      "original_shape_zyx": [
+        51,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        24,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 39,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0029",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        5.940000057220459,
+        0.875,
+        0.875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold4/img/img0029.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold4/label/img0029.nii.gz",
+      "scoring_grid": "synthetic_thick_spacing_v2",
+      "synthetic_source_spacing_z_mm": 3.0,
+      "synthetic_target_spacing_z_mm": 6.0,
+      "synthetic_actual_spacing_z_mm": 5.94,
+      "total_seconds": 6.845124407904223,
+      "peak_gpu_allocated_bytes": 11208798720,
+      "metrics": {
+        "dice": 0.8779459805930877,
+        "nsd": 0.2491458235324751,
+        "hd95_mm": 11.880000114440918,
+        "surface_status": "valid",
+        "foreground_recall": 0.9938325803166937,
+        "foreground_precision": 0.7862631690657199,
+        "false_positive_ml": 403.0135041947588
+      },
+      "resampling_info": {
+        "branch": "control",
+        "source_z_mm": 5.940000057220459,
+        "trigger_mm": 5.5,
+        "crop_start_z": 24,
+        "resampling_triggered": false,
+        "origin_xyz_working": [
+          0.0,
+          0.0,
+          142.56000137329102
+        ],
+        "inference_seconds": 4.6699811620637774,
+        "resampling_applied": false
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "15": [
+          [
+            220.0,
+            274.0,
+            614.0,
+            678.0
+          ]
+        ],
+        "16": [
+          [
+            222.0,
+            274.0,
+            611.0,
+            681.0
+          ]
+        ],
+        "17": [
+          [
+            224.0,
+            276.0,
+            611.0,
+            679.0
+          ]
+        ],
+        "18": [
+          [
+            226.0,
+            278.0,
+            609.0,
+            673.0
+          ]
+        ],
+        "19": [
+          [
+            228.0,
+            282.0,
+            607.0,
+            669.0
+          ]
+        ],
+        "20": [
+          [
+            232.0,
+            286.0,
+            605.0,
+            665.0
+          ]
+        ],
+        "21": [
+          [
+            242.0,
+            294.0,
+            597.0,
+            653.0
+          ]
+        ],
+        "22": [
+          [
+            246.0,
+            300.0,
+            473.0,
+            633.0
+          ]
+        ],
+        "14": [
+          [
+            220.0,
+            276.0,
+            609.0,
+            683.0
+          ]
+        ],
+        "13": [
+          [
+            220.0,
+            278.0,
+            605.0,
+            685.0
+          ]
+        ],
+        "12": [
+          [
+            220.0,
+            282.0,
+            593.0,
+            685.0
+          ]
+        ],
+        "11": [
+          [
+            218.0,
+            286.0,
+            589.0,
+            687.0
+          ]
+        ],
+        "10": [
+          [
+            214.0,
+            294.0,
+            579.0,
+            687.0
+          ]
+        ],
+        "9": [
+          [
+            210.0,
+            304.0,
+            575.0,
+            687.0
+          ]
+        ],
+        "8": [
+          [
+            208.0,
+            310.0,
+            565.0,
+            685.0
+          ]
+        ],
+        "7": [
+          [
+            208.0,
+            322.0,
+            547.0,
+            681.0
+          ]
+        ],
+        "6": [
+          [
+            208.0,
+            332.0,
+            531.0,
+            673.0
+          ]
+        ],
+        "5": [
+          [
+            208.0,
+            342.0,
+            519.0,
+            669.0
+          ]
+        ],
+        "4": [
+          [
+            208.0,
+            354.0,
+            491.0,
+            665.0
+          ]
+        ],
+        "3": [
+          [
+            206.0,
+            368.0,
+            467.0,
+            661.0
+          ]
+        ],
+        "2": [
+          [
+            204.0,
+            382.0,
+            449.0,
+            655.0
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 43,
+      "crop_stop_z": 73,
+      "original_shape_zyx": [
+        77,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        30,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 63,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0030",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        6.0,
+        0.7421875,
+        0.7421875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold4/img/img0030.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold4/label/img0030.nii.gz",
+      "scoring_grid": "synthetic_thick_spacing_v2",
+      "synthetic_source_spacing_z_mm": 3.0,
+      "synthetic_target_spacing_z_mm": 6.0,
+      "synthetic_actual_spacing_z_mm": 6.0,
+      "total_seconds": 8.569902678020298,
+      "peak_gpu_allocated_bytes": 11384959488,
+      "metrics": {
+        "dice": 0.879832303152574,
+        "nsd": 0.29376939762304044,
+        "hd95_mm": 12.0,
+        "surface_status": "valid",
+        "foreground_recall": 0.9821105096736159,
+        "foreground_precision": 0.7968476052653549,
+        "false_positive_ml": 386.02366333007814
+      },
+      "resampling_info": {
+        "branch": "control",
+        "source_z_mm": 6.0,
+        "trigger_mm": 5.5,
+        "crop_start_z": 43,
+        "resampling_triggered": false,
+        "origin_xyz_working": [
+          0.0,
+          0.0,
+          258.0
+        ],
+        "inference_seconds": 5.647124367998913,
+        "resampling_applied": false
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "20": [
+          [
+            118.0,
+            292.0,
+            674.0,
+            718.0
+          ]
+        ],
+        "21": [
+          [
+            128.0,
+            302.0,
+            665.0,
+            719.0
+          ]
+        ],
+        "22": [
+          [
+            134.0,
+            320.0,
+            659.0,
+            719.0
+          ]
+        ],
+        "23": [
+          [
+            150.0,
+            336.0,
+            655.0,
+            719.0
+          ]
+        ],
+        "24": [
+          [
+            164.0,
+            352.0,
+            649.0,
+            719.0
+          ]
+        ],
+        "25": [
+          [
+            176.0,
+            368.0,
+            645.0,
+            719.0
+          ]
+        ],
+        "26": [
+          [
+            188.0,
+            400.0,
+            641.0,
+            717.0
+          ]
+        ],
+        "27": [
+          [
+            200.0,
+            416.0,
+            633.0,
+            711.0
+          ]
+        ],
+        "28": [
+          [
+            214.0,
+            438.0,
+            625.0,
+            703.0
+          ]
+        ],
+        "19": [
+          [
+            118.0,
+            290.0,
+            663.0,
+            717.0
+          ]
+        ],
+        "18": [
+          [
+            116.0,
+            288.0,
+            655.0,
+            707.0
+          ]
+        ],
+        "17": [
+          [
+            116.0,
+            286.0,
+            643.0,
+            703.0
+          ]
+        ],
+        "16": [
+          [
+            118.0,
+            284.0,
+            639.0,
+            695.0
+          ]
+        ],
+        "15": [
+          [
+            118.0,
+            284.0,
+            633.0,
+            691.0
+          ]
+        ],
+        "14": [
+          [
+            124.0,
+            288.0,
+            625.0,
+            689.0
+          ]
+        ],
+        "13": [
+          [
+            130.0,
+            294.0,
+            611.0,
+            687.0
+          ]
+        ],
+        "12": [
+          [
+            134.0,
+            300.0,
+            603.0,
+            683.0
+          ]
+        ],
+        "11": [
+          [
+            140.0,
+            308.0,
+            577.0,
+            677.0
+          ]
+        ],
+        "10": [
+          [
+            144.0,
+            320.0,
+            495.0,
+            673.0
+          ]
+        ],
+        "9": [
+          [
+            148.0,
+            330.0,
+            475.0,
+            667.0
+          ]
+        ],
+        "8": [
+          [
+            156.0,
+            346.0,
+            461.0,
+            663.0
+          ]
+        ],
+        "7": [
+          [
+            162.0,
+            366.0,
+            447.0,
+            661.0
+          ]
+        ],
+        "6": [
+          [
+            166.0,
+            386.0,
+            431.0,
+            655.0
+          ]
+        ],
+        "5": [
+          [
+            170.0,
+            402.0,
+            415.0,
+            649.0
+          ]
+        ],
+        "4": [
+          [
+            176.0,
+            418.0,
+            401.0,
+            645.0
+          ]
+        ],
+        "3": [
+          [
+            178.0,
+            434.0,
+            387.0,
+            641.0
+          ]
+        ],
+        "2": [
+          [
+            182.0,
+            450.0,
+            359.0,
+            637.0
+          ]
+        ],
+        "1": [
+          [
+            192.0,
+            480.0,
+            351.0,
+            635.0
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 11,
+      "crop_stop_z": 42,
+      "original_shape_zyx": [
+        47,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        31,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 33,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0031",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        6.0,
+        0.837890625,
+        0.837890625
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold4/img/img0031.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold4/label/img0031.nii.gz",
+      "scoring_grid": "synthetic_thick_spacing_v2",
+      "synthetic_source_spacing_z_mm": 3.0,
+      "synthetic_target_spacing_z_mm": 6.0,
+      "synthetic_actual_spacing_z_mm": 6.0,
+      "total_seconds": 7.544098698999733,
+      "peak_gpu_allocated_bytes": 11414319616,
+      "metrics": {
+        "dice": 0.8437762604064133,
+        "nsd": 0.3460617802250109,
+        "hd95_mm": 34.712116970961496,
+        "surface_status": "valid",
+        "foreground_recall": 0.8763203964347684,
+        "foreground_precision": 0.8135627704798744,
+        "false_positive_ml": 328.09683492279055
+      },
+      "resampling_info": {
+        "branch": "control",
+        "source_z_mm": 6.0,
+        "trigger_mm": 5.5,
+        "crop_start_z": 11,
+        "resampling_triggered": false,
+        "origin_xyz_working": [
+          0.0,
+          0.0,
+          66.0
+        ],
+        "inference_seconds": 5.7866038819774985,
+        "resampling_applied": false
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "22": [
+          [
+            154.0,
+            326.0,
+            668.0,
+            662.0
+          ]
+        ],
+        "23": [
+          [
+            154.0,
+            338.0,
+            653.0,
+            661.0
+          ]
+        ],
+        "24": [
+          [
+            158.0,
+            348.0,
+            643.0,
+            653.0
+          ]
+        ],
+        "25": [
+          [
+            162.0,
+            358.0,
+            629.0,
+            643.0
+          ]
+        ],
+        "26": [
+          [
+            168.0,
+            370.0,
+            625.0,
+            637.0
+          ]
+        ],
+        "27": [
+          [
+            178.0,
+            384.0,
+            623.0,
+            631.0
+          ]
+        ],
+        "28": [
+          [
+            192.0,
+            398.0,
+            623.0,
+            629.0
+          ]
+        ],
+        "21": [
+          [
+            154.0,
+            328.0,
+            657.0,
+            663.0
+          ]
+        ],
+        "20": [
+          [
+            152.0,
+            326.0,
+            611.0,
+            663.0
+          ]
+        ],
+        "19": [
+          [
+            154.0,
+            326.0,
+            575.0,
+            663.0
+          ]
+        ],
+        "18": [
+          [
+            156.0,
+            328.0,
+            531.0,
+            663.0
+          ]
+        ],
+        "17": [
+          [
+            158.0,
+            330.0,
+            493.0,
+            657.0
+          ]
+        ],
+        "16": [
+          [
+            160.0,
+            334.0,
+            433.0,
+            653.0
+          ]
+        ],
+        "15": [
+          [
+            164.0,
+            340.0,
+            427.0,
+            651.0
+          ]
+        ],
+        "14": [
+          [
+            166.0,
+            348.0,
+            421.0,
+            651.0
+          ]
+        ],
+        "13": [
+          [
+            166.0,
+            354.0,
+            415.0,
+            651.0
+          ]
+        ],
+        "12": [
+          [
+            168.0,
+            362.0,
+            405.0,
+            651.0
+          ]
+        ],
+        "11": [
+          [
+            172.0,
+            370.0,
+            393.0,
+            649.0
+          ]
+        ],
+        "10": [
+          [
+            174.0,
+            378.0,
+            377.0,
+            647.0
+          ]
+        ],
+        "9": [
+          [
+            178.0,
+            386.0,
+            359.0,
+            641.0
+          ]
+        ],
+        "8": [
+          [
+            180.0,
+            394.0,
+            343.0,
+            637.0
+          ]
+        ],
+        "7": [
+          [
+            184.0,
+            402.0,
+            325.0,
+            629.0
+          ]
+        ],
+        "6": [
+          [
+            192.0,
+            410.0,
+            309.0,
+            623.0
+          ]
+        ],
+        "5": [
+          [
+            198.0,
+            418.0,
+            303.0,
+            621.0
+          ]
+        ],
+        "4": [
+          [
+            208.0,
+            426.0,
+            301.0,
+            619.0
+          ]
+        ],
+        "3": [
+          [
+            212.0,
+            434.0,
+            299.0,
+            617.0
+          ]
+        ],
+        "2": [
+          [
+            220.0,
+            440.0,
+            295.0,
+            613.0
+          ]
+        ],
+        "1": [
+          [
+            226.0,
+            450.0,
+            289.0,
+            611.0
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 40,
+      "crop_stop_z": 69,
+      "original_shape_zyx": [
+        73,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        29,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 61,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0032",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        5.958333492279053,
+        0.740234375,
+        0.740234375
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold4/img/img0032.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold4/label/img0032.nii.gz",
+      "scoring_grid": "synthetic_thick_spacing_v2",
+      "synthetic_source_spacing_z_mm": 3.0,
+      "synthetic_target_spacing_z_mm": 6.0,
+      "synthetic_actual_spacing_z_mm": 5.958333333333333,
+      "total_seconds": 7.433663571020588,
+      "peak_gpu_allocated_bytes": 11355599360,
+      "metrics": {
+        "dice": 0.8640397615638217,
+        "nsd": 0.3329363745361962,
+        "hd95_mm": 14.001792330811973,
+        "surface_status": "valid",
+        "foreground_recall": 0.9880921495776438,
+        "foreground_precision": 0.7676618249396711,
+        "false_positive_ml": 410.2121466766663
+      },
+      "resampling_info": {
+        "branch": "control",
+        "source_z_mm": 5.958333492279053,
+        "trigger_mm": 5.5,
+        "crop_start_z": 40,
+        "resampling_triggered": false,
+        "origin_xyz_working": [
+          0.0,
+          0.0,
+          238.3333396911621
+        ],
+        "inference_seconds": 5.662865612888709,
+        "resampling_applied": false
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "21": [
+          [
+            166.0,
+            290.0,
+            606.0,
+            764.0
+          ]
+        ],
+        "22": [
+          [
+            166.0,
+            294.0,
+            603.0,
+            763.0
+          ]
+        ],
+        "23": [
+          [
+            172.0,
+            306.0,
+            601.0,
+            753.0
+          ]
+        ],
+        "24": [
+          [
+            182.0,
+            320.0,
+            593.0,
+            739.0
+          ]
+        ],
+        "25": [
+          [
+            194.0,
+            344.0,
+            589.0,
+            731.0
+          ]
+        ],
+        "26": [
+          [
+            198.0,
+            370.0,
+            585.0,
+            723.0
+          ]
+        ],
+        "27": [
+          [
+            212.0,
+            386.0,
+            585.0,
+            715.0
+          ]
+        ],
+        "20": [
+          [
+            164.0,
+            292.0,
+            595.0,
+            767.0
+          ]
+        ],
+        "19": [
+          [
+            164.0,
+            292.0,
+            587.0,
+            773.0
+          ]
+        ],
+        "18": [
+          [
+            164.0,
+            290.0,
+            577.0,
+            777.0
+          ]
+        ],
+        "17": [
+          [
+            164.0,
+            290.0,
+            565.0,
+            781.0
+          ]
+        ],
+        "16": [
+          [
+            164.0,
+            292.0,
+            555.0,
+            783.0
+          ]
+        ],
+        "15": [
+          [
+            164.0,
+            296.0,
+            541.0,
+            785.0
+          ]
+        ],
+        "14": [
+          [
+            164.0,
+            302.0,
+            503.0,
+            783.0
+          ]
+        ],
+        "13": [
+          [
+            164.0,
+            308.0,
+            473.0,
+            781.0
+          ]
+        ],
+        "12": [
+          [
+            164.0,
+            314.0,
+            427.0,
+            775.0
+          ]
+        ],
+        "11": [
+          [
+            164.0,
+            320.0,
+            389.0,
+            773.0
+          ]
+        ],
+        "10": [
+          [
+            162.0,
+            326.0,
+            371.0,
+            705.0
+          ]
+        ],
+        "9": [
+          [
+            160.0,
+            340.0,
+            343.0,
+            695.0
+          ]
+        ],
+        "8": [
+          [
+            158.0,
+            352.0,
+            319.0,
+            685.0
+          ]
+        ],
+        "7": [
+          [
+            156.0,
+            362.0,
+            289.0,
+            679.0
+          ]
+        ],
+        "6": [
+          [
+            156.0,
+            376.0,
+            271.0,
+            669.0
+          ]
+        ],
+        "5": [
+          [
+            156.0,
+            390.0,
+            257.0,
+            659.0
+          ]
+        ],
+        "4": [
+          [
+            156.0,
+            402.0,
+            247.0,
+            657.0
+          ]
+        ],
+        "3": [
+          [
+            156.0,
+            418.0,
+            237.0,
+            659.0
+          ]
+        ],
+        "2": [
+          [
+            156.0,
+            434.0,
+            229.0,
+            661.0
+          ]
+        ],
+        "1": [
+          [
+            158.0,
+            452.0,
+            221.0,
+            661.0
+          ]
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "dice": {
+      "mean": 0.8663985764289742,
+      "valid_count": 4,
+      "undefined_count": 0
+    },
+    "nsd": {
+      "mean": 0.3054783439791806,
+      "valid_count": 4,
+      "undefined_count": 0
+    },
+    "hd95_mm": {
+      "mean": 18.148477354053597,
+      "valid_count": 4,
+      "undefined_count": 0
+    },
+    "foreground_recall": {
+      "mean": 0.9600889090006806,
+      "valid_count": 4,
+      "undefined_count": 0
+    },
+    "foreground_precision": {
+      "mean": 0.7910838424376551,
+      "valid_count": 4,
+      "undefined_count": 0
+    },
+    "false_positive_ml": {
+      "mean": 381.83653728107345,
+      "valid_count": 4,
+      "undefined_count": 0
+    }
+  },
+  "finished_utc": "2026-10-01T09:59:28.024075+00:00"
+}

@@ -1,0 +1,50 @@
+base:
+  base_dir: ../runs/sam/
+  tag: ''        # override at launch: --tag <run_name>
+  stage: ''
+logger:
+  mode:
+  - tb
+  recorder_reduction: mean
+training:
+  save_mode:
+  - all
+  - best
+  - latest
+  batch_size: 4          # paper: 4 GPUs; use 2 if single-GPU OOM
+  num_workers: 8
+  num_epochs: 2          # SMOKE TEST: set to 20 for full paper run
+  use_amp: false
+  save_interval: 1
+  val_check_interval: 6
+  validation_interval: 100
+
+  # Optimizer — must match paper exactly (AdamW, Appendix C)
+  lr: 0.0002             # paper: 0.0002  (was 2e-05, 10x too low)
+  decay_step: 2000
+  decay_gamma: 0.8
+  weight_decay: 0.1      # paper: 0.1    (was 0.0001, 1000x too low)
+  alpha: 0.99            # beta1=0.9, beta2=0.999 set in configure_optimizers
+
+  continue_training: false
+  load_pretrain_model: false
+  load_optimizer: false
+  breakpoint_path: /home/jupyter-team2pop/Slide-SAM/Slide-SAM/weights/slidesam_b.pth
+dataset:
+  types:
+  - 3d
+  split: train
+  data_root_path: /home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/
+  # NOTE: dataset_list is ignored by cache_dataset3d_e2.py — it selects
+  # volumes via 01_BTCV_train_4to1.txt and WORD_50_train.txt directly.
+  dataset_list:
+  - 01_BTCV
+  - 07_WORD
+  data_txt_path: ./datasets/dataset_list/
+  dataset2d_path: /home1/quanquan/datasets/08_AbdomenCT-1K/
+  cache_data_path: /home/jupyter-team2pop/Slide-SAM/Slide-SAM/cached_dataset2/
+  cache_prefix:
+  - '01'
+  - '07'
+test:
+  batch_size: 1

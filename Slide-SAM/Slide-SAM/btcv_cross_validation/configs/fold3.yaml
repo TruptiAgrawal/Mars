@@ -1,0 +1,39 @@
+base:
+  base_dir: "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold3/"
+  tag: ''
+  stage: ''
+
+logger:
+  mode: ['tb']
+  recorder_reduction: 'mean'
+
+training:
+  save_mode: ['all', 'best', 'latest']
+  batch_size: 4
+  num_workers: 8
+  num_epochs: 21
+  use_amp: false
+  save_interval: 5
+  val_check_interval: 6
+  load_pretrain_model: false
+  lr: 0.00002
+  decay_step: 2000
+  decay_gamma: 0.8
+  weight_decay: 0.0001
+  alpha: 0.99
+  validation_interval: 100
+  continue_training: false
+  load_optimizer: false
+  breakpoint_path: "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/weights/slidesam_b.pth"
+
+dataset:
+  types: ['3d']
+  split: 'train'
+  data_root_path: '/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/'
+  dataset_list: ["01_BTCV"]
+  data_txt_path: '/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/dataset_list/fold3/'
+  cache_data_path: '/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/cache/all30/'
+  cache_prefix: ['01']
+
+test:
+  batch_size: 1

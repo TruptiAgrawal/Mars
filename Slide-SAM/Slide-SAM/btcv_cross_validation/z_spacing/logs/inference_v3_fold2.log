@@ -1,0 +1,267 @@
+=== fold2 GPU inference ===
+
+--- fold2 control label6 ---
+/home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/learner2.py:126: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(model_path, map_location="cpu")
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0007",
+    "img0008",
+    "img0010",
+    "img0021"
+  ],
+  "branch": "control",
+  "protocol": "gt-cropped",
+  "target_z_mm": null,
+  "trigger_mm": 5.5,
+  "geometry_version": "v3",
+  "gpu_inference_requested": true
+}
+Loading model from btcv_cross_validation/runs/fold2/ddp_sub_cv/cv_fold2/ckpt/model_epoch_20.pth
+Checking Data range: [-200.0, 400.0]
+img0007 {'dice': 0.862651059236059, 'nsd': 0.31946138331435064, 'hd95_mm': 16.815831531446612, 'surface_status': 'valid', 'foreground_recall': 0.9575371697591466, 'foreground_precision': 0.7848747450066929, 'false_positive_ml': 506.6652743225098}
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+img0008 {'dice': 0.6731974514632766, 'nsd': 0.26699610457121375, 'hd95_mm': 59.63465549251508, 'surface_status': 'valid', 'foreground_recall': 0.6053055847743382, 'foreground_precision': 0.7582429761530931, 'false_positive_ml': 248.37571872810787}
+Checking Data range: [-200.0, 400.0]
+img0010 {'dice': 0.8709839927732045, 'nsd': 0.3289982729738202, 'hd95_mm': 17.87837791442871, 'surface_status': 'valid', 'foreground_recall': 0.9778875960127653, 'foreground_precision': 0.7851505833063774, 'false_positive_ml': 553.2505366089754}
+Checking Data range: [-200.0, 400.0]
+img0021 {'dice': 0.883377559388122, 'nsd': 0.36007499124733733, 'hd95_mm': 12.0, 'surface_status': 'valid', 'foreground_recall': 0.9905779303263377, 'foreground_precision': 0.7971138739647381, 'false_positive_ml': 293.2833480834961}
+
+--- fold2 control label7 ---
+/home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/learner2.py:126: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(model_path, map_location="cpu")
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0007",
+    "img0008",
+    "img0010",
+    "img0021"
+  ],
+  "branch": "control",
+  "protocol": "gt-cropped",
+  "target_z_mm": null,
+  "trigger_mm": 5.5,
+  "geometry_version": "v3",
+  "gpu_inference_requested": true
+}
+Loading model from btcv_cross_validation/runs/fold2/ddp_sub_cv/cv_fold2/ckpt/model_epoch_20.pth
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+img0007 {'dice': 0.48036547433903576, 'nsd': 0.19462427194380202, 'hd95_mm': 108.8486449339967, 'surface_status': 'valid', 'foreground_recall': 0.3857880474177828, 'foreground_precision': 0.6363753426169496, 'false_positive_ml': 66.3666106338501}
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+img0008 {'dice': 0.6594725853304285, 'nsd': 0.2720364470166024, 'hd95_mm': 53.854345212755575, 'surface_status': 'valid', 'foreground_recall': 0.644895694629383, 'foreground_precision': 0.6747236927649298, 'false_positive_ml': 44.30897824549286}
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+img0010 {'dice': 0.650718146653106, 'nsd': 0.22081768082875058, 'hd95_mm': 71.78875922074802, 'surface_status': 'valid', 'foreground_recall': 0.5690054538558135, 'foreground_precision': 0.7598351626735906, 'false_positive_ml': 177.64164644060656}
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+img0021 {'dice': 0.653683699478092, 'nsd': 0.22674118323046158, 'hd95_mm': 48.099727187304964, 'surface_status': 'valid', 'foreground_recall': 0.6590995312863315, 'foreground_precision': 0.6483561462433939, 'false_positive_ml': 81.8990707397461}
+
+--- fold2 control label3 ---
+/home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/learner2.py:126: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(model_path, map_location="cpu")
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0007",
+    "img0008",
+    "img0010",
+    "img0021"
+  ],
+  "branch": "control",
+  "protocol": "gt-cropped",
+  "target_z_mm": null,
+  "trigger_mm": 5.5,
+  "geometry_version": "v3",
+  "gpu_inference_requested": true
+}
+Loading model from btcv_cross_validation/runs/fold2/ddp_sub_cv/cv_fold2/ckpt/model_epoch_20.pth
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+img0007 {'dice': 0.5892617267534159, 'nsd': 0.2981690094013988, 'hd95_mm': 23.229651621958066, 'surface_status': 'valid', 'foreground_recall': 0.4915227380763746, 'foreground_precision': 0.7355192737619403, 'false_positive_ml': 26.2149287109375}
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+img0008 {'dice': 0.24926781646599414, 'nsd': 0.2767996309971333, 'hd95_mm': 23.402445289315434, 'surface_status': 'valid', 'foreground_recall': 0.22164351851851852, 'foreground_precision': 0.28475836431226764, 'false_positive_ml': 6.08540753403728}
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+img0010 {'dice': 0.8276944371338616, 'nsd': 0.46844049465935506, 'hd95_mm': 15.589569797004707, 'surface_status': 'valid', 'foreground_recall': 0.8544891017771248, 'foreground_precision': 0.8025291093301073, 'false_positive_ml': 37.99955527181737}
+Checking Data range: [-200.0, 400.0]
+No masks
+img0021 {'dice': 0.7513340195695642, 'nsd': 0.3987551250339979, 'hd95_mm': 14.175931944982985, 'surface_status': 'valid', 'foreground_recall': 0.710090799302232, 'foreground_precision': 0.7976636100992338, 'false_positive_ml': 22.581825256347656}
+
+--- fold2 control label1 ---
+/home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/learner2.py:126: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(model_path, map_location="cpu")
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0007",
+    "img0008",
+    "img0010",
+    "img0021"
+  ],
+  "branch": "control",
+  "protocol": "gt-cropped",
+  "target_z_mm": null,
+  "trigger_mm": 5.5,
+  "geometry_version": "v3",
+  "gpu_inference_requested": true
+}
+Loading model from btcv_cross_validation/runs/fold2/ddp_sub_cv/cv_fold2/ckpt/model_epoch_20.pth
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+img0007 {'dice': 0.6824697817503573, 'nsd': 0.26195575328208465, 'hd95_mm': 54.0, 'surface_status': 'valid', 'foreground_recall': 0.5999710389355957, 'foreground_precision': 0.7912734789251371, 'false_positive_ml': 62.381323699951174}
+Checking Data range: [-200.0, 400.0]
+img0008 {'dice': 0.828802300897076, 'nsd': 0.4182611539639186, 'hd95_mm': 10.506801763656782, 'surface_status': 'valid', 'foreground_recall': 0.9436154122031467, 'foreground_precision': 0.7388979108414022, 'false_positive_ml': 67.63531949472619}
+Checking Data range: [-200.0, 400.0]
+img0010 {'dice': 0.8744527451236097, 'nsd': 0.5762350170607929, 'hd95_mm': 5.687585851000405, 'surface_status': 'valid', 'foreground_recall': 0.9290973871733966, 'foreground_precision': 0.8258788753211106, 'false_positive_ml': 17.99768349621445}
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+img0021 {'dice': 0.7594701211004117, 'nsd': 0.4250494770671452, 'hd95_mm': 12.0, 'surface_status': 'valid', 'foreground_recall': 0.8132216770575866, 'foreground_precision': 0.7123836608066184, 'false_positive_ml': 24.953842163085938}
+
+--- fold2 proposed label6 ---
+/home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/learner2.py:126: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(model_path, map_location="cpu")
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0007",
+    "img0008",
+    "img0010",
+    "img0021"
+  ],
+  "branch": "proposed",
+  "protocol": "gt-cropped",
+  "target_z_mm": 3.0,
+  "trigger_mm": 5.5,
+  "geometry_version": "v3",
+  "gpu_inference_requested": true
+}
+Loading model from btcv_cross_validation/runs/fold2/ddp_sub_cv/cv_fold2/ckpt/model_epoch_20.pth
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+img0007 {'dice': 0.9094282655652758, 'nsd': 0.4691419492897483, 'hd95_mm': 11.612810368491385, 'surface_status': 'valid', 'foreground_recall': 0.9581145640759865, 'foreground_precision': 0.8654506552386099, 'false_positive_ml': 287.56178652191164}
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+img0008 {'dice': 0.8905776008747154, 'nsd': 0.4505730892901971, 'hd95_mm': 8.860287325537573, 'surface_status': 'valid', 'foreground_recall': 0.9628550082085664, 'foreground_precision': 0.8283936338243783, 'false_positive_ml': 256.69729212834284}
+Checking Data range: [-200.0, 400.0]
+img0010 {'dice': 0.9309561253974986, 'nsd': 0.5621339394405162, 'hd95_mm': 6.729099509271754, 'surface_status': 'valid', 'foreground_recall': 0.9924773140703783, 'foreground_precision': 0.8766168381141809, 'false_positive_ml': 288.8140794192441}
+Checking Data range: [-200.0, 400.0]
+img0021 {'dice': 0.918184357854038, 'nsd': 0.5319851584927247, 'hd95_mm': 9.12125769392277, 'surface_status': 'valid', 'foreground_recall': 0.990262174090152, 'foreground_precision': 0.8558872363873479, 'false_positive_ml': 193.95584106445312}
+
+--- fold2 proposed label7 ---
+/home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/learner2.py:126: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(model_path, map_location="cpu")
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0007",
+    "img0008",
+    "img0010",
+    "img0021"
+  ],
+  "branch": "proposed",
+  "protocol": "gt-cropped",
+  "target_z_mm": 3.0,
+  "trigger_mm": 5.5,
+  "geometry_version": "v3",
+  "gpu_inference_requested": true
+}
+Loading model from btcv_cross_validation/runs/fold2/ddp_sub_cv/cv_fold2/ckpt/model_epoch_20.pth
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+img0007 {'dice': 0.43054797859621835, 'nsd': 0.22183931674654894, 'hd95_mm': 96.39101634052028, 'surface_status': 'valid', 'foreground_recall': 0.4136565890867728, 'foreground_precision': 0.44887759423972895, 'false_positive_ml': 152.90474940490722}
+Checking Data range: [-200.0, 400.0]
+img0008 {'dice': 0.6330377953475618, 'nsd': 0.28637360115246707, 'hd95_mm': 58.36773938606654, 'surface_status': 'valid', 'foreground_recall': 0.6148024855747891, 'foreground_precision': 0.6523879050489827, 'false_positive_ml': 46.68747432948248}
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+img0010 {'dice': 0.5902086318884815, 'nsd': 0.25462686238896376, 'hd95_mm': 90.13264703455503, 'surface_status': 'valid', 'foreground_recall': 0.46713140441390383, 'foreground_precision': 0.8013417815877749, 'false_positive_ml': 114.38422653707676}
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+img0021 {'dice': 0.6819123875236538, 'nsd': 0.31745042836677567, 'hd95_mm': 49.74699921879122, 'surface_status': 'valid', 'foreground_recall': 0.6482811792493238, 'foreground_precision': 0.7192239284211098, 'false_positive_ml': 57.982635498046875}
+
+--- fold2 proposed label3 ---
+/home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/learner2.py:126: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(model_path, map_location="cpu")
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0007",
+    "img0008",
+    "img0010",
+    "img0021"
+  ],
+  "branch": "proposed",
+  "protocol": "gt-cropped",
+  "target_z_mm": 3.0,
+  "trigger_mm": 5.5,
+  "geometry_version": "v3",
+  "gpu_inference_requested": true
+}
+Loading model from btcv_cross_validation/runs/fold2/ddp_sub_cv/cv_fold2/ckpt/model_epoch_20.pth
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+img0007 {'dice': 0.5229156358238496, 'nsd': 0.31512049868604186, 'hd95_mm': 30.407297051682477, 'surface_status': 'valid', 'foreground_recall': 0.3827557326210472, 'foreground_precision': 0.8250304952427421, 'false_positive_ml': 12.039796920776368}
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+img0008 {'dice': 0.22501878287002253, 'nsd': 0.23124048938058872, 'hd95_mm': 29.634299933666057, 'surface_status': 'valid', 'foreground_recall': 0.17332175925925927, 'foreground_precision': 0.32066381156316914, 'false_positive_ml': 4.013712141732489}
+Checking Data range: [-200.0, 400.0]
+img0010 {'dice': 0.818493428525069, 'nsd': 0.5078580838385199, 'hd95_mm': 15.967957285928136, 'surface_status': 'valid', 'foreground_recall': 0.8121842735524383, 'foreground_precision': 0.8249013715991088, 'false_positive_ml': 31.157671145629138}
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+img0021 {'dice': 0.6720467866126952, 'nsd': 0.35294960322719476, 'hd95_mm': 16.150080611556266, 'surface_status': 'valid', 'foreground_recall': 0.5885181374960863, 'foreground_precision': 0.7832078335664752, 'false_positive_ml': 20.422897338867188}
+
+--- fold2 proposed label1 ---
+/home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/learner2.py:126: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(model_path, map_location="cpu")
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0007",
+    "img0008",
+    "img0010",
+    "img0021"
+  ],
+  "branch": "proposed",
+  "protocol": "gt-cropped",
+  "target_z_mm": 3.0,
+  "trigger_mm": 5.5,
+  "geometry_version": "v3",
+  "gpu_inference_requested": true
+}
+Loading model from btcv_cross_validation/runs/fold2/ddp_sub_cv/cv_fold2/ckpt/model_epoch_20.pth
+Checking Data range: [-200.0, 400.0]
+img0007 {'dice': 0.8566380637497695, 'nsd': 0.48203511380741937, 'hd95_mm': 20.422344969965266, 'surface_status': 'valid', 'foreground_recall': 0.850782374636922, 'foreground_precision': 0.8625749175259513, 'false_positive_ml': 53.42701851654053}
+Checking Data range: [-200.0, 400.0]
+img0008 {'dice': 0.8597825932099556, 'nsd': 0.5442943131955525, 'hd95_mm': 9.77406276102447, 'surface_status': 'valid', 'foreground_recall': 0.9410269604403486, 'foreground_precision': 0.7914519153847163, 'false_positive_ml': 50.29633607394014}
+Checking Data range: [-200.0, 400.0]
+img0010 {'dice': 0.8587672281776416, 'nsd': 0.5622978002426433, 'hd95_mm': 8.088410336288668, 'surface_status': 'valid', 'foreground_recall': 0.8880047505938242, 'foreground_precision': 0.8313936249073388, 'false_positive_ml': 16.54637474217452}
+Checking Data range: [-200.0, 400.0]
+img0021 {'dice': 0.7418493555975696, 'nsd': 0.4674348334641177, 'hd95_mm': 16.205642019122635, 'surface_status': 'valid', 'foreground_recall': 0.9481314789537758, 'foreground_precision': 0.6092883220330947, 'false_positive_ml': 46.209468841552734}

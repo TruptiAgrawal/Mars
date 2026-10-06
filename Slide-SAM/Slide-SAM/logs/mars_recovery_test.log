@@ -1,0 +1,125 @@
+Warning! Running on only 1 GPU! just for debug
+Already add '--config' 
+Already add '--func' 
+Already add '--reuse' 
+[Tutils] Add BASE_CONFIG
+[Tutils] Set file 
+[Tutils] Change experiment name from  to ddp_sub
+[Tutils] Add Args and args config
+Make dir '../runs/sam/ddp_sub/btcv_word50_e2_recovery_test/' !
+[Tutils] Saved config.yaml to ../runs/sam/ddp_sub/btcv_word50_e2_recovery_test//config.yaml
+Save running script to ../runs/sam/ddp_sub/btcv_word50_e2_recovery_test/ from /home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/ddp_sub.py
+[Tutils] Saved script file: from /home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/ddp_sub.py to ../runs/sam/ddp_sub/btcv_word50_e2_recovery_test/scripts/ddp_sub.py
+Save config file to  ../runs/sam/ddp_sub/btcv_word50_e2_recovery_test/config.yaml
+
+======================================================================
+E2 DATASET AUDIT
+======================================================================
+BTCV training volumes : 24
+WORD training volumes : 50
+
+BTCV cached samples   : 8159
+WORD cached samples   : 25913
+TOTAL cached samples  : 34072
+
+WORD sample-count range: 422 - 633
+
+BTCV volume IDs:
+['img0001', 'img0002', 'img0003', 'img0004', 'img0005', 'img0006', 'img0007', 'img0008', 'img0009', 'img0010', 'img0021', 'img0022', 'img0023', 'img0024', 'img0025', 'img0026', 'img0027', 'img0028', 'img0029', 'img0030', 'img0031', 'img0032', 'img0033', 'img0034']
+
+WORD-50 volume IDs:
+['0002', '0004', '0006', '0009', '0011', '0013', '0020', '0026', '0028', '0030', '0036', '0040', '0042', '0046', '0049', '0053', '0056', '0059', '0062', '0064', '0067', '0070', '0072', '0078', '0081', '0084', '0087', '0090', '0093', '0095', '0100', '0102', '0105', '0107', '0109', '0113', '0115', '0117', '0119', '0122', '0125', '0127', '0130', '0133', '0135', '0138', '0142', '0144', '0146', '0148']
+
+First 3 selected cache samples:
+  /home/jupyter-team2pop/Slide-SAM/Slide-SAM/cached_dataset2/01_BCV-Abdomen/label_jpg/label_0000_00000000_0000.jpg
+  /home/jupyter-team2pop/Slide-SAM/Slide-SAM/cached_dataset2/01_BCV-Abdomen/label_jpg/label_0000_00000001_0000.jpg
+  /home/jupyter-team2pop/Slide-SAM/Slide-SAM/cached_dataset2/01_BCV-Abdomen/label_jpg/label_0000_00000002_0000.jpg
+
+Last 3 selected cache samples:
+  /home/jupyter-team2pop/Slide-SAM/Slide-SAM/cached_dataset2/07_WORD/label_jpg/label_0098_00000150_0000.jpg
+  /home/jupyter-team2pop/Slide-SAM/Slide-SAM/cached_dataset2/07_WORD/label_jpg/label_0098_00000150_0001.jpg
+  /home/jupyter-team2pop/Slide-SAM/Slide-SAM/cached_dataset2/07_WORD/label_jpg/label_0098_00000151_0000.jpg
+======================================================================
+E2 DATASET AUDIT PASSED
+======================================================================
+
+Loading model from /home/jupyter-team2pop/Slide-SAM/runs/sam/ddp_sub/btcv_word50_e2_run1/ckpt/model_iter_5000.pth
+Traceback (most recent call last):
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/ddp_sub.py", line 123, in <module>
+    run_demo(ddp_train, world_size, config)
+  File "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/ddp_sub.py", line 75, in run_demo
+    mp.spawn(demo_fn,
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/torch/multiprocessing/spawn.py", line 328, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method="spawn")
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/torch/multiprocessing/spawn.py", line 284, in start_processes
+    while not context.join():
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/torch/multiprocessing/spawn.py", line 203, in join
+    raise ProcessRaisedException(msg, error_index, failed_process.pid)
+torch.multiprocessing.spawn.ProcessRaisedException: 
+
+-- Process 0 terminated with the following error:
+Traceback (most recent call last):
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/torch/multiprocessing/spawn.py", line 90, in _wrap
+    fn(i, *args)
+  File "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/ddp_sub.py", line 60, in ddp_train
+    learner.load_well_trained_model(config['training']['breakpoint_path']) # use preset path
+  File "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/learner2.py", line 127, in load_well_trained_model
+    self.model.load_state_dict(state_dict)
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/torch/nn/modules/module.py", line 2584, in load_state_dict
+    raise RuntimeError(
+RuntimeError: Error(s) in loading state_dict for Sam:
+	Missing key(s) in state_dict: "image_encoder.blocks.0.attn.qkv.qkv.weight", "image_encoder.blocks.0.attn.qkv.qkv.bias", "image_encoder.blocks.1.attn.qkv.qkv.weight", "image_encoder.blocks.1.attn.qkv.qkv.bias", "image_encoder.blocks.2.attn.qkv.qkv.weight", "image_encoder.blocks.2.attn.qkv.qkv.bias", "image_encoder.blocks.3.attn.qkv.qkv.weight", "image_encoder.blocks.3.attn.qkv.qkv.bias", "image_encoder.blocks.4.attn.qkv.qkv.weight", "image_encoder.blocks.4.attn.qkv.qkv.bias", "image_encoder.blocks.5.attn.qkv.qkv.weight", "image_encoder.blocks.5.attn.qkv.qkv.bias", "image_encoder.blocks.6.attn.qkv.qkv.weight", "image_encoder.blocks.6.attn.qkv.qkv.bias", "image_encoder.blocks.7.attn.qkv.qkv.weight", "image_encoder.blocks.7.attn.qkv.qkv.bias", "image_encoder.blocks.8.attn.qkv.qkv.weight", "image_encoder.blocks.8.attn.qkv.qkv.bias", "image_encoder.blocks.9.attn.qkv.qkv.weight", "image_encoder.blocks.9.attn.qkv.qkv.bias", "image_encoder.blocks.10.attn.qkv.qkv.weight", "image_encoder.blocks.10.attn.qkv.qkv.bias", "image_encoder.blocks.11.attn.qkv.qkv.weight", "image_encoder.blocks.11.attn.qkv.qkv.bias". 
+	Unexpected key(s) in state_dict: "image_encoder.blocks.0.attn.qkv.qkv.qkv.weight", "image_encoder.blocks.0.attn.qkv.qkv.qkv.bias", "image_encoder.blocks.0.attn.qkv.qkv.linear_a_q.weight", "image_encoder.blocks.0.attn.qkv.qkv.linear_b_q.weight", "image_encoder.blocks.0.attn.qkv.qkv.linear_a_v.weight", "image_encoder.blocks.0.attn.qkv.qkv.linear_b_v.weight", "image_encoder.blocks.1.attn.qkv.qkv.qkv.weight", "image_encoder.blocks.1.attn.qkv.qkv.qkv.bias", "image_encoder.blocks.1.attn.qkv.qkv.linear_a_q.weight", "image_encoder.blocks.1.attn.qkv.qkv.linear_b_q.weight", "image_encoder.blocks.1.attn.qkv.qkv.linear_a_v.weight", "image_encoder.blocks.1.attn.qkv.qkv.linear_b_v.weight", "image_encoder.blocks.2.attn.qkv.qkv.qkv.weight", "image_encoder.blocks.2.attn.qkv.qkv.qkv.bias", "image_encoder.blocks.2.attn.qkv.qkv.linear_a_q.weight", "image_encoder.blocks.2.attn.qkv.qkv.linear_b_q.weight", "image_encoder.blocks.2.attn.qkv.qkv.linear_a_v.weight", "image_encoder.blocks.2.attn.qkv.qkv.linear_b_v.weight", "image_encoder.blocks.3.attn.qkv.qkv.qkv.weight", "image_encoder.blocks.3.attn.qkv.qkv.qkv.bias", "image_encoder.blocks.3.attn.qkv.qkv.linear_a_q.weight", "image_encoder.blocks.3.attn.qkv.qkv.linear_b_q.weight", "image_encoder.blocks.3.attn.qkv.qkv.linear_a_v.weight", "image_encoder.blocks.3.attn.qkv.qkv.linear_b_v.weight", "image_encoder.blocks.4.attn.qkv.qkv.qkv.weight", "image_encoder.blocks.4.attn.qkv.qkv.qkv.bias", "image_encoder.blocks.4.attn.qkv.qkv.linear_a_q.weight", "image_encoder.blocks.4.attn.qkv.qkv.linear_b_q.weight", "image_encoder.blocks.4.attn.qkv.qkv.linear_a_v.weight", "image_encoder.blocks.4.attn.qkv.qkv.linear_b_v.weight", "image_encoder.blocks.5.attn.qkv.qkv.qkv.weight", "image_encoder.blocks.5.attn.qkv.qkv.qkv.bias", "image_encoder.blocks.5.attn.qkv.qkv.linear_a_q.weight", "image_encoder.blocks.5.attn.qkv.qkv.linear_b_q.weight", "image_encoder.blocks.5.attn.qkv.qkv.linear_a_v.weight", "image_encoder.blocks.5.attn.qkv.qkv.linear_b_v.weight", "image_encoder.blocks.6.attn.qkv.qkv.qkv.weight", "image_encoder.blocks.6.attn.qkv.qkv.qkv.bias", "image_encoder.blocks.6.attn.qkv.qkv.linear_a_q.weight", "image_encoder.blocks.6.attn.qkv.qkv.linear_b_q.weight", "image_encoder.blocks.6.attn.qkv.qkv.linear_a_v.weight", "image_encoder.blocks.6.attn.qkv.qkv.linear_b_v.weight", "image_encoder.blocks.7.attn.qkv.qkv.qkv.weight", "image_encoder.blocks.7.attn.qkv.qkv.qkv.bias", "image_encoder.blocks.7.attn.qkv.qkv.linear_a_q.weight", "image_encoder.blocks.7.attn.qkv.qkv.linear_b_q.weight", "image_encoder.blocks.7.attn.qkv.qkv.linear_a_v.weight", "image_encoder.blocks.7.attn.qkv.qkv.linear_b_v.weight", "image_encoder.blocks.8.attn.qkv.qkv.qkv.weight", "image_encoder.blocks.8.attn.qkv.qkv.qkv.bias", "image_encoder.blocks.8.attn.qkv.qkv.linear_a_q.weight", "image_encoder.blocks.8.attn.qkv.qkv.linear_b_q.weight", "image_encoder.blocks.8.attn.qkv.qkv.linear_a_v.weight", "image_encoder.blocks.8.attn.qkv.qkv.linear_b_v.weight", "image_encoder.blocks.9.attn.qkv.qkv.qkv.weight", "image_encoder.blocks.9.attn.qkv.qkv.qkv.bias", "image_encoder.blocks.9.attn.qkv.qkv.linear_a_q.weight", "image_encoder.blocks.9.attn.qkv.qkv.linear_b_q.weight", "image_encoder.blocks.9.attn.qkv.qkv.linear_a_v.weight", "image_encoder.blocks.9.attn.qkv.qkv.linear_b_v.weight", "image_encoder.blocks.10.attn.qkv.qkv.qkv.weight", "image_encoder.blocks.10.attn.qkv.qkv.qkv.bias", "image_encoder.blocks.10.attn.qkv.qkv.linear_a_q.weight", "image_encoder.blocks.10.attn.qkv.qkv.linear_b_q.weight", "image_encoder.blocks.10.attn.qkv.qkv.linear_a_v.weight", "image_encoder.blocks.10.attn.qkv.qkv.linear_b_v.weight", "image_encoder.blocks.11.attn.qkv.qkv.qkv.weight", "image_encoder.blocks.11.attn.qkv.qkv.qkv.bias", "image_encoder.blocks.11.attn.qkv.qkv.linear_a_q.weight", "image_encoder.blocks.11.attn.qkv.qkv.linear_b_q.weight", "image_encoder.blocks.11.attn.qkv.qkv.linear_a_v.weight", "image_encoder.blocks.11.attn.qkv.qkv.linear_b_v.weight". 
+	size mismatch for image_encoder.blocks.0.attn.qkv.linear_a_q.weight: copying a param with shape torch.Size([1, 768]) from checkpoint, the shape in current model is torch.Size([8, 768]).
+	size mismatch for image_encoder.blocks.0.attn.qkv.linear_b_q.weight: copying a param with shape torch.Size([768, 1]) from checkpoint, the shape in current model is torch.Size([768, 8]).
+	size mismatch for image_encoder.blocks.0.attn.qkv.linear_a_v.weight: copying a param with shape torch.Size([1, 768]) from checkpoint, the shape in current model is torch.Size([8, 768]).
+	size mismatch for image_encoder.blocks.0.attn.qkv.linear_b_v.weight: copying a param with shape torch.Size([768, 1]) from checkpoint, the shape in current model is torch.Size([768, 8]).
+	size mismatch for image_encoder.blocks.1.attn.qkv.linear_a_q.weight: copying a param with shape torch.Size([1, 768]) from checkpoint, the shape in current model is torch.Size([8, 768]).
+	size mismatch for image_encoder.blocks.1.attn.qkv.linear_b_q.weight: copying a param with shape torch.Size([768, 1]) from checkpoint, the shape in current model is torch.Size([768, 8]).
+	size mismatch for image_encoder.blocks.1.attn.qkv.linear_a_v.weight: copying a param with shape torch.Size([1, 768]) from checkpoint, the shape in current model is torch.Size([8, 768]).
+	size mismatch for image_encoder.blocks.1.attn.qkv.linear_b_v.weight: copying a param with shape torch.Size([768, 1]) from checkpoint, the shape in current model is torch.Size([768, 8]).
+	size mismatch for image_encoder.blocks.2.attn.qkv.linear_a_q.weight: copying a param with shape torch.Size([1, 768]) from checkpoint, the shape in current model is torch.Size([8, 768]).
+	size mismatch for image_encoder.blocks.2.attn.qkv.linear_b_q.weight: copying a param with shape torch.Size([768, 1]) from checkpoint, the shape in current model is torch.Size([768, 8]).
+	size mismatch for image_encoder.blocks.2.attn.qkv.linear_a_v.weight: copying a param with shape torch.Size([1, 768]) from checkpoint, the shape in current model is torch.Size([8, 768]).
+	size mismatch for image_encoder.blocks.2.attn.qkv.linear_b_v.weight: copying a param with shape torch.Size([768, 1]) from checkpoint, the shape in current model is torch.Size([768, 8]).
+	size mismatch for image_encoder.blocks.3.attn.qkv.linear_a_q.weight: copying a param with shape torch.Size([1, 768]) from checkpoint, the shape in current model is torch.Size([8, 768]).
+	size mismatch for image_encoder.blocks.3.attn.qkv.linear_b_q.weight: copying a param with shape torch.Size([768, 1]) from checkpoint, the shape in current model is torch.Size([768, 8]).
+	size mismatch for image_encoder.blocks.3.attn.qkv.linear_a_v.weight: copying a param with shape torch.Size([1, 768]) from checkpoint, the shape in current model is torch.Size([8, 768]).
+	size mismatch for image_encoder.blocks.3.attn.qkv.linear_b_v.weight: copying a param with shape torch.Size([768, 1]) from checkpoint, the shape in current model is torch.Size([768, 8]).
+	size mismatch for image_encoder.blocks.4.attn.qkv.linear_a_q.weight: copying a param with shape torch.Size([1, 768]) from checkpoint, the shape in current model is torch.Size([8, 768]).
+	size mismatch for image_encoder.blocks.4.attn.qkv.linear_b_q.weight: copying a param with shape torch.Size([768, 1]) from checkpoint, the shape in current model is torch.Size([768, 8]).
+	size mismatch for image_encoder.blocks.4.attn.qkv.linear_a_v.weight: copying a param with shape torch.Size([1, 768]) from checkpoint, the shape in current model is torch.Size([8, 768]).
+	size mismatch for image_encoder.blocks.4.attn.qkv.linear_b_v.weight: copying a param with shape torch.Size([768, 1]) from checkpoint, the shape in current model is torch.Size([768, 8]).
+	size mismatch for image_encoder.blocks.5.attn.qkv.linear_a_q.weight: copying a param with shape torch.Size([1, 768]) from checkpoint, the shape in current model is torch.Size([8, 768]).
+	size mismatch for image_encoder.blocks.5.attn.qkv.linear_b_q.weight: copying a param with shape torch.Size([768, 1]) from checkpoint, the shape in current model is torch.Size([768, 8]).
+	size mismatch for image_encoder.blocks.5.attn.qkv.linear_a_v.weight: copying a param with shape torch.Size([1, 768]) from checkpoint, the shape in current model is torch.Size([8, 768]).
+	size mismatch for image_encoder.blocks.5.attn.qkv.linear_b_v.weight: copying a param with shape torch.Size([768, 1]) from checkpoint, the shape in current model is torch.Size([768, 8]).
+	size mismatch for image_encoder.blocks.6.attn.qkv.linear_a_q.weight: copying a param with shape torch.Size([1, 768]) from checkpoint, the shape in current model is torch.Size([8, 768]).
+	size mismatch for image_encoder.blocks.6.attn.qkv.linear_b_q.weight: copying a param with shape torch.Size([768, 1]) from checkpoint, the shape in current model is torch.Size([768, 8]).
+	size mismatch for image_encoder.blocks.6.attn.qkv.linear_a_v.weight: copying a param with shape torch.Size([1, 768]) from checkpoint, the shape in current model is torch.Size([8, 768]).
+	size mismatch for image_encoder.blocks.6.attn.qkv.linear_b_v.weight: copying a param with shape torch.Size([768, 1]) from checkpoint, the shape in current model is torch.Size([768, 8]).
+	size mismatch for image_encoder.blocks.7.attn.qkv.linear_a_q.weight: copying a param with shape torch.Size([1, 768]) from checkpoint, the shape in current model is torch.Size([8, 768]).
+	size mismatch for image_encoder.blocks.7.attn.qkv.linear_b_q.weight: copying a param with shape torch.Size([768, 1]) from checkpoint, the shape in current model is torch.Size([768, 8]).
+	size mismatch for image_encoder.blocks.7.attn.qkv.linear_a_v.weight: copying a param with shape torch.Size([1, 768]) from checkpoint, the shape in current model is torch.Size([8, 768]).
+	size mismatch for image_encoder.blocks.7.attn.qkv.linear_b_v.weight: copying a param with shape torch.Size([768, 1]) from checkpoint, the shape in current model is torch.Size([768, 8]).
+	size mismatch for image_encoder.blocks.8.attn.qkv.linear_a_q.weight: copying a param with shape torch.Size([1, 768]) from checkpoint, the shape in current model is torch.Size([8, 768]).
+	size mismatch for image_encoder.blocks.8.attn.qkv.linear_b_q.weight: copying a param with shape torch.Size([768, 1]) from checkpoint, the shape in current model is torch.Size([768, 8]).
+	size mismatch for image_encoder.blocks.8.attn.qkv.linear_a_v.weight: copying a param with shape torch.Size([1, 768]) from checkpoint, the shape in current model is torch.Size([8, 768]).
+	size mismatch for image_encoder.blocks.8.attn.qkv.linear_b_v.weight: copying a param with shape torch.Size([768, 1]) from checkpoint, the shape in current model is torch.Size([768, 8]).
+	size mismatch for image_encoder.blocks.9.attn.qkv.linear_a_q.weight: copying a param with shape torch.Size([1, 768]) from checkpoint, the shape in current model is torch.Size([8, 768]).
+	size mismatch for image_encoder.blocks.9.attn.qkv.linear_b_q.weight: copying a param with shape torch.Size([768, 1]) from checkpoint, the shape in current model is torch.Size([768, 8]).
+	size mismatch for image_encoder.blocks.9.attn.qkv.linear_a_v.weight: copying a param with shape torch.Size([1, 768]) from checkpoint, the shape in current model is torch.Size([8, 768]).
+	size mismatch for image_encoder.blocks.9.attn.qkv.linear_b_v.weight: copying a param with shape torch.Size([768, 1]) from checkpoint, the shape in current model is torch.Size([768, 8]).
+	size mismatch for image_encoder.blocks.10.attn.qkv.linear_a_q.weight: copying a param with shape torch.Size([1, 768]) from checkpoint, the shape in current model is torch.Size([8, 768]).
+	size mismatch for image_encoder.blocks.10.attn.qkv.linear_b_q.weight: copying a param with shape torch.Size([768, 1]) from checkpoint, the shape in current model is torch.Size([768, 8]).
+	size mismatch for image_encoder.blocks.10.attn.qkv.linear_a_v.weight: copying a param with shape torch.Size([1, 768]) from checkpoint, the shape in current model is torch.Size([8, 768]).
+	size mismatch for image_encoder.blocks.10.attn.qkv.linear_b_v.weight: copying a param with shape torch.Size([768, 1]) from checkpoint, the shape in current model is torch.Size([768, 8]).
+	size mismatch for image_encoder.blocks.11.attn.qkv.linear_a_q.weight: copying a param with shape torch.Size([1, 768]) from checkpoint, the shape in current model is torch.Size([8, 768]).
+	size mismatch for image_encoder.blocks.11.attn.qkv.linear_b_q.weight: copying a param with shape torch.Size([768, 1]) from checkpoint, the shape in current model is torch.Size([768, 8]).
+	size mismatch for image_encoder.blocks.11.attn.qkv.linear_a_v.weight: copying a param with shape torch.Size([1, 768]) from checkpoint, the shape in current model is torch.Size([8, 768]).
+	size mismatch for image_encoder.blocks.11.attn.qkv.linear_b_v.weight: copying a param with shape torch.Size([768, 1]) from checkpoint, the shape in current model is torch.Size([768, 8]).
+

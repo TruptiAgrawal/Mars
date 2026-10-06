@@ -1,0 +1,513 @@
+# RECOVERED LOG: original console output was overwritten by a failed launch.
+# Sources: Jupyter log checkpoint, original run log/log.log, fold5_analysis/fold5_iter_losses.csv.
+# Sections are grouped by source, not globally chronological. This is not a byte-for-byte recovery.
+# 79 iteration lines recovered verbatim from saved session transcripts; remaining 329 retain only CSV loss fields.
+# All recovered original lines were matched against the fold 5 CSV. Batch count 2039 is confirmed by the original run.
+# Per-batch timings and auxiliary losses are available for those 79 lines only. Shutdown console tracebacks are omitted.
+
+# ORIGINAL STARTUP SNAPSHOT
+Warning! Running on only 1 GPU! just for debug
+Already add '--config' 
+Already add '--func' 
+Already add '--reuse' 
+[Tutils] Add BASE_CONFIG
+[Tutils] Set file 
+[Tutils] Change experiment name from  to ddp_sub_cv
+[Tutils] Add Args and args config
+Make dir '/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold5/ddp_sub_cv/cv_Fold5/' !
+[Tutils] Saved config.yaml to /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold5/ddp_sub_cv/cv_Fold5//config.yaml
+Save running script to /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold5/ddp_sub_cv/cv_Fold5/ from /home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/ddp_sub_cv.py
+[Tutils] Saved script file: from /home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/ddp_sub_cv.py to /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold5/ddp_sub_cv/cv_Fold5/scripts/ddp_sub_cv.py
+Save config file to  /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold5/ddp_sub_cv/cv_Fold5/config.yaml
+[2026-09-29 08:07:15] [cv_Fold5-ddp_sub_cv] Argv: python /home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/ddp_sub_cv.py --config btcv_cross_validation/configs/fold5.yaml --tag cv_Fold5
+
+======================================================================
+CV DATASET AUDIT
+======================================================================
+Fold data_txt_path      : /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/dataset_list/fold5/
+Training volumes        : 24
+Held-out volumes        : 6
+
+Cached training samples : 8159
+Leaked samples found    : 0 (must be 0)
+
+Training volume IDs:
+['img0001', 'img0002', 'img0003', 'img0004', 'img0005', 'img0006', 'img0007', 'img0008', 'img0009', 'img0010', 'img0021', 'img0022', 'img0023', 'img0024', 'img0025', 'img0026', 'img0027', 'img0028', 'img0029', 'img0030', 'img0031', 'img0032', 'img0033', 'img0034']
+
+Held-out volume IDs:
+['img0035', 'img0036', 'img0037', 'img0038', 'img0039', 'img0040']
+
+First 3 selected cache samples:
+  /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/cache/all30/01_BCV-Abdomen/label_jpg/label_0000_00000000_0000.jpg
+  /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/cache/all30/01_BCV-Abdomen/label_jpg/label_0000_00000001_0000.jpg
+  /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/cache/all30/01_BCV-Abdomen/label_jpg/label_0000_00000002_0000.jpg
+Last 3 selected cache samples:
+  /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/cache/all30/01_BCV-Abdomen/label_jpg/label_0023_00000049_0001.jpg
+  /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/cache/all30/01_BCV-Abdomen/label_jpg/label_0023_00000050_0000.jpg
+  /home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/cache/all30/01_BCV-Abdomen/label_jpg/label_0023_00000050_0001.jpg
+======================================================================
+CV DATASET AUDIT PASSED -- zero held-out samples selected
+======================================================================
+
+Loading model from /home/jupyter-team2pop/Slide-SAM/Slide-SAM/weights/slidesam_b.pth
+Running on  0
+Logger at Process(rank=0)
+[Tutils] Use Tensorboard, log at '/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold5/ddp_sub_cv/cv_Fold5/tb'
+[2026-09-29 08:09:21] [cv_Fold5-ddp_sub_cv] [*] Debug Checking Pipeline !!!
+[2026-09-29 08:09:30] [cv_Fold5-ddp_sub_cv] Epoch 0: Save checkpoint to ``/ckpt_v/model_latest.pth``
+[2026-09-29 08:09:34] [cv_Fold5-ddp_sub_cv] Epoch 0: Save model to ``/ckpt/model_epoch_0.pth``! 
+Note: Tester runs on <rank 0> only
+[2026-09-29 08:11:38] [cv_Fold5-ddp_sub_cv] Iteration 0: Saved /ckpt/model_iter_0.pth and /ckpt/optim_iter_0.pth
+
+# ORIGINAL INTERNAL LOGGER RECORDS (timestamp format normalized)
+[2026-09-29 08:07:15] [cv_Fold5-ddp_sub_cv] Argv: python /home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/ddp_sub_cv.py --config btcv_cross_validation/configs/fold5.yaml --tag cv_Fold5
+[2026-09-29 08:09:21] [cv_Fold5-ddp_sub_cv] [*] Debug Checking Pipeline !!!
+[2026-09-29 08:09:30] [cv_Fold5-ddp_sub_cv] Epoch 0: Save checkpoint to ``/ckpt_v/model_latest.pth``
+[2026-09-29 08:09:34] [cv_Fold5-ddp_sub_cv] Epoch 0: Save model to ``/ckpt/model_epoch_0.pth``! 
+[2026-09-29 08:11:38] [cv_Fold5-ddp_sub_cv] Iteration 0: Saved /ckpt/model_iter_0.pth and /ckpt/optim_iter_0.pth
+[2026-09-29 09:00:30] [cv_Fold5-ddp_sub_cv] Epoch 1: loss:0.5412 point_loss:0.3277 box_loss:0.2135 fl:0.0021 dl:0.1617 min_losses:0.2044 selected_losses:0.0091 time_load:0.0039 time_cuda:0.0104 time_forward:0.5911 time_bp:0.3845 time_record:0.4435 time_batch:1.4960 time_total:3056.5467 lr:2.000000e-05 
+[2026-09-29 09:50:44] [cv_Fold5-ddp_sub_cv] Epoch 2: loss:0.4683 point_loss:0.2688 box_loss:0.1995 fl:0.0017 dl:0.1583 min_losses:0.1926 selected_losses:0.0069 time_load:0.0032 time_cuda:0.0102 time_forward:0.5780 time_bp:0.3762 time_record:0.4451 time_batch:1.4747 time_total:3012.9566 lr:2.000000e-05 
+[2026-09-29 10:14:23] [cv_Fold5-ddp_sub_cv] Iteration 5000: Saved /ckpt/model_iter_5000.pth and /ckpt/optim_iter_5000.pth
+[2026-09-29 10:40:37] [cv_Fold5-ddp_sub_cv] Epoch 3: loss:0.4443 point_loss:0.2463 box_loss:0.1980 fl:0.0016 dl:0.1590 min_losses:0.1915 selected_losses:0.0065 time_load:0.0038 time_cuda:0.0102 time_forward:0.5703 time_bp:0.3719 time_record:0.4471 time_batch:1.4650 time_total:2993.8027 lr:2.000000e-05 
+[2026-09-29 11:30:21] [cv_Fold5-ddp_sub_cv] Epoch 4: loss:0.4394 point_loss:0.2427 box_loss:0.1967 fl:0.0016 dl:0.1586 min_losses:0.1905 selected_losses:0.0062 time_load:0.0030 time_cuda:0.0102 time_forward:0.5666 time_bp:0.3706 time_record:0.4470 time_batch:1.4602 time_total:2983.9416 lr:2.000000e-05 
+[2026-09-29 12:15:44] [cv_Fold5-ddp_sub_cv] Iteration 10000: Saved /ckpt/model_iter_10000.pth and /ckpt/optim_iter_10000.pth
+[2026-09-29 12:20:25] [cv_Fold5-ddp_sub_cv] Epoch 5: loss:0.4343 point_loss:0.2391 box_loss:0.1952 fl:0.0016 dl:0.1581 min_losses:0.1895 selected_losses:0.0057 time_load:0.0026 time_cuda:0.0099 time_forward:0.5730 time_bp:0.3731 time_record:0.4468 time_batch:1.4693 time_total:3004.0290 lr:2.000000e-05 
+[2026-09-29 12:20:28] [cv_Fold5-ddp_sub_cv] Epoch 5: Save checkpoint to ``/ckpt_v/model_latest.pth``
+[2026-09-29 12:20:31] [cv_Fold5-ddp_sub_cv] Epoch 5: Save model to ``/ckpt/model_epoch_5.pth``! 
+[2026-09-29 13:10:28] [cv_Fold5-ddp_sub_cv] Epoch 6: loss:0.4315 point_loss:0.2375 box_loss:0.1941 fl:0.0015 dl:0.1579 min_losses:0.1888 selected_losses:0.0053 time_load:0.0036 time_cuda:0.0099 time_forward:0.5729 time_bp:0.3687 time_record:0.4482 time_batch:1.4666 time_total:2996.8542 lr:2.000000e-05 
+[2026-09-29 14:01:33] [cv_Fold5-ddp_sub_cv] Epoch 7: loss:0.4264 point_loss:0.2336 box_loss:0.1928 fl:0.0015 dl:0.1570 min_losses:0.1877 selected_losses:0.0051 time_load:0.0032 time_cuda:0.0103 time_forward:0.5941 time_bp:0.3842 time_record:0.4439 time_batch:1.5005 time_total:3065.8568 lr:2.000000e-05 
+[2026-09-29 14:20:27] [cv_Fold5-ddp_sub_cv] Iteration 15000: Saved /ckpt/model_iter_15000.pth and /ckpt/optim_iter_15000.pth
+[2026-09-29 14:51:12] [cv_Fold5-ddp_sub_cv] Epoch 8: loss:0.4226 point_loss:0.2313 box_loss:0.1914 fl:0.0015 dl:0.1564 min_losses:0.1867 selected_losses:0.0047 time_load:0.0035 time_cuda:0.0100 time_forward:0.5642 time_bp:0.3684 time_record:0.4478 time_batch:1.4573 time_total:2978.1362 lr:2.000000e-05 
+[2026-09-29 15:42:16] [cv_Fold5-ddp_sub_cv] Epoch 9: loss:0.4240 point_loss:0.2334 box_loss:0.1906 fl:0.0015 dl:0.1561 min_losses:0.1860 selected_losses:0.0046 time_load:0.0042 time_cuda:0.0103 time_forward:0.5947 time_bp:0.3844 time_record:0.4427 time_batch:1.5001 time_total:3064.4447 lr:2.000000e-05 
+[2026-09-29 16:23:00] [cv_Fold5-ddp_sub_cv] Iteration 20000: Saved /ckpt/model_iter_20000.pth and /ckpt/optim_iter_20000.pth
+[2026-09-29 16:32:30] [cv_Fold5-ddp_sub_cv] Epoch 10: loss:0.4180 point_loss:0.2284 box_loss:0.1895 fl:0.0015 dl:0.1554 min_losses:0.1851 selected_losses:0.0044 time_load:0.0029 time_cuda:0.0100 time_forward:0.5756 time_bp:0.3782 time_record:0.4512 time_batch:1.4748 time_total:3013.7896 lr:2.000000e-05 
+[2026-09-29 16:32:36] [cv_Fold5-ddp_sub_cv] Epoch 10: Save checkpoint to ``/ckpt_v/model_latest.pth``
+[2026-09-29 16:32:38] [cv_Fold5-ddp_sub_cv] Epoch 10: Save model to ``/ckpt/model_epoch_10.pth``! 
+[2026-09-29 17:22:20] [cv_Fold5-ddp_sub_cv] Epoch 11: loss:0.4139 point_loss:0.2251 box_loss:0.1888 fl:0.0015 dl:0.1549 min_losses:0.1845 selected_losses:0.0043 time_load:0.0029 time_cuda:0.0102 time_forward:0.5672 time_bp:0.3702 time_record:0.4468 time_batch:1.4606 time_total:2981.7881 lr:2.000000e-05 
+[2026-09-29 18:11:00] [cv_Fold5-ddp_sub_cv] Epoch 12: loss:0.4117 point_loss:0.2232 box_loss:0.1885 fl:0.0015 dl:0.1549 min_losses:0.1843 selected_losses:0.0043 time_load:0.0033 time_cuda:0.0100 time_forward:0.5598 time_bp:0.3671 time_record:0.4489 time_batch:1.4291 time_total:2920.5950 lr:2.000000e-05 
+[2026-09-29 18:25:24] [cv_Fold5-ddp_sub_cv] Iteration 25000: Saved /ckpt/model_iter_25000.pth and /ckpt/optim_iter_25000.pth
+[2026-09-29 19:00:33] [cv_Fold5-ddp_sub_cv] Epoch 13: loss:0.4109 point_loss:0.2231 box_loss:0.1878 fl:0.0015 dl:0.1544 min_losses:0.1836 selected_losses:0.0041 time_load:0.0032 time_cuda:0.0101 time_forward:0.5635 time_bp:0.3675 time_record:0.4470 time_batch:1.4545 time_total:2972.4185 lr:2.000000e-05 
+[2026-09-29 19:50:04] [cv_Fold5-ddp_sub_cv] Epoch 14: loss:0.4089 point_loss:0.2218 box_loss:0.1871 fl:0.0015 dl:0.1540 min_losses:0.1831 selected_losses:0.0040 time_load:0.0035 time_cuda:0.0100 time_forward:0.5624 time_bp:0.3684 time_record:0.4473 time_batch:1.4537 time_total:2970.9660 lr:2.000000e-05 
+[2026-09-29 20:25:47] [cv_Fold5-ddp_sub_cv] Iteration 30000: Saved /ckpt/model_iter_30000.pth and /ckpt/optim_iter_30000.pth
+[2026-09-29 20:39:25] [cv_Fold5-ddp_sub_cv] Epoch 15: loss:0.4066 point_loss:0.2203 box_loss:0.1863 fl:0.0014 dl:0.1537 min_losses:0.1825 selected_losses:0.0038 time_load:0.0032 time_cuda:0.0100 time_forward:0.5594 time_bp:0.3658 time_record:0.4477 time_batch:1.4495 time_total:2961.2697 lr:2.000000e-05 
+[2026-09-29 20:39:29] [cv_Fold5-ddp_sub_cv] Epoch 15: Save checkpoint to ``/ckpt_v/model_latest.pth``
+[2026-09-29 20:39:30] [cv_Fold5-ddp_sub_cv] Epoch 15: Save model to ``/ckpt/model_epoch_15.pth``! 
+[2026-09-29 21:28:51] [cv_Fold5-ddp_sub_cv] Epoch 16: loss:0.4083 point_loss:0.2223 box_loss:0.1860 fl:0.0014 dl:0.1535 min_losses:0.1823 selected_losses:0.0037 time_load:0.0033 time_cuda:0.0100 time_forward:0.5593 time_bp:0.3664 time_record:0.4475 time_batch:1.4487 time_total:2960.3857 lr:2.000000e-05 
+[2026-09-29 22:20:17] [cv_Fold5-ddp_sub_cv] Epoch 17: loss:0.4032 point_loss:0.2180 box_loss:0.1852 fl:0.0014 dl:0.1531 min_losses:0.1816 selected_losses:0.0036 time_load:0.0043 time_cuda:0.0108 time_forward:0.6119 time_bp:0.3776 time_record:0.4434 time_batch:1.5101 time_total:3086.1887 lr:2.000000e-05 
+[2026-09-29 22:30:03] [cv_Fold5-ddp_sub_cv] Iteration 35000: Saved /ckpt/model_iter_35000.pth and /ckpt/optim_iter_35000.pth
+[2026-09-29 23:09:54] [cv_Fold5-ddp_sub_cv] Epoch 18: loss:0.4033 point_loss:0.2185 box_loss:0.1848 fl:0.0014 dl:0.1530 min_losses:0.1813 selected_losses:0.0035 time_load:0.0027 time_cuda:0.0103 time_forward:0.5757 time_bp:0.3667 time_record:0.4466 time_batch:1.4568 time_total:2977.6231 lr:2.000000e-05 
+[2026-09-29 23:59:02] [cv_Fold5-ddp_sub_cv] Epoch 19: loss:0.4030 point_loss:0.2187 box_loss:0.1843 fl:0.0014 dl:0.1526 min_losses:0.1808 selected_losses:0.0035 time_load:0.0033 time_cuda:0.0099 time_forward:0.5586 time_bp:0.3667 time_record:0.4476 time_batch:1.4426 time_total:2947.2217 lr:2.000000e-05 
+[2026-09-30 00:30:14] [cv_Fold5-ddp_sub_cv] Iteration 40000: Saved /ckpt/model_iter_40000.pth and /ckpt/optim_iter_40000.pth
+[2026-09-30 00:48:37] [cv_Fold5-ddp_sub_cv] Epoch 20: loss:0.4019 point_loss:0.2179 box_loss:0.1839 fl:0.0014 dl:0.1523 min_losses:0.1805 selected_losses:0.0034 time_load:0.0032 time_cuda:0.0102 time_forward:0.5667 time_bp:0.3661 time_record:0.4472 time_batch:1.4553 time_total:2975.3449 lr:2.000000e-05 
+[2026-09-30 00:48:40] [cv_Fold5-ddp_sub_cv] Epoch 20: Save checkpoint to ``/ckpt_v/model_latest.pth``
+[2026-09-30 00:48:42] [cv_Fold5-ddp_sub_cv] Epoch 20: Save model to ``/ckpt/model_epoch_20.pth``! 
+
+# ITERATION RECORDS: 79 ORIGINAL TRANSCRIPT LINES AND 329 CSV RECONSTRUCTIONS
+Epoch: 1 | batch:0/2039, Iteration:0, results: {'loss': 0.38749074935913086, 'point_loss': 0.2038540244102478, 'box_loss': 0.18363671004772186, 'fl': 0.0020534286741167307, 'dl': 0.13316106796264648, 'min_losses': 0.17422963678836823, 'selected_losses': 0.009407076984643936, 'time_load': 3.1204330921173096, 'time_cuda': 0.03432726860046387, 'time_forward': 0.537214994430542, 'time_bp': 0.36858534812927246, 'time_record': 0.1111, 'time_batch': 121.25175213813782}
+Epoch: 1 | batch:100/2039, Iteration:100, results: {'loss': 0.9840477705001831, 'point_loss': 0.4078877866268158, 'box_loss': 0.5761600136756897, 'fl': 0.008539935573935509, 'dl': 0.2986176311969757, 'min_losses': 0.4694163203239441, 'selected_losses': 0.1067437082529068, 'time_load': 0.0011925697326660156, 'time_cuda': 0.00592494010925293, 'time_forward': 0.518047571182251, 'time_bp': 0.3421919345855713, 'time_record': 0.4495832920074463, 'time_batch': 1.319518804550171}
+Epoch: 1 | batch:200/2039, Iteration:200, results: {'loss': 0.3900448679924011, 'point_loss': 0.21111753582954407, 'box_loss': 0.17892734706401825, 'fl': 0.001324761426076293, 'dl': 0.14316773414611816, 'min_losses': 0.1696629524230957, 'selected_losses': 0.009264394640922546, 'time_load': 0.004114866256713867, 'time_cuda': 0.005732059478759766, 'time_forward': 0.5343501567840576, 'time_bp': 0.34061670303344727, 'time_record': 0.45292210578918457, 'time_batch': 1.3390614986419678}
+Epoch: 1 | batch:300/2039, Iteration:300, results: {'loss': 0.767562985420227, 'point_loss': 0.4720032811164856, 'box_loss': 0.29555973410606384, 'fl': 0.001778966747224331, 'dl': 0.2526569366455078, 'min_losses': 0.2882362902164459, 'selected_losses': 0.007323435507714748, 'time_load': 0.015269756317138672, 'time_cuda': 0.022141695022583008, 'time_forward': 0.5351152420043945, 'time_bp': 0.3610532283782959, 'time_record': 0.45159029960632324, 'time_batch': 1.388169527053833}
+Epoch: 1 | batch:400/2039, Iteration:400, results: {'loss': 0.496226042509079, 'point_loss': 0.28168100118637085, 'box_loss': 0.21454504132270813, 'fl': 0.0030490257777273655, 'dl': 0.14358823001384735, 'min_losses': 0.2045687437057495, 'selected_losses': 0.00997629202902317, 'time_load': 0.002712726593017578, 'time_cuda': 0.013914823532104492, 'time_forward': 0.6914830207824707, 'time_bp': 0.39963459968566895, 'time_record': 0.45032835006713867, 'time_batch': 1.5643537044525146}
+Epoch: 1 | batch:500/2039, Iteration:500, results: {'loss': 0.4981301426887512, 'point_loss': 0.2726823687553406, 'box_loss': 0.22544775903224945, 'fl': 0.0014148640912026167, 'dl': 0.189231738448143, 'min_losses': 0.21752901375293732, 'selected_losses': 0.007918743416666985, 'time_load': 0.0034227371215820312, 'time_cuda': 0.013703346252441406, 'time_forward': 0.6312973499298096, 'time_bp': 0.42926645278930664, 'time_record': 0.4569211006164551, 'time_batch': 1.5461008548736572}
+Epoch: 1 | batch:600/2039, Iteration:600, results: {'loss': 0.39400577545166016, 'point_loss': 0.21967142820358276, 'box_loss': 0.1743343472480774, 'fl': 0.0030987090431153774, 'dl': 0.10701259225606918, 'min_losses': 0.16898676753044128, 'selected_losses': 0.005347580648958683, 'time_load': 0.0014486312866210938, 'time_cuda': 0.012998342514038086, 'time_forward': 0.5412271022796631, 'time_bp': 0.3594844341278076, 'time_record': 0.4505898952484131, 'time_batch': 1.3685126304626465}
+Epoch: 1 | batch:700/2039, Iteration:700, results: {'loss': 0.39792901277542114, 'point_loss': 0.22077549993991852, 'box_loss': 0.17715349793434143, 'fl': 0.001621575909666717, 'dl': 0.13470402359962463, 'min_losses': 0.16713552176952362, 'selected_losses': 0.010017978958785534, 'time_load': 0.0012717247009277344, 'time_cuda': 0.011553287506103516, 'time_forward': 0.558474063873291, 'time_bp': 0.3894023895263672, 'time_record': 0.4482295513153076, 'time_batch': 1.410301685333252}
+Epoch: 1 | batch:800/2039, Iteration:800, results: {'loss': 0.683407187461853, 'point_loss': 0.3768940269947052, 'box_loss': 0.3065131604671478, 'fl': 0.005288233049213886, 'dl': 0.1855349838733673, 'min_losses': 0.29129964113235474, 'selected_losses': 0.015213528648018837, 'time_load': 0.0018703937530517578, 'time_cuda': 0.013498783111572266, 'time_forward': 0.540400505065918, 'time_bp': 0.3477492332458496, 'time_record': 0.42917561531066895, 'time_batch': 1.3371453285217285}
+Epoch: 1 | batch:900/2039, Iteration:900, results: {'loss': 0.3775796592235565, 'point_loss': 0.20402491092681885, 'box_loss': 0.17355474829673767, 'fl': 0.0016367215430364013, 'dl': 0.13284622132778168, 'min_losses': 0.1655806601047516, 'selected_losses': 0.007974094711244106, 'time_load': 0.0022063255310058594, 'time_cuda': 0.011676311492919922, 'time_forward': 0.5644478797912598, 'time_bp': 0.49097275733947754, 'time_record': 0.43138718605041504, 'time_batch': 1.503375768661499}
+Epoch: 1 | batch:1000/2039, Iteration:1000, results: {'loss': 0.6514956951141357, 'point_loss': 0.37618228793144226, 'box_loss': 0.2753133773803711, 'fl': 0.0016991088632494211, 'dl': 0.22388765215873718, 'min_losses': 0.2578698396682739, 'selected_losses': 0.017443528398871422, 'time_load': 0.007243633270263672, 'time_cuda': 0.0073947906494140625, 'time_forward': 0.5432608127593994, 'time_bp': 0.3631916046142578, 'time_record': 0.43995094299316406, 'time_batch': 1.3634238243103027}
+Epoch: 1 | batch:1100/2039, Iteration:1100, results: {'loss': 0.396618127822876, 'point_loss': 0.2123720943927765, 'box_loss': 0.1842460185289383, 'fl': 0.0017448670696467161, 'dl': 0.14477622509002686, 'min_losses': 0.17967355251312256, 'selected_losses': 0.0045724594965577126, 'time_load': 0.005016803741455078, 'time_cuda': 0.011934518814086914, 'time_forward': 0.7097630500793457, 'time_bp': 0.5341284275054932, 'time_record': 0.4326601028442383, 'time_batch': 1.6969208717346191}
+Epoch: 1 | batch:1200/2039, Iteration:1200, results: {'loss': 0.44040679931640625, 'point_loss': 0.23817673325538635, 'box_loss': 0.2022300511598587, 'fl': 0.0018094342667609453, 'dl': 0.16098949313163757, 'min_losses': 0.1971781700849533, 'selected_losses': 0.005051881540566683, 'time_load': 0.0012302398681640625, 'time_cuda': 0.007234096527099609, 'time_forward': 0.55605149269104, 'time_bp': 0.3603968620300293, 'time_record': 0.44983816146850586, 'time_batch': 1.3824262619018555}
+Epoch: 1 | batch:1300/2039, Iteration:1300, results: {'loss': 0.9099137187004089, 'point_loss': 0.7096240520477295, 'box_loss': 0.20028966665267944, 'fl': 0.0013361149467527866, 'dl': 0.16702285408973694, 'min_losses': 0.19374515116214752, 'selected_losses': 0.006544516887515783, 'time_load': 0.001074075698852539, 'time_cuda': 0.0093231201171875, 'time_forward': 0.564450740814209, 'time_bp': 0.36366748809814453, 'time_record': 0.4476754665374756, 'time_batch': 1.3887739181518555}
+Epoch: 1 | batch:1400/2039, Iteration:1400, results: {'loss': 1.2273386716842651, 'point_loss': 0.8828760385513306, 'box_loss': 0.34446263313293457, 'fl': 0.005011965520679951, 'dl': 0.232743039727211, 'min_losses': 0.3329823613166809, 'selected_losses': 0.011480262503027916, 'time_load': 0.0023288726806640625, 'time_cuda': 0.009993791580200195, 'time_forward': 0.7160236835479736, 'time_bp': 0.41908788681030273, 'time_record': 0.4399070739746094, 'time_batch': 1.592505693435669}
+Epoch: 1 | batch:1500/2039, Iteration:1500, results: {'loss': 0.6321240663528442, 'point_loss': 0.3687349557876587, 'box_loss': 0.26338911056518555, 'fl': 0.0030905618332326412, 'dl': 0.19066336750984192, 'min_losses': 0.2524746060371399, 'selected_losses': 0.010914511047303677, 'time_load': 0.002393484115600586, 'time_cuda': 0.0066645145416259766, 'time_forward': 0.5706579685211182, 'time_bp': 0.3587775230407715, 'time_record': 0.45087432861328125, 'time_batch': 1.3925986289978027}
+Epoch: 1 | batch:1600/2039, Iteration:1600, results: {'loss': 0.3660467863082886, 'point_loss': 0.20112545788288116, 'box_loss': 0.1649213284254074, 'fl': 0.0015557860024273396, 'dl': 0.12773844599723816, 'min_losses': 0.1588541567325592, 'selected_losses': 0.006067166104912758, 'time_load': 0.0029668807983398438, 'time_cuda': 0.013840913772583008, 'time_forward': 0.5293240547180176, 'time_bp': 0.45087718963623047, 'time_record': 0.444563627243042, 'time_batch': 1.4466397762298584}
+Epoch: 1 | batch:1700/2039, Iteration:1700, results: {'loss': 0.3572510778903961, 'point_loss': 0.19227725267410278, 'box_loss': 0.16497382521629333, 'fl': 0.0011600838042795658, 'dl': 0.13709747791290283, 'min_losses': 0.160299152135849, 'selected_losses': 0.004674678668379784, 'time_load': 0.0013089179992675781, 'time_cuda': 0.011967658996582031, 'time_forward': 0.5317404270172119, 'time_bp': 0.41554737091064453, 'time_record': 0.45308780670166016, 'time_batch': 1.4156486988067627}
+Epoch: 1 | batch:1800/2039, Iteration:1800, results: {'loss': 0.30784785747528076, 'point_loss': 0.16407258808612823, 'box_loss': 0.14377525448799133, 'fl': 0.001986538991332054, 'dl': 0.09852518141269684, 'min_losses': 0.13825595378875732, 'selected_losses': 0.005519297905266285, 'time_load': 0.0010950565338134766, 'time_cuda': 0.011159658432006836, 'time_forward': 0.5535330772399902, 'time_bp': 0.33380603790283203, 'time_record': 0.44986748695373535, 'time_batch': 1.3545541763305664}
+Epoch: 1 | batch:1900/2039, Iteration:1900, results: {'loss': 0.3394082188606262, 'point_loss': 0.18567125499248505, 'box_loss': 0.15373697876930237, 'fl': 0.0011525971349328756, 'dl': 0.12396147847175598, 'min_losses': 0.14701342582702637, 'selected_losses': 0.006723560392856598, 'time_load': 0.0013849735260009766, 'time_cuda': 0.008698463439941406, 'time_forward': 0.5336270332336426, 'time_bp': 0.40863680839538574, 'time_record': 0.45229578018188477, 'time_batch': 1.4071135520935059}
+Epoch: 1 | batch:2000/2039, Iteration:2000, results: {'loss': 0.5571467876434326, 'point_loss': 0.2899250388145447, 'box_loss': 0.26722174882888794, 'fl': 0.0014577233232557774, 'dl': 0.21365825831890106, 'min_losses': 0.24281272292137146, 'selected_losses': 0.024409029632806778, 'time_load': 0.001901865005493164, 'time_cuda': 0.010277986526489258, 'time_forward': 0.613804817199707, 'time_bp': 0.3586101531982422, 'time_record': 0.4257380962371826, 'time_batch': 1.4147400856018066}
+Epoch: 2 | batch:61/2039, Iteration:2100, results: {'loss': 0.44527846574783325, 'point_loss': 0.24089418351650238, 'box_loss': 0.20438429713249207}
+Epoch: 2 | batch:161/2039, Iteration:2200, results: {'loss': 0.28930413722991943, 'point_loss': 0.14947453141212463, 'box_loss': 0.1398295909166336}
+Epoch: 2 | batch:261/2039, Iteration:2300, results: {'loss': 0.4122421443462372, 'point_loss': 0.21414867043495178, 'box_loss': 0.1980934739112854}
+Epoch: 2 | batch:361/2039, Iteration:2400, results: {'loss': 0.34141990542411804, 'point_loss': 0.18353058397769928, 'box_loss': 0.15788932144641876}
+Epoch: 2 | batch:461/2039, Iteration:2500, results: {'loss': 0.32530397176742554, 'point_loss': 0.16401521861553192, 'box_loss': 0.16128875315189362}
+Epoch: 2 | batch:561/2039, Iteration:2600, results: {'loss': 0.4454428553581238, 'point_loss': 0.2601246237754822, 'box_loss': 0.1853182315826416}
+Epoch: 2 | batch:661/2039, Iteration:2700, results: {'loss': 0.33118900656700134, 'point_loss': 0.17191503942012787, 'box_loss': 0.15927396714687347}
+Epoch: 2 | batch:761/2039, Iteration:2800, results: {'loss': 0.3432597517967224, 'point_loss': 0.18003134429454803, 'box_loss': 0.16322842240333557}
+Epoch: 2 | batch:861/2039, Iteration:2900, results: {'loss': 0.4054908752441406, 'point_loss': 0.19944767653942108, 'box_loss': 0.20604319870471954}
+Epoch: 2 | batch:961/2039, Iteration:3000, results: {'loss': 0.6803568005561829, 'point_loss': 0.4026162624359131, 'box_loss': 0.2777405381202698}
+Epoch: 2 | batch:1061/2039, Iteration:3100, results: {'loss': 0.45279133319854736, 'point_loss': 0.2424881011247635, 'box_loss': 0.21030324697494507}
+Epoch: 2 | batch:1161/2039, Iteration:3200, results: {'loss': 0.4673968255519867, 'point_loss': 0.25490275025367737, 'box_loss': 0.21249407529830933}
+Epoch: 2 | batch:1261/2039, Iteration:3300, results: {'loss': 0.3621262311935425, 'point_loss': 0.1878097504377365, 'box_loss': 0.17431648075580597}
+Epoch: 2 | batch:1361/2039, Iteration:3400, results: {'loss': 0.4727499485015869, 'point_loss': 0.25404685735702515, 'box_loss': 0.21870307624340057}
+Epoch: 2 | batch:1461/2039, Iteration:3500, results: {'loss': 0.3941759467124939, 'point_loss': 0.21752668917179108, 'box_loss': 0.17664924263954163}
+Epoch: 2 | batch:1561/2039, Iteration:3600, results: {'loss': 0.34993475675582886, 'point_loss': 0.17338144779205322, 'box_loss': 0.17655330896377563}
+Epoch: 2 | batch:1661/2039, Iteration:3700, results: {'loss': 0.3302760124206543, 'point_loss': 0.16847263276576996, 'box_loss': 0.16180339455604553}
+Epoch: 2 | batch:1761/2039, Iteration:3800, results: {'loss': 0.462197482585907, 'point_loss': 0.2358519434928894, 'box_loss': 0.22634555399417877}
+Epoch: 2 | batch:1861/2039, Iteration:3900, results: {'loss': 0.36864224076271057, 'point_loss': 0.17741434276103973, 'box_loss': 0.19122789800167084}
+Epoch: 2 | batch:1961/2039, Iteration:4000, results: {'loss': 0.4203336238861084, 'point_loss': 0.2243010401725769, 'box_loss': 0.1960325837135315}
+Epoch: 3 | batch:22/2039, Iteration:4100, results: {'loss': 0.4006365239620209, 'point_loss': 0.21095940470695496, 'box_loss': 0.18967711925506592}
+Epoch: 3 | batch:122/2039, Iteration:4200, results: {'loss': 0.32748761773109436, 'point_loss': 0.18042626976966858, 'box_loss': 0.14706134796142578}
+Epoch: 3 | batch:222/2039, Iteration:4300, results: {'loss': 0.32503199577331543, 'point_loss': 0.15626199543476105, 'box_loss': 0.16877001523971558}
+Epoch: 3 | batch:322/2039, Iteration:4400, results: {'loss': 0.7105761766433716, 'point_loss': 0.4873162508010864, 'box_loss': 0.22325994074344635}
+Epoch: 3 | batch:422/2039, Iteration:4500, results: {'loss': 0.8559103608131409, 'point_loss': 0.6123542785644531, 'box_loss': 0.24355606734752655}
+Epoch: 3 | batch:522/2039, Iteration:4600, results: {'loss': 0.3349108099937439, 'point_loss': 0.17731863260269165, 'box_loss': 0.15759219229221344}
+Epoch: 3 | batch:622/2039, Iteration:4700, results: {'loss': 0.5022326111793518, 'point_loss': 0.2581353485584259, 'box_loss': 0.2440972626209259}
+Epoch: 3 | batch:722/2039, Iteration:4800, results: {'loss': 0.28448888659477234, 'point_loss': 0.1394324004650116, 'box_loss': 0.14505648612976074}
+Epoch: 3 | batch:822/2039, Iteration:4900, results: {'loss': 0.5933113098144531, 'point_loss': 0.32378125190734863, 'box_loss': 0.2695300877094269}
+Epoch: 3 | batch:922/2039, Iteration:5000, results: {'loss': 0.5606883764266968, 'point_loss': 0.29702064394950867, 'box_loss': 0.2636677026748657}
+Epoch: 3 | batch:1022/2039, Iteration:5100, results: {'loss': 0.386169970035553, 'point_loss': 0.20425082743167877, 'box_loss': 0.1819191575050354}
+Epoch: 3 | batch:1122/2039, Iteration:5200, results: {'loss': 0.32419759035110474, 'point_loss': 0.17927484214305878, 'box_loss': 0.14492273330688477}
+Epoch: 3 | batch:1222/2039, Iteration:5300, results: {'loss': 0.6143569946289062, 'point_loss': 0.34797433018684387, 'box_loss': 0.2663826644420624}
+Epoch: 3 | batch:1322/2039, Iteration:5400, results: {'loss': 0.6013154983520508, 'point_loss': 0.3723040819168091, 'box_loss': 0.2290114313364029}
+Epoch: 3 | batch:1422/2039, Iteration:5500, results: {'loss': 0.47124481201171875, 'point_loss': 0.23474448919296265, 'box_loss': 0.2365003079175949}
+Epoch: 3 | batch:1522/2039, Iteration:5600, results: {'loss': 0.39258915185928345, 'point_loss': 0.20641346275806427, 'box_loss': 0.18617570400238037}
+Epoch: 3 | batch:1622/2039, Iteration:5700, results: {'loss': 0.5421754121780396, 'point_loss': 0.2917231023311615, 'box_loss': 0.25045230984687805}
+Epoch: 3 | batch:1722/2039, Iteration:5800, results: {'loss': 0.36608925461769104, 'point_loss': 0.17678005993366241, 'box_loss': 0.18930919468402863}
+Epoch: 3 | batch:1822/2039, Iteration:5900, results: {'loss': 0.6883080005645752, 'point_loss': 0.39321744441986084, 'box_loss': 0.29509055614471436}
+Epoch: 3 | batch:1922/2039, Iteration:6000, results: {'loss': 0.3811371922492981, 'point_loss': 0.22011791169643402, 'box_loss': 0.16101926565170288}
+Epoch: 3 | batch:2022/2039, Iteration:6100, results: {'loss': 0.3422206938266754, 'point_loss': 0.1734246462583542, 'box_loss': 0.16879604756832123}
+Epoch: 4 | batch:83/2039, Iteration:6200, results: {'loss': 0.3270699381828308, 'point_loss': 0.1657252013683319, 'box_loss': 0.1613447219133377}
+Epoch: 4 | batch:183/2039, Iteration:6300, results: {'loss': 0.4015010595321655, 'point_loss': 0.2145269811153412, 'box_loss': 0.18697406351566315}
+Epoch: 4 | batch:283/2039, Iteration:6400, results: {'loss': 0.2749243378639221, 'point_loss': 0.13694339990615845, 'box_loss': 0.13798093795776367}
+Epoch: 4 | batch:383/2039, Iteration:6500, results: {'loss': 0.44458436965942383, 'point_loss': 0.22242069244384766, 'box_loss': 0.22216366231441498}
+Epoch: 4 | batch:483/2039, Iteration:6600, results: {'loss': 0.4789689779281616, 'point_loss': 0.2533535361289978, 'box_loss': 0.22561542689800262}
+Epoch: 4 | batch:583/2039, Iteration:6700, results: {'loss': 0.304944783449173, 'point_loss': 0.15248186886310577, 'box_loss': 0.1524629145860672}
+Epoch: 4 | batch:683/2039, Iteration:6800, results: {'loss': 0.3826802968978882, 'point_loss': 0.20422740280628204, 'box_loss': 0.17845290899276733}
+Epoch: 4 | batch:783/2039, Iteration:6900, results: {'loss': 0.40682125091552734, 'point_loss': 0.21986259520053864, 'box_loss': 0.1869586706161499}
+Epoch: 4 | batch:883/2039, Iteration:7000, results: {'loss': 0.2939411699771881, 'point_loss': 0.14368122816085815, 'box_loss': 0.15025994181632996}
+Epoch: 4 | batch:983/2039, Iteration:7100, results: {'loss': 0.6125129461288452, 'point_loss': 0.31507834792137146, 'box_loss': 0.29743462800979614}
+Epoch: 4 | batch:1083/2039, Iteration:7200, results: {'loss': 0.5241052508354187, 'point_loss': 0.2869448959827423, 'box_loss': 0.2371603548526764}
+Epoch: 4 | batch:1183/2039, Iteration:7300, results: {'loss': 0.7296580076217651, 'point_loss': 0.5733035206794739, 'box_loss': 0.15635445713996887}
+Epoch: 4 | batch:1283/2039, Iteration:7400, results: {'loss': 0.9389200806617737, 'point_loss': 0.6464710831642151, 'box_loss': 0.2924489974975586}
+Epoch: 4 | batch:1383/2039, Iteration:7500, results: {'loss': 0.3209015727043152, 'point_loss': 0.1631736010313034, 'box_loss': 0.15772795677185059}
+Epoch: 4 | batch:1483/2039, Iteration:7600, results: {'loss': 0.42216160893440247, 'point_loss': 0.22089524567127228, 'box_loss': 0.2012663632631302}
+Epoch: 4 | batch:1583/2039, Iteration:7700, results: {'loss': 0.7771817445755005, 'point_loss': 0.5482384562492371, 'box_loss': 0.22894327342510223}
+Epoch: 4 | batch:1683/2039, Iteration:7800, results: {'loss': 0.38226887583732605, 'point_loss': 0.1949339210987091, 'box_loss': 0.18733495473861694}
+Epoch: 4 | batch:1783/2039, Iteration:7900, results: {'loss': 0.43800079822540283, 'point_loss': 0.21821367740631104, 'box_loss': 0.2197871059179306, 'fl': 0.0020611556246876717, 'dl': 0.16620798408985138, 'min_losses': 0.2074311077594757, 'selected_losses': 0.012355998158454895, 'time_load': 0.0011856555938720703, 'time_cuda': 0.00732421875, 'time_forward': 0.5893087387084961, 'time_bp': 0.3599529266357422, 'time_record': 0.43804430961608887, 'time_batch': 1.3985159397125244}
+Epoch: 4 | batch:1883/2039, Iteration:8000, results: {'loss': 0.7165701985359192, 'point_loss': 0.42983511090278625, 'box_loss': 0.28673508763313293, 'fl': 0.0030514684040099382, 'dl': 0.2219630479812622, 'min_losses': 0.282992422580719, 'selected_losses': 0.00374267203733325, 'time_load': 0.0030448436737060547, 'time_cuda': 0.0065119266510009766, 'time_forward': 0.5438969135284424, 'time_bp': 0.3443892002105713, 'time_record': 0.4541440010070801, 'time_batch': 1.3551838397979736}
+Epoch: 4 | batch:1983/2039, Iteration:8100, results: {'loss': 0.5053284764289856, 'point_loss': 0.24885180592536926, 'box_loss': 0.25647667050361633, 'fl': 0.0016475319862365723, 'dl': 0.20786817371845245, 'min_losses': 0.2408188283443451, 'selected_losses': 0.015657834708690643, 'time_load': 0.002454519271850586, 'time_cuda': 0.009037256240844727, 'time_forward': 0.5134227275848389, 'time_bp': 0.3403177261352539, 'time_record': 0.455974817276001, 'time_batch': 1.3250312805175781}
+Epoch: 5 | batch:44/2039, Iteration:8200, results: {'loss': 0.3797324299812317, 'point_loss': 0.21257683634757996, 'box_loss': 0.16715559363365173}
+Epoch: 5 | batch:144/2039, Iteration:8300, results: {'loss': 0.29529187083244324, 'point_loss': 0.14542162418365479, 'box_loss': 0.14987024664878845}
+Epoch: 5 | batch:244/2039, Iteration:8400, results: {'loss': 0.4509476125240326, 'point_loss': 0.23969724774360657, 'box_loss': 0.21125036478042603}
+Epoch: 5 | batch:344/2039, Iteration:8500, results: {'loss': 0.3723139762878418, 'point_loss': 0.18955889344215393, 'box_loss': 0.18275508284568787}
+Epoch: 5 | batch:444/2039, Iteration:8600, results: {'loss': 0.5813450217247009, 'point_loss': 0.3333148956298828, 'box_loss': 0.24803012609481812}
+Epoch: 5 | batch:544/2039, Iteration:8700, results: {'loss': 0.4051404595375061, 'point_loss': 0.20249906182289124, 'box_loss': 0.20264139771461487}
+Epoch: 5 | batch:644/2039, Iteration:8800, results: {'loss': 0.3496856987476349, 'point_loss': 0.17774304747581482, 'box_loss': 0.17194265127182007}
+Epoch: 5 | batch:744/2039, Iteration:8900, results: {'loss': 0.3220643401145935, 'point_loss': 0.17421019077301025, 'box_loss': 0.14785414934158325}
+Epoch: 5 | batch:844/2039, Iteration:9000, results: {'loss': 0.40083426237106323, 'point_loss': 0.21897868812084198, 'box_loss': 0.18185557425022125}
+Epoch: 5 | batch:944/2039, Iteration:9100, results: {'loss': 0.26540064811706543, 'point_loss': 0.134994775056839, 'box_loss': 0.13040587306022644}
+Epoch: 5 | batch:1044/2039, Iteration:9200, results: {'loss': 0.274819016456604, 'point_loss': 0.1429845243692398, 'box_loss': 0.131834477186203}
+Epoch: 5 | batch:1144/2039, Iteration:9300, results: {'loss': 0.3534344434738159, 'point_loss': 0.17796631157398224, 'box_loss': 0.17546811699867249}
+Epoch: 5 | batch:1244/2039, Iteration:9400, results: {'loss': 0.35697099566459656, 'point_loss': 0.1717362105846405, 'box_loss': 0.18523478507995605}
+Epoch: 5 | batch:1344/2039, Iteration:9500, results: {'loss': 0.4544997811317444, 'point_loss': 0.2394193410873413, 'box_loss': 0.21508045494556427}
+Epoch: 5 | batch:1444/2039, Iteration:9600, results: {'loss': 0.621972918510437, 'point_loss': 0.33151018619537354, 'box_loss': 0.29046276211738586, 'fl': 0.0023802637588232756, 'dl': 0.23791372776031494, 'min_losses': 0.285519003868103, 'selected_losses': 0.004943744279444218, 'time_load': 0.0027894973754882812, 'time_cuda': 0.01260232925415039, 'time_forward': 0.6836535930633545, 'time_bp': 0.42890024185180664, 'time_record': 0.45104217529296875, 'time_batch': 1.5861761569976807}
+Epoch: 5 | batch:1544/2039, Iteration:9700, results: {'loss': 0.41979652643203735, 'point_loss': 0.2382364273071289, 'box_loss': 0.18156011402606964, 'fl': 0.002108811866492033, 'dl': 0.13662362098693848, 'min_losses': 0.17879988253116608, 'selected_losses': 0.002760226372629404, 'time_load': 0.0032014846801757812, 'time_cuda': 0.009176969528198242, 'time_forward': 0.5885381698608398, 'time_bp': 0.35897278785705566, 'time_record': 0.45001935958862305, 'time_batch': 1.4140708446502686}
+Epoch: 5 | batch:1644/2039, Iteration:9800, results: {'loss': 0.40129953622817993, 'point_loss': 0.19423779845237732, 'box_loss': 0.20706172287464142}
+Epoch: 5 | batch:1744/2039, Iteration:9900, results: {'loss': 0.563596785068512, 'point_loss': 0.306606262922287, 'box_loss': 0.256990522146225}
+Epoch: 5 | batch:1844/2039, Iteration:10000, results: {'loss': 0.3804534673690796, 'point_loss': 0.20972225069999695, 'box_loss': 0.17073121666908264, 'fl': 0.0010286574251949787, 'dl': 0.14512427151203156, 'min_losses': 0.16569742560386658, 'selected_losses': 0.0050337850116193295, 'time_load': 0.0026433467864990234, 'time_cuda': 0.012729883193969727, 'time_forward': 0.5836279392242432, 'time_bp': 0.36176562309265137, 'time_record': 0.4535086154937744, 'time_batch': 1.4193830490112305}
+Epoch: 5 | batch:1944/2039, Iteration:10100, results: {'loss': 0.3196863532066345, 'point_loss': 0.16440793871879578, 'box_loss': 0.15527841448783875, 'fl': 0.0012729659210890532, 'dl': 0.12717705965042114, 'min_losses': 0.15263637900352478, 'selected_losses': 0.0026420357171446085, 'time_load': 0.00218963623046875, 'time_cuda': 0.011795282363891602, 'time_forward': 0.5223467350006104, 'time_bp': 0.3394787311553955, 'time_record': 0.4512054920196533, 'time_batch': 1.3316779136657715}
+Epoch: 6 | batch:5/2039, Iteration:10200, results: {'loss': 0.3469182848930359, 'point_loss': 0.17217037081718445, 'box_loss': 0.17474789917469025}
+Epoch: 6 | batch:105/2039, Iteration:10300, results: {'loss': 0.39825940132141113, 'point_loss': 0.20066170394420624, 'box_loss': 0.1975977122783661}
+Epoch: 6 | batch:205/2039, Iteration:10400, results: {'loss': 0.3114776909351349, 'point_loss': 0.15666057169437408, 'box_loss': 0.1548171192407608}
+Epoch: 6 | batch:305/2039, Iteration:10500, results: {'loss': 0.3409486413002014, 'point_loss': 0.18414422869682312, 'box_loss': 0.1568043977022171}
+Epoch: 6 | batch:405/2039, Iteration:10600, results: {'loss': 0.3005821108818054, 'point_loss': 0.1534940004348755, 'box_loss': 0.14708812534809113}
+Epoch: 6 | batch:505/2039, Iteration:10700, results: {'loss': 0.3419792652130127, 'point_loss': 0.17314809560775757, 'box_loss': 0.16883118450641632}
+Epoch: 6 | batch:605/2039, Iteration:10800, results: {'loss': 0.3384213447570801, 'point_loss': 0.18225668370723724, 'box_loss': 0.15616467595100403}
+Epoch: 6 | batch:705/2039, Iteration:10900, results: {'loss': 0.4627144932746887, 'point_loss': 0.272641658782959, 'box_loss': 0.19007284939289093}
+Epoch: 6 | batch:805/2039, Iteration:11000, results: {'loss': 0.3795367479324341, 'point_loss': 0.19214311242103577, 'box_loss': 0.1873936504125595}
+Epoch: 6 | batch:905/2039, Iteration:11100, results: {'loss': 0.6361206769943237, 'point_loss': 0.4221736192703247, 'box_loss': 0.2139470875263214}
+Epoch: 6 | batch:1005/2039, Iteration:11200, results: {'loss': 0.5130877494812012, 'point_loss': 0.2645690441131592, 'box_loss': 0.2485186755657196}
+Epoch: 6 | batch:1105/2039, Iteration:11300, results: {'loss': 0.40756672620773315, 'point_loss': 0.20712465047836304, 'box_loss': 0.20044206082820892}
+Epoch: 6 | batch:1205/2039, Iteration:11400, results: {'loss': 0.31743335723876953, 'point_loss': 0.1747669130563736, 'box_loss': 0.14266645908355713}
+Epoch: 6 | batch:1305/2039, Iteration:11500, results: {'loss': 0.4974431097507477, 'point_loss': 0.259611576795578, 'box_loss': 0.23783153295516968}
+Epoch: 6 | batch:1405/2039, Iteration:11600, results: {'loss': 0.6208614110946655, 'point_loss': 0.36908450722694397, 'box_loss': 0.25177687406539917, 'fl': 0.001622854731976986, 'dl': 0.20958156883716583, 'min_losses': 0.24203866720199585, 'selected_losses': 0.009738207794725895, 'time_load': 0.0015387535095214844, 'time_cuda': 0.008470535278320312, 'time_forward': 0.5851612091064453, 'time_bp': 0.3583202362060547, 'time_record': 0.4537677764892578, 'time_batch': 1.4099514484405518}
+Epoch: 6 | batch:1505/2039, Iteration:11700, results: {'loss': 0.5796835422515869, 'point_loss': 0.33878985047340393, 'box_loss': 0.2408936768770218, 'fl': 0.0012494106777012348, 'dl': 0.21106590330600739, 'min_losses': 0.23605410754680634, 'selected_losses': 0.004839575849473476, 'time_load': 0.0010030269622802734, 'time_cuda': 0.014679193496704102, 'time_forward': 0.535653829574585, 'time_bp': 0.3510017395019531, 'time_record': 0.4547591209411621, 'time_batch': 1.3593664169311523}
+Epoch: 6 | batch:1605/2039, Iteration:11800, results: {'loss': 0.3156156539916992, 'point_loss': 0.15842553973197937, 'box_loss': 0.15719011425971985}
+Epoch: 6 | batch:1705/2039, Iteration:11900, results: {'loss': 0.8851149082183838, 'point_loss': 0.5530486702919006, 'box_loss': 0.33206626772880554}
+Epoch: 6 | batch:1805/2039, Iteration:12000, results: {'loss': 0.38126900792121887, 'point_loss': 0.1933671534061432, 'box_loss': 0.18790185451507568}
+Epoch: 6 | batch:1905/2039, Iteration:12100, results: {'loss': 0.42281240224838257, 'point_loss': 0.2385255992412567, 'box_loss': 0.18428678810596466}
+Epoch: 6 | batch:2005/2039, Iteration:12200, results: {'loss': 0.5780676603317261, 'point_loss': 0.2944599390029907, 'box_loss': 0.28360772132873535, 'fl': 0.002797249238938093, 'dl': 0.2219681441783905, 'min_losses': 0.2779131233692169, 'selected_losses': 0.005694601684808731, 'time_load': 0.0029556751251220703, 'time_cuda': 0.012737035751342773, 'time_forward': 0.5390462875366211, 'time_bp': 0.4093453884124756, 'time_record': 0.4523172378540039, 'time_batch': 1.4184319972991943}
+Epoch: 7 | batch:66/2039, Iteration:12300, results: {'loss': 0.7293620109558105, 'point_loss': 0.49318501353263855, 'box_loss': 0.236176997423172}
+Epoch: 7 | batch:166/2039, Iteration:12400, results: {'loss': 0.42228060960769653, 'point_loss': 0.23072615265846252, 'box_loss': 0.1915544718503952}
+Epoch: 7 | batch:266/2039, Iteration:12500, results: {'loss': 0.5888346433639526, 'point_loss': 0.3177652359008789, 'box_loss': 0.27106940746307373}
+Epoch: 7 | batch:366/2039, Iteration:12600, results: {'loss': 0.3812827467918396, 'point_loss': 0.1964401751756668, 'box_loss': 0.18484258651733398}
+Epoch: 7 | batch:466/2039, Iteration:12700, results: {'loss': 0.5508087277412415, 'point_loss': 0.33210453391075134, 'box_loss': 0.21870417892932892}
+Epoch: 7 | batch:566/2039, Iteration:12800, results: {'loss': 0.3437367081642151, 'point_loss': 0.1738763004541397, 'box_loss': 0.16986039280891418}
+Epoch: 7 | batch:666/2039, Iteration:12900, results: {'loss': 0.6423865556716919, 'point_loss': 0.3362386226654053, 'box_loss': 0.30614790320396423}
+Epoch: 7 | batch:766/2039, Iteration:13000, results: {'loss': 0.4387451410293579, 'point_loss': 0.21635277569293976, 'box_loss': 0.22239235043525696}
+Epoch: 7 | batch:866/2039, Iteration:13100, results: {'loss': 0.45518243312835693, 'point_loss': 0.26093611121177673, 'box_loss': 0.194246307015419}
+Epoch: 7 | batch:966/2039, Iteration:13200, results: {'loss': 0.3334856927394867, 'point_loss': 0.1682179719209671, 'box_loss': 0.1652677208185196}
+Epoch: 7 | batch:1066/2039, Iteration:13300, results: {'loss': 0.36558693647384644, 'point_loss': 0.18658459186553955, 'box_loss': 0.17900234460830688}
+Epoch: 7 | batch:1166/2039, Iteration:13400, results: {'loss': 0.42261189222335815, 'point_loss': 0.23400865495204926, 'box_loss': 0.1886032223701477}
+Epoch: 7 | batch:1266/2039, Iteration:13500, results: {'loss': 0.411243736743927, 'point_loss': 0.21941518783569336, 'box_loss': 0.19182853400707245}
+Epoch: 7 | batch:1366/2039, Iteration:13600, results: {'loss': 0.3590022325515747, 'point_loss': 0.1802646368741989, 'box_loss': 0.1787375956773758}
+Epoch: 7 | batch:1466/2039, Iteration:13700, results: {'loss': 0.3624195158481598, 'point_loss': 0.1840582638978958, 'box_loss': 0.17836125195026398}
+Epoch: 7 | batch:1566/2039, Iteration:13800, results: {'loss': 0.3560631275177002, 'point_loss': 0.17494037747383118, 'box_loss': 0.18112275004386902}
+Epoch: 7 | batch:1666/2039, Iteration:13900, results: {'loss': 0.28929612040519714, 'point_loss': 0.14380665123462677, 'box_loss': 0.14548946917057037}
+Epoch: 7 | batch:1766/2039, Iteration:14000, results: {'loss': 0.5261567831039429, 'point_loss': 0.29236307740211487, 'box_loss': 0.2337937355041504}
+Epoch: 7 | batch:1866/2039, Iteration:14100, results: {'loss': 0.35593411326408386, 'point_loss': 0.17512619495391846, 'box_loss': 0.1808079183101654, 'fl': 0.0014513407368212938, 'dl': 0.14734937250614166, 'min_losses': 0.17637619376182556, 'selected_losses': 0.0044317301362752914, 'time_load': 0.0011339187622070312, 'time_cuda': 0.009816884994506836, 'time_forward': 0.528029203414917, 'time_bp': 0.34809303283691406, 'time_record': 0.4482276439666748, 'time_batch': 1.3397772312164307}
+Epoch: 7 | batch:1966/2039, Iteration:14200, results: {'loss': 0.6502174735069275, 'point_loss': 0.49693113565444946, 'box_loss': 0.15328632295131683, 'fl': 0.0012684625107795, 'dl': 0.12426390498876572, 'min_losses': 0.14963313937187195, 'selected_losses': 0.003653184976428747, 'time_load': 0.005738735198974609, 'time_cuda': 0.011375904083251953, 'time_forward': 0.6316537857055664, 'time_bp': 0.44944095611572266, 'time_record': 0.4519479274749756, 'time_batch': 1.5591421127319336}
+Epoch: 8 | batch:27/2039, Iteration:14300, results: {'loss': 0.41748636960983276, 'point_loss': 0.2270771712064743, 'box_loss': 0.19040921330451965}
+Epoch: 8 | batch:127/2039, Iteration:14400, results: {'loss': 0.5168418288230896, 'point_loss': 0.2881012260913849, 'box_loss': 0.2287406176328659}
+Epoch: 8 | batch:227/2039, Iteration:14500, results: {'loss': 0.4123247265815735, 'point_loss': 0.207071453332901, 'box_loss': 0.2052532583475113}
+Epoch: 8 | batch:327/2039, Iteration:14600, results: {'loss': 0.2757389545440674, 'point_loss': 0.13876958191394806, 'box_loss': 0.13696937263011932}
+Epoch: 8 | batch:427/2039, Iteration:14700, results: {'loss': 0.3121362328529358, 'point_loss': 0.15708453953266144, 'box_loss': 0.15505170822143555}
+Epoch: 8 | batch:527/2039, Iteration:14800, results: {'loss': 0.5561130046844482, 'point_loss': 0.3053519129753113, 'box_loss': 0.25076112151145935}
+Epoch: 8 | batch:627/2039, Iteration:14900, results: {'loss': 0.35358768701553345, 'point_loss': 0.17700576782226562, 'box_loss': 0.17658190429210663}
+Epoch: 8 | batch:727/2039, Iteration:15000, results: {'loss': 0.3655756115913391, 'point_loss': 0.18697337806224823, 'box_loss': 0.1786022186279297}
+Epoch: 8 | batch:827/2039, Iteration:15100, results: {'loss': 0.44383227825164795, 'point_loss': 0.24430599808692932, 'box_loss': 0.19952626526355743}
+Epoch: 8 | batch:927/2039, Iteration:15200, results: {'loss': 0.3839586079120636, 'point_loss': 0.1938892900943756, 'box_loss': 0.190069317817688}
+Epoch: 8 | batch:1027/2039, Iteration:15300, results: {'loss': 0.4856119751930237, 'point_loss': 0.24840320646762848, 'box_loss': 0.2372087836265564}
+Epoch: 8 | batch:1127/2039, Iteration:15400, results: {'loss': 0.37510251998901367, 'point_loss': 0.196306511759758, 'box_loss': 0.17879600822925568}
+Epoch: 8 | batch:1227/2039, Iteration:15500, results: {'loss': 0.5559347867965698, 'point_loss': 0.390536904335022, 'box_loss': 0.16539788246154785}
+Epoch: 8 | batch:1327/2039, Iteration:15600, results: {'loss': 0.39057672023773193, 'point_loss': 0.20779608190059662, 'box_loss': 0.18278062343597412}
+Epoch: 8 | batch:1427/2039, Iteration:15700, results: {'loss': 0.4372323155403137, 'point_loss': 0.21714137494564056, 'box_loss': 0.22009092569351196, 'fl': 0.0016092201694846153, 'dl': 0.17208784818649292, 'min_losses': 0.20427224040031433, 'selected_losses': 0.01581868715584278, 'time_load': 0.0008122920989990234, 'time_cuda': 0.008257627487182617, 'time_forward': 0.5531148910522461, 'time_bp': 0.3474736213684082, 'time_record': 0.45252275466918945, 'time_batch': 1.3640565872192383}
+Epoch: 8 | batch:1527/2039, Iteration:15800, results: {'loss': 0.5709412097930908, 'point_loss': 0.39331647753715515, 'box_loss': 0.17762474715709686, 'fl': 0.0012193925213068724, 'dl': 0.15136626362800598, 'min_losses': 0.175754114985466, 'selected_losses': 0.0018706382252275944, 'time_load': 0.0010144710540771484, 'time_cuda': 0.008517026901245117, 'time_forward': 0.5720319747924805, 'time_bp': 0.40348196029663086, 'time_record': 0.44745659828186035, 'time_batch': 1.4346883296966553}
+Epoch: 8 | batch:1627/2039, Iteration:15900, results: {'loss': 0.4928218126296997, 'point_loss': 0.26720064878463745, 'box_loss': 0.22562117874622345}
+Epoch: 8 | batch:1727/2039, Iteration:16000, results: {'loss': 0.4726424515247345, 'point_loss': 0.26987841725349426, 'box_loss': 0.20276403427124023}
+Epoch: 8 | batch:1827/2039, Iteration:16100, results: {'loss': 0.6169456839561462, 'point_loss': 0.33464315533638, 'box_loss': 0.28230252861976624}
+Epoch: 8 | batch:1927/2039, Iteration:16200, results: {'loss': 0.29561853408813477, 'point_loss': 0.1513979136943817, 'box_loss': 0.14422060549259186, 'fl': 0.001147015718743205, 'dl': 0.1189384013414383, 'min_losses': 0.14187870919704437, 'selected_losses': 0.0023419028148055077, 'time_load': 0.0024149417877197266, 'time_cuda': 0.02089381217956543, 'time_forward': 0.5794999599456787, 'time_bp': 0.34314680099487305, 'time_record': 0.4399731159210205, 'time_batch': 1.3933780193328857}
+Epoch: 8 | batch:2027/2039, Iteration:16300, results: {'loss': 0.5155282020568848, 'point_loss': 0.2711261212825775, 'box_loss': 0.24440209567546844, 'fl': 0.0020407529082149267, 'dl': 0.19804459810256958, 'min_losses': 0.2388596534729004, 'selected_losses': 0.005542442202568054, 'time_load': 0.0025959014892578125, 'time_cuda': 0.01155400276184082, 'time_forward': 0.7030768394470215, 'time_bp': 0.347820520401001, 'time_record': 0.4394369125366211, 'time_batch': 1.5120692253112793}
+Epoch: 9 | batch:88/2039, Iteration:16400, results: {'loss': 0.33581531047821045, 'point_loss': 0.18056319653987885, 'box_loss': 0.1552521139383316}
+Epoch: 9 | batch:188/2039, Iteration:16500, results: {'loss': 0.49793875217437744, 'point_loss': 0.27666065096855164, 'box_loss': 0.221278116106987}
+Epoch: 9 | batch:288/2039, Iteration:16600, results: {'loss': 0.34497857093811035, 'point_loss': 0.17938335239887238, 'box_loss': 0.16559521853923798}
+Epoch: 9 | batch:388/2039, Iteration:16700, results: {'loss': 0.77931809425354, 'point_loss': 0.2566586434841156, 'box_loss': 0.522659420967102}
+Epoch: 9 | batch:488/2039, Iteration:16800, results: {'loss': 0.42546963691711426, 'point_loss': 0.21032561361789703, 'box_loss': 0.21514400839805603}
+Epoch: 9 | batch:588/2039, Iteration:16900, results: {'loss': 0.4213331937789917, 'point_loss': 0.22219163179397583, 'box_loss': 0.19914156198501587}
+Epoch: 9 | batch:688/2039, Iteration:17000, results: {'loss': 0.32437533140182495, 'point_loss': 0.16740956902503967, 'box_loss': 0.15696577727794647}
+Epoch: 9 | batch:788/2039, Iteration:17100, results: {'loss': 0.4839281141757965, 'point_loss': 0.29516369104385376, 'box_loss': 0.18876442313194275}
+Epoch: 9 | batch:888/2039, Iteration:17200, results: {'loss': 0.3808249533176422, 'point_loss': 0.19557733833789825, 'box_loss': 0.18524761497974396}
+Epoch: 9 | batch:988/2039, Iteration:17300, results: {'loss': 0.47251322865486145, 'point_loss': 0.2682897448539734, 'box_loss': 0.20422348380088806}
+Epoch: 9 | batch:1088/2039, Iteration:17400, results: {'loss': 0.7541241645812988, 'point_loss': 0.5300574898719788, 'box_loss': 0.22406670451164246}
+Epoch: 9 | batch:1188/2039, Iteration:17500, results: {'loss': 0.3907414674758911, 'point_loss': 0.19718439877033234, 'box_loss': 0.19355705380439758}
+Epoch: 9 | batch:1288/2039, Iteration:17600, results: {'loss': 0.360231876373291, 'point_loss': 0.18307660520076752, 'box_loss': 0.1771552562713623}
+Epoch: 9 | batch:1388/2039, Iteration:17700, results: {'loss': 0.3577015995979309, 'point_loss': 0.19549064338207245, 'box_loss': 0.16221097111701965}
+Epoch: 9 | batch:1488/2039, Iteration:17800, results: {'loss': 0.3435804545879364, 'point_loss': 0.1774665266275406, 'box_loss': 0.1661139279603958}
+Epoch: 9 | batch:1588/2039, Iteration:17900, results: {'loss': 0.33810678124427795, 'point_loss': 0.17345885932445526, 'box_loss': 0.1646479219198227}
+Epoch: 9 | batch:1688/2039, Iteration:18000, results: {'loss': 0.30778050422668457, 'point_loss': 0.1679784208536148, 'box_loss': 0.13980209827423096}
+Epoch: 9 | batch:1788/2039, Iteration:18100, results: {'loss': 0.9123026132583618, 'point_loss': 0.7031000256538391, 'box_loss': 0.20920255780220032}
+Epoch: 9 | batch:1888/2039, Iteration:18200, results: {'loss': 0.3230045437812805, 'point_loss': 0.16544654965400696, 'box_loss': 0.15755797922611237, 'fl': 0.001187923364341259, 'dl': 0.13232353329658508, 'min_losses': 0.15608200430870056, 'selected_losses': 0.00147597910836339, 'time_load': 0.00164031982421875, 'time_cuda': 0.009006977081298828, 'time_forward': 0.584190845489502, 'time_bp': 0.3510711193084717, 'time_record': 0.4514923095703125, 'time_batch': 1.4041924476623535}
+Epoch: 9 | batch:1988/2039, Iteration:18300, results: {'loss': 0.2589138150215149, 'point_loss': 0.1305284947156906, 'box_loss': 0.12838533520698547, 'fl': 0.0011770699638873339, 'dl': 0.10280456393957138, 'min_losses': 0.12634596228599548, 'selected_losses': 0.002039375016465783, 'time_load': 0.0009961128234863281, 'time_cuda': 0.00951695442199707, 'time_forward': 0.6170854568481445, 'time_bp': 0.664099931716919, 'time_record': 0.4162752628326416, 'time_batch': 1.7103791236877441}
+Epoch: 10 | batch:49/2039, Iteration:18400, results: {'loss': 0.44215232133865356, 'point_loss': 0.25693634152412415, 'box_loss': 0.18521597981452942}
+Epoch: 10 | batch:149/2039, Iteration:18500, results: {'loss': 0.7432457208633423, 'point_loss': 0.4974808692932129, 'box_loss': 0.2457648515701294}
+Epoch: 10 | batch:249/2039, Iteration:18600, results: {'loss': 0.3810332417488098, 'point_loss': 0.1932784467935562, 'box_loss': 0.1877547949552536}
+Epoch: 10 | batch:349/2039, Iteration:18700, results: {'loss': 0.326732337474823, 'point_loss': 0.16148346662521362, 'box_loss': 0.16524888575077057}
+Epoch: 10 | batch:449/2039, Iteration:18800, results: {'loss': 0.5353782176971436, 'point_loss': 0.2729092538356781, 'box_loss': 0.26246899366378784}
+Epoch: 10 | batch:549/2039, Iteration:18900, results: {'loss': 0.35083726048469543, 'point_loss': 0.1842515915632248, 'box_loss': 0.16658566892147064}
+Epoch: 10 | batch:649/2039, Iteration:19000, results: {'loss': 0.37426894903182983, 'point_loss': 0.18995144963264465, 'box_loss': 0.18431751430034637}
+Epoch: 10 | batch:749/2039, Iteration:19100, results: {'loss': 0.4004862904548645, 'point_loss': 0.20725975930690765, 'box_loss': 0.19322654604911804}
+Epoch: 10 | batch:849/2039, Iteration:19200, results: {'loss': 0.49327242374420166, 'point_loss': 0.2532331049442291, 'box_loss': 0.24003933370113373}
+Epoch: 10 | batch:949/2039, Iteration:19300, results: {'loss': 0.40591198205947876, 'point_loss': 0.22650782763957977, 'box_loss': 0.179404154419899}
+Epoch: 10 | batch:1049/2039, Iteration:19400, results: {'loss': 0.29419639706611633, 'point_loss': 0.15885978937149048, 'box_loss': 0.13533660769462585}
+Epoch: 10 | batch:1149/2039, Iteration:19500, results: {'loss': 0.5383327007293701, 'point_loss': 0.3004302382469177, 'box_loss': 0.2379024475812912}
+Epoch: 10 | batch:1249/2039, Iteration:19600, results: {'loss': 0.32250726222991943, 'point_loss': 0.16430409252643585, 'box_loss': 0.1582031548023224}
+Epoch: 10 | batch:1349/2039, Iteration:19700, results: {'loss': 0.6215105056762695, 'point_loss': 0.4094077944755554, 'box_loss': 0.2121027261018753}
+Epoch: 10 | batch:1449/2039, Iteration:19800, results: {'loss': 0.5866380929946899, 'point_loss': 0.3908781111240387, 'box_loss': 0.19575999677181244}
+Epoch: 10 | batch:1549/2039, Iteration:19900, results: {'loss': 0.5541111826896667, 'point_loss': 0.31453993916511536, 'box_loss': 0.23957125842571259}
+Epoch: 10 | batch:1649/2039, Iteration:20000, results: {'loss': 0.6348481178283691, 'point_loss': 0.3989940881729126, 'box_loss': 0.23585399985313416}
+Epoch: 10 | batch:1749/2039, Iteration:20100, results: {'loss': 0.6275074481964111, 'point_loss': 0.35563424229621887, 'box_loss': 0.27187320590019226}
+Epoch: 10 | batch:1849/2039, Iteration:20200, results: {'loss': 0.34691667556762695, 'point_loss': 0.1884147971868515, 'box_loss': 0.15850186347961426}
+Epoch: 10 | batch:1949/2039, Iteration:20300, results: {'loss': 0.3910250663757324, 'point_loss': 0.203263059258461, 'box_loss': 0.18776199221611023}
+Epoch: 11 | batch:10/2039, Iteration:20400, results: {'loss': 0.39343446493148804, 'point_loss': 0.20964619517326355, 'box_loss': 0.1837882548570633}
+Epoch: 11 | batch:110/2039, Iteration:20500, results: {'loss': 0.34931129217147827, 'point_loss': 0.19058385491371155, 'box_loss': 0.15872743725776672}
+Epoch: 11 | batch:210/2039, Iteration:20600, results: {'loss': 0.2733422517776489, 'point_loss': 0.13488519191741943, 'box_loss': 0.13845707476139069}
+Epoch: 11 | batch:310/2039, Iteration:20700, results: {'loss': 0.3672736883163452, 'point_loss': 0.18571442365646362, 'box_loss': 0.1815592497587204}
+Epoch: 11 | batch:410/2039, Iteration:20800, results: {'loss': 0.38219505548477173, 'point_loss': 0.18628638982772827, 'box_loss': 0.19590868055820465}
+Epoch: 11 | batch:510/2039, Iteration:20900, results: {'loss': 0.3118390142917633, 'point_loss': 0.1624259054660797, 'box_loss': 0.1494131088256836}
+Epoch: 11 | batch:610/2039, Iteration:21000, results: {'loss': 0.4738827645778656, 'point_loss': 0.24658000469207764, 'box_loss': 0.22730275988578796}
+Epoch: 11 | batch:710/2039, Iteration:21100, results: {'loss': 0.2997416853904724, 'point_loss': 0.1571054309606552, 'box_loss': 0.1426362693309784}
+Epoch: 11 | batch:810/2039, Iteration:21200, results: {'loss': 0.43517473340034485, 'point_loss': 0.2228744477033615, 'box_loss': 0.21230028569698334}
+Epoch: 11 | batch:910/2039, Iteration:21300, results: {'loss': 0.27178052067756653, 'point_loss': 0.13142162561416626, 'box_loss': 0.14035889506340027}
+Epoch: 11 | batch:1010/2039, Iteration:21400, results: {'loss': 0.43987104296684265, 'point_loss': 0.21732878684997559, 'box_loss': 0.22254225611686707}
+Epoch: 11 | batch:1110/2039, Iteration:21500, results: {'loss': 0.3599662780761719, 'point_loss': 0.18080753087997437, 'box_loss': 0.1791587471961975}
+Epoch: 11 | batch:1210/2039, Iteration:21600, results: {'loss': 0.338731050491333, 'point_loss': 0.19438530504703522, 'box_loss': 0.14434576034545898}
+Epoch: 11 | batch:1310/2039, Iteration:21700, results: {'loss': 0.43482506275177, 'point_loss': 0.2179933488368988, 'box_loss': 0.21683171391487122}
+Epoch: 11 | batch:1410/2039, Iteration:21800, results: {'loss': 0.24239274859428406, 'point_loss': 0.1274859756231308, 'box_loss': 0.11490677297115326}
+Epoch: 11 | batch:1510/2039, Iteration:21900, results: {'loss': 0.6482949256896973, 'point_loss': 0.3302012085914612, 'box_loss': 0.3180937170982361}
+Epoch: 11 | batch:1610/2039, Iteration:22000, results: {'loss': 0.37445563077926636, 'point_loss': 0.19256560504436493, 'box_loss': 0.18189002573490143}
+Epoch: 11 | batch:1710/2039, Iteration:22100, results: {'loss': 0.4686710238456726, 'point_loss': 0.26533830165863037, 'box_loss': 0.20333270728588104}
+Epoch: 11 | batch:1810/2039, Iteration:22200, results: {'loss': 0.5214911699295044, 'point_loss': 0.2817849814891815, 'box_loss': 0.23970617353916168}
+Epoch: 11 | batch:1910/2039, Iteration:22300, results: {'loss': 0.677984356880188, 'point_loss': 0.34963953495025635, 'box_loss': 0.32834482192993164}
+Epoch: 11 | batch:2010/2039, Iteration:22400, results: {'loss': 0.6996747851371765, 'point_loss': 0.46141666173934937, 'box_loss': 0.23825812339782715}
+Epoch: 12 | batch:71/2039, Iteration:22500, results: {'loss': 0.49835893511772156, 'point_loss': 0.29086923599243164, 'box_loss': 0.20748969912528992}
+Epoch: 12 | batch:171/2039, Iteration:22600, results: {'loss': 0.33327022194862366, 'point_loss': 0.16666187345981598, 'box_loss': 0.16660834848880768}
+Epoch: 12 | batch:271/2039, Iteration:22700, results: {'loss': 0.31830641627311707, 'point_loss': 0.16114220023155212, 'box_loss': 0.15716421604156494}
+Epoch: 12 | batch:371/2039, Iteration:22800, results: {'loss': 0.6637259125709534, 'point_loss': 0.36092421412467957, 'box_loss': 0.3028016984462738}
+Epoch: 12 | batch:471/2039, Iteration:22900, results: {'loss': 0.33675438165664673, 'point_loss': 0.17428207397460938, 'box_loss': 0.16247229278087616}
+Epoch: 12 | batch:571/2039, Iteration:23000, results: {'loss': 0.37226152420043945, 'point_loss': 0.202578604221344, 'box_loss': 0.16968291997909546}
+Epoch: 12 | batch:671/2039, Iteration:23100, results: {'loss': 0.630368709564209, 'point_loss': 0.34393665194511414, 'box_loss': 0.28643202781677246}
+Epoch: 12 | batch:771/2039, Iteration:23200, results: {'loss': 0.4083973169326782, 'point_loss': 0.22612138092517853, 'box_loss': 0.1822759509086609}
+Epoch: 12 | batch:871/2039, Iteration:23300, results: {'loss': 0.39352136850357056, 'point_loss': 0.19151556491851807, 'box_loss': 0.2020058035850525}
+Epoch: 12 | batch:971/2039, Iteration:23400, results: {'loss': 0.46881335973739624, 'point_loss': 0.24698838591575623, 'box_loss': 0.22182495892047882}
+Epoch: 12 | batch:1071/2039, Iteration:23500, results: {'loss': 0.47206252813339233, 'point_loss': 0.23773957788944244, 'box_loss': 0.2343229502439499}
+Epoch: 12 | batch:1171/2039, Iteration:23600, results: {'loss': 0.3148529827594757, 'point_loss': 0.16666743159294128, 'box_loss': 0.14818555116653442}
+Epoch: 12 | batch:1271/2039, Iteration:23700, results: {'loss': 0.49295803904533386, 'point_loss': 0.25741299986839294, 'box_loss': 0.23554503917694092}
+Epoch: 12 | batch:1371/2039, Iteration:23800, results: {'loss': 0.45253512263298035, 'point_loss': 0.25431355834007263, 'box_loss': 0.19822156429290771}
+Epoch: 12 | batch:1471/2039, Iteration:23900, results: {'loss': 0.4878607392311096, 'point_loss': 0.24407735466957092, 'box_loss': 0.2437833696603775, 'fl': 0.00126328831538558, 'dl': 0.2026398777961731, 'min_losses': 0.22790566086769104, 'selected_losses': 0.015877706930041313, 'time_load': 0.0009560585021972656, 'time_cuda': 0.008758306503295898, 'time_forward': 0.5519516468048096, 'time_bp': 0.3749692440032959, 'time_record': 0.4440488815307617, 'time_batch': 1.38297700881958}
+Epoch: 12 | batch:1571/2039, Iteration:24000, results: {'loss': 0.34821563959121704, 'point_loss': 0.17464421689510345, 'box_loss': 0.17357143759727478, 'fl': 0.0016800331650301814, 'dl': 0.1388535350561142, 'min_losses': 0.17245419323444366, 'selected_losses': 0.0011172429658472538, 'time_load': 0.006106138229370117, 'time_cuda': 0.010708093643188477, 'time_forward': 0.6731607913970947, 'time_bp': 0.3997507095336914, 'time_record': 0.4560518264770508, 'time_batch': 1.551954984664917}
+Epoch: 12 | batch:1671/2039, Iteration:24100, results: {'loss': 0.3279727101325989, 'point_loss': 0.16560031473636627, 'box_loss': 0.1623723953962326}
+Epoch: 12 | batch:1771/2039, Iteration:24200, results: {'loss': 0.5651341676712036, 'point_loss': 0.3207298815250397, 'box_loss': 0.24440431594848633}
+Epoch: 12 | batch:1871/2039, Iteration:24300, results: {'loss': 0.567028820514679, 'point_loss': 0.29829710721969604, 'box_loss': 0.2687317132949829}
+Epoch: 12 | batch:1971/2039, Iteration:24400, results: {'loss': 0.32630908489227295, 'point_loss': 0.1593809574842453, 'box_loss': 0.16692812740802765}
+Epoch: 13 | batch:32/2039, Iteration:24500, results: {'loss': 0.6822653412818909, 'point_loss': 0.39920443296432495, 'box_loss': 0.2830609083175659}
+Epoch: 13 | batch:132/2039, Iteration:24600, results: {'loss': 0.4394563138484955, 'point_loss': 0.23633673787117004, 'box_loss': 0.20311957597732544}
+Epoch: 13 | batch:232/2039, Iteration:24700, results: {'loss': 0.32141679525375366, 'point_loss': 0.16465146839618683, 'box_loss': 0.15676531195640564}
+Epoch: 13 | batch:332/2039, Iteration:24800, results: {'loss': 0.3923991024494171, 'point_loss': 0.21232128143310547, 'box_loss': 0.18007782101631165}
+Epoch: 13 | batch:432/2039, Iteration:24900, results: {'loss': 0.28232643008232117, 'point_loss': 0.14376713335514069, 'box_loss': 0.13855929672718048}
+Epoch: 13 | batch:532/2039, Iteration:25000, results: {'loss': 0.4626177251338959, 'point_loss': 0.24913932383060455, 'box_loss': 0.21347840130329132}
+Epoch: 13 | batch:632/2039, Iteration:25100, results: {'loss': 0.51677405834198, 'point_loss': 0.2735389769077301, 'box_loss': 0.24323508143424988}
+Epoch: 13 | batch:732/2039, Iteration:25200, results: {'loss': 0.5337456464767456, 'point_loss': 0.3159480392932892, 'box_loss': 0.21779757738113403}
+Epoch: 13 | batch:832/2039, Iteration:25300, results: {'loss': 0.28635841608047485, 'point_loss': 0.14411713182926178, 'box_loss': 0.14224128425121307}
+Epoch: 13 | batch:932/2039, Iteration:25400, results: {'loss': 0.4453135132789612, 'point_loss': 0.24561059474945068, 'box_loss': 0.1997029185295105}
+Epoch: 13 | batch:1032/2039, Iteration:25500, results: {'loss': 0.32392704486846924, 'point_loss': 0.16492676734924316, 'box_loss': 0.15900026261806488}
+Epoch: 13 | batch:1132/2039, Iteration:25600, results: {'loss': 0.6094527244567871, 'point_loss': 0.334658682346344, 'box_loss': 0.2747940123081207}
+Epoch: 13 | batch:1232/2039, Iteration:25700, results: {'loss': 0.47729453444480896, 'point_loss': 0.2572902739048004, 'box_loss': 0.22000426054000854}
+Epoch: 13 | batch:1332/2039, Iteration:25800, results: {'loss': 0.5418034195899963, 'point_loss': 0.2864929437637329, 'box_loss': 0.2553104758262634}
+Epoch: 13 | batch:1432/2039, Iteration:25900, results: {'loss': 0.3237287998199463, 'point_loss': 0.17177286744117737, 'box_loss': 0.15195594727993011}
+Epoch: 13 | batch:1532/2039, Iteration:26000, results: {'loss': 0.42548704147338867, 'point_loss': 0.2155909538269043, 'box_loss': 0.20989607274532318}
+Epoch: 13 | batch:1632/2039, Iteration:26100, results: {'loss': 0.2966756820678711, 'point_loss': 0.15196944773197174, 'box_loss': 0.14470621943473816}
+Epoch: 13 | batch:1732/2039, Iteration:26200, results: {'loss': 0.25440189242362976, 'point_loss': 0.1296684443950653, 'box_loss': 0.12473344802856445}
+Epoch: 13 | batch:1832/2039, Iteration:26300, results: {'loss': 0.4488269090652466, 'point_loss': 0.24679186940193176, 'box_loss': 0.202035054564476}
+Epoch: 13 | batch:1932/2039, Iteration:26400, results: {'loss': 0.3172411322593689, 'point_loss': 0.1699267029762268, 'box_loss': 0.1473144292831421}
+Epoch: 13 | batch:2032/2039, Iteration:26500, results: {'loss': 0.591246485710144, 'point_loss': 0.3475049138069153, 'box_loss': 0.24374157190322876}
+Epoch: 14 | batch:93/2039, Iteration:26600, results: {'loss': 0.48135077953338623, 'point_loss': 0.24758382141590118, 'box_loss': 0.23376695811748505}
+Epoch: 14 | batch:193/2039, Iteration:26700, results: {'loss': 0.38136574625968933, 'point_loss': 0.19900180399417877, 'box_loss': 0.18236394226551056}
+Epoch: 14 | batch:293/2039, Iteration:26800, results: {'loss': 0.408937007188797, 'point_loss': 0.20687465369701385, 'box_loss': 0.20206235349178314}
+Epoch: 14 | batch:393/2039, Iteration:26900, results: {'loss': 0.3432289958000183, 'point_loss': 0.17564821243286133, 'box_loss': 0.16758078336715698}
+Epoch: 14 | batch:493/2039, Iteration:27000, results: {'loss': 0.2922036051750183, 'point_loss': 0.15076178312301636, 'box_loss': 0.14144182205200195}
+Epoch: 14 | batch:593/2039, Iteration:27100, results: {'loss': 0.3191905617713928, 'point_loss': 0.17191125452518463, 'box_loss': 0.147279292345047}
+Epoch: 14 | batch:693/2039, Iteration:27200, results: {'loss': 0.3716821074485779, 'point_loss': 0.1971631497144699, 'box_loss': 0.17451895773410797}
+Epoch: 14 | batch:793/2039, Iteration:27300, results: {'loss': 0.4233904778957367, 'point_loss': 0.21908219158649445, 'box_loss': 0.20430828630924225}
+Epoch: 14 | batch:893/2039, Iteration:27400, results: {'loss': 0.4426102638244629, 'point_loss': 0.23021137714385986, 'box_loss': 0.21239888668060303}
+Epoch: 14 | batch:993/2039, Iteration:27500, results: {'loss': 0.2909010946750641, 'point_loss': 0.15162131190299988, 'box_loss': 0.1392797827720642}
+Epoch: 14 | batch:1093/2039, Iteration:27600, results: {'loss': 0.3915412425994873, 'point_loss': 0.19429433345794678, 'box_loss': 0.19724692404270172}
+Epoch: 14 | batch:1193/2039, Iteration:27700, results: {'loss': 0.37943726778030396, 'point_loss': 0.1909036487340927, 'box_loss': 0.18853360414505005}
+Epoch: 14 | batch:1293/2039, Iteration:27800, results: {'loss': 0.3672255277633667, 'point_loss': 0.19392898678779602, 'box_loss': 0.17329652607440948}
+Epoch: 14 | batch:1393/2039, Iteration:27900, results: {'loss': 0.42382484674453735, 'point_loss': 0.22585400938987732, 'box_loss': 0.19797083735466003}
+Epoch: 14 | batch:1493/2039, Iteration:28000, results: {'loss': 0.7025810480117798, 'point_loss': 0.4558664858341217, 'box_loss': 0.24671456217765808, 'fl': 0.0018384021241217852, 'dl': 0.20418177545070648, 'min_losses': 0.2409498244524002, 'selected_losses': 0.005764733534306288, 'time_load': 0.0016603469848632812, 'time_cuda': 0.011336088180541992, 'time_forward': 0.5851521492004395, 'time_bp': 0.3552560806274414, 'time_record': 0.45012474060058594, 'time_batch': 1.4068069458007812}
+Epoch: 14 | batch:1593/2039, Iteration:28100, results: {'loss': 0.296123743057251, 'point_loss': 0.16221094131469727, 'box_loss': 0.1339128166437149, 'fl': 0.001529152737930417, 'dl': 0.10284996032714844, 'min_losses': 0.1334330141544342, 'selected_losses': 0.0004797964356839657, 'time_load': 0.00408482551574707, 'time_cuda': 0.01512598991394043, 'time_forward': 0.5548796653747559, 'time_bp': 0.43337416648864746, 'time_record': 0.4468841552734375, 'time_batch': 1.4605631828308105}
+Epoch: 14 | batch:1693/2039, Iteration:28200, results: {'loss': 0.49250176548957825, 'point_loss': 0.24628466367721558, 'box_loss': 0.24621710181236267}
+Epoch: 14 | batch:1793/2039, Iteration:28300, results: {'loss': 0.4104737937450409, 'point_loss': 0.21938809752464294, 'box_loss': 0.19108569622039795}
+Epoch: 14 | batch:1893/2039, Iteration:28400, results: {'loss': 0.6042397022247314, 'point_loss': 0.44603535532951355, 'box_loss': 0.15820437669754028}
+Epoch: 14 | batch:1993/2039, Iteration:28500, results: {'loss': 0.39522016048431396, 'point_loss': 0.19568157196044922, 'box_loss': 0.19953857362270355}
+Epoch: 15 | batch:54/2039, Iteration:28600, results: {'loss': 0.3331514298915863, 'point_loss': 0.16836249828338623, 'box_loss': 0.16478893160820007}
+Epoch: 15 | batch:154/2039, Iteration:28700, results: {'loss': 0.3451540470123291, 'point_loss': 0.16752378642559052, 'box_loss': 0.1776302456855774}
+Epoch: 15 | batch:254/2039, Iteration:28800, results: {'loss': 0.22631192207336426, 'point_loss': 0.11476398259401321, 'box_loss': 0.11154794692993164}
+Epoch: 15 | batch:354/2039, Iteration:28900, results: {'loss': 0.360895037651062, 'point_loss': 0.17739874124526978, 'box_loss': 0.18349631130695343}
+Epoch: 15 | batch:454/2039, Iteration:29000, results: {'loss': 0.38304340839385986, 'point_loss': 0.2014794945716858, 'box_loss': 0.18156389892101288}
+Epoch: 15 | batch:554/2039, Iteration:29100, results: {'loss': 0.4685450792312622, 'point_loss': 0.24632059037685394, 'box_loss': 0.22222447395324707}
+Epoch: 15 | batch:654/2039, Iteration:29200, results: {'loss': 0.45271944999694824, 'point_loss': 0.23365962505340576, 'box_loss': 0.2190598100423813}
+Epoch: 15 | batch:754/2039, Iteration:29300, results: {'loss': 0.2942084074020386, 'point_loss': 0.14678587019443512, 'box_loss': 0.14742253720760345}
+Epoch: 15 | batch:854/2039, Iteration:29400, results: {'loss': 0.6209341287612915, 'point_loss': 0.4571722745895386, 'box_loss': 0.16376185417175293}
+Epoch: 15 | batch:954/2039, Iteration:29500, results: {'loss': 0.354611873626709, 'point_loss': 0.19098716974258423, 'box_loss': 0.16362470388412476}
+Epoch: 15 | batch:1054/2039, Iteration:29600, results: {'loss': 0.2832367420196533, 'point_loss': 0.1427631825208664, 'box_loss': 0.14047355949878693}
+Epoch: 15 | batch:1154/2039, Iteration:29700, results: {'loss': 0.5825208425521851, 'point_loss': 0.4180871248245239, 'box_loss': 0.16443371772766113}
+Epoch: 15 | batch:1254/2039, Iteration:29800, results: {'loss': 0.6649053692817688, 'point_loss': 0.36458417773246765, 'box_loss': 0.30032119154930115}
+Epoch: 15 | batch:1354/2039, Iteration:29900, results: {'loss': 0.29646313190460205, 'point_loss': 0.1524316817522049, 'box_loss': 0.14403143525123596}
+Epoch: 15 | batch:1454/2039, Iteration:30000, results: {'loss': 0.455250084400177, 'point_loss': 0.27440422773361206, 'box_loss': 0.18084584176540375, 'fl': 0.0008668358786962926, 'dl': 0.15837594866752625, 'min_losses': 0.1757126748561859, 'selected_losses': 0.005133169237524271, 'time_load': 0.0006918907165527344, 'time_cuda': 0.005025625228881836, 'time_forward': 0.5776369571685791, 'time_bp': 0.3629639148712158, 'time_record': 0.44788146018981934, 'time_batch': 1.3950371742248535}
+Epoch: 15 | batch:1554/2039, Iteration:30100, results: {'loss': 0.5252483487129211, 'point_loss': 0.27914726734161377, 'box_loss': 0.24610108137130737, 'fl': 0.001828178414143622, 'dl': 0.20259256660938263, 'min_losses': 0.23915612697601318, 'selected_losses': 0.006944949738681316, 'time_load': 0.002128124237060547, 'time_cuda': 0.007890462875366211, 'time_forward': 0.5238807201385498, 'time_bp': 0.39540982246398926, 'time_record': 0.4528217315673828, 'time_batch': 1.3826582431793213}
+Epoch: 15 | batch:1654/2039, Iteration:30200, results: {'loss': 0.30802303552627563, 'point_loss': 0.16224056482315063, 'box_loss': 0.1457824558019638}
+Epoch: 15 | batch:1754/2039, Iteration:30300, results: {'loss': 0.4751085042953491, 'point_loss': 0.29711276292800903, 'box_loss': 0.1779957264661789}
+Epoch: 15 | batch:1854/2039, Iteration:30400, results: {'loss': 0.39312928915023804, 'point_loss': 0.19982896745204926, 'box_loss': 0.19330032169818878}
+Epoch: 15 | batch:1954/2039, Iteration:30500, results: {'loss': 0.3296021819114685, 'point_loss': 0.16518063843250275, 'box_loss': 0.16442152857780457}
+Epoch: 16 | batch:15/2039, Iteration:30600, results: {'loss': 0.33205294609069824, 'point_loss': 0.18107926845550537, 'box_loss': 0.15097366273403168}
+Epoch: 16 | batch:115/2039, Iteration:30700, results: {'loss': 0.267935574054718, 'point_loss': 0.13620208203792572, 'box_loss': 0.1317334920167923}
+Epoch: 16 | batch:215/2039, Iteration:30800, results: {'loss': 0.32533568143844604, 'point_loss': 0.17243120074272156, 'box_loss': 0.1529044657945633}
+Epoch: 16 | batch:315/2039, Iteration:30900, results: {'loss': 0.4744999408721924, 'point_loss': 0.2387440800666809, 'box_loss': 0.23575587570667267}
+Epoch: 16 | batch:415/2039, Iteration:31000, results: {'loss': 0.4279897212982178, 'point_loss': 0.2286483496427536, 'box_loss': 0.19934138655662537, 'fl': 0.001669749733991921, 'dl': 0.16435270011425018, 'min_losses': 0.19774769246578217, 'selected_losses': 0.0015936901327222586, 'time_load': 0.016632556915283203, 'time_cuda': 0.008703231811523438, 'time_forward': 0.5700204372406006, 'time_bp': 0.3687417507171631, 'time_record': 0.45087242126464844, 'time_batch': 1.4175517559051514}
+Epoch: 16 | batch:515/2039, Iteration:31100, results: {'loss': 0.41617193818092346, 'point_loss': 0.24773818254470825, 'box_loss': 0.1684337556362152, 'fl': 0.001168346730992198, 'dl': 0.1436307728290558, 'min_losses': 0.16699770092964172, 'selected_losses': 0.0014360533095896244, 'time_load': 0.0004563331604003906, 'time_cuda': 0.007578372955322266, 'time_forward': 0.5216236114501953, 'time_bp': 0.3333165645599365, 'time_record': 0.4531216621398926, 'time_batch': 1.31705641746521}
+Epoch: 16 | batch:615/2039, Iteration:31200, results: {'loss': 0.39352428913116455, 'point_loss': 0.19324086606502533, 'box_loss': 0.20028340816497803, 'fl': 0.0009510763338766992, 'dl': 0.17173022031784058, 'min_losses': 0.19075174629688263, 'selected_losses': 0.009531666524708271, 'time_load': 0.0012059211730957031, 'time_cuda': 0.015187978744506836, 'time_forward': 0.5508012771606445, 'time_bp': 0.35193657875061035, 'time_record': 0.4436206817626953, 'time_batch': 1.3651068210601807}
+Epoch: 16 | batch:715/2039, Iteration:31300, results: {'loss': 0.4254953861236572, 'point_loss': 0.23606157302856445, 'box_loss': 0.18943379819393158, 'fl': 0.0012713313335552812, 'dl': 0.16204461455345154, 'min_losses': 0.18747124075889587, 'selected_losses': 0.0019625546410679817, 'time_load': 0.00107574462890625, 'time_cuda': 0.007926225662231445, 'time_forward': 0.5585150718688965, 'time_bp': 0.33519601821899414, 'time_record': 0.4355347156524658, 'time_batch': 1.3407297134399414}
+Epoch: 16 | batch:815/2039, Iteration:31400, results: {'loss': 0.37592869997024536, 'point_loss': 0.23163633048534393, 'box_loss': 0.14429235458374023, 'fl': 0.001372053287923336, 'dl': 0.11567319929599762, 'min_losses': 0.14311426877975464, 'selected_losses': 0.0011780927889049053, 'time_load': 0.001705169677734375, 'time_cuda': 0.009680747985839844, 'time_forward': 0.6195652484893799, 'time_bp': 0.36748743057250977, 'time_record': 0.44747424125671387, 'time_batch': 1.4484858512878418}
+Epoch: 16 | batch:915/2039, Iteration:31500, results: {'loss': 0.31241774559020996, 'point_loss': 0.15725938975811005, 'box_loss': 0.15515835583209991, 'fl': 0.000840304943267256, 'dl': 0.1355176568031311, 'min_losses': 0.15232375264167786, 'selected_losses': 0.0028346043545752764, 'time_load': 0.0037355422973632812, 'time_cuda': 0.012479066848754883, 'time_forward': 0.6633627414703369, 'time_bp': 0.3426477909088135, 'time_record': 0.44257283210754395, 'time_batch': 1.470848560333252}
+Epoch: 16 | batch:1015/2039, Iteration:31600, results: {'loss': 0.3339313268661499, 'point_loss': 0.16780991852283478, 'box_loss': 0.16612140834331512, 'fl': 0.0016137007623910904, 'dl': 0.1311655342578888, 'min_losses': 0.1634395569562912, 'selected_losses': 0.0026818476617336273, 'time_load': 0.0007889270782470703, 'time_cuda': 0.008385896682739258, 'time_forward': 0.6535530090332031, 'time_bp': 0.4698185920715332, 'time_record': 0.444652795791626, 'time_batch': 1.5787205696105957}
+Epoch: 16 | batch:1115/2039, Iteration:31700, results: {'loss': 0.5192885994911194, 'point_loss': 0.2945536971092224, 'box_loss': 0.22473491728305817, 'fl': 0.0012968855444341898, 'dl': 0.18915364146232605, 'min_losses': 0.21509134769439697, 'selected_losses': 0.009643574245274067, 'time_load': 0.002375364303588867, 'time_cuda': 0.011816024780273438, 'time_forward': 0.5767664909362793, 'time_bp': 0.3663632869720459, 'time_record': 0.4510304927825928, 'time_batch': 1.4133503437042236}
+Epoch: 16 | batch:1215/2039, Iteration:31800, results: {'loss': 0.3224535584449768, 'point_loss': 0.16115660965442657, 'box_loss': 0.16129694879055023, 'fl': 0.0008614961407147348, 'dl': 0.1419997215270996, 'min_losses': 0.15922963619232178, 'selected_losses': 0.0020673091057687998, 'time_load': 0.0014886856079101562, 'time_cuda': 0.01031184196472168, 'time_forward': 0.5484533309936523, 'time_bp': 0.42359304428100586, 'time_record': 0.45401644706726074, 'time_batch': 1.4398205280303955}
+Epoch: 16 | batch:1315/2039, Iteration:31900, results: {'loss': 0.4119475483894348, 'point_loss': 0.21024459600448608, 'box_loss': 0.20170295238494873, 'fl': 0.0013875789009034634, 'dl': 0.17012706398963928, 'min_losses': 0.1978786438703537, 'selected_losses': 0.0038243145681917667, 'time_load': 0.0014619827270507812, 'time_cuda': 0.009057044982910156, 'time_forward': 0.5487122535705566, 'time_bp': 0.3507564067840576, 'time_record': 0.45270776748657227, 'time_batch': 1.3710405826568604}
+Epoch: 16 | batch:1415/2039, Iteration:32000, results: {'loss': 0.2979179620742798, 'point_loss': 0.15416689217090607, 'box_loss': 0.14375105500221252, 'fl': 0.0010674343211576343, 'dl': 0.1209227442741394, 'min_losses': 0.14227142930030823, 'selected_losses': 0.0014796205796301365, 'time_load': 0.001617431640625, 'time_cuda': 0.008586406707763672, 'time_forward': 0.5387871265411377, 'time_bp': 0.4006307125091553, 'time_record': 0.4467329978942871, 'time_batch': 1.3976786136627197}
+Epoch: 16 | batch:1515/2039, Iteration:32100, results: {'loss': 0.34116390347480774, 'point_loss': 0.1792069524526596, 'box_loss': 0.16195695102214813, 'fl': 0.0010829875245690346, 'dl': 0.13693492114543915, 'min_losses': 0.15859466791152954, 'selected_losses': 0.003362282644957304, 'time_load': 0.0009341239929199219, 'time_cuda': 0.014286518096923828, 'time_forward': 0.5552122592926025, 'time_bp': 0.3620288372039795, 'time_record': 0.45482683181762695, 'time_batch': 1.3910071849822998}
+Epoch: 16 | batch:1615/2039, Iteration:32200, results: {'loss': 0.3402441442012787, 'point_loss': 0.1772468090057373, 'box_loss': 0.16299733519554138}
+Epoch: 16 | batch:1715/2039, Iteration:32300, results: {'loss': 0.41231751441955566, 'point_loss': 0.21624651551246643, 'box_loss': 0.19607098400592804}
+Epoch: 16 | batch:1815/2039, Iteration:32400, results: {'loss': 0.45674026012420654, 'point_loss': 0.27304807305336, 'box_loss': 0.18369220197200775}
+Epoch: 16 | batch:1915/2039, Iteration:32500, results: {'loss': 0.3437497019767761, 'point_loss': 0.16930274665355682, 'box_loss': 0.1744469553232193, 'fl': 0.001079160370863974, 'dl': 0.14749856293201447, 'min_losses': 0.16908176243305206, 'selected_losses': 0.00536519568413496, 'time_load': 0.0010485649108886719, 'time_cuda': 0.00890207290649414, 'time_forward': 0.5470867156982422, 'time_bp': 0.3684532642364502, 'time_record': 0.4494047164916992, 'time_batch': 1.3776237964630127}
+Epoch: 16 | batch:2015/2039, Iteration:32600, results: {'loss': 0.41398191452026367, 'point_loss': 0.21905553340911865, 'box_loss': 0.1949263960123062, 'fl': 0.0011349041014909744, 'dl': 0.16910487413406372, 'min_losses': 0.1918029487133026, 'selected_losses': 0.0031234510242938995, 'time_load': 0.000507354736328125, 'time_cuda': 0.004881381988525391, 'time_forward': 0.5450248718261719, 'time_bp': 0.33877086639404297, 'time_record': 0.4516174793243408, 'time_batch': 1.3416273593902588}
+Epoch: 17 | batch:76/2039, Iteration:32700, results: {'loss': 0.34835880994796753, 'point_loss': 0.18131759762763977, 'box_loss': 0.16704119741916656}
+Epoch: 17 | batch:176/2039, Iteration:32800, results: {'loss': 0.33072036504745483, 'point_loss': 0.17027647793293, 'box_loss': 0.16044387221336365}
+Epoch: 17 | batch:276/2039, Iteration:32900, results: {'loss': 0.2834937870502472, 'point_loss': 0.14505596458911896, 'box_loss': 0.13843782246112823}
+Epoch: 17 | batch:376/2039, Iteration:33000, results: {'loss': 0.37163886427879333, 'point_loss': 0.18997040390968323, 'box_loss': 0.1816684603691101}
+Epoch: 17 | batch:476/2039, Iteration:33100, results: {'loss': 0.36862051486968994, 'point_loss': 0.18728549778461456, 'box_loss': 0.18133501708507538}
+Epoch: 17 | batch:576/2039, Iteration:33200, results: {'loss': 0.27769389748573303, 'point_loss': 0.13978390395641327, 'box_loss': 0.13790999352931976}
+Epoch: 17 | batch:676/2039, Iteration:33300, results: {'loss': 0.3146097660064697, 'point_loss': 0.16148126125335693, 'box_loss': 0.1531285047531128}
+Epoch: 17 | batch:776/2039, Iteration:33400, results: {'loss': 0.3815760016441345, 'point_loss': 0.2105725258588791, 'box_loss': 0.17100346088409424}
+Epoch: 17 | batch:876/2039, Iteration:33500, results: {'loss': 0.3171919286251068, 'point_loss': 0.1574893444776535, 'box_loss': 0.1597025841474533}
+Epoch: 17 | batch:976/2039, Iteration:33600, results: {'loss': 0.4189026653766632, 'point_loss': 0.2197229415178299, 'box_loss': 0.1991797238588333}
+Epoch: 17 | batch:1076/2039, Iteration:33700, results: {'loss': 0.2813027501106262, 'point_loss': 0.15005910396575928, 'box_loss': 0.13124364614486694}
+Epoch: 17 | batch:1176/2039, Iteration:33800, results: {'loss': 0.4368261694908142, 'point_loss': 0.24031350016593933, 'box_loss': 0.19651265442371368}
+Epoch: 17 | batch:1276/2039, Iteration:33900, results: {'loss': 0.3518638014793396, 'point_loss': 0.18588273227214813, 'box_loss': 0.16598105430603027}
+Epoch: 17 | batch:1376/2039, Iteration:34000, results: {'loss': 0.4105827212333679, 'point_loss': 0.22107553482055664, 'box_loss': 0.18950720131397247}
+Epoch: 17 | batch:1476/2039, Iteration:34100, results: {'loss': 0.2572985887527466, 'point_loss': 0.13096848130226135, 'box_loss': 0.12633009254932404}
+Epoch: 17 | batch:1576/2039, Iteration:34200, results: {'loss': 0.27188485860824585, 'point_loss': 0.13615994155406952, 'box_loss': 0.13572490215301514}
+Epoch: 17 | batch:1676/2039, Iteration:34300, results: {'loss': 0.6824515461921692, 'point_loss': 0.48962801694869995, 'box_loss': 0.19282354414463043}
+Epoch: 17 | batch:1776/2039, Iteration:34400, results: {'loss': 0.5158740878105164, 'point_loss': 0.27486082911491394, 'box_loss': 0.24101325869560242}
+Epoch: 17 | batch:1876/2039, Iteration:34500, results: {'loss': 0.2592082619667053, 'point_loss': 0.13382650911808014, 'box_loss': 0.12538175284862518, 'fl': 0.00146577600389719, 'dl': 0.09526471793651581, 'min_losses': 0.12458023428916931, 'selected_losses': 0.0008015197236090899, 'time_load': 0.0018608570098876953, 'time_cuda': 0.01245427131652832, 'time_forward': 0.7811355590820312, 'time_bp': 0.3808145523071289, 'time_record': 0.4542052745819092, 'time_batch': 1.6390888690948486}
+Epoch: 17 | batch:1976/2039, Iteration:34600, results: {'loss': 0.3529980182647705, 'point_loss': 0.17484433948993683, 'box_loss': 0.17815369367599487, 'fl': 0.0010694355005398393, 'dl': 0.15068449079990387, 'min_losses': 0.17207320034503937, 'selected_losses': 0.0060804979875683784, 'time_load': 0.002454519271850586, 'time_cuda': 0.010018110275268555, 'time_forward': 0.7995069026947021, 'time_bp': 0.4775888919830322, 'time_record': 0.4514322280883789, 'time_batch': 1.7486512660980225}
+Epoch: 18 | batch:37/2039, Iteration:34700, results: {'loss': 0.2907894253730774, 'point_loss': 0.1482241153717041, 'box_loss': 0.1425652951002121}
+Epoch: 18 | batch:137/2039, Iteration:34800, results: {'loss': 0.3553845286369324, 'point_loss': 0.17697973549365997, 'box_loss': 0.1784048080444336}
+Epoch: 18 | batch:237/2039, Iteration:34900, results: {'loss': 0.39106521010398865, 'point_loss': 0.20279595255851746, 'box_loss': 0.1882692575454712}
+Epoch: 18 | batch:337/2039, Iteration:35000, results: {'loss': 0.27637147903442383, 'point_loss': 0.1403396725654602, 'box_loss': 0.13603180646896362}
+Epoch: 18 | batch:437/2039, Iteration:35100, results: {'loss': 0.4603843688964844, 'point_loss': 0.2520243227481842, 'box_loss': 0.20836004614830017}
+Epoch: 18 | batch:537/2039, Iteration:35200, results: {'loss': 0.29889482259750366, 'point_loss': 0.15313436090946198, 'box_loss': 0.1457604467868805}
+Epoch: 18 | batch:637/2039, Iteration:35300, results: {'loss': 0.33118361234664917, 'point_loss': 0.1678399294614792, 'box_loss': 0.1633436679840088}
+Epoch: 18 | batch:737/2039, Iteration:35400, results: {'loss': 0.3656679391860962, 'point_loss': 0.18832197785377502, 'box_loss': 0.17734597623348236}
+Epoch: 18 | batch:837/2039, Iteration:35500, results: {'loss': 0.33613070845603943, 'point_loss': 0.16818059980869293, 'box_loss': 0.1679501086473465}
+Epoch: 18 | batch:937/2039, Iteration:35600, results: {'loss': 0.5494675636291504, 'point_loss': 0.2953701317310333, 'box_loss': 0.25409746170043945}
+Epoch: 18 | batch:1037/2039, Iteration:35700, results: {'loss': 0.39244773983955383, 'point_loss': 0.19877977669239044, 'box_loss': 0.1936679631471634}
+Epoch: 18 | batch:1137/2039, Iteration:35800, results: {'loss': 0.401610791683197, 'point_loss': 0.21010534465312958, 'box_loss': 0.19150546193122864}
+Epoch: 18 | batch:1237/2039, Iteration:35900, results: {'loss': 0.4544278383255005, 'point_loss': 0.24467019736766815, 'box_loss': 0.20975765585899353}
+Epoch: 18 | batch:1337/2039, Iteration:36000, results: {'loss': 0.44104480743408203, 'point_loss': 0.22838707268238068, 'box_loss': 0.21265773475170135}
+Epoch: 18 | batch:1437/2039, Iteration:36100, results: {'loss': 0.31807535886764526, 'point_loss': 0.17332062125205994, 'box_loss': 0.14475475251674652}
+Epoch: 18 | batch:1537/2039, Iteration:36200, results: {'loss': 0.28397825360298157, 'point_loss': 0.14328551292419434, 'box_loss': 0.14069274067878723}
+Epoch: 18 | batch:1637/2039, Iteration:36300, results: {'loss': 0.5463986396789551, 'point_loss': 0.3183996081352234, 'box_loss': 0.2279990017414093}
+Epoch: 18 | batch:1737/2039, Iteration:36400, results: {'loss': 0.32436853647232056, 'point_loss': 0.18034115433692932, 'box_loss': 0.14402736723423004}
+Epoch: 18 | batch:1837/2039, Iteration:36500, results: {'loss': 0.3044655919075012, 'point_loss': 0.15858617424964905, 'box_loss': 0.14587941765785217}
+Epoch: 18 | batch:1937/2039, Iteration:36600, results: {'loss': 0.63643479347229, 'point_loss': 0.3479796350002289, 'box_loss': 0.28845518827438354, 'fl': 0.002152615925297141, 'dl': 0.24312786757946014, 'min_losses': 0.28618019819259644, 'selected_losses': 0.002274992410093546, 'time_load': 0.0012028217315673828, 'time_cuda': 0.011388778686523438, 'time_forward': 0.5319783687591553, 'time_bp': 0.3792755603790283, 'time_record': 0.4295687675476074, 'time_batch': 1.3566486835479736}
+Epoch: 18 | batch:2037/2039, Iteration:36700, results: {'loss': 0.3608568012714386, 'point_loss': 0.19846035540103912, 'box_loss': 0.16239644587039948, 'fl': 0.0008521619020029902, 'dl': 0.1425122618675232, 'min_losses': 0.15955549478530884, 'selected_losses': 0.002840945264324546, 'time_load': 0.0011103153228759766, 'time_cuda': 0.009844303131103516, 'time_forward': 0.575829029083252, 'time_bp': 0.3700683116912842, 'time_record': 0.45018553733825684, 'time_batch': 1.4093680381774902}
+Epoch: 19 | batch:98/2039, Iteration:36800, results: {'loss': 0.3547256290912628, 'point_loss': 0.17972597479820251, 'box_loss': 0.1749996542930603}
+Epoch: 19 | batch:198/2039, Iteration:36900, results: {'loss': 0.4303572177886963, 'point_loss': 0.22183050215244293, 'box_loss': 0.20852670073509216}
+Epoch: 19 | batch:298/2039, Iteration:37000, results: {'loss': 0.3435911536216736, 'point_loss': 0.18503797054290771, 'box_loss': 0.15855318307876587}
+Epoch: 19 | batch:398/2039, Iteration:37100, results: {'loss': 0.28878653049468994, 'point_loss': 0.14446505904197693, 'box_loss': 0.14432145655155182}
+Epoch: 19 | batch:498/2039, Iteration:37200, results: {'loss': 0.5441181063652039, 'point_loss': 0.3207116425037384, 'box_loss': 0.22340646386146545}
+Epoch: 19 | batch:598/2039, Iteration:37300, results: {'loss': 0.38034600019454956, 'point_loss': 0.21764959394931793, 'box_loss': 0.16269642114639282}
+Epoch: 19 | batch:698/2039, Iteration:37400, results: {'loss': 0.293950617313385, 'point_loss': 0.1546970009803772, 'box_loss': 0.1392536163330078}
+Epoch: 19 | batch:798/2039, Iteration:37500, results: {'loss': 0.734988808631897, 'point_loss': 0.48174405097961426, 'box_loss': 0.2532447576522827}
+Epoch: 19 | batch:898/2039, Iteration:37600, results: {'loss': 0.44393011927604675, 'point_loss': 0.23025648295879364, 'box_loss': 0.2136736363172531}
+Epoch: 19 | batch:998/2039, Iteration:37700, results: {'loss': 0.3797107934951782, 'point_loss': 0.19498270750045776, 'box_loss': 0.18472810089588165}
+Epoch: 19 | batch:1098/2039, Iteration:37800, results: {'loss': 0.4658260941505432, 'point_loss': 0.2613103985786438, 'box_loss': 0.2045157104730606}
+Epoch: 19 | batch:1198/2039, Iteration:37900, results: {'loss': 0.31028783321380615, 'point_loss': 0.15790493786334991, 'box_loss': 0.15238289535045624}
+Epoch: 19 | batch:1298/2039, Iteration:38000, results: {'loss': 0.6047987937927246, 'point_loss': 0.3175184428691864, 'box_loss': 0.2872803807258606, 'fl': 0.0016854621935635805, 'dl': 0.24767115712165833, 'min_losses': 0.28138041496276855, 'selected_losses': 0.005899976938962936, 'time_load': 0.004133462905883789, 'time_cuda': 0.011998891830444336, 'time_forward': 0.5409293174743652, 'time_bp': 0.3434476852416992, 'time_record': 0.4491121768951416, 'time_batch': 1.3539817333221436}
+Epoch: 19 | batch:1398/2039, Iteration:38100, results: {'loss': 0.5787415504455566, 'point_loss': 0.325499951839447, 'box_loss': 0.25324156880378723, 'fl': 0.002201051451265812, 'dl': 0.2063402533531189, 'min_losses': 0.25036126375198364, 'selected_losses': 0.002880299696698785, 'time_load': 0.0005424022674560547, 'time_cuda': 0.0047795772552490234, 'time_forward': 0.5411033630371094, 'time_bp': 0.33924126625061035, 'time_record': 0.4508688449859619, 'time_batch': 1.3373947143554688}
+Epoch: 19 | batch:1498/2039, Iteration:38200, results: {'loss': 0.3239767253398895, 'point_loss': 0.16386860609054565, 'box_loss': 0.16010811924934387, 'fl': 0.0010556075721979141, 'dl': 0.13315942883491516, 'min_losses': 0.15427157282829285, 'selected_losses': 0.005836552940309048, 'time_load': 0.0011343955993652344, 'time_cuda': 0.006491184234619141, 'time_forward': 0.5266265869140625, 'time_bp': 0.3444352149963379, 'time_record': 0.4465830326080322, 'time_batch': 1.3270494937896729}
+Epoch: 19 | batch:1598/2039, Iteration:38300, results: {'loss': 0.34776026010513306, 'point_loss': 0.194022536277771, 'box_loss': 0.15373773872852325, 'fl': 0.0011984659358859062, 'dl': 0.12781986594200134, 'min_losses': 0.15178918838500977, 'selected_losses': 0.0019485437078401446, 'time_load': 0.003305673599243164, 'time_cuda': 0.009672880172729492, 'time_forward': 0.596245288848877, 'time_bp': 0.3743767738342285, 'time_record': 0.44632863998413086, 'time_batch': 1.4332380294799805}
+Epoch: 19 | batch:1698/2039, Iteration:38400, results: {'loss': 0.4020848572254181, 'point_loss': 0.204474538564682, 'box_loss': 0.19761031866073608}
+Epoch: 19 | batch:1798/2039, Iteration:38500, results: {'loss': 0.3269970118999481, 'point_loss': 0.17162922024726868, 'box_loss': 0.15536779165267944, 'fl': 0.0016347530763596296, 'dl': 0.12094467133283615, 'min_losses': 0.15363973379135132, 'selected_losses': 0.0017280644970014691, 'time_load': 0.0006844997406005859, 'time_cuda': 0.008763790130615234, 'time_forward': 0.5144855976104736, 'time_bp': 0.33570337295532227, 'time_record': 0.43885135650634766, 'time_batch': 1.2995660305023193}
+Epoch: 19 | batch:1898/2039, Iteration:38600, results: {'loss': 0.241319477558136, 'point_loss': 0.1213640570640564, 'box_loss': 0.11995542794466019, 'fl': 0.0008726167143322527, 'dl': 0.10177827626466751, 'min_losses': 0.11923061311244965, 'selected_losses': 0.0007248179172165692, 'time_load': 0.0012805461883544922, 'time_cuda': 0.007693290710449219, 'time_forward': 0.5373969078063965, 'time_bp': 0.36788392066955566, 'time_record': 0.4467604160308838, 'time_batch': 1.3631892204284668}
+Epoch: 19 | batch:1998/2039, Iteration:38700, results: {'loss': 0.34090399742126465, 'point_loss': 0.17257675528526306, 'box_loss': 0.16832725703716278, 'fl': 0.0013565097469836473, 'dl': 0.13843420147895813, 'min_losses': 0.1655643880367279, 'selected_losses': 0.0027628738898783922, 'time_load': 0.0010437965393066406, 'time_cuda': 0.00709080696105957, 'time_forward': 0.5767321586608887, 'time_bp': 0.40740370750427246, 'time_record': 0.4518454074859619, 'time_batch': 1.4463889598846436}
+Epoch: 20 | batch:59/2039, Iteration:38800, results: {'loss': 0.3279229402542114, 'point_loss': 0.16507276892662048, 'box_loss': 0.16285017132759094}
+Epoch: 20 | batch:159/2039, Iteration:38900, results: {'loss': 0.40030503273010254, 'point_loss': 0.2125413566827774, 'box_loss': 0.18776366114616394}
+Epoch: 20 | batch:259/2039, Iteration:39000, results: {'loss': 0.4125403165817261, 'point_loss': 0.2166585624217987, 'box_loss': 0.19588175415992737}
+Epoch: 20 | batch:359/2039, Iteration:39100, results: {'loss': 0.360691636800766, 'point_loss': 0.18884313106536865, 'box_loss': 0.17184850573539734}
+Epoch: 20 | batch:459/2039, Iteration:39200, results: {'loss': 0.3478353023529053, 'point_loss': 0.18506330251693726, 'box_loss': 0.16277198493480682}
+Epoch: 20 | batch:559/2039, Iteration:39300, results: {'loss': 0.32238465547561646, 'point_loss': 0.16643118858337402, 'box_loss': 0.15595346689224243}
+Epoch: 20 | batch:659/2039, Iteration:39400, results: {'loss': 0.7917242050170898, 'point_loss': 0.5323256254196167, 'box_loss': 0.25939860939979553}
+Epoch: 20 | batch:759/2039, Iteration:39500, results: {'loss': 0.35263150930404663, 'point_loss': 0.18167056143283844, 'box_loss': 0.1709609478712082}
+Epoch: 20 | batch:859/2039, Iteration:39600, results: {'loss': 0.29707491397857666, 'point_loss': 0.1516883373260498, 'box_loss': 0.14538656175136566}
+Epoch: 20 | batch:959/2039, Iteration:39700, results: {'loss': 0.40011799335479736, 'point_loss': 0.2008703649044037, 'box_loss': 0.19924761354923248}
+Epoch: 20 | batch:1059/2039, Iteration:39800, results: {'loss': 0.41599729657173157, 'point_loss': 0.22321093082427979, 'box_loss': 0.19278636574745178}
+Epoch: 20 | batch:1159/2039, Iteration:39900, results: {'loss': 0.286606103181839, 'point_loss': 0.14535626769065857, 'box_loss': 0.14124983549118042, 'fl': 0.0011468020966276526, 'dl': 0.11704256385564804, 'min_losses': 0.13997860252857208, 'selected_losses': 0.001271227840334177, 'time_load': 0.00742340087890625, 'time_cuda': 0.006806373596191406, 'time_forward': 0.5396952629089355, 'time_bp': 0.33559513092041016, 'time_record': 0.4513871669769287, 'time_batch': 1.3417441844940186}
+Epoch: 20 | batch:1259/2039, Iteration:40000, results: {'loss': 0.6459353566169739, 'point_loss': 0.35031792521476746, 'box_loss': 0.2956174314022064, 'fl': 0.0028301526326686144, 'dl': 0.2342238575220108, 'min_losses': 0.2908269166946411, 'selected_losses': 0.004790502600371838, 'time_load': 0.0025327205657958984, 'time_cuda': 0.011362314224243164, 'time_forward': 0.5383787155151367, 'time_bp': 0.3338661193847656, 'time_record': 0.4487731456756592, 'time_batch': 1.3391118049621582}
+Epoch: 20 | batch:1359/2039, Iteration:40100, results: {'loss': 0.4574202001094818, 'point_loss': 0.287887305021286, 'box_loss': 0.1695328950881958, 'fl': 0.0015750438906252384, 'dl': 0.13691003620624542, 'min_losses': 0.16841091215610504, 'selected_losses': 0.0011219854932278395, 'time_load': 0.0016584396362304688, 'time_cuda': 0.010029792785644531, 'time_forward': 0.5605628490447998, 'time_bp': 0.40447568893432617, 'time_record': 0.4523186683654785, 'time_batch': 1.4327468872070312}
+Epoch: 20 | batch:1459/2039, Iteration:40200, results: {'loss': 0.33172163367271423, 'point_loss': 0.1829954832792282, 'box_loss': 0.14872615039348602, 'fl': 0.0008612446254119277, 'dl': 0.13082164525985718, 'min_losses': 0.14804652333259583, 'selected_losses': 0.0006796272937208414, 'time_load': 0.0022382736206054688, 'time_cuda': 0.011946916580200195, 'time_forward': 0.5672132968902588, 'time_bp': 0.36400771141052246, 'time_record': 0.4510316848754883, 'time_batch': 1.4010367393493652}
+Epoch: 20 | batch:1559/2039, Iteration:40300, results: {'loss': 0.34415769577026367, 'point_loss': 0.17261935770511627, 'box_loss': 0.1715383231639862, 'fl': 0.0013589102309197187, 'dl': 0.13698014616966248, 'min_losses': 0.16415834426879883, 'selected_losses': 0.0073799798265099525, 'time_load': 0.00478816032409668, 'time_cuda': 0.008758544921875, 'time_forward': 0.5345766544342041, 'time_bp': 0.37274956703186035, 'time_record': 0.452725887298584, 'time_batch': 1.3757662773132324}
+Epoch: 20 | batch:1659/2039, Iteration:40400, results: {'loss': 0.318950355052948, 'point_loss': 0.16572216153144836, 'box_loss': 0.15322817862033844, 'fl': 0.0008820214425213635, 'dl': 0.13379153609275818, 'min_losses': 0.15143196284770966, 'selected_losses': 0.001796213211491704, 'time_load': 0.0006892681121826172, 'time_cuda': 0.012363910675048828, 'time_forward': 0.5825369358062744, 'time_bp': 0.3527095317840576, 'time_record': 0.4484724998474121, 'time_batch': 1.398676872253418}
+Epoch: 20 | batch:1759/2039, Iteration:40500, results: {'loss': 0.3277357518672943, 'point_loss': 0.17494861781597137, 'box_loss': 0.15278713405132294, 'fl': 0.001162105705589056, 'dl': 0.12594549357891083, 'min_losses': 0.1491876095533371, 'selected_losses': 0.0035995228681713343, 'time_load': 0.0012133121490478516, 'time_cuda': 0.024669408798217773, 'time_forward': 0.5595932006835938, 'time_bp': 0.42469120025634766, 'time_record': 0.43950366973876953, 'time_batch': 1.4527990818023682}
+Epoch: 20 | batch:1859/2039, Iteration:40600, results: {'loss': 0.2885708212852478, 'point_loss': 0.14700451493263245, 'box_loss': 0.14156632125377655, 'fl': 0.0009501830791123211, 'dl': 0.12066936492919922, 'min_losses': 0.13967302441596985, 'selected_losses': 0.0018932975362986326, 'time_load': 0.004356861114501953, 'time_cuda': 0.015464305877685547, 'time_forward': 0.6234104633331299, 'time_bp': 0.34159278869628906, 'time_record': 0.450286865234375, 'time_batch': 1.440122127532959}
+Epoch: 20 | batch:1959/2039, Iteration:40700, results: {'loss': 0.392402708530426, 'point_loss': 0.20373371243476868, 'box_loss': 0.18866898119449615, 'fl': 0.0011069775791838765, 'dl': 0.16250845789909363, 'min_losses': 0.18464800715446472, 'selected_losses': 0.004020980093628168, 'time_load': 0.002686738967895508, 'time_cuda': 0.012309789657592773, 'time_forward': 0.5425972938537598, 'time_bp': 0.46907615661621094, 'time_record': 0.44557809829711914, 'time_batch': 1.4805259704589844}

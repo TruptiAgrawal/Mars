@@ -1,0 +1,45 @@
+Loading from  /home/jupyter-team2pop/Slide-SAM/runs/sam/ddp_sub/btcv_4to1_20epoch/ckpt/model_epoch_20.pth
+/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/matched_bs_comparison/author_source/core/learner2.py:102: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(pth, map_location="cpu")
+Load datalist from  matched
+train len 6
+template_slice.area  22887 0.08730697631835938
+Checking Data range: [-200.0, 400.0]
+Traceback (most recent call last):
+  File "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/matched_bs_comparison/run_comparison.py", line 87, in <module>
+    main()
+  File "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/matched_bs_comparison/run_comparison.py", line 65, in main
+    metrics = evaluator.eval_step(data, batch_idx=i)
+  File "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/matched_bs_comparison/author_source/test/volume_eval_sublora.py", line 76, in eval_step
+    pred, stability = self.predictor.predict_volume(
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/matched_bs_comparison/author_source/core/volume_predictor.py", line 260, in predict_volume
+    self.set_image(x)
+  File "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/matched_bs_comparison/author_source/core/volume_predictor.py", line 102, in set_image
+    self.set_torch_image(input_slices)
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/matched_bs_comparison/author_source/core/volume_predictor.py", line 127, in set_torch_image
+    features_batch = self.model.image_encoder(input_image_batch[0]).cpu()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/matched_bs_comparison/author_source/modeling/image_encoder.py", line 107, in forward
+    x = self.patch_embed(x)
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/matched_bs_comparison/author_source/modeling/image_encoder.py", line 391, in forward
+    x = self.proj(x)
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 554, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 549, in _conv_forward
+    return F.conv2d(
+RuntimeError: cuDNN error: CUDNN_STATUS_NOT_INITIALIZED

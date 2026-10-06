@@ -1,0 +1,3 @@
+01_BCV-Abdomen/Training/img/img0035.nii.gz	01_BCV-Abdomen/Training/label/label0035.nii.gz
+01_BCV-Abdomen/Training/img/img0036.nii.gz	01_BCV-Abdomen/Training/label/label0036.nii.gz
+01_BCV-Abdomen/Training/img/img0037.nii.gz	01_BCV-Abdomen/Training/label/label0037.nii.gz

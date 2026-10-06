@@ -1,0 +1,3 @@
+07_WORD/WORD-V0.1.0/imagesTr/word_0002.nii.gz	07_WORD/WORD-V0.1.0/labelsTr/word_0002.nii.gz
+07_WORD/WORD-V0.1.0/imagesTr/word_0081.nii.gz	07_WORD/WORD-V0.1.0/labelsTr/word_0081.nii.gz
+07_WORD/WORD-V0.1.0/imagesTr/word_0148.nii.gz	07_WORD/WORD-V0.1.0/labelsTr/word_0148.nii.gz

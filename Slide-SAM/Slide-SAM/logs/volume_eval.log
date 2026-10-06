@@ -1,0 +1,229 @@
+ base: {
+     base_dir: "../runs/sam/",
+ }
+ logger: {
+     mode: ['tb'],
+     recorder_reduction: "mean",
+ }
+ training: {
+     save_mode: ['all', 'best', 'latest'],
+     batch_size: 2,
+     num_workers: 8,
+     num_epochs: 500,
+     use_amp: True,
+     save_interval: 4,
+     val_check_interval: 6,
+     load_pretrain_model: False,
+     lr: 5e-06,
+     decay_step: 2000,
+     decay_gamma: 0.8,
+     weight_decay: 0.0001,
+     alpha: 0.99,
+     validation_interval: 100,
+ }
+ dataset: {
+     prompt: "box",
+     dataset_list: ['word'],
+     label_idx: 13,
+     types: ['3d'],
+     split: "train",
+     data_root_path: "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/",
+     data_txt_path: "./datasets/dataset_list/",
+     dataset2d_path: "/home1/quanquan/datasets/08_AbdomenCT-1K/",
+     cache_data_path: "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/cached_dataset2/",
+     cache_prefix: ['07'],
+     specific_label: [2],
+ }
+ test: {
+     batch_size: 1,
+ }
+ model_type: "vit_b",
+ pth: "./weights/slidesam_b.pth",
+Loading from  ./weights/slidesam_b.pth
+Load datalist from  word
+train len 30
+template_slice.area  717 0.002735137939453125
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Save to  visual/07_WORD/pred_0_label_13_box.nii.gz
+Save to  visual/07_WORD/label_0.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0014.nii.gz'] 0.7004728517854231
+template_slice.area  2310 0.00881195068359375
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Ends for no mask.
+Save to  visual/07_WORD/pred_1_label_13_box.nii.gz
+Save to  visual/07_WORD/label_1.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0016.nii.gz'] 0.6598620168226066
+template_slice.area  842 0.00321197509765625
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Save to  visual/07_WORD/pred_2_label_13_box.nii.gz
+Save to  visual/07_WORD/label_2.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0017.nii.gz'] 0.6181868359321099
+template_slice.area  1057 0.004032135009765625
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Save to  visual/07_WORD/pred_3_label_13_box.nii.gz
+Save to  visual/07_WORD/label_3.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0019.nii.gz'] 0.5364481553857997
+template_slice.area  3261 0.012439727783203125
+Checking Data range: [-200.0, 400.0]
+Save to  visual/07_WORD/pred_4_label_13_box.nii.gz
+Save to  visual/07_WORD/label_4.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0021.nii.gz'] 0.7887790286118787
+template_slice.area  999 0.003810882568359375
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Save to  visual/07_WORD/pred_5_label_13_box.nii.gz
+Save to  visual/07_WORD/label_5.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0023.nii.gz'] 0.6451479839125502
+template_slice.area  1195 0.004558563232421875
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Save to  visual/07_WORD/pred_6_label_13_box.nii.gz
+Save to  visual/07_WORD/label_6.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0024.nii.gz'] 0.6192388918795809
+template_slice.area  1046 0.00399017333984375
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Ends for no mask.
+Save to  visual/07_WORD/pred_7_label_13_box.nii.gz
+Save to  visual/07_WORD/label_7.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0033.nii.gz'] 0.5252912162871235
+template_slice.area  725 0.002765655517578125
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Ends for no mask.
+Save to  visual/07_WORD/pred_8_label_13_box.nii.gz
+Save to  visual/07_WORD/label_8.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0034.nii.gz'] 0.44483433980740983
+template_slice.area  798 0.00304412841796875
+Checking Data range: [-200.0, 400.0]
+Save to  visual/07_WORD/pred_9_label_13_box.nii.gz
+Save to  visual/07_WORD/label_9.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0037.nii.gz'] 0.7946001687447267
+template_slice.area  657 0.002506256103515625
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Ends for no mask.
+Save to  visual/07_WORD/pred_10_label_13_box.nii.gz
+Save to  visual/07_WORD/label_10.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0043.nii.gz'] 0.3288102261553589
+template_slice.area  692 0.0026397705078125
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Save to  visual/07_WORD/pred_11_label_13_box.nii.gz
+Save to  visual/07_WORD/label_11.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0050.nii.gz'] 0.6103880968105357
+template_slice.area  808 0.003082275390625
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Ends for no mask.
+Save to  visual/07_WORD/pred_12_label_13_box.nii.gz
+Save to  visual/07_WORD/label_12.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0052.nii.gz'] 0.5778461834447598
+template_slice.area  1088 0.004150390625
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Ends for no mask.
+Save to  visual/07_WORD/pred_13_label_13_box.nii.gz
+Save to  visual/07_WORD/label_13.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0054.nii.gz'] 0.40308546415416646
+template_slice.area  1057 0.004032135009765625
+Checking Data range: [-200.0, 400.0]
+Save to  visual/07_WORD/pred_14_label_13_box.nii.gz
+Save to  visual/07_WORD/label_14.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0057.nii.gz'] 0.7776879547291835
+template_slice.area  878 0.00334930419921875
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Ends for no mask.
+Save to  visual/07_WORD/pred_15_label_13_box.nii.gz
+Save to  visual/07_WORD/label_15.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0060.nii.gz'] 0.5211082436577884
+template_slice.area  1160 0.004425048828125
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Ends for no mask.
+Save to  visual/07_WORD/pred_16_label_13_box.nii.gz
+Save to  visual/07_WORD/label_16.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0069.nii.gz'] 0.4006532124402847
+template_slice.area  1841 0.007022857666015625
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Save to  visual/07_WORD/pred_17_label_13_box.nii.gz
+Save to  visual/07_WORD/label_17.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0074.nii.gz'] 0.7418090170820498
+template_slice.area  1164 0.0044403076171875
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Save to  visual/07_WORD/pred_18_label_13_box.nii.gz
+Save to  visual/07_WORD/label_18.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0076.nii.gz'] 0.5742865936771754
+template_slice.area  819 0.003124237060546875
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Save to  visual/07_WORD/pred_19_label_13_box.nii.gz
+Save to  visual/07_WORD/label_19.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0077.nii.gz'] 0.40979076194236086
+template_slice.area  1171 0.004467010498046875
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Save to  visual/07_WORD/pred_20_label_13_box.nii.gz
+Save to  visual/07_WORD/label_20.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0088.nii.gz'] 0.48719489512690645
+template_slice.area  768 0.0029296875
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Save to  visual/07_WORD/pred_21_label_13_box.nii.gz
+Save to  visual/07_WORD/label_21.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0092.nii.gz'] 0.3339231646415792
+template_slice.area  662 0.00252532958984375
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Save to  visual/07_WORD/pred_22_label_13_box.nii.gz
+Save to  visual/07_WORD/label_22.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0097.nii.gz'] 0.528046421663443
+template_slice.area  722 0.00275421142578125
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Save to  visual/07_WORD/pred_23_label_13_box.nii.gz
+Save to  visual/07_WORD/label_23.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0099.nii.gz'] 0.4745113070141817
+template_slice.area  1897 0.007236480712890625
+Checking Data range: [-200.0, 400.0]
+Save to  visual/07_WORD/pred_24_label_13_box.nii.gz
+Save to  visual/07_WORD/label_24.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0103.nii.gz'] 0.8312106246828315
+template_slice.area  760 0.002899169921875
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Save to  visual/07_WORD/pred_25_label_13_box.nii.gz
+Save to  visual/07_WORD/label_25.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0110.nii.gz'] 0.4680897887323944
+template_slice.area  1344 0.005126953125
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Save to  visual/07_WORD/pred_26_label_13_box.nii.gz
+Save to  visual/07_WORD/label_26.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0120.nii.gz'] 0.7128776767380464
+template_slice.area  690 0.00263214111328125
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Save to  visual/07_WORD/pred_27_label_13_box.nii.gz
+Save to  visual/07_WORD/label_27.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0124.nii.gz'] 0.44668523320208714
+template_slice.area  658 0.00251007080078125
+Checking Data range: [-200.0, 400.0]
+Save to  visual/07_WORD/pred_28_label_13_box.nii.gz
+Save to  visual/07_WORD/label_28.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0129.nii.gz'] 0.7319776714513556
+template_slice.area  790 0.00301361083984375
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+Save to  visual/07_WORD/pred_29_label_13_box.nii.gz
+Save to  visual/07_WORD/label_29.nii.gz
+07_WORD ['/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/07_WORD/WORD-V0.1.0/imagesTs/word_0131.nii.gz'] 0.6220430107526882
+{'dice': 0.5771629012422796}
+prompt: box  class_idx: 13

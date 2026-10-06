@@ -1,0 +1,321 @@
+Warning! Running on only 1 GPU! just for debug
+Already add '--config' 
+Already add '--func' 
+Already add '--reuse' 
+[Tutils] Add BASE_CONFIG
+[Tutils] Set file 
+[Tutils] Change experiment name from  to ddp_sub
+[Tutils] Add Args and args config
+Make dir '../runs/sam/ddp_sub/btcv_word_mini_5epoch_retry/' !
+[Tutils] Saved config.yaml to ../runs/sam/ddp_sub/btcv_word_mini_5epoch_retry//config.yaml
+Save running script to ../runs/sam/ddp_sub/btcv_word_mini_5epoch_retry/ from /home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/ddp_sub.py
+[Tutils] Saved script file: from /home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/ddp_sub.py to ../runs/sam/ddp_sub/btcv_word_mini_5epoch_retry/scripts/ddp_sub.py
+Save config file to  ../runs/sam/ddp_sub/btcv_word_mini_5epoch_retry/config.yaml
+[2026-09-22 20:08:12] [btcv_word_mini_5epoch_retry-ddp_sub] Argv: python /home/jupyter-team2pop/Slide-SAM/Slide-SAM/core/ddp_sub.py --config configs/vit_sub_btcv_word_mini.yaml --tag btcv_word_mini_5epoch_retry
+
+======================================================================
+E2 DATASET AUDIT
+======================================================================
+BTCV training volumes : 3
+WORD training volumes : 3
+
+BTCV cached samples   : 1216
+WORD cached samples   : 1633
+TOTAL cached samples  : 2849
+
+WORD sample-count range: 499 - 633
+
+BTCV volume IDs:
+['img0001', 'img0002', 'img0003']
+
+WORD-50 volume IDs:
+['0002', '0081', '0148']
+
+First 3 selected cache samples:
+  /home/jupyter-team2pop/Slide-SAM/Slide-SAM/cached_dataset2/01_BCV-Abdomen/label_jpg/label_0000_00000000_0000.jpg
+  /home/jupyter-team2pop/Slide-SAM/Slide-SAM/cached_dataset2/01_BCV-Abdomen/label_jpg/label_0000_00000001_0000.jpg
+  /home/jupyter-team2pop/Slide-SAM/Slide-SAM/cached_dataset2/01_BCV-Abdomen/label_jpg/label_0000_00000002_0000.jpg
+
+Last 3 selected cache samples:
+  /home/jupyter-team2pop/Slide-SAM/Slide-SAM/cached_dataset2/07_WORD/label_jpg/label_0098_00000150_0000.jpg
+  /home/jupyter-team2pop/Slide-SAM/Slide-SAM/cached_dataset2/07_WORD/label_jpg/label_0098_00000150_0001.jpg
+  /home/jupyter-team2pop/Slide-SAM/Slide-SAM/cached_dataset2/07_WORD/label_jpg/label_0098_00000151_0000.jpg
+======================================================================
+E2 DATASET AUDIT PASSED
+======================================================================
+
+Loading model from /home/jupyter-team2pop/Slide-SAM/Slide-SAM/weights/slidesam_b.pth
+Running on  0
+Logger at Process(rank=0)
+[Tutils] Use Tensorboard, log at '../runs/sam/ddp_sub/btcv_word_mini_5epoch_retry/tb'
+[2026-09-22 20:08:49] [btcv_word_mini_5epoch_retry-ddp_sub] [*] Debug Checking Pipeline !!!
+[2026-09-22 20:08:51] [btcv_word_mini_5epoch_retry-ddp_sub] Epoch 0: Save checkpoint to ``/ckpt_v/model_latest.pth``
+[2026-09-22 20:08:51] [btcv_word_mini_5epoch_retry-ddp_sub] Epoch 0: Save model to ``/ckpt/model_epoch_0.pth``! 
+Note: Tester runs on <rank 0> only
+[2026-09-22 20:09:19] [btcv_word_mini_5epoch_retry-ddp_sub] Iteration 0: Saved /ckpt/model_iter_0.pth and /ckpt/optim_iter_0.pth
+[2026-09-22 20:25:08] [btcv_word_mini_5epoch_retry-ddp_sub] Epoch 1: loss:0.5804 point_loss:0.3485 box_loss:0.2320 fl:0.0026 dl:0.1678 min_losses:0.2204 selected_losses:0.0115 time_load:0.0006 time_cuda:0.0025 time_forward:0.2568 time_bp:0.1602 time_record:0.2452 time_batch:0.6848 time_total:977.0830 lr:5.000000e-06 
+[2026-09-22 20:25:10] [btcv_word_mini_5epoch_retry-ddp_sub] Epoch 1: Save checkpoint to ``/ckpt_v/model_latest.pth``
+[2026-09-22 20:25:10] [btcv_word_mini_5epoch_retry-ddp_sub] Epoch 1: Save model to ``/ckpt/model_epoch_1.pth``! 
+Epoch: 1 | batch:0/1424, Iteration:0, results: {'loss': 0.6832239627838135, 'point_loss': 0.41302114725112915, 'box_loss': 0.27020278573036194, 'fl': 0.002244275063276291, 'dl': 0.2156430184841156, 'min_losses': 0.2605285346508026, 'selected_losses': 0.009674260392785072, 'time_load': 0.2748599052429199, 'time_cuda': 0.019574880599975586, 'time_forward': 0.24359631538391113, 'time_bp': 0.1531670093536377, 'time_record': 0.1111, 'time_batch': 27.208552598953247}
+Epoch: 1 | batch:100/1424, Iteration:100, results: {'loss': 0.5863142609596252, 'point_loss': 0.35778969526290894, 'box_loss': 0.22852455079555511, 'fl': 0.0027937355916947126, 'dl': 0.16365067660808563, 'min_losses': 0.21952538192272186, 'selected_losses': 0.0089991744607687, 'time_load': 9.465217590332031e-05, 'time_cuda': 0.0021219253540039062, 'time_forward': 0.24645495414733887, 'time_bp': 0.15696072578430176, 'time_record': 0.24358081817626953, 'time_batch': 0.6495473384857178}
+Epoch: 1 | batch:200/1424, Iteration:200, results: {'loss': 0.359806090593338, 'point_loss': 0.1938210427761078, 'box_loss': 0.16598504781723022, 'fl': 0.0022588097490370274, 'dl': 0.1112910732626915, 'min_losses': 0.1564672589302063, 'selected_losses': 0.009517788887023926, 'time_load': 9.393692016601562e-05, 'time_cuda': 0.002123117446899414, 'time_forward': 0.24771952629089355, 'time_bp': 0.15656042098999023, 'time_record': 0.24433350563049316, 'time_batch': 0.6511602401733398}
+Epoch: 1 | batch:300/1424, Iteration:300, results: {'loss': 0.6174255013465881, 'point_loss': 0.3920597434043884, 'box_loss': 0.2253657430410385, 'fl': 0.0010651907650753856, 'dl': 0.20272493362426758, 'min_losses': 0.22402876615524292, 'selected_losses': 0.001336971065029502, 'time_load': 9.560585021972656e-05, 'time_cuda': 0.002121448516845703, 'time_forward': 0.24744892120361328, 'time_bp': 0.1569819450378418, 'time_record': 0.24408316612243652, 'time_batch': 0.6510117053985596}
+Epoch: 1 | batch:400/1424, Iteration:400, results: {'loss': 0.8433765172958374, 'point_loss': 0.46230894327163696, 'box_loss': 0.3810676038265228, 'fl': 0.005907023325562477, 'dl': 0.24168607592582703, 'min_losses': 0.35982656478881836, 'selected_losses': 0.021241042762994766, 'time_load': 0.00010275840759277344, 'time_cuda': 0.0021321773529052734, 'time_forward': 0.24798369407653809, 'time_bp': 0.15724420547485352, 'time_record': 0.2437891960144043, 'time_batch': 0.6515142917633057}
+Epoch: 1 | batch:500/1424, Iteration:500, results: {'loss': 0.7078344821929932, 'point_loss': 0.43150290846824646, 'box_loss': 0.2763316035270691, 'fl': 0.0012196488678455353, 'dl': 0.2420278787612915, 'min_losses': 0.266420841217041, 'selected_losses': 0.009910764172673225, 'time_load': 0.0014722347259521484, 'time_cuda': 0.0064241886138916016, 'time_forward': 0.2566864490509033, 'time_bp': 0.15617156028747559, 'time_record': 0.24199700355529785, 'time_batch': 0.6692557334899902}
+Epoch: 1 | batch:600/1424, Iteration:600, results: {'loss': 0.5018774271011353, 'point_loss': 0.26261770725250244, 'box_loss': 0.2392597198486328, 'fl': 0.0024384544230997562, 'dl': 0.1678639054298401, 'min_losses': 0.21663299202919006, 'selected_losses': 0.02262672781944275, 'time_load': 0.0004074573516845703, 'time_cuda': 0.002216815948486328, 'time_forward': 0.25603389739990234, 'time_bp': 0.15790247917175293, 'time_record': 0.24411916732788086, 'time_batch': 0.6614911556243896}
+Epoch: 1 | batch:700/1424, Iteration:700, results: {'loss': 0.40446871519088745, 'point_loss': 0.2538676857948303, 'box_loss': 0.15060102939605713, 'fl': 0.001513156690634787, 'dl': 0.11903411149978638, 'min_losses': 0.14929723739624023, 'selected_losses': 0.0013037924654781818, 'time_load': 0.00022125244140625, 'time_cuda': 0.002209901809692383, 'time_forward': 0.27275753021240234, 'time_bp': 0.15695428848266602, 'time_record': 0.24420952796936035, 'time_batch': 0.6770055294036865}
+Epoch: 1 | batch:800/1424, Iteration:800, results: {'loss': 0.8118441700935364, 'point_loss': 0.4219059944152832, 'box_loss': 0.3899381756782532, 'fl': 0.0033959317952394485, 'dl': 0.2839897572994232, 'min_losses': 0.3519083857536316, 'selected_losses': 0.03802979364991188, 'time_load': 0.00023937225341796875, 'time_cuda': 0.0021996498107910156, 'time_forward': 0.2555527687072754, 'time_bp': 0.15805459022521973, 'time_record': 0.2441272735595703, 'time_batch': 0.6608150005340576}
+Epoch: 1 | batch:900/1424, Iteration:900, results: {'loss': 0.9229247570037842, 'point_loss': 0.6176657676696777, 'box_loss': 0.30525895953178406, 'fl': 0.0009540697792544961, 'dl': 0.27470239996910095, 'min_losses': 0.2937837839126587, 'selected_losses': 0.011475170962512493, 'time_load': 0.0020618438720703125, 'time_cuda': 0.004549503326416016, 'time_forward': 0.25589442253112793, 'time_bp': 0.16596722602844238, 'time_record': 0.24587011337280273, 'time_batch': 0.6773061752319336}
+Epoch: 1 | batch:1000/1424, Iteration:1000, results: {'loss': 0.3822067975997925, 'point_loss': 0.2207868993282318, 'box_loss': 0.16141991317272186, 'fl': 0.0007156497449614108, 'dl': 0.138652965426445, 'min_losses': 0.1529659628868103, 'selected_losses': 0.008453949354588985, 'time_load': 0.00030541419982910156, 'time_cuda': 0.0029549598693847656, 'time_forward': 0.2680504322052002, 'time_bp': 0.1572551727294922, 'time_record': 0.2738046646118164, 'time_batch': 0.7034225463867188}
+Epoch: 1 | batch:1100/1424, Iteration:1100, results: {'loss': 0.40463465452194214, 'point_loss': 0.23342564702033997, 'box_loss': 0.17120900750160217, 'fl': 0.0019348544301465154, 'dl': 0.1301819086074829, 'min_losses': 0.16887900233268738, 'selected_losses': 0.0023300102911889553, 'time_load': 0.0002913475036621094, 'time_cuda': 0.002670764923095703, 'time_forward': 0.2623152732849121, 'time_bp': 0.15711665153503418, 'time_record': 0.24440884590148926, 'time_batch': 0.6675324440002441}
+Epoch: 1 | batch:1200/1424, Iteration:1200, results: {'loss': 0.5434993505477905, 'point_loss': 0.29511207342147827, 'box_loss': 0.24838729202747345, 'fl': 0.0033472860231995583, 'dl': 0.16327674686908722, 'min_losses': 0.23022246360778809, 'selected_losses': 0.018164824694395065, 'time_load': 0.000186920166015625, 'time_cuda': 0.0021533966064453125, 'time_forward': 0.24785923957824707, 'time_bp': 0.1574723720550537, 'time_record': 0.2443244457244873, 'time_batch': 0.6524906158447266}
+Epoch: 1 | batch:1300/1424, Iteration:1300, results: {'loss': 0.4137256145477295, 'point_loss': 0.230687215924263, 'box_loss': 0.1830383986234665, 'fl': 0.003870218526571989, 'dl': 0.10011410713195801, 'min_losses': 0.17751848697662354, 'selected_losses': 0.005519906058907509, 'time_load': 0.0014886856079101562, 'time_cuda': 0.005868196487426758, 'time_forward': 0.2700972557067871, 'time_bp': 0.1752936840057373, 'time_record': 0.2451481819152832, 'time_batch': 0.7013280391693115}
+Epoch: 1 | batch:1400/1424, Iteration:1400, results: {'loss': 0.34575968980789185, 'point_loss': 0.19424603879451752, 'box_loss': 0.15151366591453552, 'fl': 0.0010020980844274163, 'dl': 0.12928223609924316, 'min_losses': 0.1493241935968399, 'selected_losses': 0.0021894790697842836, 'time_load': 0.00022673606872558594, 'time_cuda': 0.002233266830444336, 'time_forward': 0.25594353675842285, 'time_bp': 0.17059803009033203, 'time_record': 0.23951077461242676, 'time_batch': 0.6691737174987793}
+[2026-09-22 20:41:57] [btcv_word_mini_5epoch_retry-ddp_sub] Epoch 2: loss:0.5796 point_loss:0.3507 box_loss:0.2289 fl:0.0026 dl:0.1667 min_losses:0.2178 selected_losses:0.0111 time_load:0.0010 time_cuda:0.0028 time_forward:0.2626 time_bp:0.1624 time_record:0.2457 time_batch:0.7055 time_total:1006.5380 lr:5.000000e-06 
+[2026-09-22 20:41:58] [btcv_word_mini_5epoch_retry-ddp_sub] Epoch 2: Save checkpoint to ``/ckpt_v/model_latest.pth``
+[2026-09-22 20:41:59] [btcv_word_mini_5epoch_retry-ddp_sub] Epoch 2: Save model to ``/ckpt/model_epoch_2.pth``! 
+Epoch: 2 | batch:76/1424, Iteration:1500, results: {'loss': 0.5318745374679565, 'point_loss': 0.325607568025589, 'box_loss': 0.20626695454120636, 'fl': 0.002788642654195428, 'dl': 0.14601707458496094, 'min_losses': 0.20178991556167603, 'selected_losses': 0.004477035719901323, 'time_load': 0.0002238750457763672, 'time_cuda': 0.002207517623901367, 'time_forward': 0.25297045707702637, 'time_bp': 0.15792274475097656, 'time_record': 0.24371814727783203, 'time_batch': 0.6577444076538086}
+Epoch: 2 | batch:176/1424, Iteration:1600, results: {'loss': 0.34815046191215515, 'point_loss': 0.20049718022346497, 'box_loss': 0.14765328168869019, 'fl': 0.0025758054107427597, 'dl': 0.08963938802480698, 'min_losses': 0.14115549623966217, 'selected_losses': 0.006497781258076429, 'time_load': 0.0002090930938720703, 'time_cuda': 0.0021827220916748047, 'time_forward': 0.2496027946472168, 'time_bp': 0.17208552360534668, 'time_record': 0.24455833435058594, 'time_batch': 0.6692450046539307}
+Epoch: 2 | batch:276/1424, Iteration:1700, results: {'loss': 0.7427797913551331, 'point_loss': 0.47293418645858765, 'box_loss': 0.2698456048965454, 'fl': 0.0016316038090735674, 'dl': 0.2274385541677475, 'min_losses': 0.2600706219673157, 'selected_losses': 0.00977498758584261, 'time_load': 0.00022268295288085938, 'time_cuda': 0.0022008419036865234, 'time_forward': 0.2588987350463867, 'time_bp': 0.15817880630493164, 'time_record': 0.23960232734680176, 'time_batch': 0.6596176624298096}
+Epoch: 2 | batch:376/1424, Iteration:1800, results: {'loss': 0.6402117609977722, 'point_loss': 0.3849920630455017, 'box_loss': 0.2552196979522705, 'fl': 0.0031798332929611206, 'dl': 0.17514072358608246, 'min_losses': 0.23873737454414368, 'selected_losses': 0.016482330858707428, 'time_load': 0.00021719932556152344, 'time_cuda': 0.002201080322265625, 'time_forward': 0.25664496421813965, 'time_bp': 0.15757536888122559, 'time_record': 0.24398541450500488, 'time_batch': 0.6612882614135742}
+Epoch: 2 | batch:476/1424, Iteration:1900, results: {'loss': 0.32909953594207764, 'point_loss': 0.1986348181962967, 'box_loss': 0.13046473264694214, 'fl': 0.002071935683488846, 'dl': 0.08682550489902496, 'min_losses': 0.12826421856880188, 'selected_losses': 0.002200515940785408, 'time_load': 0.0001914501190185547, 'time_cuda': 0.0021719932556152344, 'time_forward': 0.2820701599121094, 'time_bp': 0.15613269805908203, 'time_record': 0.24401569366455078, 'time_batch': 0.6852107048034668}
+Epoch: 2 | batch:576/1424, Iteration:2000, results: {'loss': 0.622181236743927, 'point_loss': 0.42188647389411926, 'box_loss': 0.20029477775096893, 'fl': 0.001846102299168706, 'dl': 0.1569388508796692, 'min_losses': 0.19386090338230133, 'selected_losses': 0.006433868780732155, 'time_load': 0.00021982192993164062, 'time_cuda': 0.002206563949584961, 'time_forward': 0.25620484352111816, 'time_bp': 0.16167855262756348, 'time_record': 0.24353384971618652, 'time_batch': 0.6644177436828613}
+Epoch: 2 | batch:676/1424, Iteration:2100, results: {'loss': 0.30002492666244507, 'point_loss': 0.16481487452983856, 'box_loss': 0.1352100372314453, 'fl': 0.0014374377205967903, 'dl': 0.10301460325717926, 'min_losses': 0.13176335394382477, 'selected_losses': 0.0034466800279915333, 'time_load': 0.0003001689910888672, 'time_cuda': 0.0029909610748291016, 'time_forward': 0.253756046295166, 'time_bp': 0.1572248935699463, 'time_record': 0.2409064769744873, 'time_batch': 0.6559126377105713}
+Epoch: 2 | batch:776/1424, Iteration:2200, results: {'loss': 0.5630388259887695, 'point_loss': 0.30160340666770935, 'box_loss': 0.2614353895187378, 'fl': 0.0031336243264377117, 'dl': 0.1796165555715561, 'min_losses': 0.24228905141353607, 'selected_losses': 0.01914634369313717, 'time_load': 0.0002167224884033203, 'time_cuda': 0.0022058486938476562, 'time_forward': 0.2606837749481201, 'time_bp': 0.15726184844970703, 'time_record': 0.24364709854125977, 'time_batch': 0.6645209789276123}
+Epoch: 2 | batch:876/1424, Iteration:2300, results: {'loss': 0.9283561706542969, 'point_loss': 0.6152198910713196, 'box_loss': 0.3131362497806549, 'fl': 0.0044045536778867245, 'dl': 0.20257078111171722, 'min_losses': 0.29066187143325806, 'selected_losses': 0.022474365308880806, 'time_load': 0.001985788345336914, 'time_cuda': 0.002550363540649414, 'time_forward': 0.26808619499206543, 'time_bp': 0.16312146186828613, 'time_record': 0.24400591850280762, 'time_batch': 0.6810436248779297}
+Epoch: 2 | batch:976/1424, Iteration:2400, results: {'loss': 0.4089958667755127, 'point_loss': 0.24246327579021454, 'box_loss': 0.16653257608413696, 'fl': 0.001119020627811551, 'dl': 0.14120878279209137, 'min_losses': 0.163589209318161, 'selected_losses': 0.002943374216556549, 'time_load': 0.0005958080291748047, 'time_cuda': 0.0022275447845458984, 'time_forward': 0.25411009788513184, 'time_bp': 0.15733695030212402, 'time_record': 0.24413108825683594, 'time_batch': 0.6591746807098389}
+Epoch: 2 | batch:1076/1424, Iteration:2500, results: {'loss': 0.560350775718689, 'point_loss': 0.32292166352272034, 'box_loss': 0.23742912709712982, 'fl': 0.005173157900571823, 'dl': 0.1283673644065857, 'min_losses': 0.23183052241802216, 'selected_losses': 0.005598611664026976, 'time_load': 0.00028967857360839844, 'time_cuda': 0.006410360336303711, 'time_forward': 0.2766585350036621, 'time_bp': 0.15798306465148926, 'time_record': 0.23908710479736328, 'time_batch': 0.6912839412689209}
+Epoch: 2 | batch:1176/1424, Iteration:2600, results: {'loss': 0.6404742002487183, 'point_loss': 0.34640276432037354, 'box_loss': 0.2940714657306671, 'fl': 0.0021914259996265173, 'dl': 0.23159947991371155, 'min_losses': 0.27542799711227417, 'selected_losses': 0.018643468618392944, 'time_load': 0.0006105899810791016, 'time_cuda': 0.0022597312927246094, 'time_forward': 0.2575385570526123, 'time_bp': 0.1577765941619873, 'time_record': 0.23895716667175293, 'time_batch': 0.6582956314086914}
+Epoch: 2 | batch:1276/1424, Iteration:2700, results: {'loss': 0.7803725600242615, 'point_loss': 0.43431589007377625, 'box_loss': 0.34605666995048523, 'fl': 0.002096004318445921, 'dl': 0.28239309787750244, 'min_losses': 0.3243131935596466, 'selected_losses': 0.02174348011612892, 'time_load': 0.0021200180053710938, 'time_cuda': 0.006022930145263672, 'time_forward': 0.2862122058868408, 'time_bp': 0.15685796737670898, 'time_record': 0.2743408679962158, 'time_batch': 0.7278380393981934}
+Epoch: 2 | batch:1376/1424, Iteration:2800, results: {'loss': 0.4493427872657776, 'point_loss': 0.2475774735212326, 'box_loss': 0.2017652988433838, 'fl': 0.004088154062628746, 'dl': 0.11389095336198807, 'min_losses': 0.195654034614563, 'selected_losses': 0.0061112577095627785, 'time_load': 0.0002281665802001953, 'time_cuda': 0.0040225982666015625, 'time_forward': 0.28322458267211914, 'time_bp': 0.16122794151306152, 'time_record': 0.2457437515258789, 'time_batch': 0.6950654983520508}
+[2026-09-22 20:58:45] [btcv_word_mini_5epoch_retry-ddp_sub] Epoch 3: loss:0.5659 point_loss:0.3424 box_loss:0.2235 fl:0.0024 dl:0.1646 min_losses:0.2133 selected_losses:0.0102 time_load:0.0010 time_cuda:0.0028 time_forward:0.2614 time_bp:0.1622 time_record:0.2456 time_batch:0.7052 time_total:1006.1537 lr:5.000000e-06 
+[2026-09-22 20:58:46] [btcv_word_mini_5epoch_retry-ddp_sub] Epoch 3: Save checkpoint to ``/ckpt_v/model_latest.pth``
+[2026-09-22 20:58:47] [btcv_word_mini_5epoch_retry-ddp_sub] Epoch 3: Save model to ``/ckpt/model_epoch_3.pth``! 
+Epoch: 3 | batch:52/1424, Iteration:2900, results: {'loss': 0.7354640960693359, 'point_loss': 0.412494957447052, 'box_loss': 0.3229691684246063, 'fl': 0.0019940645433962345, 'dl': 0.2610846161842346, 'min_losses': 0.30096590518951416, 'selected_losses': 0.02200327068567276, 'time_load': 0.00021338462829589844, 'time_cuda': 0.0022172927856445312, 'time_forward': 0.2720193862915039, 'time_bp': 0.1562514305114746, 'time_record': 0.30487608909606934, 'time_batch': 0.7362148761749268}
+Epoch: 3 | batch:152/1424, Iteration:3000, results: {'loss': 0.5230920910835266, 'point_loss': 0.281828373670578, 'box_loss': 0.2412637174129486, 'fl': 0.0040957387536764145, 'dl': 0.14771008491516113, 'min_losses': 0.22962486743927002, 'selected_losses': 0.01163884811103344, 'time_load': 0.00048089027404785156, 'time_cuda': 0.0022454261779785156, 'time_forward': 0.2707819938659668, 'time_bp': 0.15774822235107422, 'time_record': 0.2526743412017822, 'time_batch': 0.6848502159118652}
+Epoch: 3 | batch:252/1424, Iteration:3100, results: {'loss': 0.5446316003799438, 'point_loss': 0.34473326802253723, 'box_loss': 0.1998983472585678, 'fl': 0.0012378273531794548, 'dl': 0.1714177280664444, 'min_losses': 0.1961742788553238, 'selected_losses': 0.0037240698002278805, 'time_load': 0.00018739700317382812, 'time_cuda': 0.002155303955078125, 'time_forward': 0.25562047958374023, 'time_bp': 0.15672826766967773, 'time_record': 0.24470019340515137, 'time_batch': 0.6597228050231934}
+Epoch: 3 | batch:352/1424, Iteration:3200, results: {'loss': 0.5671789646148682, 'point_loss': 0.34191587567329407, 'box_loss': 0.2252630740404129, 'fl': 0.00143245211802423, 'dl': 0.18456068634986877, 'min_losses': 0.21320973336696625, 'selected_losses': 0.01205333974212408, 'time_load': 0.00022554397583007812, 'time_cuda': 0.002214670181274414, 'time_forward': 0.2543046474456787, 'time_bp': 0.15956616401672363, 'time_record': 0.238753080368042, 'time_batch': 0.6556572914123535}
+Epoch: 3 | batch:452/1424, Iteration:3300, results: {'loss': 0.49248409271240234, 'point_loss': 0.3192163109779358, 'box_loss': 0.17326778173446655, 'fl': 0.0008533109212294221, 'dl': 0.15419933199882507, 'min_losses': 0.17126554250717163, 'selected_losses': 0.0020022434182465076, 'time_load': 0.0002193450927734375, 'time_cuda': 0.0022101402282714844, 'time_forward': 0.25339174270629883, 'time_bp': 0.15761947631835938, 'time_record': 0.24393987655639648, 'time_batch': 0.657982349395752}
+Epoch: 3 | batch:552/1424, Iteration:3400, results: {'loss': 0.6657686233520508, 'point_loss': 0.3643864095211029, 'box_loss': 0.3013821840286255, 'fl': 0.004991054534912109, 'dl': 0.18445444107055664, 'min_losses': 0.28427553176879883, 'selected_losses': 0.017106637358665466, 'time_load': 0.0002014636993408203, 'time_cuda': 0.0021593570709228516, 'time_forward': 0.24979209899902344, 'time_bp': 0.17445111274719238, 'time_record': 0.24417734146118164, 'time_batch': 0.6712973117828369}
+Epoch: 3 | batch:652/1424, Iteration:3500, results: {'loss': 1.0141915082931519, 'point_loss': 0.5674220323562622, 'box_loss': 0.44676944613456726, 'fl': 0.005641837604343891, 'dl': 0.314532071352005, 'min_losses': 0.42736881971359253, 'selected_losses': 0.01940063014626503, 'time_load': 0.00023221969604492188, 'time_cuda': 0.002209186553955078, 'time_forward': 0.270282506942749, 'time_bp': 0.15647006034851074, 'time_record': 0.23875999450683594, 'time_batch': 0.6687054634094238}
+Epoch: 3 | batch:752/1424, Iteration:3600, results: {'loss': 1.173473596572876, 'point_loss': 0.9774187803268433, 'box_loss': 0.19605478644371033, 'fl': 0.0011389005230739713, 'dl': 0.1610483080148697, 'min_losses': 0.18382632732391357, 'selected_losses': 0.012228456325829029, 'time_load': 0.0002536773681640625, 'time_cuda': 0.0022051334381103516, 'time_forward': 0.2617309093475342, 'time_bp': 0.17576384544372559, 'time_record': 0.23708152770996094, 'time_batch': 0.6775307655334473}
+Epoch: 3 | batch:852/1424, Iteration:3700, results: {'loss': 0.5413049459457397, 'point_loss': 0.3401676118373871, 'box_loss': 0.20113730430603027, 'fl': 0.0019030335824936628, 'dl': 0.16084522008895874, 'min_losses': 0.19890588521957397, 'selected_losses': 0.002231412101536989, 'time_load': 0.00029540061950683594, 'time_cuda': 0.0030775070190429688, 'time_forward': 0.2566690444946289, 'time_bp': 0.15813732147216797, 'time_record': 0.27342677116394043, 'time_batch': 0.6924493312835693}
+Epoch: 3 | batch:952/1424, Iteration:3800, results: {'loss': 0.6769675016403198, 'point_loss': 0.38582003116607666, 'box_loss': 0.2911474406719208, 'fl': 0.005017533898353577, 'dl': 0.17912933230400085, 'min_losses': 0.2794800102710724, 'selected_losses': 0.01166742667555809, 'time_load': 0.0002598762512207031, 'time_cuda': 0.0030117034912109375, 'time_forward': 0.2567415237426758, 'time_bp': 0.15755105018615723, 'time_record': 0.24325847625732422, 'time_batch': 0.6616835594177246}
+Epoch: 3 | batch:1052/1424, Iteration:3900, results: {'loss': 0.5428692102432251, 'point_loss': 0.2792338728904724, 'box_loss': 0.2636353671550751, 'fl': 0.002993097761645913, 'dl': 0.1881510615348816, 'min_losses': 0.24801300466060638, 'selected_losses': 0.01562236063182354, 'time_load': 0.0003135204315185547, 'time_cuda': 0.002599954605102539, 'time_forward': 0.2497117519378662, 'time_bp': 0.1734635829925537, 'time_record': 0.24344682693481445, 'time_batch': 0.6703917980194092}
+Epoch: 3 | batch:1152/1424, Iteration:4000, results: {'loss': 0.6546474695205688, 'point_loss': 0.3336712121963501, 'box_loss': 0.32097628712654114, 'fl': 0.002495803637430072, 'dl': 0.26093244552612305, 'min_losses': 0.31084850430488586, 'selected_losses': 0.010127796791493893, 'time_load': 0.00032806396484375, 'time_cuda': 0.0029387474060058594, 'time_forward': 0.25670790672302246, 'time_bp': 0.15699315071105957, 'time_record': 0.2434825897216797, 'time_batch': 0.6613473892211914}
+Epoch: 3 | batch:1252/1424, Iteration:4100, results: {'loss': 0.4136538505554199, 'point_loss': 0.23896242678165436, 'box_loss': 0.17469140887260437, 'fl': 0.002018316648900509, 'dl': 0.12675608694553375, 'min_losses': 0.16712242364883423, 'selected_losses': 0.007568982429802418, 'time_load': 0.0002117156982421875, 'time_cuda': 0.0022051334381103516, 'time_forward': 0.25841641426086426, 'time_bp': 0.15722417831420898, 'time_record': 0.2765192985534668, 'time_batch': 0.6951704025268555}
+Epoch: 3 | batch:1352/1424, Iteration:4200, results: {'loss': 0.7003570795059204, 'point_loss': 0.4204990565776825, 'box_loss': 0.2798579931259155, 'fl': 0.0014142051804810762, 'dl': 0.23944804072380066, 'min_losses': 0.2677321434020996, 'selected_losses': 0.012125859968364239, 'time_load': 0.0003414154052734375, 'time_cuda': 0.0028464794158935547, 'time_forward': 0.2531137466430664, 'time_bp': 0.16180133819580078, 'time_record': 0.30342531204223633, 'time_batch': 0.7227203845977783}
+[2026-09-22 21:07:28] [btcv_word_mini_5epoch_retry-ddp_sub] Iteration 5000: Saved /ckpt/model_iter_5000.pth and /ckpt/optim_iter_5000.pth
+[2026-09-22 21:15:02] [btcv_word_mini_5epoch_retry-ddp_sub] Epoch 4: loss:0.5430 point_loss:0.3261 box_loss:0.2169 fl:0.0023 dl:0.1624 min_losses:0.2079 selected_losses:0.0090 time_load:0.0004 time_cuda:0.0022 time_forward:0.2488 time_bp:0.1572 time_record:0.2439 time_batch:0.6834 time_total:974.7902 lr:5.000000e-06 
+[2026-09-22 21:15:03] [btcv_word_mini_5epoch_retry-ddp_sub] Epoch 4: Save checkpoint to ``/ckpt_v/model_latest.pth``
+[2026-09-22 21:15:03] [btcv_word_mini_5epoch_retry-ddp_sub] Epoch 4: Save model to ``/ckpt/model_epoch_4.pth``! 
+Exception in thread Thread-8:
+Traceback (most recent call last):
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+Exception in thread Thread-17:
+Traceback (most recent call last):
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+Exception in thread Thread-6:
+Traceback (most recent call last):
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+Exception in thread Thread-15:
+Traceback (most recent call last):
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+Exception in thread Thread-18:
+Traceback (most recent call last):
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+Exception in thread Thread-5:
+Traceback (most recent call last):
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+Exception in thread Thread-12:
+Traceback (most recent call last):
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+Exception in thread Thread-7:
+Traceback (most recent call last):
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+Exception in thread Thread-4:
+Traceback (most recent call last):
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+Exception in thread Thread-10:
+Traceback (most recent call last):
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+Exception in thread Thread-11:
+Exception in thread Thread-16:
+Traceback (most recent call last):
+    self.run()
+Exception in thread Thread-9:
+Epoch: 4 | batch:28/1424, Iteration:4300, results: {'loss': 3.3364615440368652, 'point_loss': 3.2014920711517334, 'box_loss': 0.1349695473909378, 'fl': 0.0022596607450395823, 'dl': 0.08773170411586761, 'min_losses': 0.1329249143600464, 'selected_losses': 0.0020446337293833494, 'time_load': 0.002096414566040039, 'time_cuda': 0.004936933517456055, 'time_forward': 0.27853941917419434, 'time_bp': 0.15573859214782715, 'time_record': 0.24285387992858887, 'time_batch': 0.6863307952880859}
+Epoch: 4 | batch:128/1424, Iteration:4400, results: {'loss': 0.4114353060722351, 'point_loss': 0.22217948734760284, 'box_loss': 0.18925580382347107, 'fl': 0.0015225752722471952, 'dl': 0.15095943212509155, 'min_losses': 0.18141093850135803, 'selected_losses': 0.00784487184137106, 'time_load': 0.0002009868621826172, 'time_cuda': 0.002928018569946289, 'time_forward': 0.25087952613830566, 'time_bp': 0.1582643985748291, 'time_record': 0.24358892440795898, 'time_batch': 0.6565341949462891}
+Epoch: 4 | batch:228/1424, Iteration:4500, results: {'loss': 0.4522067904472351, 'point_loss': 0.25686123967170715, 'box_loss': 0.19534556567668915, 'fl': 0.0007496250327676535, 'dl': 0.17320126295089722, 'min_losses': 0.18819376826286316, 'selected_losses': 0.007151802070438862, 'time_load': 0.0002338886260986328, 'time_cuda': 0.0021257400512695312, 'time_forward': 0.2480313777923584, 'time_bp': 0.15695500373840332, 'time_record': 0.2447056770324707, 'time_batch': 0.6522808074951172}
+Epoch: 4 | batch:328/1424, Iteration:4600, results: {'loss': 1.061211109161377, 'point_loss': 0.6091808080673218, 'box_loss': 0.4520302712917328, 'fl': 0.003518502227962017, 'dl': 0.32445693016052246, 'min_losses': 0.3948269486427307, 'selected_losses': 0.05720331519842148, 'time_load': 0.0001251697540283203, 'time_cuda': 0.002131938934326172, 'time_forward': 0.24786853790283203, 'time_bp': 0.1566295623779297, 'time_record': 0.24417924880981445, 'time_batch': 0.6513481140136719}
+Epoch: 4 | batch:428/1424, Iteration:4700, results: {'loss': 0.37348443269729614, 'point_loss': 0.18107819557189941, 'box_loss': 0.19240622222423553, 'fl': 0.0010223106946796179, 'dl': 0.16091127693653107, 'min_losses': 0.1813574880361557, 'selected_losses': 0.011048728600144386, 'time_load': 9.417533874511719e-05, 'time_cuda': 0.002271413803100586, 'time_forward': 0.24748945236206055, 'time_bp': 0.15708613395690918, 'time_record': 0.24462461471557617, 'time_batch': 0.6517918109893799}
+Epoch: 4 | batch:528/1424, Iteration:4800, results: {'loss': 0.3942602872848511, 'point_loss': 0.22318372130393982, 'box_loss': 0.17107655107975006, 'fl': 0.0026910542510449886, 'dl': 0.11064189672470093, 'min_losses': 0.16446298360824585, 'selected_losses': 0.006613574456423521, 'time_load': 9.608268737792969e-05, 'time_cuda': 0.0021202564239501953, 'time_forward': 0.24776148796081543, 'time_bp': 0.15773296356201172, 'time_record': 0.24431705474853516, 'time_batch': 0.6523947715759277}
+Epoch: 4 | batch:628/1424, Iteration:4900, results: {'loss': 0.4709894061088562, 'point_loss': 0.2527729272842407, 'box_loss': 0.21821649372577667, 'fl': 0.0015104321064427495, 'dl': 0.1783422827720642, 'min_losses': 0.20855093002319336, 'selected_losses': 0.00966556929051876, 'time_load': 0.00010538101196289062, 'time_cuda': 0.0021343231201171875, 'time_forward': 0.24802565574645996, 'time_bp': 0.15685391426086426, 'time_record': 0.24475550651550293, 'time_batch': 0.6522598266601562}
+Epoch: 4 | batch:728/1424, Iteration:5000, results: {'loss': 0.7933707237243652, 'point_loss': 0.45935025811195374, 'box_loss': 0.3340204358100891, 'fl': 0.003354629036039114, 'dl': 0.25198009610176086, 'min_losses': 0.3190726637840271, 'selected_losses': 0.01494776550680399, 'time_load': 0.0001361370086669922, 'time_cuda': 0.0021364688873291016, 'time_forward': 0.24882030487060547, 'time_bp': 0.15781259536743164, 'time_record': 0.243851900100708, 'time_batch': 0.6530628204345703}
+Epoch: 4 | batch:828/1424, Iteration:5100, results: {'loss': 0.4845094680786133, 'point_loss': 0.2712632417678833, 'box_loss': 0.2132462114095688, 'fl': 0.0029529412277042866, 'dl': 0.14964404702186584, 'min_losses': 0.20870286226272583, 'selected_losses': 0.004543352872133255, 'time_load': 0.00010061264038085938, 'time_cuda': 0.0021300315856933594, 'time_forward': 0.2473313808441162, 'time_bp': 0.15636968612670898, 'time_record': 0.24431777000427246, 'time_batch': 0.6505992412567139}
+Epoch: 4 | batch:928/1424, Iteration:5200, results: {'loss': 0.6381120681762695, 'point_loss': 0.4574894607067108, 'box_loss': 0.18062257766723633, 'fl': 0.0010801006574183702, 'dl': 0.14686092734336853, 'min_losses': 0.16846294701099396, 'selected_losses': 0.012159634381532669, 'time_load': 9.918212890625e-05, 'time_cuda': 0.0023140907287597656, 'time_forward': 0.2474820613861084, 'time_bp': 0.15611577033996582, 'time_record': 0.24399638175964355, 'time_batch': 0.6502213478088379}
+Epoch: 4 | batch:1028/1424, Iteration:5300, results: {'loss': 0.36333319544792175, 'point_loss': 0.20022961497306824, 'box_loss': 0.16310358047485352, 'fl': 0.003508469555526972, 'dl': 0.08959616720676422, 'min_losses': 0.1597655564546585, 'selected_losses': 0.003338020760565996, 'time_load': 0.00011849403381347656, 'time_cuda': 0.002128124237060547, 'time_forward': 0.24750065803527832, 'time_bp': 0.15682125091552734, 'time_record': 0.2442030906677246, 'time_batch': 0.6511721611022949}
+Epoch: 4 | batch:1128/1424, Iteration:5400, results: {'loss': 0.4860799312591553, 'point_loss': 0.28298354148864746, 'box_loss': 0.20309637486934662, 'fl': 0.0021473087836056948, 'dl': 0.15263760089874268, 'min_losses': 0.1955837905406952, 'selected_losses': 0.007512581069022417, 'time_load': 0.00012040138244628906, 'time_cuda': 0.002287149429321289, 'time_forward': 0.24653410911560059, 'time_bp': 0.15695834159851074, 'time_record': 0.24365878105163574, 'time_batch': 0.6497831344604492}
+Epoch: 4 | batch:1228/1424, Iteration:5500, results: {'loss': 0.8185146450996399, 'point_loss': 0.38279783725738525, 'box_loss': 0.43571680784225464, 'fl': 0.003402539063245058, 'dl': 0.31328147649765015, 'min_losses': 0.38133224844932556, 'selected_losses': 0.05438455194234848, 'time_load': 0.00011372566223144531, 'time_cuda': 0.002130270004272461, 'time_forward': 0.24712181091308594, 'time_bp': 0.15606117248535156, 'time_record': 0.2433617115020752, 'time_batch': 0.6491513252258301}
+Epoch: 4 | batch:1328/1424, Iteration:5600, results: {'loss': 0.3994775116443634, 'point_loss': 0.2092079073190689, 'box_loss': 0.1902696043252945, 'fl': 0.002674706280231476, 'dl': 0.13416045904159546, 'min_losses': 0.18765458464622498, 'selected_losses': 0.002615023637190461, 'time_load': 0.00015616416931152344, 'time_cuda': 0.0021436214447021484, 'time_forward': 0.24725937843322754, 'time_bp': 0.1570746898651123, 'time_record': 0.24361944198608398, 'time_batch': 0.6508998870849609}
+Training is Over for GPU rank  0
+Traceback (most recent call last):
+    self.run()
+Traceback (most recent call last):
+    self.run()
+    self.run()
+    self.run()
+Exception in thread Thread-14:
+Traceback (most recent call last):
+    self.run()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/tensorboardX/event_file_writer.py", line 199, in run
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/tensorboardX/event_file_writer.py", line 199, in run
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/tensorboardX/event_file_writer.py", line 199, in run
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/tensorboardX/event_file_writer.py", line 199, in run
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/tensorboardX/event_file_writer.py", line 199, in run
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    self.run()
+    self.run()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    data = self._queue.get(True, queue_wait_duration)
+    self.run()
+    self.run()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/tensorboardX/event_file_writer.py", line 199, in run
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/tensorboardX/event_file_writer.py", line 199, in run
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/tensorboardX/event_file_writer.py", line 199, in run
+    data = self._queue.get(True, queue_wait_duration)
+    data = self._queue.get(True, queue_wait_duration)
+    self.run()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/tensorboardX/event_file_writer.py", line 199, in run
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/tensorboardX/event_file_writer.py", line 199, in run
+    data = self._queue.get(True, queue_wait_duration)
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/queues.py", line 117, in get
+    self.run()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/queues.py", line 117, in get
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/queues.py", line 117, in get
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/tensorboardX/event_file_writer.py", line 199, in run
+Exception in thread Thread-13:
+Traceback (most recent call last):
+    data = self._queue.get(True, queue_wait_duration)
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/queues.py", line 117, in get
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    data = self._queue.get(True, queue_wait_duration)
+    data = self._queue.get(True, queue_wait_duration)
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/queues.py", line 117, in get
+    data = self._queue.get(True, queue_wait_duration)
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/queues.py", line 117, in get
+    data = self._queue.get(True, queue_wait_duration)
+    res = self._recv_bytes()
+    res = self._recv_bytes()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/queues.py", line 117, in get
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+    res = self._recv_bytes()
+    data = self._queue.get(True, queue_wait_duration)
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/queues.py", line 117, in get
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/tensorboardX/event_file_writer.py", line 199, in run
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/queues.py", line 117, in get
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 212, in recv_bytes
+    data = self._queue.get(True, queue_wait_duration)
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 212, in recv_bytes
+    res = self._recv_bytes()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 212, in recv_bytes
+    self.run()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/tensorboardX/event_file_writer.py", line 199, in run
+    res = self._recv_bytes()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 212, in recv_bytes
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/queues.py", line 117, in get
+    self.run()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/queues.py", line 117, in get
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 212, in recv_bytes
+    self.run()
+    res = self._recv_bytes()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 212, in recv_bytes
+    res = self._recv_bytes()
+    res = self._recv_bytes()
+    self._check_closed()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 136, in _check_closed
+    self._check_closed()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 136, in _check_closed
+    self._check_closed()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/tensorboardX/event_file_writer.py", line 199, in run
+    data = self._queue.get(True, queue_wait_duration)
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 212, in recv_bytes
+    res = self._recv_bytes()
+    res = self._recv_bytes()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 212, in recv_bytes
+    self._check_closed()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 136, in _check_closed
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/site-packages/tensorboardX/event_file_writer.py", line 199, in run
+    data = self._queue.get(True, queue_wait_duration)
+    self._check_closed()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 136, in _check_closed
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 212, in recv_bytes
+    self._check_closed()
+    res = self._recv_bytes()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 136, in _check_closed
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/queues.py", line 117, in get
+    raise OSError("handle is closed")
+    raise OSError("handle is closed")
+    data = self._queue.get(True, queue_wait_duration)
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 212, in recv_bytes
+    self._check_closed()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/queues.py", line 117, in get
+    raise OSError("handle is closed")
+OSError: handle is closed
+    raise OSError("handle is closed")
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 136, in _check_closed
+    data = self._queue.get(True, queue_wait_duration)
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 136, in _check_closed
+OSError: handle is closed
+    res = self._recv_bytes()
+    res = self._recv_bytes()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/queues.py", line 117, in get
+OSError: handle is closed
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/queues.py", line 117, in get
+OSError: handle is closed
+    raise OSError("handle is closed")
+    self._check_closed()
+    raise OSError("handle is closed")
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 212, in recv_bytes
+    raise OSError("handle is closed")
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 212, in recv_bytes
+OSError: handle is closed
+    res = self._recv_bytes()
+OSError: handle is closed
+    self._check_closed()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 212, in recv_bytes
+    res = self._recv_bytes()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 212, in recv_bytes
+OSError: handle is closed
+    self._check_closed()
+    self._check_closed()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 136, in _check_closed
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 136, in _check_closed
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 212, in recv_bytes
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 136, in _check_closed
+    self._check_closed()
+    self._check_closed()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 136, in _check_closed
+    self._check_closed()
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 136, in _check_closed
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 136, in _check_closed
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 136, in _check_closed
+    raise OSError("handle is closed")
+    raise OSError("handle is closed")
+    raise OSError("handle is closed")
+OSError: handle is closed
+OSError: handle is closed
+    raise OSError("handle is closed")
+    raise OSError("handle is closed")
+OSError: handle is closed
+    raise OSError("handle is closed")
+    raise OSError("handle is closed")
+    self._check_closed()
+OSError: handle is closed
+OSError: handle is closed
+OSError: handle is closed
+OSError: handle is closed
+  File "/home/jupyter-team2pop/.conda/envs/slidesam/lib/python3.10/multiprocessing/connection.py", line 136, in _check_closed
+    raise OSError("handle is closed")
+OSError: handle is closed

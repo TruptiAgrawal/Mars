@@ -1,0 +1,48 @@
+# ----------------------  Common Configs  --------------------------
+base:
+  base_dir: "../runs/sam/"
+  tag: ''
+  stage: ''
+logger:
+  mode: ['tb', ]
+#  mode: ''
+  recorder_reduction: 'mean'
+
+training:
+  save_mode: ['all', 'best', 'latest'] # ,
+  batch_size : 2 # 8 for A100
+  num_workers : 8
+  # num_epochs : 100  # epochs
+  num_epochs : 21  # epochs
+  use_amp: false
+  save_interval : 1
+  val_check_interval: 6
+  load_pretrain_model: false
+
+  # optim:
+  lr: 0.00002
+  decay_step: 2000
+  decay_gamma: 0.8
+  weight_decay: 0.0001
+  alpha: 0.99
+  validation_interval: 100
+
+  continue_training: false
+  load_optimizer: false
+  breakpoint_path: "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/weights/slidesam_b.pth"
+
+dataset:
+  types: ['3d'] # ['3d', '2d']
+  split: 'train'
+  data_root_path: '/home/jupyter-team2pop/Slide-SAM/Slide-SAM/datasets/'
+  dataset_list: ["01_BTCV"] # for example_train.txt
+  data_txt_path: './datasets/dataset_list/'
+  dataset2d_path: "/home1/quanquan/datasets/08_AbdomenCT-1K/"
+  cache_data_path: '/home/jupyter-team2pop/Slide-SAM/Slide-SAM/cached_dataset2/'
+
+  cache_prefix: ['01'] # '07'
+  specific_label: [2]
+
+test:
+  batch_size: 1
+

@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model weights
+*.pth
+*.pt
+*.ckpt
+*.bin
+*.safetensors
+
+# Large datasets / caches
+cached_dataset2/
+btcv_cross_validation/cache/
+datasets/01_BCV-Abdomen
+datasets/07_WORD
+
+# Training outputs
+runs/
+
+# Generated visualizations (large, reproducible)
+visualizations_copilot/
+visualizations_btcv/
+epoch_20_visualizations_copilot/
+visual/
+
+# Synthetic spacing data (large NIfTI files)
+btcv_cross_validation/z_spacing/synthetic_6mm/
+btcv_cross_validation/z_spacing/synthetic_6mm_v2/
+btcv_cross_validation/z_spacing/synthetic_6mm_v3/
+
+# Temporary files
+tmp/
+tmp_*
+*.tmp
+
+# IDE
+.vscode/
+.idea/
+

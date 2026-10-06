@@ -1,0 +1,50 @@
+{
+  "status": "archive verified; three approved directories deleted",
+  "preserved_documents": [
+    {
+      "source": "btcv_cross_validation/checkpoint_trajectory/report.md",
+      "destination": "btcv_cross_validation/logs/checkpoint_audits/checkpoint_trajectory.report.md",
+      "sha256_original": "b5dc69eda3fec39892cc3122d328945827f7e02c356f2e10dc0376eeddf700d8"
+    },
+    {
+      "source": "btcv_cross_validation/checkpoint_trajectory/run.log",
+      "destination": "btcv_cross_validation/logs/checkpoint_audits/checkpoint_trajectory.run.log",
+      "sha256_original": "0c0f955626995eada69615639fe8ca8af470cb8979a10c826d90a33542031185"
+    },
+    {
+      "source": "btcv_cross_validation/matched_bs_comparison/README.md",
+      "destination": "btcv_cross_validation/logs/checkpoint_audits/matched_bs_comparison.README.md",
+      "sha256_original": "fa5d429e86ac3ff66b827b89379d54ff6aeedd09ba90494978d3d39ed3b28b2e"
+    },
+    {
+      "source": "btcv_cross_validation/matched_bs_comparison/failed_cudnn_attempt.log",
+      "destination": "btcv_cross_validation/logs/checkpoint_audits/matched_bs_comparison.failed_cudnn_attempt.log",
+      "sha256_original": "be9df875ce5be2954489f2da56ac35114224e0496b4e78a2a59ec1f719f011f7"
+    },
+    {
+      "source": "btcv_cross_validation/matched_bs_comparison/report.md",
+      "destination": "btcv_cross_validation/logs/checkpoint_audits/matched_bs_comparison.report.md",
+      "sha256_original": "4baa341053ab746c8a56c6580aebe1a3eb8e0d0039626ae772e540309d51f675"
+    },
+    {
+      "source": "btcv_cross_validation/matched_bs_comparison/run.log",
+      "destination": "btcv_cross_validation/logs/checkpoint_audits/matched_bs_comparison.run.log",
+      "sha256_original": "45513550858a94f904d4acb6630cd34fecaa5f5d919ab6d8fccbca81ba068ea0"
+    },
+    {
+      "source": "btcv_cross_validation/official_checkpoint_comparison/report.md",
+      "destination": "btcv_cross_validation/logs/checkpoint_audits/official_checkpoint_comparison.report.md",
+      "sha256_original": "93b82a1c95bd84aeff781b55ea8659ae8dd8c9a293d8c84fbd12e0fd9139e79d"
+    },
+    {
+      "source": "btcv_cross_validation/official_checkpoint_comparison/run.log",
+      "destination": "btcv_cross_validation/logs/checkpoint_audits/official_checkpoint_comparison.run.log",
+      "sha256_original": "f3b7875e8a881ce19962fcd6785503a02bfd7a55af6c3c369056e85198f8cac7"
+    }
+  ],
+  "approved_removals": [
+    "checkpoint_trajectory",
+    "matched_bs_comparison",
+    "official_checkpoint_comparison"
+  ]
+}

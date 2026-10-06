@@ -1,0 +1,15 @@
+07_WORD/WORD-V0.1.0/imagesTr/word_0002.nii.gz	07_WORD/WORD-V0.1.0/labelsTr/word_0002.nii.gz
+07_WORD/WORD-V0.1.0/imagesTr/word_0011.nii.gz	07_WORD/WORD-V0.1.0/labelsTr/word_0011.nii.gz
+07_WORD/WORD-V0.1.0/imagesTr/word_0026.nii.gz	07_WORD/WORD-V0.1.0/labelsTr/word_0026.nii.gz
+07_WORD/WORD-V0.1.0/imagesTr/word_0036.nii.gz	07_WORD/WORD-V0.1.0/labelsTr/word_0036.nii.gz
+07_WORD/WORD-V0.1.0/imagesTr/word_0049.nii.gz	07_WORD/WORD-V0.1.0/labelsTr/word_0049.nii.gz
+07_WORD/WORD-V0.1.0/imagesTr/word_0062.nii.gz	07_WORD/WORD-V0.1.0/labelsTr/word_0062.nii.gz
+07_WORD/WORD-V0.1.0/imagesTr/word_0070.nii.gz	07_WORD/WORD-V0.1.0/labelsTr/word_0070.nii.gz
+07_WORD/WORD-V0.1.0/imagesTr/word_0081.nii.gz	07_WORD/WORD-V0.1.0/labelsTr/word_0081.nii.gz
+07_WORD/WORD-V0.1.0/imagesTr/word_0093.nii.gz	07_WORD/WORD-V0.1.0/labelsTr/word_0093.nii.gz
+07_WORD/WORD-V0.1.0/imagesTr/word_0105.nii.gz	07_WORD/WORD-V0.1.0/labelsTr/word_0105.nii.gz
+07_WORD/WORD-V0.1.0/imagesTr/word_0113.nii.gz	07_WORD/WORD-V0.1.0/labelsTr/word_0113.nii.gz
+07_WORD/WORD-V0.1.0/imagesTr/word_0119.nii.gz	07_WORD/WORD-V0.1.0/labelsTr/word_0119.nii.gz
+07_WORD/WORD-V0.1.0/imagesTr/word_0130.nii.gz	07_WORD/WORD-V0.1.0/labelsTr/word_0130.nii.gz
+07_WORD/WORD-V0.1.0/imagesTr/word_0142.nii.gz	07_WORD/WORD-V0.1.0/labelsTr/word_0142.nii.gz
+07_WORD/WORD-V0.1.0/imagesTr/word_0148.nii.gz	07_WORD/WORD-V0.1.0/labelsTr/word_0148.nii.gz

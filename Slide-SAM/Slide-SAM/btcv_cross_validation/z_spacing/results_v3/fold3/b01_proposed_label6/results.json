@@ -1,0 +1,520 @@
+{
+  "started_utc": "2026-10-01T09:56:54.833419+00:00",
+  "status": "complete",
+  "geometry_version": "v3_cropped_origin",
+  "arguments": {
+    "synthetic_root": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold3",
+    "manifest": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold3/synthetic_manifest.txt",
+    "train_manifest": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/dataset_list/fold3/01_BTCV_train_4to1.txt",
+    "checkpoint": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold3/ddp_sub_cv/cv_fold3/ckpt/model_epoch_20.pth",
+    "checkpoint_kind": "finetuned",
+    "label_idx": 6,
+    "protocol": "gt-cropped",
+    "branch": "proposed",
+    "target_z_mm": 3.0,
+    "trigger_mm": 5.5,
+    "nsd_tolerance_mm": 1.0,
+    "output": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/results_v3/fold3/b01_proposed_label6",
+    "save_predictions": false,
+    "run_inference": true
+  },
+  "training_ids": [
+    "img0001",
+    "img0002",
+    "img0003",
+    "img0004",
+    "img0005",
+    "img0006",
+    "img0007",
+    "img0008",
+    "img0009",
+    "img0010",
+    "img0021",
+    "img0022",
+    "img0029",
+    "img0030",
+    "img0031",
+    "img0032",
+    "img0033",
+    "img0034",
+    "img0035",
+    "img0036",
+    "img0037",
+    "img0038",
+    "img0039",
+    "img0040"
+  ],
+  "evaluation_ids": [
+    "img0024"
+  ],
+  "manifest_sha256": "b53cefdd4760e84b0f8dcdb536d6acc674e8ae306291519a28402fe5fc6b5486",
+  "training_manifest_sha256": "640c58ad2425eb3123283e1fd9932bfafafcaaac1aede29c4e7853dcd2fc376a",
+  "checkpoint_bytes": 377029836,
+  "checkpoint_mtime_ns": 1790459639805569384,
+  "checkpoint_sha256": "4fa959b3936a8e64fbbd474ec1e476201639c888c604e471e53a54477ff25e94",
+  "experiment_source_sha256": {
+    "run_b00_b01_all_folds.py": "5e1f6257af202097a1c03e76ee86bf1af6dcd1bd4169ef2d5e0b9c77e03817eb",
+    "evaluate.py": "d3537b295dc47a719d56dc2470cc636bfd52b161213b9fc2d918ab714031037f",
+    "test_cpu.py": "3326f9f4f4a23688cbea6d85da2b1fb11216f7bb9502b2322e432d13df9d5df9",
+    "test_geometry_fixes.py": "da609b20b87a2e955f9e273ecc08a0462cb1e8ac2135c30fc28888263c5b2998",
+    "evaluate_v3.py": "5ad5caba6da98b5a5e5a57a6952755f95dc797c5cc5692a8c07af3a4324f7856",
+    "__init__.py": "3522d6e6170abc90b754803f2bac8bc049ee3e32c43a760be2bcd6622212225c",
+    "audit_kidney.py": "306896bafc978bea3d4ddcb4a2f673403dd6c8198bf704f3578f88d2aa976a3e",
+    "helpers.py": "e08ce8822102b514d0dd48c92826db1a2527fc63bcfb04f4cc08026894b6cdab",
+    "loader.py": "3af56876091db94351df8217ab5599ff039617d03fcbc0b4b484be455f821c98",
+    "make_synthetic.py": "a4f53eadecfc63f7f58fc98c1cd25fccfd45cefbe32ad696d5a48b6abec7d78f",
+    "find_eligible_patients.py": "5ef3d13e442c3a71d0e971351bf4d6986588bd6e287710e1a039350b8d5c1230"
+  },
+  "warning": "v3: cropped z-origin passed to resampler. Scoring on declared thick-spacing grid. Proposed branch resamples only when z > trigger_mm.",
+  "cases": [
+    {
+      "crop_start_z": 31,
+      "crop_stop_z": 60,
+      "original_shape_zyx": [
+        63,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        29,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 52,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0024",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        5.951612949371338,
+        0.685546875,
+        0.685546875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold3/img/img0024.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold3/label/img0024.nii.gz",
+      "scoring_grid": "synthetic_thick_spacing_v2",
+      "synthetic_source_spacing_z_mm": 3.0,
+      "synthetic_target_spacing_z_mm": 6.0,
+      "synthetic_actual_spacing_z_mm": 5.951612903225806,
+      "total_seconds": 14.265248899813741,
+      "peak_gpu_allocated_bytes": 12177682944,
+      "metrics": {
+        "dice": 0.8775911619963771,
+        "nsd": 0.4782510095747408,
+        "hd95_mm": 23.80645179748535,
+        "surface_status": "valid",
+        "foreground_recall": 0.9227507806667139,
+        "foreground_precision": 0.8366455514818512,
+        "false_positive_ml": 184.94467689674354
+      },
+      "resampling_info": {
+        "branch": "proposed",
+        "source_z_mm": 5.951612949371338,
+        "trigger_mm": 5.5,
+        "crop_start_z": 31,
+        "resampling_triggered": true,
+        "origin_xyz_working": [
+          0.0,
+          0.0,
+          184.50000143051147
+        ],
+        "resample_seconds": 0.48535995301790535,
+        "target_z_mm": 3.0,
+        "actual_z_mm": 2.975806474685669,
+        "resampled_shape_zyx": [
+          57,
+          512,
+          512
+        ],
+        "center_scoring_grid": 21,
+        "center_continuous_resampled": 42.0,
+        "center_resampled_actual": 42,
+        "center_physical_displacement_mm": 0.0,
+        "inference_seconds": 9.961141552077606,
+        "restored_shape_zyx": [
+          29,
+          512,
+          512
+        ],
+        "resampling_applied": true
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "42": [
+          [
+            186.0,
+            326.0,
+            666.0,
+            728.0
+          ]
+        ],
+        "43": [
+          [
+            190.0,
+            338.0,
+            657.0,
+            727.0
+          ]
+        ],
+        "44": [
+          [
+            196.0,
+            342.0,
+            653.0,
+            727.0
+          ]
+        ],
+        "45": [
+          [
+            200.0,
+            354.0,
+            653.0,
+            727.0
+          ]
+        ],
+        "46": [
+          [
+            208.0,
+            368.0,
+            653.0,
+            727.0
+          ]
+        ],
+        "47": [
+          [
+            214.0,
+            382.0,
+            653.0,
+            725.0
+          ]
+        ],
+        "48": [
+          [
+            226.0,
+            392.0,
+            651.0,
+            725.0
+          ]
+        ],
+        "49": [
+          [
+            232.0,
+            404.0,
+            649.0,
+            721.0
+          ]
+        ],
+        "50": [
+          [
+            248.0,
+            418.0,
+            647.0,
+            719.0
+          ]
+        ],
+        "51": [
+          [
+            256.0,
+            424.0,
+            641.0,
+            717.0
+          ]
+        ],
+        "52": [
+          [
+            272.0,
+            464.0,
+            637.0,
+            713.0
+          ]
+        ],
+        "53": [
+          [
+            278.0,
+            476.0,
+            633.0,
+            707.0
+          ]
+        ],
+        "54": [
+          [
+            290.0,
+            512.0,
+            631.0,
+            701.0
+          ]
+        ],
+        "55": [
+          [
+            294.0,
+            528.0,
+            623.0,
+            691.0
+          ]
+        ],
+        "41": [
+          [
+            186.0,
+            324.0,
+            655.0,
+            727.0
+          ]
+        ],
+        "40": [
+          [
+            186.0,
+            322.0,
+            643.0,
+            725.0
+          ]
+        ],
+        "39": [
+          [
+            184.0,
+            320.0,
+            635.0,
+            723.0
+          ]
+        ],
+        "38": [
+          [
+            182.0,
+            316.0,
+            625.0,
+            721.0
+          ]
+        ],
+        "37": [
+          [
+            182.0,
+            314.0,
+            619.0,
+            719.0
+          ]
+        ],
+        "36": [
+          [
+            182.0,
+            312.0,
+            613.0,
+            717.0
+          ]
+        ],
+        "35": [
+          [
+            180.0,
+            310.0,
+            609.0,
+            713.0
+          ]
+        ],
+        "34": [
+          [
+            180.0,
+            310.0,
+            605.0,
+            709.0
+          ]
+        ],
+        "33": [
+          [
+            180.0,
+            312.0,
+            599.0,
+            707.0
+          ]
+        ],
+        "32": [
+          [
+            180.0,
+            314.0,
+            593.0,
+            705.0
+          ]
+        ],
+        "31": [
+          [
+            182.0,
+            316.0,
+            591.0,
+            705.0
+          ]
+        ],
+        "30": [
+          [
+            184.0,
+            320.0,
+            589.0,
+            703.0
+          ]
+        ],
+        "29": [
+          [
+            188.0,
+            322.0,
+            581.0,
+            701.0
+          ]
+        ],
+        "28": [
+          [
+            192.0,
+            326.0,
+            577.0,
+            695.0
+          ]
+        ],
+        "27": [
+          [
+            196.0,
+            334.0,
+            575.0,
+            689.0
+          ]
+        ],
+        "26": [
+          [
+            198.0,
+            338.0,
+            567.0,
+            685.0
+          ]
+        ],
+        "25": [
+          [
+            202.0,
+            342.0,
+            563.0,
+            681.0
+          ]
+        ],
+        "24": [
+          [
+            206.0,
+            346.0,
+            559.0,
+            673.0
+          ]
+        ],
+        "23": [
+          [
+            210.0,
+            348.0,
+            547.0,
+            671.0
+          ]
+        ],
+        "22": [
+          [
+            214.0,
+            352.0,
+            539.0,
+            669.0
+          ]
+        ],
+        "21": [
+          [
+            222.0,
+            352.0,
+            529.0,
+            665.0
+          ]
+        ],
+        "20": [
+          [
+            226.0,
+            352.0,
+            513.0,
+            663.0
+          ]
+        ],
+        "19": [
+          [
+            230.0,
+            354.0,
+            509.0,
+            659.0
+          ]
+        ],
+        "18": [
+          [
+            238.0,
+            358.0,
+            507.0,
+            655.0
+          ]
+        ],
+        "17": [
+          [
+            244.0,
+            366.0,
+            503.0,
+            649.0
+          ]
+        ],
+        "16": [
+          [
+            248.0,
+            378.0,
+            499.0,
+            643.0
+          ]
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "dice": {
+      "mean": 0.8775911619963771,
+      "valid_count": 1,
+      "undefined_count": 0
+    },
+    "nsd": {
+      "mean": 0.4782510095747408,
+      "valid_count": 1,
+      "undefined_count": 0
+    },
+    "hd95_mm": {
+      "mean": 23.80645179748535,
+      "valid_count": 1,
+      "undefined_count": 0
+    },
+    "foreground_recall": {
+      "mean": 0.9227507806667139,
+      "valid_count": 1,
+      "undefined_count": 0
+    },
+    "foreground_precision": {
+      "mean": 0.8366455514818512,
+      "valid_count": 1,
+      "undefined_count": 0
+    },
+    "false_positive_ml": {
+      "mean": 184.94467689674354,
+      "valid_count": 1,
+      "undefined_count": 0
+    }
+  },
+  "finished_utc": "2026-10-01T09:57:15.124217+00:00"
+}
