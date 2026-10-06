@@ -1,0 +1,57 @@
+# Repo-wide ignore rules for Mars.
+# Project-specific rules also live in Slide-SAM/.gitignore and
+# Slide-SAM/Slide-SAM/.gitignore.
+
+# --- Secrets / local environment -------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# --- Python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+build/
+dist/
+
+# --- Node / frontend -------------------------------------------------------
+node_modules/
+coverage/
+*.tsbuildinfo
+npm-debug.log*
+
+# --- Jupyter ---------------------------------------------------------------
+.ipynb_checkpoints/
+Untitled*.ipynb
+
+# --- Model weights and checkpoints -----------------------------------------
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.bin
+*.onnx
+
+# --- Medical imaging data --------------------------------------------------
+*.nii
+*.nii.gz
+*.dcm
+
+# --- Training outputs ------------------------------------------------------
+# Upstream Slide-SAM training runs (~68 GB of checkpoints and event files)
+Slide-SAM/runs/
+events.out.tfevents.*
+
+# --- OS / editor -----------------------------------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
