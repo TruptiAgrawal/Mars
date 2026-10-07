@@ -1,0 +1,10 @@
+{
+  "case_id": "case_012",
+  "expected_site": "anterior",
+  "expected_size_range_mm3": [
+    1.0,
+    20.0
+  ],
+  "prior_history": "none",
+  "label": "Size mismatch: lesion too large for expected range"
+}

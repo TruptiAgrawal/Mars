@@ -1,0 +1,10 @@
+{
+  "case_id": "case_006",
+  "expected_site": "posterior",
+  "expected_size_range_mm3": [
+    50.0,
+    5000.0
+  ],
+  "prior_history": "none",
+  "label": "Low-contrast posterior lesion"
+}
