@@ -1,0 +1,154 @@
+Prepare the missing BTCV evaluations below: native padding × prompt budget,
+and the matched synthetic historical/corrected-box × spacing experiment.
+Prepare copied code, checks, and runnable commands FIRST. Do not launch GPU
+inference until the user explicitly requests execution.
+
+REUSE EXISTING SCRIPTS FIRST
+Inspect existing scripts first. If they already support the required
+combinations, use them unchanged; otherwise copy and minimally extend them.
+"Prepare" means verify capabilities and assemble the missing run commands,
+not rebuild working evaluators or duplicate completed work.
+The one-box evaluator already supports the padding modes; use its existing
+arguments for the remaining folds. Check whether the five-box and z-spacing
+runners now support the required modes before making any changes. Only
+extend hardcoded settings that prevent the requested evaluations.
+If suitable launch scripts already exist, reuse them rather than creating
+duplicates. Document their exact commands and stop before inference so the
+user can launch them.
+
+Repository:
+/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM
+
+First read the existing box_padding and five_box code, their READMEs,
+KT/Box_Padding_First_Results.md, and
+KT/Five_Box_Corrected_Zero_Results.md,
+KT/B00_vs_B01_17patient_Results.md, and the z_spacing v3 evaluator,
+geometry tests, manifests, logs, and raw results.
+
+Preserve all completed results. Make separate copies before changing code.
+Do not delete files, retrain, rebuild caches, or overwrite existing results.
+Keep native-data and synthetic-spacing experiments separate.
+
+A. REQUIRED MISSING NATIVE-DATA EVALUATIONS
+Use all SIX held-out patients in EACH fold, on their original native scans.
+No z-spacing resampling in this experiment.
+
+1. 5% image-relative padding, 1 box: folds 1–4.
+2. Historical padding behaviour, 5 boxes: folds 1–5.
+3. 5% image-relative padding, 5 boxes: folds 1–5.
+
+Reuse completed historical 1-box, corrected-zero 1-box/5-box, and
+fold-5 5%-padding 1-box results. Do not rerun those unnecessarily.
+
+B. REQUIRED MISSING MATCHED SYNTHETIC-SPACING EVALUATIONS (ONE BOX ONLY)
+Complete the historical/corrected-tight-box × recovery-OFF/ON comparison
+on the SAME eligible patients and synthetic inputs as the completed v3 run.
+
+Setting                                         Status to verify
+Historical boxes, recovery OFF                  Missing: prepare evaluation
+Historical boxes, recovery ON                   Missing: prepare evaluation
+Corrected tight boxes, recovery OFF             Existing v3 B00: reuse
+Corrected tight boxes, recovery ON              Existing v3 B01: reuse
+
+Fixed held-out cohort:
+Fold 1: img0001, img0002, img0003, img0004, img0005, img0006 (6)
+Fold 2: img0007, img0008, img0010, img0021                  (4)
+Fold 3: img0024                                           (1)
+Fold 4: img0029, img0030, img0031, img0032                  (4)
+Fold 5: img0036, img0040                                   (2)
+
+These are 17 native 3 mm patients, NOT all 30 patients. Verify IDs against
+the saved eligibility list, manifests, and v3 result files before execution.
+Do not add native 2.5 mm or 5 mm patients or evaluate training patients.
+
+Both arms start from the same saved v3 synthetic approximately 6 mm inputs,
+created by degrading native 3 mm scans:
+- Recovery OFF: segment synthetic 6 mm directly.
+- Recovery ON: use the existing >5.5 mm trigger and approximately 3 mm target,
+  then restore predictions to the exact 6 mm scoring reference.
+Both arms must use identical scoring labels/reference geometry and the
+existing v3 physical prompt mapping and initial-box protocol.
+Do NOT use native historical scores as the recovery-OFF synthetic control.
+Do NOT regenerate synthetic inputs or tune spacing, thresholds, or organ rules.
+
+Use copied v3 code retaining the crop-origin correction and exact-reference
+restoration. No crop/pad geometry fallback. Images use the existing linear
+interpolation protocol; discrete labels use nearest-neighbour interpolation.
+Check physical origin, spacing, direction, size, initial prompt equivalence,
+and restoration geometry. Record the applied padding mode in every result.
+
+This experiment toggles HISTORICAL versus CORRECTED TIGHT boxes; corrected
+tight OFF does not mean 5% padding. Existing B00/B01 names use a different
+convention: BOTH already use corrected tight boxes. Use descriptive output
+names to avoid mixing these conventions.
+
+Fold coverage is not a model intervention. Running all five folds includes
+fold 5; do not rerun a separate fold-5-only version of the same experiment.
+Do not expand this scope to five-box synthetic-spacing or 5%-padding plus
+synthetic-spacing experiments. Those combinations are not part of the
+four-setting one-box comparison requested here; list them as out of scope.
+
+Implementation:
+- Reuse box_padding/evaluate.py for one-box evaluation.
+- If five_box/evaluate.py still hardcodes corrected zero, copy and minimally
+  extend it to accept padding mode/fraction and a separate output directory.
+  If those options already exist, reuse them unchanged.
+- Preserve the authors’ existing corrective-box selection and merging.
+- Apply padding only to automatically propagated boxes. Keep initial
+  and corrective user-supplied boxes unchanged.
+- Historical mode must reproduce the original arithmetic exactly.
+- 5% padding means 0.05 × image width/height on each corresponding side,
+  not 5% of bounding-box size.
+- Preserve the existing evaluator settings, preprocessing, GT cropping,
+  checkpoint loading, and prompt protocol.
+- Preserve each experiment's own established protocol; do not mix native
+  and synthetic scoring grids, labels, preprocessing, or patient cohorts.
+- Use each fold’s own epoch-20 checkpoint and held-out manifest.
+- Verify train/test disjointness and repair stale paths from the repo move.
+- Use the slidesam conda Python and explicit PYTHONPATH; retain the
+  successful cuDNN-disabled configuration.
+
+Before GPU execution:
+- Inventory the actual completed files first; the statuses above are the
+  expected starting state, not permission to ignore newer completed runs.
+- Verify the copied code and padding wiring.
+- Run appropriate CPU checks for the changed padding wiring and geometry.
+- Confirm the historical path reproduces the original arithmetic and the
+  corrected-zero path remains unchanged. Do not change historical arithmetic
+  to make it look like a corrected margin.
+- Check all checkpoint/data paths and output-directory uniqueness.
+- Validate the per-fold checkpoint provenance, four organ IDs, expected case
+  counts, and strict checkpoint loading. Do not silently substitute weights.
+- Reuse suitable launch scripts for A and B; create or minimally extend
+  scripts only where needed. Provide preflight mode, explicit conda
+  interpreter, logs, and exact commands in a README.
+- Produce a reviewable execution inventory listing fold, cohort, padding,
+  prompt budget, spacing branch, checkpoint, output path, and reuse/run status.
+- Stop after preparation and show me the command; do not start inference.
+
+The script should run sequentially, preserve logs and intermediate results,
+and skip only verified complete runs.
+Completeness means successful case statuses, all expected patient/organ IDs,
+matching configuration and provenance, and valid metrics—not directory
+existence alone. Preserve partial/failed outputs; never silently overwrite
+or treat them as complete. Stop on unexplained mismatches before GPU work.
+
+Reporting:
+Report folds 1, 2, 3, 4, and 5 SEPARATELY.
+For each fold, show liver (6), stomach (7), left kidney (3), spleen (1),
+and that fold’s four-organ mean for all six combinations:
+historical/corrected-zero/5% padding × 1-box/5-box.
+In a SEPARATE synthetic table for EACH fold, show the four historical/
+corrected-tight × recovery-OFF/ON settings for the eligible cohort only.
+Label the patient count explicitly: 6, 4, 1, 4, and 2 respectively.
+Use paired comparisons within the same cohort and scoring grid. Report
+organ-specific outcomes including regressions; do not pool native and
+synthetic scores or describe all-fold coverage as all-patient coverage.
+Do not calculate an across-fold mean.
+Include patient IDs, paired differences, runtime, and failures.
+Compare with the authors only at matching prompt budgets and disclose
+that the evaluation splits and training provenance differ.
+Do not present synthetic-spacing results as directly comparable with the
+authors' native BTCV scores. Treat this as an exploratory synthetic robustness
+study; interpolation does not recover missing anatomy. No parameter selection
+or organ-specific fixes based on these held-out test results.

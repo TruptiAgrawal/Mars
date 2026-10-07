@@ -1,0 +1,922 @@
+{
+  "started_utc": "2026-10-07T10:03:35.746620+00:00",
+  "status": "complete",
+  "arguments": {
+    "data_root": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets",
+    "manifest": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/dataset_list/fold3/01_BTCV_test_4to1.txt",
+    "train_manifest": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/dataset_list/fold3/01_BTCV_train_4to1.txt",
+    "checkpoint": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold3/ddp_sub_cv/cv_fold3/ckpt/model_epoch_20.pth",
+    "checkpoint_kind": "finetuned",
+    "label_idx": 1,
+    "prompt": "box",
+    "protocol": "gt-cropped",
+    "padding_mode": "image",
+    "padding_fraction": 0.05,
+    "nsd_tolerance_mm": 1.0,
+    "output": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/box_padding/results/fold3_e20_image_label1",
+    "save_predictions": false,
+    "run_inference": true
+  },
+  "training_ids": [
+    "img0001",
+    "img0002",
+    "img0003",
+    "img0004",
+    "img0005",
+    "img0006",
+    "img0007",
+    "img0008",
+    "img0009",
+    "img0010",
+    "img0021",
+    "img0022",
+    "img0029",
+    "img0030",
+    "img0031",
+    "img0032",
+    "img0033",
+    "img0034",
+    "img0035",
+    "img0036",
+    "img0037",
+    "img0038",
+    "img0039",
+    "img0040"
+  ],
+  "evaluation_ids": [
+    "img0023",
+    "img0024",
+    "img0025",
+    "img0026",
+    "img0027",
+    "img0028"
+  ],
+  "manifest_sha256": "c2fd54c6be8a72061a9e0bafa44d7dbeac4cf1e950c335c1848ed68aa1e81e96",
+  "training_manifest_sha256": "640c58ad2425eb3123283e1fd9932bfafafcaaac1aede29c4e7853dcd2fc376a",
+  "checkpoint_bytes": 377029836,
+  "checkpoint_mtime_ns": 1790459639805569384,
+  "checkpoint_sha256": "4fa959b3936a8e64fbbd474ec1e476201639c888c604e471e53a54477ff25e94",
+  "experiment_source_sha256": {
+    "evaluate.py": "0f2f3a896c31c250b737de99a9f6701a4a262bc2243662b59f11210da757ac48",
+    "test_cpu.py": "152d052d42699c189f6f28fe19ee51cb2afa63cf462da8370542e4a3e0588b6e",
+    "__init__.py": "c35faac239c71b6f655052d71ac9afe22e94248bbfef9487c7d157ee2a95166e",
+    "predictor.py": "239beab9175f067a61aa9cec700611fe09892b5e90939569ae02fa6e8ac286e0",
+    "helpers.py": "fc1d547ec89c6a257d65d521c7da88e37e3849d596256f6a729ab2dc6f32ebf9",
+    "loader.py": "6f60df861d792a5ebdded032571946568d4a1c596a10114d51950941490005d3",
+    "data_engine.py": "53e6ab80edba2230f042919cfeb6292de98985da24ebfee18af06fa453ad4469"
+  },
+  "warning": "Ground-truth-assisted initial prompt; gt-cropped additionally uses target extent. Historical padding is within the corrected evaluator, not an exact legacy-score reproduction.",
+  "cases": [
+    {
+      "crop_start_z": 68,
+      "crop_stop_z": 86,
+      "original_shape_zyx": [
+        96,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        18,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 79,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0023",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        5.0,
+        0.70703125,
+        0.70703125
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0023.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0023.nii.gz",
+      "initial_prompt": {
+        "box": [
+          [
+            310.0,
+            145.0,
+            428.0,
+            248.0
+          ]
+        ]
+      },
+      "inference_seconds": 2.0881266640062677,
+      "peak_gpu_allocated_bytes": 11032637952,
+      "metrics": {
+        "dice": 0.6588368854089861,
+        "nsd": 0.16424592979411434,
+        "hd95_mm": 25.0,
+        "surface_status": "valid",
+        "foreground_recall": 0.7011995366275956,
+        "foreground_precision": 0.6213012526902488,
+        "false_positive_ml": 85.76167541503906
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "11": [
+          [
+            620.0,
+            290.0,
+            856.0,
+            496.0
+          ]
+        ],
+        "12": [
+          [
+            570.8,
+            248.8,
+            900.2,
+            546.2
+          ]
+        ],
+        "13": [
+          [
+            558.8,
+            258.8,
+            922.2,
+            564.2
+          ]
+        ],
+        "14": [
+          [
+            566.8,
+            270.8,
+            906.2,
+            574.2
+          ]
+        ],
+        "10": [
+          [
+            572.8,
+            240.8,
+            908.2,
+            548.2
+          ]
+        ],
+        "9": [
+          [
+            562.8,
+            230.8,
+            944.2,
+            564.2
+          ]
+        ],
+        "8": [
+          [
+            578.8,
+            224.8,
+            992.2,
+            610.2
+          ]
+        ],
+        "7": [
+          [
+            534.8,
+            196.8,
+            1002.2,
+            642.2
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 90,
+      "crop_stop_z": 114,
+      "original_shape_zyx": [
+        124,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        24,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 101,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0024",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        3.0,
+        0.685546875,
+        0.685546875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0024.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0024.nii.gz",
+      "initial_prompt": {
+        "box": [
+          [
+            337.0,
+            144.0,
+            461.0,
+            295.0
+          ]
+        ]
+      },
+      "inference_seconds": 2.754665353000746,
+      "peak_gpu_allocated_bytes": 11208798720,
+      "metrics": {
+        "dice": 0.8229505349786298,
+        "nsd": 0.23467309720027976,
+        "hd95_mm": 12.0,
+        "surface_status": "valid",
+        "foreground_recall": 0.8763973368403748,
+        "foreground_precision": 0.775647903973811,
+        "false_positive_ml": 52.178450866699215
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "11": [
+          [
+            674.0,
+            288.0,
+            922.0,
+            590.0
+          ]
+        ],
+        "12": [
+          [
+            624.8,
+            238.8,
+            976.2,
+            642.2
+          ]
+        ],
+        "13": [
+          [
+            620.8,
+            236.8,
+            976.2,
+            640.2
+          ]
+        ],
+        "14": [
+          [
+            616.8,
+            236.8,
+            974.2,
+            636.2
+          ]
+        ],
+        "15": [
+          [
+            618.8,
+            238.8,
+            970.2,
+            630.2
+          ]
+        ],
+        "16": [
+          [
+            618.8,
+            240.8,
+            968.2,
+            622.2
+          ]
+        ],
+        "17": [
+          [
+            618.8,
+            242.8,
+            964.2,
+            618.2
+          ]
+        ],
+        "18": [
+          [
+            616.8,
+            248.8,
+            960.2,
+            608.2
+          ]
+        ],
+        "10": [
+          [
+            624.8,
+            238.8,
+            976.2,
+            644.2
+          ]
+        ],
+        "9": [
+          [
+            622.8,
+            232.8,
+            984.2,
+            652.2
+          ]
+        ],
+        "8": [
+          [
+            626.8,
+            238.8,
+            984.2,
+            652.2
+          ]
+        ],
+        "7": [
+          [
+            634.8,
+            240.8,
+            984.2,
+            650.2
+          ]
+        ],
+        "6": [
+          [
+            638.8,
+            240.8,
+            984.2,
+            646.2
+          ]
+        ],
+        "5": [
+          [
+            654.8,
+            246.8,
+            984.2,
+            654.2
+          ]
+        ],
+        "4": [
+          [
+            748.8,
+            250.8,
+            980.2,
+            658.2
+          ]
+        ],
+        "3": [
+          [
+            754.8,
+            252.8,
+            978.2,
+            658.2
+          ]
+        ],
+        "2": [
+          [
+            766.8,
+            256.8,
+            976.2,
+            656.2
+          ]
+        ],
+        "1": [
+          [
+            772.8,
+            256.8,
+            974.2,
+            646.2
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 57,
+      "crop_stop_z": 73,
+      "original_shape_zyx": [
+        85,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        16,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 64,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0025",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        5.0,
+        0.83203125,
+        0.83203125
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0025.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0025.nii.gz",
+      "initial_prompt": {
+        "box": [
+          [
+            319.0,
+            157.0,
+            419.0,
+            266.0
+          ]
+        ]
+      },
+      "inference_seconds": 1.648448459993233,
+      "peak_gpu_allocated_bytes": 10973917696,
+      "metrics": {
+        "dice": 0.6094857642201753,
+        "nsd": 0.1473454798893896,
+        "hd95_mm": 25.0,
+        "surface_status": "valid",
+        "foreground_recall": 0.5551656920077973,
+        "foreground_precision": 0.6755885899539408,
+        "false_positive_ml": 56.804707260131835
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "7": [
+          [
+            638.0,
+            314.0,
+            838.0,
+            532.0
+          ]
+        ],
+        "8": [
+          [
+            588.8,
+            262.8,
+            888.2,
+            580.2
+          ]
+        ],
+        "9": [
+          [
+            570.8,
+            248.8,
+            912.2,
+            630.2
+          ]
+        ],
+        "10": [
+          [
+            562.8,
+            252.8,
+            890.2,
+            572.2
+          ]
+        ],
+        "6": [
+          [
+            592.8,
+            264.8,
+            888.2,
+            582.2
+          ]
+        ],
+        "5": [
+          [
+            572.8,
+            224.8,
+            920.2,
+            630.2
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 66,
+      "crop_stop_z": 83,
+      "original_shape_zyx": [
+        131,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        17,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 75,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0026",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        5.0,
+        0.7792969942092896,
+        0.7792969942092896
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0026.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0026.nii.gz",
+      "initial_prompt": {
+        "box": [
+          [
+            355.0,
+            172.0,
+            443.0,
+            265.0
+          ]
+        ]
+      },
+      "inference_seconds": 1.7331578109879047,
+      "peak_gpu_allocated_bytes": 11003277824,
+      "metrics": {
+        "dice": 0.5066312384473198,
+        "nsd": 0.16455703515811793,
+        "hd95_mm": 30.0,
+        "surface_status": "valid",
+        "foreground_recall": 0.39281619491221786,
+        "foreground_precision": 0.7133051398828888,
+        "false_positive_ml": 26.76084217541681
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "9": [
+          [
+            710.0,
+            344.0,
+            886.0,
+            530.0
+          ]
+        ],
+        "10": [
+          [
+            660.8,
+            296.8,
+            938.2,
+            576.2
+          ]
+        ],
+        "11": [
+          [
+            654.8,
+            288.8,
+            968.2,
+            588.2
+          ]
+        ],
+        "8": [
+          [
+            668.8,
+            294.8,
+            940.2,
+            582.2
+          ]
+        ],
+        "7": [
+          [
+            634.8,
+            286.8,
+            954.2,
+            632.2
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 55,
+      "crop_stop_z": 74,
+      "original_shape_zyx": [
+        88,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        19,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 63,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0027",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        5.0,
+        0.7753909826278687,
+        0.7753909826278687
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0027.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0027.nii.gz",
+      "initial_prompt": {
+        "box": [
+          [
+            319.0,
+            160.0,
+            445.0,
+            254.0
+          ]
+        ]
+      },
+      "inference_seconds": 2.018495267009712,
+      "peak_gpu_allocated_bytes": 11061998080,
+      "metrics": {
+        "dice": 0.6401689449039901,
+        "nsd": 0.13442906409705638,
+        "hd95_mm": 30.0,
+        "surface_status": "valid",
+        "foreground_recall": 0.6068874646608077,
+        "foreground_precision": 0.6773125080307811,
+        "false_positive_ml": 67.94513519304853
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "8": [
+          [
+            638.0,
+            320.0,
+            890.0,
+            508.0
+          ]
+        ],
+        "9": [
+          [
+            588.8,
+            272.8,
+            942.2,
+            560.2
+          ]
+        ],
+        "10": [
+          [
+            572.8,
+            268.8,
+            950.2,
+            576.2
+          ]
+        ],
+        "11": [
+          [
+            564.8,
+            268.8,
+            970.2,
+            626.2
+          ]
+        ],
+        "7": [
+          [
+            592.8,
+            272.8,
+            940.2,
+            558.2
+          ]
+        ],
+        "6": [
+          [
+            558.8,
+            256.8,
+            960.2,
+            564.2
+          ]
+        ],
+        "5": [
+          [
+            572.8,
+            264.8,
+            954.2,
+            562.2
+          ]
+        ],
+        "4": [
+          [
+            550.8,
+            264.8,
+            940.2,
+            558.2
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 62,
+      "crop_stop_z": 79,
+      "original_shape_zyx": [
+        89,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        17,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 70,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0028",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        5.0,
+        0.796875,
+        0.796875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/img/img0028.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/datasets/01_BCV-Abdomen/Training/label/label0028.nii.gz",
+      "initial_prompt": {
+        "box": [
+          [
+            299.0,
+            104.0,
+            404.0,
+            169.0
+          ]
+        ]
+      },
+      "inference_seconds": 1.71760590300255,
+      "peak_gpu_allocated_bytes": 11003277824,
+      "metrics": {
+        "dice": 0.4985869610613802,
+        "nsd": 0.18399087968075156,
+        "hd95_mm": 30.0,
+        "surface_status": "valid",
+        "foreground_recall": 0.38902889419943515,
+        "foreground_precision": 0.6940428665555599,
+        "false_positive_ml": 25.06383544921875
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "8": [
+          [
+            598.0,
+            208.0,
+            808.0,
+            338.0
+          ]
+        ],
+        "9": [
+          [
+            548.8,
+            160.8,
+            854.2,
+            390.2
+          ]
+        ],
+        "7": [
+          [
+            554.8,
+            158.8,
+            860.2,
+            390.2
+          ]
+        ],
+        "6": [
+          [
+            540.8,
+            142.8,
+            882.2,
+            408.2
+          ]
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "dice": {
+      "mean": 0.6227767215034136,
+      "valid_count": 6,
+      "undefined_count": 0
+    },
+    "nsd": {
+      "mean": 0.17154024763661826,
+      "valid_count": 6,
+      "undefined_count": 0
+    },
+    "hd95_mm": {
+      "mean": 25.333333333333332,
+      "valid_count": 6,
+      "undefined_count": 0
+    },
+    "foreground_recall": {
+      "mean": 0.586915853208038,
+      "valid_count": 6,
+      "undefined_count": 0
+    },
+    "foreground_precision": {
+      "mean": 0.6928663768478717,
+      "valid_count": 6,
+      "undefined_count": 0
+    },
+    "false_positive_ml": {
+      "mean": 52.419107726592365,
+      "valid_count": 6,
+      "undefined_count": 0
+    }
+  },
+  "finished_utc": "2026-10-07T10:03:51.994057+00:00"
+}

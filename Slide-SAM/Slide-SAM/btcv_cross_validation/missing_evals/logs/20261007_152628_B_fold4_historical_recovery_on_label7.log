@@ -1,0 +1,38 @@
+{
+  "preflight": "passed",
+  "training_count": 24,
+  "evaluation_ids": [
+    "img0029",
+    "img0030",
+    "img0031",
+    "img0032"
+  ],
+  "branch": "proposed",
+  "protocol": "gt-cropped",
+  "target_z_mm": 3.0,
+  "trigger_mm": 5.5,
+  "geometry_version": "v3",
+  "box_mode": "historical",
+  "padding_mode": "historical",
+  "gpu_inference_requested": true
+}
+Loading model from /home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold4/ddp_sub_cv/cv_fold4/ckpt/model_epoch_20.pth
+/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/core/learner2.py:126: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict = torch.load(model_path, map_location="cpu")
+Checking Data range: [-200.0, 400.0]
+Ends for no mask.
+img0029 {'dice': 0.4962090781281382, 'nsd': 0.2603649116488174, 'hd95_mm': 90.52661504285915, 'surface_status': 'valid', 'foreground_recall': 0.3620029670873093, 'foreground_precision': 0.7885497705964493, 'false_positive_ml': 24.103406482189893}
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+img0030 {'dice': 0.5673598673007526, 'nsd': 0.28288749490226234, 'hd95_mm': 53.55429487912244, 'surface_status': 'valid', 'foreground_recall': 0.5877342107668403, 'foreground_precision': 0.5483507862332435, 'false_positive_ml': 87.52443237304688}
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+No masks
+Ends for no mask.
+img0031 {'dice': 0.5619229686272766, 'nsd': 0.2790045727614079, 'hd95_mm': 52.89964207201837, 'surface_status': 'valid', 'foreground_recall': 0.4820125594284697, 'foreground_precision': 0.6735948269736375, 'false_positive_ml': 38.69898987579346}
+Checking Data range: [-200.0, 400.0]
+No masks
+Ends for no mask.
+img0032 {'dice': 0.7571102446363599, 'nsd': 0.364474184633038, 'hd95_mm': 49.86371435998428, 'surface_status': 'valid', 'foreground_recall': 0.683467023472537, 'foreground_precision': 0.8485399936557757, 'false_positive_ml': 59.23744828128006}

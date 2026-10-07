@@ -1,0 +1,372 @@
+{
+  "started_utc": "2026-10-07T10:41:15.966719+00:00",
+  "status": "complete",
+  "geometry_version": "v3_cropped_origin_strict_restore",
+  "box_mode": "historical",
+  "padding_mode": "historical",
+  "padding_fraction": 0.0,
+  "recovery": "ON",
+  "arguments": {
+    "synthetic_root": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold3",
+    "manifest": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold3/synthetic_manifest.txt",
+    "train_manifest": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/dataset_list/fold3/01_BTCV_train_4to1.txt",
+    "checkpoint": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold3/ddp_sub_cv/cv_fold3/ckpt/model_epoch_20.pth",
+    "checkpoint_kind": "finetuned",
+    "label_idx": 1,
+    "protocol": "gt-cropped",
+    "branch": "proposed",
+    "box_mode": "historical",
+    "target_z_mm": 3.0,
+    "trigger_mm": 5.5,
+    "nsd_tolerance_mm": 1.0,
+    "output": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing_boxmode/results/fold3/historical_box_recovery_on_label1",
+    "save_predictions": false,
+    "run_inference": true
+  },
+  "training_ids": [
+    "img0001",
+    "img0002",
+    "img0003",
+    "img0004",
+    "img0005",
+    "img0006",
+    "img0007",
+    "img0008",
+    "img0009",
+    "img0010",
+    "img0021",
+    "img0022",
+    "img0029",
+    "img0030",
+    "img0031",
+    "img0032",
+    "img0033",
+    "img0034",
+    "img0035",
+    "img0036",
+    "img0037",
+    "img0038",
+    "img0039",
+    "img0040"
+  ],
+  "evaluation_ids": [
+    "img0024"
+  ],
+  "manifest_sha256": "b53cefdd4760e84b0f8dcdb536d6acc674e8ae306291519a28402fe5fc6b5486",
+  "training_manifest_sha256": "640c58ad2425eb3123283e1fd9932bfafafcaaac1aede29c4e7853dcd2fc376a",
+  "checkpoint_bytes": 377029836,
+  "checkpoint_mtime_ns": 1790459639805569384,
+  "checkpoint_sha256": "4fa959b3936a8e64fbbd474ec1e476201639c888c604e471e53a54477ff25e94",
+  "experiment_source_sha256": {
+    "evaluate.py": "03ab920a04d5c173596eaaa9f738aab9445d19f687e84b55e5c3a18be1ff4d49",
+    "__init__.py": "3522d6e6170abc90b754803f2bac8bc049ee3e32c43a760be2bcd6622212225c",
+    "helpers.py": "e08ce8822102b514d0dd48c92826db1a2527fc63bcfb04f4cc08026894b6cdab",
+    "loader.py": "3af56876091db94351df8217ab5599ff039617d03fcbc0b4b484be455f821c98"
+  },
+  "warning": "v3: cropped z-origin passed to resampler. Scoring on declared thick-spacing grid. Proposed branch resamples only when z > trigger_mm.",
+  "cases": [
+    {
+      "crop_start_z": 46,
+      "crop_stop_z": 58,
+      "original_shape_zyx": [
+        63,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        12,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 51,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0024",
+      "label_idx": 1,
+      "spacing_zyx_mm": [
+        5.951612949371338,
+        0.685546875,
+        0.685546875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold3/img/img0024.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold3/label/img0024.nii.gz",
+      "scoring_grid": "synthetic_thick_spacing_v2",
+      "synthetic_source_spacing_z_mm": 3.0,
+      "synthetic_target_spacing_z_mm": 6.0,
+      "synthetic_actual_spacing_z_mm": 5.951612903225806,
+      "total_seconds": 3.222818107009516,
+      "peak_gpu_allocated_bytes": 11179438592,
+      "metrics": {
+        "dice": 0.7755590943709756,
+        "nsd": 0.4434898468916435,
+        "hd95_mm": 13.105920644392876,
+        "surface_status": "valid",
+        "foreground_recall": 0.7616269582245431,
+        "foreground_precision": 0.7900104381188817,
+        "false_positive_ml": 41.64052336602876
+      },
+      "resampling_info": {
+        "branch": "proposed",
+        "source_z_mm": 5.951612949371338,
+        "trigger_mm": 5.5,
+        "crop_start_z": 46,
+        "resampling_triggered": true,
+        "origin_xyz_working": [
+          0.0,
+          0.0,
+          273.77419567108154
+        ],
+        "resample_seconds": 0.03277532999345567,
+        "target_z_mm": 3.0,
+        "actual_z_mm": 2.975806474685669,
+        "resampled_shape_zyx": [
+          23,
+          512,
+          512
+        ],
+        "center_scoring_grid": 5,
+        "center_continuous_resampled": 10.0,
+        "center_resampled_actual": 10,
+        "center_physical_displacement_mm": 0.0,
+        "inference_seconds": 2.9413690700021107,
+        "restored_shape_zyx": [
+          12,
+          512,
+          512
+        ],
+        "resampling_applied": true
+      },
+      "box_mode": "historical",
+      "padding_mode": "historical",
+      "synthetic_input_sha256": {
+        "img": "45c1c672d5e20731c3de13addb96d87ee651f74a7a2767273250d95e6ebb38e6",
+        "label": "dc8b37404de09f00e6480934a638a544f97c6619e315dc90715f3400f1f94ee3"
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "10": [
+          [
+            674.0,
+            288.0,
+            922.0,
+            590.0
+          ]
+        ],
+        "11": [
+          [
+            664,
+            278,
+            910,
+            576
+          ]
+        ],
+        "12": [
+          [
+            660,
+            274,
+            901,
+            567
+          ]
+        ],
+        "13": [
+          [
+            657,
+            275,
+            889,
+            555
+          ]
+        ],
+        "14": [
+          [
+            657,
+            277,
+            876,
+            540
+          ]
+        ],
+        "15": [
+          [
+            660,
+            282,
+            864,
+            516
+          ]
+        ],
+        "16": [
+          [
+            661,
+            285,
+            855,
+            501
+          ]
+        ],
+        "17": [
+          [
+            663,
+            293,
+            848,
+            488
+          ]
+        ],
+        "18": [
+          [
+            664,
+            306,
+            841,
+            477
+          ]
+        ],
+        "19": [
+          [
+            670,
+            308,
+            834,
+            468
+          ]
+        ],
+        "20": [
+          [
+            700,
+            340,
+            827,
+            461
+          ]
+        ],
+        "21": [
+          [
+            703,
+            347,
+            820,
+            456
+          ]
+        ],
+        "9": [
+          [
+            664,
+            278,
+            910,
+            578
+          ]
+        ],
+        "8": [
+          [
+            665,
+            277,
+            899,
+            567
+          ]
+        ],
+        "7": [
+          [
+            667,
+            281,
+            886,
+            554
+          ]
+        ],
+        "6": [
+          [
+            677,
+            285,
+            871,
+            539
+          ]
+        ],
+        "5": [
+          [
+            680,
+            290,
+            854,
+            510
+          ]
+        ],
+        "4": [
+          [
+            685,
+            295,
+            839,
+            495
+          ]
+        ],
+        "3": [
+          [
+            688,
+            312,
+            824,
+            460
+          ]
+        ],
+        "2": [
+          [
+            707,
+            347,
+            808,
+            452
+          ]
+        ],
+        "1": [
+          [
+            710,
+            354,
+            803,
+            445
+          ]
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "dice": {
+      "mean": 0.7755590943709756,
+      "valid_count": 1,
+      "undefined_count": 0
+    },
+    "nsd": {
+      "mean": 0.4434898468916435,
+      "valid_count": 1,
+      "undefined_count": 0
+    },
+    "hd95_mm": {
+      "mean": 13.105920644392876,
+      "valid_count": 1,
+      "undefined_count": 0
+    },
+    "foreground_recall": {
+      "mean": 0.7616269582245431,
+      "valid_count": 1,
+      "undefined_count": 0
+    },
+    "foreground_precision": {
+      "mean": 0.7900104381188817,
+      "valid_count": 1,
+      "undefined_count": 0
+    },
+    "false_positive_ml": {
+      "mean": 41.64052336602876,
+      "valid_count": 1,
+      "undefined_count": 0
+    }
+  },
+  "finished_utc": "2026-10-07T10:41:20.925582+00:00"
+}

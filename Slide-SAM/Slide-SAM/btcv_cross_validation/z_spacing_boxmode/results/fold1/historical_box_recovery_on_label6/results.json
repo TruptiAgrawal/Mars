@@ -1,0 +1,2719 @@
+{
+  "started_utc": "2026-10-07T10:34:41.025804+00:00",
+  "status": "complete",
+  "geometry_version": "v3_cropped_origin_strict_restore",
+  "box_mode": "historical",
+  "padding_mode": "historical",
+  "padding_fraction": 0.0,
+  "recovery": "ON",
+  "arguments": {
+    "synthetic_root": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1",
+    "manifest": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/synthetic_manifest.txt",
+    "train_manifest": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/dataset_list/fold1/01_BTCV_train_4to1.txt",
+    "checkpoint": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold1/ddp_sub_cv/cv_fold1/ckpt/model_epoch_20.pth",
+    "checkpoint_kind": "finetuned",
+    "label_idx": 6,
+    "protocol": "gt-cropped",
+    "branch": "proposed",
+    "box_mode": "historical",
+    "target_z_mm": 3.0,
+    "trigger_mm": 5.5,
+    "nsd_tolerance_mm": 1.0,
+    "output": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing_boxmode/results/fold1/historical_box_recovery_on_label6",
+    "save_predictions": false,
+    "run_inference": true
+  },
+  "training_ids": [
+    "img0007",
+    "img0008",
+    "img0009",
+    "img0010",
+    "img0021",
+    "img0022",
+    "img0023",
+    "img0024",
+    "img0025",
+    "img0026",
+    "img0027",
+    "img0028",
+    "img0029",
+    "img0030",
+    "img0031",
+    "img0032",
+    "img0033",
+    "img0034",
+    "img0035",
+    "img0036",
+    "img0037",
+    "img0038",
+    "img0039",
+    "img0040"
+  ],
+  "evaluation_ids": [
+    "img0001",
+    "img0002",
+    "img0003",
+    "img0004",
+    "img0005",
+    "img0006"
+  ],
+  "manifest_sha256": "b7f26bbf6eacdc889307613756a901da66ff434430744964f673568081f9b60c",
+  "training_manifest_sha256": "dc6d60791ddaa48d01bf83fee11cfec09aa26ff29aa544cdc554ebeb81d92924",
+  "checkpoint_bytes": 377029836,
+  "checkpoint_mtime_ns": 1790188496289373751,
+  "checkpoint_sha256": "d11c3c3526284de56039b7657197842a90972476ae70189ff1928d2644cc713e",
+  "experiment_source_sha256": {
+    "evaluate.py": "03ab920a04d5c173596eaaa9f738aab9445d19f687e84b55e5c3a18be1ff4d49",
+    "__init__.py": "3522d6e6170abc90b754803f2bac8bc049ee3e32c43a760be2bcd6622212225c",
+    "helpers.py": "e08ce8822102b514d0dd48c92826db1a2527fc63bcfb04f4cc08026894b6cdab",
+    "loader.py": "3af56876091db94351df8217ab5599ff039617d03fcbc0b4b484be455f821c98"
+  },
+  "warning": "v3: cropped z-origin passed to resampler. Scoring on declared thick-spacing grid. Proposed branch resamples only when z > trigger_mm.",
+  "cases": [
+    {
+      "crop_start_z": 31,
+      "crop_stop_z": 68,
+      "original_shape_zyx": [
+        74,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        37,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 62,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0001",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        6.0,
+        0.66796875,
+        0.66796875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/img/img0001.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/label/img0001.nii.gz",
+      "scoring_grid": "synthetic_thick_spacing_v2",
+      "synthetic_source_spacing_z_mm": 3.0,
+      "synthetic_target_spacing_z_mm": 6.0,
+      "synthetic_actual_spacing_z_mm": 6.0,
+      "total_seconds": 10.312446210999042,
+      "peak_gpu_allocated_bytes": 12647444992,
+      "metrics": {
+        "dice": 0.6441458975091239,
+        "nsd": 0.3582746828787103,
+        "hd95_mm": 66.06630289469685,
+        "surface_status": "valid",
+        "foreground_recall": 0.4881657123755917,
+        "foreground_precision": 0.9466093948825789,
+        "false_positive_ml": 47.85036932373047
+      },
+      "resampling_info": {
+        "branch": "proposed",
+        "source_z_mm": 6.0,
+        "trigger_mm": 5.5,
+        "crop_start_z": 31,
+        "resampling_triggered": true,
+        "origin_xyz_working": [
+          0.0,
+          0.0,
+          186.0
+        ],
+        "resample_seconds": 0.12877784299780615,
+        "target_z_mm": 3.0,
+        "actual_z_mm": 3.0,
+        "resampled_shape_zyx": [
+          73,
+          512,
+          512
+        ],
+        "center_scoring_grid": 31,
+        "center_continuous_resampled": 62.0,
+        "center_resampled_actual": 62,
+        "center_physical_displacement_mm": 0.0,
+        "inference_seconds": 8.919057991995942,
+        "restored_shape_zyx": [
+          37,
+          512,
+          512
+        ],
+        "resampling_applied": true
+      },
+      "box_mode": "historical",
+      "padding_mode": "historical",
+      "synthetic_input_sha256": {
+        "img": "fd78213dab57ab5351c6f1924d7f2348a896d723a1e7a58866bbcf115203229f",
+        "label": "dd2b22d4ab2b1b6ae95a69ad84796b2e13d1d34eb40dd1fc9fac9382159ba7f1"
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "62": [
+          [
+            102.0,
+            298.0,
+            716.0,
+            752.0
+          ]
+        ],
+        "63": [
+          [
+            74,
+            270,
+            689,
+            729
+          ]
+        ],
+        "64": [
+          [
+            75,
+            265,
+            667,
+            723
+          ]
+        ],
+        "65": [
+          [
+            81,
+            271,
+            644,
+            710
+          ]
+        ],
+        "66": [
+          [
+            92,
+            284,
+            621,
+            693
+          ]
+        ],
+        "67": [
+          [
+            96,
+            288,
+            597,
+            671
+          ]
+        ],
+        "68": [
+          [
+            99,
+            303,
+            577,
+            649
+          ]
+        ],
+        "69": [
+          [
+            100,
+            300,
+            554,
+            626
+          ]
+        ],
+        "61": [
+          [
+            72,
+            268,
+            687,
+            731
+          ]
+        ],
+        "60": [
+          [
+            70,
+            266,
+            655,
+            725
+          ]
+        ],
+        "59": [
+          [
+            69,
+            269,
+            627,
+            719
+          ]
+        ],
+        "58": [
+          [
+            72,
+            272,
+            604,
+            708
+          ]
+        ],
+        "57": [
+          [
+            73,
+            277,
+            583,
+            691
+          ]
+        ],
+        "56": [
+          [
+            74,
+            280,
+            564,
+            674
+          ]
+        ],
+        "55": [
+          [
+            77,
+            287,
+            546,
+            652
+          ]
+        ],
+        "54": [
+          [
+            80,
+            292,
+            527,
+            633
+          ]
+        ],
+        "53": [
+          [
+            84,
+            302,
+            504,
+            620
+          ]
+        ],
+        "52": [
+          [
+            84,
+            306,
+            491,
+            609
+          ]
+        ],
+        "51": [
+          [
+            85,
+            311,
+            475,
+            601
+          ]
+        ],
+        "50": [
+          [
+            89,
+            317,
+            452,
+            588
+          ]
+        ],
+        "49": [
+          [
+            90,
+            322,
+            421,
+            577
+          ]
+        ],
+        "48": [
+          [
+            94,
+            328,
+            396,
+            568
+          ]
+        ],
+        "47": [
+          [
+            97,
+            333,
+            376,
+            560
+          ]
+        ],
+        "46": [
+          [
+            100,
+            338,
+            361,
+            553
+          ]
+        ],
+        "45": [
+          [
+            102,
+            342,
+            345,
+            549
+          ]
+        ],
+        "44": [
+          [
+            105,
+            349,
+            330,
+            544
+          ]
+        ],
+        "43": [
+          [
+            106,
+            356,
+            317,
+            537
+          ]
+        ],
+        "42": [
+          [
+            107,
+            361,
+            303,
+            529
+          ]
+        ],
+        "41": [
+          [
+            112,
+            366,
+            292,
+            524
+          ]
+        ],
+        "40": [
+          [
+            114,
+            370,
+            284,
+            518
+          ]
+        ],
+        "39": [
+          [
+            117,
+            373,
+            276,
+            514
+          ]
+        ],
+        "38": [
+          [
+            121,
+            377,
+            267,
+            509
+          ]
+        ],
+        "37": [
+          [
+            124,
+            382,
+            260,
+            502
+          ]
+        ],
+        "36": [
+          [
+            126,
+            386,
+            252,
+            496
+          ]
+        ],
+        "35": [
+          [
+            129,
+            389,
+            246,
+            490
+          ]
+        ],
+        "34": [
+          [
+            129,
+            391,
+            241,
+            485
+          ]
+        ],
+        "33": [
+          [
+            131,
+            393,
+            235,
+            483
+          ]
+        ],
+        "32": [
+          [
+            134,
+            396,
+            229,
+            479
+          ]
+        ],
+        "31": [
+          [
+            136,
+            398,
+            224,
+            474
+          ]
+        ],
+        "30": [
+          [
+            138,
+            400,
+            220,
+            470
+          ]
+        ],
+        "29": [
+          [
+            141,
+            403,
+            216,
+            466
+          ]
+        ],
+        "28": [
+          [
+            143,
+            403,
+            211,
+            463
+          ]
+        ],
+        "27": [
+          [
+            145,
+            403,
+            207,
+            461
+          ]
+        ],
+        "26": [
+          [
+            148,
+            406,
+            205,
+            457
+          ]
+        ],
+        "25": [
+          [
+            152,
+            408,
+            203,
+            453
+          ]
+        ],
+        "24": [
+          [
+            156,
+            410,
+            200,
+            450
+          ]
+        ],
+        "23": [
+          [
+            159,
+            413,
+            196,
+            448
+          ]
+        ],
+        "22": [
+          [
+            161,
+            415,
+            192,
+            444
+          ]
+        ],
+        "21": [
+          [
+            161,
+            419,
+            183,
+            437
+          ]
+        ],
+        "20": [
+          [
+            164,
+            420,
+            181,
+            437
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 39,
+      "crop_stop_z": 66,
+      "original_shape_zyx": [
+        70,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        27,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 57,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0002",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        6.0,
+        0.720703125,
+        0.720703125
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/img/img0002.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/label/img0002.nii.gz",
+      "scoring_grid": "synthetic_thick_spacing_v2",
+      "synthetic_source_spacing_z_mm": 3.0,
+      "synthetic_target_spacing_z_mm": 6.0,
+      "synthetic_actual_spacing_z_mm": 6.0,
+      "total_seconds": 7.064665908997995,
+      "peak_gpu_allocated_bytes": 12060242432,
+      "metrics": {
+        "dice": 0.727636041726048,
+        "nsd": 0.3276047590777254,
+        "hd95_mm": 39.0520310678418,
+        "surface_status": "valid",
+        "foreground_recall": 0.6028332108890455,
+        "foreground_precision": 0.9176052186150891,
+        "false_positive_ml": 67.50914570617675
+      },
+      "resampling_info": {
+        "branch": "proposed",
+        "source_z_mm": 6.0,
+        "trigger_mm": 5.5,
+        "crop_start_z": 39,
+        "resampling_triggered": true,
+        "origin_xyz_working": [
+          0.0,
+          0.0,
+          234.0
+        ],
+        "resample_seconds": 0.07755398801236879,
+        "target_z_mm": 3.0,
+        "actual_z_mm": 3.0,
+        "resampled_shape_zyx": [
+          53,
+          512,
+          512
+        ],
+        "center_scoring_grid": 18,
+        "center_continuous_resampled": 36.0,
+        "center_resampled_actual": 36,
+        "center_physical_displacement_mm": 0.0,
+        "inference_seconds": 6.341830235003727,
+        "restored_shape_zyx": [
+          27,
+          512,
+          512
+        ],
+        "resampling_applied": true
+      },
+      "box_mode": "historical",
+      "padding_mode": "historical",
+      "synthetic_input_sha256": {
+        "img": "454d8cf2bfbf22b3d0c422978787b20b01609ddca52ac71785f6ac660635f361",
+        "label": "4b81991592032afa95a23db44304f536db07bc4a7b2f883a400a0025d3184e75"
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "36": [
+          [
+            188.0,
+            400.0,
+            690.0,
+            754.0
+          ]
+        ],
+        "37": [
+          [
+            166,
+            380,
+            664,
+            738
+          ]
+        ],
+        "38": [
+          [
+            167,
+            383,
+            639,
+            729
+          ]
+        ],
+        "39": [
+          [
+            171,
+            387,
+            615,
+            713
+          ]
+        ],
+        "40": [
+          [
+            176,
+            400,
+            595,
+            699
+          ]
+        ],
+        "41": [
+          [
+            179,
+            403,
+            580,
+            688
+          ]
+        ],
+        "42": [
+          [
+            186,
+            418,
+            565,
+            677
+          ]
+        ],
+        "43": [
+          [
+            193,
+            419,
+            547,
+            665
+          ]
+        ],
+        "44": [
+          [
+            201,
+            425,
+            516,
+            654
+          ]
+        ],
+        "45": [
+          [
+            208,
+            438,
+            498,
+            642
+          ]
+        ],
+        "46": [
+          [
+            218,
+            442,
+            474,
+            630
+          ]
+        ],
+        "47": [
+          [
+            225,
+            451,
+            457,
+            617
+          ]
+        ],
+        "48": [
+          [
+            232,
+            458,
+            444,
+            610
+          ]
+        ],
+        "49": [
+          [
+            237,
+            463,
+            427,
+            599
+          ]
+        ],
+        "50": [
+          [
+            246,
+            474,
+            418,
+            594
+          ]
+        ],
+        "51": [
+          [
+            246,
+            476,
+            410,
+            588
+          ]
+        ],
+        "35": [
+          [
+            166,
+            374,
+            664,
+            738
+          ]
+        ],
+        "34": [
+          [
+            161,
+            363,
+            637,
+            729
+          ]
+        ],
+        "33": [
+          [
+            162,
+            356,
+            610,
+            718
+          ]
+        ],
+        "32": [
+          [
+            163,
+            355,
+            590,
+            708
+          ]
+        ],
+        "31": [
+          [
+            160,
+            352,
+            566,
+            696
+          ]
+        ],
+        "30": [
+          [
+            162,
+            352,
+            543,
+            687
+          ]
+        ],
+        "29": [
+          [
+            161,
+            351,
+            513,
+            677
+          ]
+        ],
+        "28": [
+          [
+            165,
+            351,
+            482,
+            666
+          ]
+        ],
+        "27": [
+          [
+            165,
+            353,
+            442,
+            652
+          ]
+        ],
+        "26": [
+          [
+            168,
+            354,
+            425,
+            641
+          ]
+        ],
+        "25": [
+          [
+            170,
+            354,
+            410,
+            626
+          ]
+        ],
+        "24": [
+          [
+            178,
+            358,
+            393,
+            613
+          ]
+        ],
+        "23": [
+          [
+            181,
+            361,
+            375,
+            603
+          ]
+        ],
+        "22": [
+          [
+            186,
+            364,
+            360,
+            596
+          ]
+        ],
+        "21": [
+          [
+            189,
+            369,
+            344,
+            590
+          ]
+        ],
+        "20": [
+          [
+            191,
+            377,
+            331,
+            581
+          ]
+        ],
+        "19": [
+          [
+            194,
+            382,
+            316,
+            572
+          ]
+        ],
+        "18": [
+          [
+            199,
+            389,
+            304,
+            566
+          ]
+        ],
+        "17": [
+          [
+            204,
+            398,
+            291,
+            559
+          ]
+        ],
+        "16": [
+          [
+            209,
+            403,
+            282,
+            552
+          ]
+        ],
+        "15": [
+          [
+            213,
+            415,
+            271,
+            545
+          ]
+        ],
+        "14": [
+          [
+            218,
+            424,
+            262,
+            538
+          ]
+        ],
+        "13": [
+          [
+            221,
+            441,
+            255,
+            529
+          ]
+        ],
+        "12": [
+          [
+            223,
+            453,
+            252,
+            522
+          ]
+        ],
+        "11": [
+          [
+            227,
+            467,
+            247,
+            515
+          ]
+        ],
+        "10": [
+          [
+            230,
+            486,
+            244,
+            508
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 62,
+      "crop_stop_z": 94,
+      "original_shape_zyx": [
+        100,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        32,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 82,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0003",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        5.969696998596191,
+        0.8984375,
+        0.8984375
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/img/img0003.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/label/img0003.nii.gz",
+      "scoring_grid": "synthetic_thick_spacing_v2",
+      "synthetic_source_spacing_z_mm": 3.0,
+      "synthetic_target_spacing_z_mm": 6.0,
+      "synthetic_actual_spacing_z_mm": 5.96969696969697,
+      "total_seconds": 8.092896399990423,
+      "peak_gpu_allocated_bytes": 12353843712,
+      "metrics": {
+        "dice": 0.6397098775967819,
+        "nsd": 0.2841656449652282,
+        "hd95_mm": 59.7847948457057,
+        "surface_status": "valid",
+        "foreground_recall": 0.48700868313012297,
+        "foreground_precision": 0.9319093219217767,
+        "false_positive_ml": 71.91878960486065
+      },
+      "resampling_info": {
+        "branch": "proposed",
+        "source_z_mm": 5.969696998596191,
+        "trigger_mm": 5.5,
+        "crop_start_z": 62,
+        "resampling_triggered": true,
+        "origin_xyz_working": [
+          0.0,
+          0.0,
+          370.12121391296387
+        ],
+        "resample_seconds": 0.07611041500058491,
+        "target_z_mm": 3.0,
+        "actual_z_mm": 2.9848484992980957,
+        "resampled_shape_zyx": [
+          63,
+          512,
+          512
+        ],
+        "center_scoring_grid": 20,
+        "center_continuous_resampled": 40.0,
+        "center_resampled_actual": 40,
+        "center_physical_displacement_mm": 0.0,
+        "inference_seconds": 7.3353940669912845,
+        "restored_shape_zyx": [
+          32,
+          512,
+          512
+        ],
+        "resampling_applied": true
+      },
+      "box_mode": "historical",
+      "padding_mode": "historical",
+      "synthetic_input_sha256": {
+        "img": "942bb40e4a5ee38f3b85a76163fcb1973fad0b5a76355bae295c25e54c49ad8f",
+        "label": "53f335b0936660b3d7523239cbd95d5bd5c61a9baed83c2320e3048de89b93e5"
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "40": [
+          [
+            190.0,
+            254.0,
+            566.0,
+            678.0
+          ]
+        ],
+        "41": [
+          [
+            172,
+            238,
+            541,
+            651
+          ]
+        ],
+        "42": [
+          [
+            169,
+            237,
+            509,
+            635
+          ]
+        ],
+        "43": [
+          [
+            173,
+            241,
+            484,
+            624
+          ]
+        ],
+        "44": [
+          [
+            178,
+            244,
+            459,
+            611
+          ]
+        ],
+        "45": [
+          [
+            181,
+            247,
+            440,
+            598
+          ]
+        ],
+        "46": [
+          [
+            182,
+            250,
+            421,
+            585
+          ]
+        ],
+        "47": [
+          [
+            183,
+            251,
+            403,
+            575
+          ]
+        ],
+        "48": [
+          [
+            184,
+            252,
+            388,
+            564
+          ]
+        ],
+        "49": [
+          [
+            185,
+            255,
+            370,
+            556
+          ]
+        ],
+        "50": [
+          [
+            188,
+            260,
+            353,
+            551
+          ]
+        ],
+        "51": [
+          [
+            189,
+            265,
+            335,
+            543
+          ]
+        ],
+        "52": [
+          [
+            192,
+            272,
+            316,
+            532
+          ]
+        ],
+        "53": [
+          [
+            192,
+            276,
+            287,
+            443
+          ]
+        ],
+        "54": [
+          [
+            190,
+            280,
+            282,
+            434
+          ]
+        ],
+        "55": [
+          [
+            194,
+            286,
+            276,
+            424
+          ]
+        ],
+        "56": [
+          [
+            197,
+            293,
+            271,
+            417
+          ]
+        ],
+        "57": [
+          [
+            203,
+            367,
+            235,
+            415
+          ]
+        ],
+        "58": [
+          [
+            207,
+            373,
+            234,
+            412
+          ]
+        ],
+        "59": [
+          [
+            209,
+            379,
+            232,
+            408
+          ]
+        ],
+        "60": [
+          [
+            214,
+            382,
+            230,
+            404
+          ]
+        ],
+        "39": [
+          [
+            172,
+            236,
+            538,
+            656
+          ]
+        ],
+        "38": [
+          [
+            165,
+            231,
+            517,
+            639
+          ]
+        ],
+        "37": [
+          [
+            164,
+            228,
+            494,
+            622
+          ]
+        ],
+        "36": [
+          [
+            167,
+            229,
+            478,
+            606
+          ]
+        ],
+        "35": [
+          [
+            164,
+            228,
+            455,
+            589
+          ]
+        ],
+        "34": [
+          [
+            167,
+            229,
+            440,
+            576
+          ]
+        ],
+        "33": [
+          [
+            167,
+            227,
+            425,
+            561
+          ]
+        ],
+        "32": [
+          [
+            168,
+            228,
+            409,
+            547
+          ]
+        ],
+        "31": [
+          [
+            169,
+            227,
+            388,
+            534
+          ]
+        ],
+        "30": [
+          [
+            172,
+            226,
+            371,
+            519
+          ]
+        ],
+        "29": [
+          [
+            171,
+            225,
+            353,
+            505
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 40,
+      "crop_stop_z": 68,
+      "original_shape_zyx": [
+        71,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        28,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 59,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0004",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        5.9571428298950195,
+        0.59375,
+        0.59375
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/img/img0004.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/label/img0004.nii.gz",
+      "scoring_grid": "synthetic_thick_spacing_v2",
+      "synthetic_source_spacing_z_mm": 3.0,
+      "synthetic_target_spacing_z_mm": 6.0,
+      "synthetic_actual_spacing_z_mm": 5.957142857142857,
+      "total_seconds": 7.640315545999329,
+      "peak_gpu_allocated_bytes": 12118962688,
+      "metrics": {
+        "dice": 0.8045267210758927,
+        "nsd": 0.3900324031506184,
+        "hd95_mm": 29.785714149475098,
+        "surface_status": "valid",
+        "foreground_recall": 0.7160286523270967,
+        "foreground_precision": 0.9179858303770316,
+        "false_positive_ml": 66.80709382109995
+      },
+      "resampling_info": {
+        "branch": "proposed",
+        "source_z_mm": 5.9571428298950195,
+        "trigger_mm": 5.5,
+        "crop_start_z": 40,
+        "resampling_triggered": true,
+        "origin_xyz_working": [
+          0.0,
+          0.0,
+          238.28571319580078
+        ],
+        "resample_seconds": 0.07091069700254593,
+        "target_z_mm": 3.0,
+        "actual_z_mm": 2.9785714149475098,
+        "resampled_shape_zyx": [
+          55,
+          512,
+          512
+        ],
+        "center_scoring_grid": 19,
+        "center_continuous_resampled": 38.0,
+        "center_resampled_actual": 38,
+        "center_physical_displacement_mm": 0.0,
+        "inference_seconds": 6.73791849699046,
+        "restored_shape_zyx": [
+          28,
+          512,
+          512
+        ],
+        "resampling_applied": true
+      },
+      "box_mode": "historical",
+      "padding_mode": "historical",
+      "synthetic_input_sha256": {
+        "img": "0ae660e5a3854b52d2d168d0f639a1dac86ba092dec3f3c7c7d14403a4063726",
+        "label": "6565f841d8cb85f3729fabce96925c58ea61288f51f878612797c719c8f4bfce"
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "38": [
+          [
+            148.0,
+            274.0,
+            886.0,
+            670.0
+          ]
+        ],
+        "39": [
+          [
+            115,
+            241,
+            848,
+            654
+          ]
+        ],
+        "40": [
+          [
+            116,
+            240,
+            830,
+            652
+          ]
+        ],
+        "41": [
+          [
+            112,
+            246,
+            812,
+            648
+          ]
+        ],
+        "42": [
+          [
+            114,
+            248,
+            787,
+            633
+          ]
+        ],
+        "43": [
+          [
+            117,
+            263,
+            763,
+            615
+          ]
+        ],
+        "44": [
+          [
+            125,
+            269,
+            738,
+            598
+          ]
+        ],
+        "45": [
+          [
+            132,
+            268,
+            713,
+            581
+          ]
+        ],
+        "46": [
+          [
+            144,
+            284,
+            692,
+            568
+          ]
+        ],
+        "47": [
+          [
+            143,
+            285,
+            675,
+            555
+          ]
+        ],
+        "48": [
+          [
+            160,
+            302,
+            654,
+            542
+          ]
+        ],
+        "49": [
+          [
+            156,
+            298,
+            622,
+            530
+          ]
+        ],
+        "50": [
+          [
+            166,
+            310,
+            584,
+            518
+          ]
+        ],
+        "37": [
+          [
+            115,
+            237,
+            846,
+            652
+          ]
+        ],
+        "36": [
+          [
+            114,
+            228,
+            827,
+            647
+          ]
+        ],
+        "35": [
+          [
+            115,
+            229,
+            805,
+            643
+          ]
+        ],
+        "34": [
+          [
+            122,
+            230,
+            782,
+            638
+          ]
+        ],
+        "33": [
+          [
+            130,
+            234,
+            758,
+            632
+          ]
+        ],
+        "32": [
+          [
+            133,
+            237,
+            735,
+            625
+          ]
+        ],
+        "31": [
+          [
+            136,
+            240,
+            708,
+            610
+          ]
+        ],
+        "30": [
+          [
+            142,
+            246,
+            687,
+            589
+          ]
+        ],
+        "29": [
+          [
+            149,
+            251,
+            590,
+            570
+          ]
+        ],
+        "28": [
+          [
+            154,
+            256,
+            523,
+            557
+          ]
+        ],
+        "27": [
+          [
+            162,
+            260,
+            495,
+            543
+          ]
+        ],
+        "26": [
+          [
+            163,
+            263,
+            468,
+            534
+          ]
+        ],
+        "25": [
+          [
+            165,
+            267,
+            437,
+            527
+          ]
+        ],
+        "24": [
+          [
+            166,
+            272,
+            425,
+            519
+          ]
+        ],
+        "23": [
+          [
+            164,
+            274,
+            412,
+            514
+          ]
+        ],
+        "22": [
+          [
+            165,
+            277,
+            398,
+            506
+          ]
+        ],
+        "21": [
+          [
+            168,
+            280,
+            384,
+            500
+          ]
+        ],
+        "20": [
+          [
+            171,
+            283,
+            369,
+            495
+          ]
+        ],
+        "19": [
+          [
+            175,
+            287,
+            355,
+            487
+          ]
+        ],
+        "18": [
+          [
+            178,
+            290,
+            342,
+            480
+          ]
+        ],
+        "17": [
+          [
+            179,
+            293,
+            328,
+            472
+          ]
+        ],
+        "16": [
+          [
+            180,
+            296,
+            317,
+            467
+          ]
+        ],
+        "15": [
+          [
+            180,
+            300,
+            303,
+            461
+          ]
+        ],
+        "14": [
+          [
+            183,
+            303,
+            294,
+            456
+          ]
+        ],
+        "13": [
+          [
+            186,
+            308,
+            282,
+            450
+          ]
+        ],
+        "12": [
+          [
+            188,
+            312,
+            273,
+            443
+          ]
+        ],
+        "11": [
+          [
+            189,
+            319,
+            264,
+            436
+          ]
+        ],
+        "10": [
+          [
+            191,
+            325,
+            254,
+            428
+          ]
+        ],
+        "9": [
+          [
+            192,
+            332,
+            247,
+            419
+          ]
+        ],
+        "8": [
+          [
+            194,
+            340,
+            238,
+            412
+          ]
+        ],
+        "7": [
+          [
+            197,
+            349,
+            233,
+            407
+          ]
+        ],
+        "6": [
+          [
+            199,
+            359,
+            227,
+            401
+          ]
+        ],
+        "5": [
+          [
+            203,
+            367,
+            224,
+            400
+          ]
+        ],
+        "4": [
+          [
+            208,
+            380,
+            222,
+            400
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 26,
+      "crop_stop_z": 51,
+      "original_shape_zyx": [
+        59,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        25,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 41,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0005",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        6.0,
+        0.90625,
+        0.90625
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/img/img0005.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/label/img0005.nii.gz",
+      "scoring_grid": "synthetic_thick_spacing_v2",
+      "synthetic_source_spacing_z_mm": 3.0,
+      "synthetic_target_spacing_z_mm": 6.0,
+      "synthetic_actual_spacing_z_mm": 6.0,
+      "total_seconds": 6.66750456498994,
+      "peak_gpu_allocated_bytes": 11942801920,
+      "metrics": {
+        "dice": 0.8187270194349922,
+        "nsd": 0.4286238857899607,
+        "hd95_mm": 37.12315862436816,
+        "surface_status": "valid",
+        "foreground_recall": 0.7471515181829739,
+        "foreground_precision": 0.9054689927081782,
+        "false_positive_ml": 184.430314453125
+      },
+      "resampling_info": {
+        "branch": "proposed",
+        "source_z_mm": 6.0,
+        "trigger_mm": 5.5,
+        "crop_start_z": 26,
+        "resampling_triggered": true,
+        "origin_xyz_working": [
+          0.0,
+          0.0,
+          156.0
+        ],
+        "resample_seconds": 0.05303688799904194,
+        "target_z_mm": 3.0,
+        "actual_z_mm": 3.0,
+        "resampled_shape_zyx": [
+          49,
+          512,
+          512
+        ],
+        "center_scoring_grid": 15,
+        "center_continuous_resampled": 30.0,
+        "center_resampled_actual": 30,
+        "center_physical_displacement_mm": 0.0,
+        "inference_seconds": 5.8494758710003225,
+        "restored_shape_zyx": [
+          25,
+          512,
+          512
+        ],
+        "resampling_applied": true
+      },
+      "box_mode": "historical",
+      "padding_mode": "historical",
+      "synthetic_input_sha256": {
+        "img": "3620e25b7293ad16cf68e5721c564709ddabe968fd490a147454885a589d2f7a",
+        "label": "5eea9b998c75b408ca1ecf342a968612ead87cb881d88bb232f769a0753da69c"
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "30": [
+          [
+            140.0,
+            438.0,
+            768.0,
+            808.0
+          ]
+        ],
+        "31": [
+          [
+            114,
+            410,
+            739,
+            785
+          ]
+        ],
+        "32": [
+          [
+            115,
+            411,
+            718,
+            766
+          ]
+        ],
+        "33": [
+          [
+            120,
+            422,
+            694,
+            750
+          ]
+        ],
+        "34": [
+          [
+            124,
+            428,
+            671,
+            737
+          ]
+        ],
+        "35": [
+          [
+            129,
+            433,
+            643,
+            725
+          ]
+        ],
+        "36": [
+          [
+            133,
+            445,
+            612,
+            716
+          ]
+        ],
+        "37": [
+          [
+            139,
+            449,
+            583,
+            707
+          ]
+        ],
+        "38": [
+          [
+            142,
+            452,
+            557,
+            701
+          ]
+        ],
+        "39": [
+          [
+            148,
+            460,
+            526,
+            696
+          ]
+        ],
+        "40": [
+          [
+            152,
+            470,
+            479,
+            691
+          ]
+        ],
+        "41": [
+          [
+            159,
+            475,
+            429,
+            687
+          ]
+        ],
+        "42": [
+          [
+            167,
+            483,
+            406,
+            682
+          ]
+        ],
+        "43": [
+          [
+            174,
+            488,
+            388,
+            676
+          ]
+        ],
+        "44": [
+          [
+            181,
+            493,
+            377,
+            673
+          ]
+        ],
+        "45": [
+          [
+            188,
+            494,
+            365,
+            667
+          ]
+        ],
+        "46": [
+          [
+            195,
+            503,
+            354,
+            658
+          ]
+        ],
+        "47": [
+          [
+            197,
+            505,
+            341,
+            645
+          ]
+        ],
+        "29": [
+          [
+            112,
+            408,
+            741,
+            787
+          ]
+        ],
+        "28": [
+          [
+            104,
+            400,
+            720,
+            772
+          ]
+        ],
+        "27": [
+          [
+            99,
+            393,
+            696,
+            760
+          ]
+        ],
+        "26": [
+          [
+            99,
+            391,
+            658,
+            748
+          ]
+        ],
+        "25": [
+          [
+            98,
+            390,
+            635,
+            729
+          ]
+        ],
+        "24": [
+          [
+            99,
+            387,
+            610,
+            714
+          ]
+        ],
+        "23": [
+          [
+            96,
+            380,
+            592,
+            700
+          ]
+        ],
+        "22": [
+          [
+            93,
+            375,
+            576,
+            690
+          ]
+        ],
+        "21": [
+          [
+            91,
+            367,
+            560,
+            680
+          ]
+        ],
+        "20": [
+          [
+            90,
+            362,
+            544,
+            672
+          ]
+        ],
+        "19": [
+          [
+            93,
+            361,
+            529,
+            653
+          ]
+        ],
+        "18": [
+          [
+            92,
+            356,
+            508,
+            638
+          ]
+        ],
+        "17": [
+          [
+            91,
+            355,
+            489,
+            619
+          ]
+        ],
+        "16": [
+          [
+            92,
+            356,
+            471,
+            603
+          ]
+        ],
+        "15": [
+          [
+            93,
+            355,
+            454,
+            594
+          ]
+        ],
+        "14": [
+          [
+            94,
+            354,
+            434,
+            590
+          ]
+        ],
+        "13": [
+          [
+            93,
+            355,
+            412,
+            584
+          ]
+        ],
+        "12": [
+          [
+            94,
+            356,
+            390,
+            582
+          ]
+        ],
+        "11": [
+          [
+            93,
+            357,
+            371,
+            573
+          ]
+        ],
+        "10": [
+          [
+            98,
+            362,
+            356,
+            558
+          ]
+        ],
+        "9": [
+          [
+            99,
+            367,
+            339,
+            539
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 36,
+      "crop_stop_z": 63,
+      "original_shape_zyx": [
+        66,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        27,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 53,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0006",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        6.0,
+        0.701171875,
+        0.701171875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/img/img0006.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold1/label/img0006.nii.gz",
+      "scoring_grid": "synthetic_thick_spacing_v2",
+      "synthetic_source_spacing_z_mm": 3.0,
+      "synthetic_target_spacing_z_mm": 6.0,
+      "synthetic_actual_spacing_z_mm": 6.0,
+      "total_seconds": 7.067781431993353,
+      "peak_gpu_allocated_bytes": 12060242432,
+      "metrics": {
+        "dice": 0.7850739191973886,
+        "nsd": 0.3817461219620574,
+        "hd95_mm": 36.46104615209398,
+        "surface_status": "valid",
+        "foreground_recall": 0.700983228747855,
+        "foreground_precision": 0.8920899776203622,
+        "false_positive_ml": 99.84954000091552
+      },
+      "resampling_info": {
+        "branch": "proposed",
+        "source_z_mm": 6.0,
+        "trigger_mm": 5.5,
+        "crop_start_z": 36,
+        "resampling_triggered": true,
+        "origin_xyz_working": [
+          0.0,
+          0.0,
+          216.0
+        ],
+        "resample_seconds": 0.0660472040035529,
+        "target_z_mm": 3.0,
+        "actual_z_mm": 3.0,
+        "resampled_shape_zyx": [
+          53,
+          512,
+          512
+        ],
+        "center_scoring_grid": 17,
+        "center_continuous_resampled": 34.0,
+        "center_resampled_actual": 34,
+        "center_physical_displacement_mm": 0.0,
+        "inference_seconds": 6.312129382989951,
+        "restored_shape_zyx": [
+          27,
+          512,
+          512
+        ],
+        "resampling_applied": true
+      },
+      "box_mode": "historical",
+      "padding_mode": "historical",
+      "synthetic_input_sha256": {
+        "img": "86066d0256f1b9088328ce1d04b24e1b1c66beabfb8cee37763ca8a3b059c2ce",
+        "label": "8916f3624756393ac402b49daf106af882cc93a14af90a465db79c45a9a026e7"
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "34": [
+          [
+            164.0,
+            168.0,
+            834.0,
+            522.0
+          ]
+        ],
+        "35": [
+          [
+            131,
+            141,
+            816,
+            506
+          ]
+        ],
+        "36": [
+          [
+            130,
+            142,
+            796,
+            500
+          ]
+        ],
+        "37": [
+          [
+            133,
+            147,
+            777,
+            495
+          ]
+        ],
+        "38": [
+          [
+            134,
+            162,
+            754,
+            494
+          ]
+        ],
+        "39": [
+          [
+            135,
+            165,
+            730,
+            488
+          ]
+        ],
+        "40": [
+          [
+            141,
+            171,
+            709,
+            483
+          ]
+        ],
+        "41": [
+          [
+            142,
+            182,
+            684,
+            474
+          ]
+        ],
+        "42": [
+          [
+            156,
+            190,
+            648,
+            470
+          ]
+        ],
+        "43": [
+          [
+            155,
+            195,
+            552,
+            462
+          ]
+        ],
+        "44": [
+          [
+            167,
+            213,
+            532,
+            458
+          ]
+        ],
+        "45": [
+          [
+            170,
+            216,
+            508,
+            448
+          ]
+        ],
+        "33": [
+          [
+            134,
+            138,
+            804,
+            508
+          ]
+        ],
+        "32": [
+          [
+            131,
+            135,
+            782,
+            506
+          ]
+        ],
+        "31": [
+          [
+            130,
+            128,
+            753,
+            507
+          ]
+        ],
+        "30": [
+          [
+            133,
+            131,
+            725,
+            507
+          ]
+        ],
+        "29": [
+          [
+            135,
+            133,
+            701,
+            505
+          ]
+        ],
+        "28": [
+          [
+            138,
+            136,
+            680,
+            500
+          ]
+        ],
+        "27": [
+          [
+            143,
+            141,
+            658,
+            494
+          ]
+        ],
+        "26": [
+          [
+            151,
+            143,
+            633,
+            487
+          ]
+        ],
+        "25": [
+          [
+            154,
+            144,
+            607,
+            477
+          ]
+        ],
+        "24": [
+          [
+            165,
+            153,
+            442,
+            466
+          ]
+        ],
+        "23": [
+          [
+            165,
+            153,
+            424,
+            456
+          ]
+        ],
+        "22": [
+          [
+            166,
+            154,
+            407,
+            447
+          ]
+        ],
+        "21": [
+          [
+            167,
+            155,
+            389,
+            435
+          ]
+        ],
+        "20": [
+          [
+            168,
+            158,
+            372,
+            424
+          ]
+        ],
+        "19": [
+          [
+            169,
+            161,
+            357,
+            417
+          ]
+        ],
+        "18": [
+          [
+            170,
+            168,
+            341,
+            407
+          ]
+        ],
+        "17": [
+          [
+            171,
+            173,
+            324,
+            398
+          ]
+        ],
+        "16": [
+          [
+            174,
+            180,
+            305,
+            389
+          ]
+        ],
+        "15": [
+          [
+            177,
+            189,
+            284,
+            378
+          ]
+        ],
+        "14": [
+          [
+            182,
+            198,
+            269,
+            369
+          ]
+        ],
+        "13": [
+          [
+            185,
+            211,
+            254,
+            360
+          ]
+        ],
+        "12": [
+          [
+            188,
+            224,
+            243,
+            353
+          ]
+        ],
+        "11": [
+          [
+            188,
+            234,
+            234,
+            346
+          ]
+        ],
+        "10": [
+          [
+            189,
+            249,
+            225,
+            339
+          ]
+        ],
+        "9": [
+          [
+            191,
+            259,
+            222,
+            334
+          ]
+        ],
+        "8": [
+          [
+            191,
+            267,
+            220,
+            330
+          ]
+        ],
+        "7": [
+          [
+            193,
+            281,
+            215,
+            325
+          ]
+        ],
+        "6": [
+          [
+            194,
+            296,
+            210,
+            322
+          ]
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "dice": {
+      "mean": 0.7366365794233712,
+      "valid_count": 6,
+      "undefined_count": 0
+    },
+    "nsd": {
+      "mean": 0.36174124963738336,
+      "valid_count": 6,
+      "undefined_count": 0
+    },
+    "hd95_mm": {
+      "mean": 44.7121746223636,
+      "valid_count": 6,
+      "undefined_count": 0
+    },
+    "foreground_recall": {
+      "mean": 0.6236951676087809,
+      "valid_count": 6,
+      "undefined_count": 0
+    },
+    "foreground_precision": {
+      "mean": 0.918611456020836,
+      "valid_count": 6,
+      "undefined_count": 0
+    },
+    "false_positive_ml": {
+      "mean": 89.72754215165139,
+      "valid_count": 6,
+      "undefined_count": 0
+    }
+  },
+  "finished_utc": "2026-10-07T10:35:30.951875+00:00"
+}

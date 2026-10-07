@@ -1,0 +1,141 @@
+== CPU test suites
+  missing_evals.test_cpu: Ran 14 tests in 3.945s OK
+  box_padding.test_cpu: Ran 19 tests in 2.599s OK
+  z_spacing.test_geometry_fixes: Ran 12 tests in 0.283s OK
+== Provenance and cohort checks
+  A1_fold1_image_1box_label6                       pending
+  A1_fold1_image_1box_label7                       pending
+  A1_fold1_image_1box_label3                       pending
+  A1_fold1_image_1box_label1                       pending
+  A1_fold2_image_1box_label6                       pending
+  A1_fold2_image_1box_label7                       pending
+  A1_fold2_image_1box_label3                       pending
+  A1_fold2_image_1box_label1                       pending
+  A1_fold3_image_1box_label6                       pending
+  A1_fold3_image_1box_label7                       pending
+  A1_fold3_image_1box_label3                       pending
+  A1_fold3_image_1box_label1                       pending
+  A1_fold4_image_1box_label6                       pending
+  A1_fold4_image_1box_label7                       pending
+  A1_fold4_image_1box_label3                       pending
+  A1_fold4_image_1box_label1                       pending
+  A2_fold1_historical_5box                         pending
+  A2_fold2_historical_5box                         pending
+  A2_fold3_historical_5box                         pending
+  A2_fold4_historical_5box                         pending
+  A2_fold5_historical_5box                         pending
+  A3_fold1_image_5box                              pending
+  A3_fold2_image_5box                              pending
+  A3_fold3_image_5box                              pending
+  A3_fold4_image_5box                              pending
+  A3_fold5_image_5box                              pending
+  B_fold1_historical_recovery_off_label6           pending
+  B_fold1_historical_recovery_off_label7           pending
+  B_fold1_historical_recovery_off_label3           pending
+  B_fold1_historical_recovery_off_label1           pending
+  B_fold1_historical_recovery_on_label6            pending
+  B_fold1_historical_recovery_on_label7            pending
+  B_fold1_historical_recovery_on_label3            pending
+  B_fold1_historical_recovery_on_label1            pending
+  B_fold2_historical_recovery_off_label6           pending
+  B_fold2_historical_recovery_off_label7           pending
+  B_fold2_historical_recovery_off_label3           pending
+  B_fold2_historical_recovery_off_label1           pending
+  B_fold2_historical_recovery_on_label6            pending
+  B_fold2_historical_recovery_on_label7            pending
+  B_fold2_historical_recovery_on_label3            pending
+  B_fold2_historical_recovery_on_label1            pending
+  B_fold3_historical_recovery_off_label6           pending
+  B_fold3_historical_recovery_off_label7           pending
+  B_fold3_historical_recovery_off_label3           pending
+  B_fold3_historical_recovery_off_label1           pending
+  B_fold3_historical_recovery_on_label6            pending
+  B_fold3_historical_recovery_on_label7            pending
+  B_fold3_historical_recovery_on_label3            pending
+  B_fold3_historical_recovery_on_label1            pending
+  B_fold4_historical_recovery_off_label6           pending
+  B_fold4_historical_recovery_off_label7           pending
+  B_fold4_historical_recovery_off_label3           pending
+  B_fold4_historical_recovery_off_label1           pending
+  B_fold4_historical_recovery_on_label6            pending
+  B_fold4_historical_recovery_on_label7            pending
+  B_fold4_historical_recovery_on_label3            pending
+  B_fold4_historical_recovery_on_label1            pending
+  B_fold5_historical_recovery_off_label6           pending
+  B_fold5_historical_recovery_off_label7           pending
+  B_fold5_historical_recovery_off_label3           pending
+  B_fold5_historical_recovery_off_label1           pending
+  B_fold5_historical_recovery_on_label6            pending
+  B_fold5_historical_recovery_on_label7            pending
+  B_fold5_historical_recovery_on_label3            pending
+  B_fold5_historical_recovery_on_label1            pending
+== Evaluator preflights on CPU for 66 pending arms
+All preflights passed. Inventory: btcv_cross_validation/missing_evals/execution_inventory.md
+[1/66] A1_fold1_image_1box_label6 -> 20261007_152628_A1_fold1_image_1box_label6.log
+[2/66] A1_fold1_image_1box_label7 -> 20261007_152628_A1_fold1_image_1box_label7.log
+[3/66] A1_fold1_image_1box_label3 -> 20261007_152628_A1_fold1_image_1box_label3.log
+[4/66] A1_fold1_image_1box_label1 -> 20261007_152628_A1_fold1_image_1box_label1.log
+[5/66] A1_fold2_image_1box_label6 -> 20261007_152628_A1_fold2_image_1box_label6.log
+[6/66] A1_fold2_image_1box_label7 -> 20261007_152628_A1_fold2_image_1box_label7.log
+[7/66] A1_fold2_image_1box_label3 -> 20261007_152628_A1_fold2_image_1box_label3.log
+[8/66] A1_fold2_image_1box_label1 -> 20261007_152628_A1_fold2_image_1box_label1.log
+[9/66] A1_fold3_image_1box_label6 -> 20261007_152628_A1_fold3_image_1box_label6.log
+[10/66] A1_fold3_image_1box_label7 -> 20261007_152628_A1_fold3_image_1box_label7.log
+[11/66] A1_fold3_image_1box_label3 -> 20261007_152628_A1_fold3_image_1box_label3.log
+[12/66] A1_fold3_image_1box_label1 -> 20261007_152628_A1_fold3_image_1box_label1.log
+[13/66] A1_fold4_image_1box_label6 -> 20261007_152628_A1_fold4_image_1box_label6.log
+[14/66] A1_fold4_image_1box_label7 -> 20261007_152628_A1_fold4_image_1box_label7.log
+[15/66] A1_fold4_image_1box_label3 -> 20261007_152628_A1_fold4_image_1box_label3.log
+[16/66] A1_fold4_image_1box_label1 -> 20261007_152628_A1_fold4_image_1box_label1.log
+[17/66] A2_fold1_historical_5box -> 20261007_152628_A2_fold1_historical_5box.log
+[18/66] A2_fold2_historical_5box -> 20261007_152628_A2_fold2_historical_5box.log
+[19/66] A2_fold3_historical_5box -> 20261007_152628_A2_fold3_historical_5box.log
+[20/66] A2_fold4_historical_5box -> 20261007_152628_A2_fold4_historical_5box.log
+[21/66] A2_fold5_historical_5box -> 20261007_152628_A2_fold5_historical_5box.log
+[22/66] A3_fold1_image_5box -> 20261007_152628_A3_fold1_image_5box.log
+[23/66] A3_fold2_image_5box -> 20261007_152628_A3_fold2_image_5box.log
+[24/66] A3_fold3_image_5box -> 20261007_152628_A3_fold3_image_5box.log
+[25/66] A3_fold4_image_5box -> 20261007_152628_A3_fold4_image_5box.log
+[26/66] A3_fold5_image_5box -> 20261007_152628_A3_fold5_image_5box.log
+[27/66] B_fold1_historical_recovery_off_label6 -> 20261007_152628_B_fold1_historical_recovery_off_label6.log
+[28/66] B_fold1_historical_recovery_off_label7 -> 20261007_152628_B_fold1_historical_recovery_off_label7.log
+[29/66] B_fold1_historical_recovery_off_label3 -> 20261007_152628_B_fold1_historical_recovery_off_label3.log
+[30/66] B_fold1_historical_recovery_off_label1 -> 20261007_152628_B_fold1_historical_recovery_off_label1.log
+[31/66] B_fold1_historical_recovery_on_label6 -> 20261007_152628_B_fold1_historical_recovery_on_label6.log
+[32/66] B_fold1_historical_recovery_on_label7 -> 20261007_152628_B_fold1_historical_recovery_on_label7.log
+[33/66] B_fold1_historical_recovery_on_label3 -> 20261007_152628_B_fold1_historical_recovery_on_label3.log
+[34/66] B_fold1_historical_recovery_on_label1 -> 20261007_152628_B_fold1_historical_recovery_on_label1.log
+[35/66] B_fold2_historical_recovery_off_label6 -> 20261007_152628_B_fold2_historical_recovery_off_label6.log
+[36/66] B_fold2_historical_recovery_off_label7 -> 20261007_152628_B_fold2_historical_recovery_off_label7.log
+[37/66] B_fold2_historical_recovery_off_label3 -> 20261007_152628_B_fold2_historical_recovery_off_label3.log
+[38/66] B_fold2_historical_recovery_off_label1 -> 20261007_152628_B_fold2_historical_recovery_off_label1.log
+[39/66] B_fold2_historical_recovery_on_label6 -> 20261007_152628_B_fold2_historical_recovery_on_label6.log
+[40/66] B_fold2_historical_recovery_on_label7 -> 20261007_152628_B_fold2_historical_recovery_on_label7.log
+[41/66] B_fold2_historical_recovery_on_label3 -> 20261007_152628_B_fold2_historical_recovery_on_label3.log
+[42/66] B_fold2_historical_recovery_on_label1 -> 20261007_152628_B_fold2_historical_recovery_on_label1.log
+[43/66] B_fold3_historical_recovery_off_label6 -> 20261007_152628_B_fold3_historical_recovery_off_label6.log
+[44/66] B_fold3_historical_recovery_off_label7 -> 20261007_152628_B_fold3_historical_recovery_off_label7.log
+[45/66] B_fold3_historical_recovery_off_label3 -> 20261007_152628_B_fold3_historical_recovery_off_label3.log
+[46/66] B_fold3_historical_recovery_off_label1 -> 20261007_152628_B_fold3_historical_recovery_off_label1.log
+[47/66] B_fold3_historical_recovery_on_label6 -> 20261007_152628_B_fold3_historical_recovery_on_label6.log
+[48/66] B_fold3_historical_recovery_on_label7 -> 20261007_152628_B_fold3_historical_recovery_on_label7.log
+[49/66] B_fold3_historical_recovery_on_label3 -> 20261007_152628_B_fold3_historical_recovery_on_label3.log
+[50/66] B_fold3_historical_recovery_on_label1 -> 20261007_152628_B_fold3_historical_recovery_on_label1.log
+[51/66] B_fold4_historical_recovery_off_label6 -> 20261007_152628_B_fold4_historical_recovery_off_label6.log
+[52/66] B_fold4_historical_recovery_off_label7 -> 20261007_152628_B_fold4_historical_recovery_off_label7.log
+[53/66] B_fold4_historical_recovery_off_label3 -> 20261007_152628_B_fold4_historical_recovery_off_label3.log
+[54/66] B_fold4_historical_recovery_off_label1 -> 20261007_152628_B_fold4_historical_recovery_off_label1.log
+[55/66] B_fold4_historical_recovery_on_label6 -> 20261007_152628_B_fold4_historical_recovery_on_label6.log
+[56/66] B_fold4_historical_recovery_on_label7 -> 20261007_152628_B_fold4_historical_recovery_on_label7.log
+[57/66] B_fold4_historical_recovery_on_label3 -> 20261007_152628_B_fold4_historical_recovery_on_label3.log
+[58/66] B_fold4_historical_recovery_on_label1 -> 20261007_152628_B_fold4_historical_recovery_on_label1.log
+[59/66] B_fold5_historical_recovery_off_label6 -> 20261007_152628_B_fold5_historical_recovery_off_label6.log
+[60/66] B_fold5_historical_recovery_off_label7 -> 20261007_152628_B_fold5_historical_recovery_off_label7.log
+[61/66] B_fold5_historical_recovery_off_label3 -> 20261007_152628_B_fold5_historical_recovery_off_label3.log
+[62/66] B_fold5_historical_recovery_off_label1 -> 20261007_152628_B_fold5_historical_recovery_off_label1.log
+[63/66] B_fold5_historical_recovery_on_label6 -> 20261007_152628_B_fold5_historical_recovery_on_label6.log
+[64/66] B_fold5_historical_recovery_on_label7 -> 20261007_152628_B_fold5_historical_recovery_on_label7.log
+[65/66] B_fold5_historical_recovery_on_label3 -> 20261007_152628_B_fold5_historical_recovery_on_label3.log
+[66/66] B_fold5_historical_recovery_on_label1 -> 20261007_152628_B_fold5_historical_recovery_on_label1.log
+All pending arms complete. Next: summarize.py
+EXIT=0

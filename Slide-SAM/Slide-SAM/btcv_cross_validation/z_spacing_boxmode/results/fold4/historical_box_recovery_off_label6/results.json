@@ -1,0 +1,1237 @@
+{
+  "started_utc": "2026-10-07T10:41:25.242773+00:00",
+  "status": "complete",
+  "geometry_version": "v3_cropped_origin_strict_restore",
+  "box_mode": "historical",
+  "padding_mode": "historical",
+  "padding_fraction": 0.0,
+  "recovery": "OFF",
+  "arguments": {
+    "synthetic_root": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold4",
+    "manifest": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold4/synthetic_manifest.txt",
+    "train_manifest": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/dataset_list/fold4/01_BTCV_train_4to1.txt",
+    "checkpoint": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/runs/fold4/ddp_sub_cv/cv_fold4/ckpt/model_epoch_20.pth",
+    "checkpoint_kind": "finetuned",
+    "label_idx": 6,
+    "protocol": "gt-cropped",
+    "branch": "control",
+    "box_mode": "historical",
+    "target_z_mm": 3.0,
+    "trigger_mm": 5.5,
+    "nsd_tolerance_mm": 1.0,
+    "output": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing_boxmode/results/fold4/historical_box_recovery_off_label6",
+    "save_predictions": false,
+    "run_inference": true
+  },
+  "training_ids": [
+    "img0001",
+    "img0002",
+    "img0003",
+    "img0004",
+    "img0005",
+    "img0006",
+    "img0007",
+    "img0008",
+    "img0009",
+    "img0010",
+    "img0021",
+    "img0022",
+    "img0023",
+    "img0024",
+    "img0025",
+    "img0026",
+    "img0027",
+    "img0028",
+    "img0035",
+    "img0036",
+    "img0037",
+    "img0038",
+    "img0039",
+    "img0040"
+  ],
+  "evaluation_ids": [
+    "img0029",
+    "img0030",
+    "img0031",
+    "img0032"
+  ],
+  "manifest_sha256": "9d3f1c228b3d9f2f89ffda5bff17cbacd98965f986cb61aafa6a5ae39808cd1c",
+  "training_manifest_sha256": "ced778eb6b58f9a5947489ffb36396c63b224cf08e645e942a2de9700a9ed1b6",
+  "checkpoint_bytes": 377029836,
+  "checkpoint_mtime_ns": 1790534678567331084,
+  "checkpoint_sha256": "ce675b35442c900ef90d219f608955685f2dba41beb67c891aa74272ecf4fb2e",
+  "experiment_source_sha256": {
+    "evaluate.py": "03ab920a04d5c173596eaaa9f738aab9445d19f687e84b55e5c3a18be1ff4d49",
+    "__init__.py": "3522d6e6170abc90b754803f2bac8bc049ee3e32c43a760be2bcd6622212225c",
+    "helpers.py": "e08ce8822102b514d0dd48c92826db1a2527fc63bcfb04f4cc08026894b6cdab",
+    "loader.py": "3af56876091db94351df8217ab5599ff039617d03fcbc0b4b484be455f821c98"
+  },
+  "warning": "v3: cropped z-origin passed to resampler. Scoring on declared thick-spacing grid. Proposed branch resamples only when z > trigger_mm.",
+  "cases": [
+    {
+      "crop_start_z": 24,
+      "crop_stop_z": 48,
+      "original_shape_zyx": [
+        51,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        24,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 39,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0029",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        5.940000057220459,
+        0.875,
+        0.875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold4/img/img0029.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold4/label/img0029.nii.gz",
+      "scoring_grid": "synthetic_thick_spacing_v2",
+      "synthetic_source_spacing_z_mm": 3.0,
+      "synthetic_target_spacing_z_mm": 6.0,
+      "synthetic_actual_spacing_z_mm": 5.94,
+      "total_seconds": 3.444861629002844,
+      "peak_gpu_allocated_bytes": 11208798720,
+      "metrics": {
+        "dice": 0.872012891977471,
+        "nsd": 0.30549194804771296,
+        "hd95_mm": 18.349197015619282,
+        "surface_status": "valid",
+        "foreground_recall": 0.9163999097599492,
+        "foreground_precision": 0.8317271109856754,
+        "false_positive_ml": 276.57521985176953
+      },
+      "resampling_info": {
+        "branch": "control",
+        "source_z_mm": 5.940000057220459,
+        "trigger_mm": 5.5,
+        "crop_start_z": 24,
+        "resampling_triggered": false,
+        "origin_xyz_working": [
+          0.0,
+          0.0,
+          142.56000137329102
+        ],
+        "inference_seconds": 3.008686018991284,
+        "resampling_applied": false
+      },
+      "box_mode": "historical",
+      "padding_mode": "historical",
+      "synthetic_input_sha256": {
+        "img": "f6b70988a6f1c4a3181772c8bfd2cea4897acc16a7f889f18d8e310a5985999c",
+        "label": "7a8f4290ef4df2d96b117e904b8340901ee13c3969f941f35ae6fc4e940fc2b1"
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "15": [
+          [
+            220.0,
+            274.0,
+            614.0,
+            678.0
+          ]
+        ],
+        "16": [
+          [
+            203,
+            255,
+            591,
+            661
+          ]
+        ],
+        "17": [
+          [
+            204,
+            256,
+            572,
+            650
+          ]
+        ],
+        "18": [
+          [
+            207,
+            259,
+            551,
+            637
+          ]
+        ],
+        "19": [
+          [
+            208,
+            262,
+            530,
+            616
+          ]
+        ],
+        "20": [
+          [
+            218,
+            264,
+            503,
+            601
+          ]
+        ],
+        "21": [
+          [
+            226,
+            264,
+            471,
+            587
+          ]
+        ],
+        "22": [
+          [
+            232,
+            266,
+            442,
+            572
+          ]
+        ],
+        "14": [
+          [
+            201,
+            257,
+            589,
+            663
+          ]
+        ],
+        "13": [
+          [
+            196,
+            258,
+            560,
+            652
+          ]
+        ],
+        "12": [
+          [
+            195,
+            261,
+            534,
+            640
+          ]
+        ],
+        "11": [
+          [
+            195,
+            267,
+            509,
+            627
+          ]
+        ],
+        "10": [
+          [
+            192,
+            278,
+            485,
+            615
+          ]
+        ],
+        "9": [
+          [
+            191,
+            285,
+            460,
+            602
+          ]
+        ],
+        "8": [
+          [
+            192,
+            296,
+            437,
+            591
+          ]
+        ],
+        "7": [
+          [
+            190,
+            302,
+            401,
+            583
+          ]
+        ],
+        "6": [
+          [
+            191,
+            305,
+            386,
+            576
+          ]
+        ],
+        "5": [
+          [
+            193,
+            311,
+            370,
+            572
+          ]
+        ],
+        "4": [
+          [
+            194,
+            320,
+            355,
+            567
+          ]
+        ],
+        "3": [
+          [
+            193,
+            331,
+            340,
+            562
+          ]
+        ],
+        "2": [
+          [
+            192,
+            338,
+            325,
+            551
+          ]
+        ],
+        "1": [
+          [
+            193,
+            371,
+            301,
+            545
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 43,
+      "crop_stop_z": 73,
+      "original_shape_zyx": [
+        77,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        30,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 63,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0030",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        6.0,
+        0.7421875,
+        0.7421875
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold4/img/img0030.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold4/label/img0030.nii.gz",
+      "scoring_grid": "synthetic_thick_spacing_v2",
+      "synthetic_source_spacing_z_mm": 3.0,
+      "synthetic_target_spacing_z_mm": 6.0,
+      "synthetic_actual_spacing_z_mm": 6.0,
+      "total_seconds": 4.269115533999866,
+      "peak_gpu_allocated_bytes": 11384959488,
+      "metrics": {
+        "dice": 0.7592114737649767,
+        "nsd": 0.21354960113932794,
+        "hd95_mm": 30.0,
+        "surface_status": "valid",
+        "foreground_recall": 0.6893895707165443,
+        "foreground_precision": 0.844770473501018,
+        "false_positive_ml": 195.30223388671874
+      },
+      "resampling_info": {
+        "branch": "control",
+        "source_z_mm": 6.0,
+        "trigger_mm": 5.5,
+        "crop_start_z": 43,
+        "resampling_triggered": false,
+        "origin_xyz_working": [
+          0.0,
+          0.0,
+          258.0
+        ],
+        "inference_seconds": 3.537008106999565,
+        "resampling_applied": false
+      },
+      "box_mode": "historical",
+      "padding_mode": "historical",
+      "synthetic_input_sha256": {
+        "img": "452c49172397ac5414c931ea2ccbe05dce747f73e8183dcc0a5592597535bb18",
+        "label": "cb0334939d2132f70ecb220b5d24da41ca4ff3267b31b4eb574b4bd2b7fe06bb"
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "20": [
+          [
+            118.0,
+            292.0,
+            674.0,
+            718.0
+          ]
+        ],
+        "21": [
+          [
+            102,
+            276,
+            645,
+            699
+          ]
+        ],
+        "22": [
+          [
+            95,
+            267,
+            619,
+            687
+          ]
+        ],
+        "23": [
+          [
+            106,
+            282,
+            592,
+            668
+          ]
+        ],
+        "19": [
+          [
+            91,
+            263,
+            642,
+            696
+          ]
+        ],
+        "18": [
+          [
+            84,
+            252,
+            614,
+            680
+          ]
+        ],
+        "17": [
+          [
+            83,
+            253,
+            589,
+            667
+          ]
+        ],
+        "16": [
+          [
+            87,
+            255,
+            560,
+            654
+          ]
+        ],
+        "15": [
+          [
+            89,
+            259,
+            531,
+            639
+          ]
+        ],
+        "14": [
+          [
+            94,
+            262,
+            503,
+            625
+          ]
+        ],
+        "13": [
+          [
+            105,
+            271,
+            461,
+            611
+          ]
+        ],
+        "12": [
+          [
+            116,
+            284,
+            364,
+            596
+          ]
+        ],
+        "11": [
+          [
+            121,
+            291,
+            347,
+            583
+          ]
+        ],
+        "10": [
+          [
+            126,
+            302,
+            330,
+            572
+          ]
+        ],
+        "9": [
+          [
+            131,
+            311,
+            317,
+            561
+          ]
+        ],
+        "8": [
+          [
+            136,
+            322,
+            294,
+            550
+          ]
+        ],
+        "7": [
+          [
+            140,
+            338,
+            273,
+            539
+          ]
+        ],
+        "6": [
+          [
+            143,
+            351,
+            258,
+            528
+          ]
+        ],
+        "5": [
+          [
+            143,
+            361,
+            245,
+            519
+          ]
+        ],
+        "4": [
+          [
+            148,
+            368,
+            232,
+            512
+          ]
+        ],
+        "3": [
+          [
+            151,
+            377,
+            223,
+            505
+          ]
+        ],
+        "2": [
+          [
+            153,
+            383,
+            218,
+            498
+          ]
+        ],
+        "1": [
+          [
+            162,
+            386,
+            213,
+            477
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 11,
+      "crop_stop_z": 42,
+      "original_shape_zyx": [
+        47,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        31,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 33,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0031",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        6.0,
+        0.837890625,
+        0.837890625
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold4/img/img0031.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold4/label/img0031.nii.gz",
+      "scoring_grid": "synthetic_thick_spacing_v2",
+      "synthetic_source_spacing_z_mm": 3.0,
+      "synthetic_target_spacing_z_mm": 6.0,
+      "synthetic_actual_spacing_z_mm": 6.0,
+      "total_seconds": 4.336354895000113,
+      "peak_gpu_allocated_bytes": 11414319616,
+      "metrics": {
+        "dice": 0.8148323859271778,
+        "nsd": 0.21958740799456805,
+        "hd95_mm": 44.26964456316015,
+        "surface_status": "valid",
+        "foreground_recall": 0.8546551950847864,
+        "foreground_precision": 0.7785554574322167,
+        "false_positive_ml": 397.15854592895505
+      },
+      "resampling_info": {
+        "branch": "control",
+        "source_z_mm": 6.0,
+        "trigger_mm": 5.5,
+        "crop_start_z": 11,
+        "resampling_triggered": false,
+        "origin_xyz_working": [
+          0.0,
+          0.0,
+          66.0
+        ],
+        "inference_seconds": 3.6582669030030956,
+        "resampling_applied": false
+      },
+      "box_mode": "historical",
+      "padding_mode": "historical",
+      "synthetic_input_sha256": {
+        "img": "d82c4108858269d566008e6574ed039455f33bd86b6772ae1d8d2ecfc879fd4f",
+        "label": "6682b5acc6e8e47fe8202f0bdce169296ac2ed791373307cb5ec2d2bd6d13eb5"
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "22": [
+          [
+            154.0,
+            326.0,
+            668.0,
+            662.0
+          ]
+        ],
+        "23": [
+          [
+            130,
+            314,
+            637,
+            645
+          ]
+        ],
+        "24": [
+          [
+            127,
+            317,
+            614,
+            632
+          ]
+        ],
+        "25": [
+          [
+            128,
+            320,
+            589,
+            621
+          ]
+        ],
+        "26": [
+          [
+            131,
+            329,
+            568,
+            604
+          ]
+        ],
+        "27": [
+          [
+            128,
+            334,
+            551,
+            589
+          ]
+        ],
+        "28": [
+          [
+            156,
+            354,
+            403,
+            569
+          ]
+        ],
+        "29": [
+          [
+            151,
+            355,
+            390,
+            552
+          ]
+        ],
+        "21": [
+          [
+            129,
+            303,
+            641,
+            647
+          ]
+        ],
+        "20": [
+          [
+            121,
+            287,
+            596,
+            634
+          ]
+        ],
+        "19": [
+          [
+            114,
+            276,
+            561,
+            619
+          ]
+        ],
+        "18": [
+          [
+            114,
+            270,
+            523,
+            609
+          ]
+        ],
+        "17": [
+          [
+            125,
+            263,
+            485,
+            597
+          ]
+        ],
+        "16": [
+          [
+            133,
+            259,
+            451,
+            581
+          ]
+        ],
+        "15": [
+          [
+            134,
+            256,
+            424,
+            570
+          ]
+        ],
+        "14": [
+          [
+            137,
+            251,
+            404,
+            558
+          ]
+        ],
+        "13": [
+          [
+            140,
+            246,
+            386,
+            546
+          ]
+        ],
+        "12": [
+          [
+            145,
+            247,
+            365,
+            537
+          ]
+        ],
+        "11": [
+          [
+            151,
+            251,
+            341,
+            527
+          ]
+        ],
+        "10": [
+          [
+            156,
+            258,
+            320,
+            516
+          ]
+        ],
+        "9": [
+          [
+            163,
+            267,
+            303,
+            509
+          ]
+        ],
+        "8": [
+          [
+            170,
+            278,
+            288,
+            500
+          ]
+        ],
+        "7": [
+          [
+            178,
+            298,
+            272,
+            490
+          ]
+        ],
+        "6": [
+          [
+            189,
+            329,
+            258,
+            480
+          ]
+        ],
+        "5": [
+          [
+            198,
+            358,
+            250,
+            466
+          ]
+        ],
+        "4": [
+          [
+            209,
+            393,
+            240,
+            452
+          ]
+        ],
+        "3": [
+          [
+            218,
+            414,
+            234,
+            434
+          ]
+        ]
+      }
+    },
+    {
+      "crop_start_z": 40,
+      "crop_stop_z": 69,
+      "original_shape_zyx": [
+        73,
+        512,
+        512
+      ],
+      "working_shape_zyx": [
+        29,
+        512,
+        512
+      ],
+      "initial_slice_original_z": 61,
+      "initial_slice_adjusted": false,
+      "intensity_clip": [
+        -200,
+        400
+      ],
+      "protocol": "gt-cropped",
+      "prompt_policy": "ground-truth maximum-area slice; nearest valid foreground center at endpoints",
+      "volume_id": "img0032",
+      "label_idx": 6,
+      "spacing_zyx_mm": [
+        5.958333492279053,
+        0.740234375,
+        0.740234375
+      ],
+      "origin_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "direction": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "image_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold4/img/img0032.nii.gz",
+      "label_path": "/home/jupyter-team2pop/Mars/Slide-SAM/Slide-SAM/btcv_cross_validation/z_spacing/synthetic_6mm_v3/fold4/label/img0032.nii.gz",
+      "scoring_grid": "synthetic_thick_spacing_v2",
+      "synthetic_source_spacing_z_mm": 3.0,
+      "synthetic_target_spacing_z_mm": 6.0,
+      "synthetic_actual_spacing_z_mm": 5.958333333333333,
+      "total_seconds": 4.118352689998574,
+      "peak_gpu_allocated_bytes": 11355599360,
+      "metrics": {
+        "dice": 0.8879391960847851,
+        "nsd": 0.3989793102239573,
+        "hd95_mm": 18.567372353016573,
+        "surface_status": "valid",
+        "foreground_recall": 0.916359430003594,
+        "foreground_precision": 0.861228799341443,
+        "false_positive_ml": 202.53826838500274
+      },
+      "resampling_info": {
+        "branch": "control",
+        "source_z_mm": 5.958333492279053,
+        "trigger_mm": 5.5,
+        "crop_start_z": 40,
+        "resampling_triggered": false,
+        "origin_xyz_working": [
+          0.0,
+          0.0,
+          238.3333396911621
+        ],
+        "inference_seconds": 3.4501045669894665,
+        "resampling_applied": false
+      },
+      "box_mode": "historical",
+      "padding_mode": "historical",
+      "synthetic_input_sha256": {
+        "img": "ff7e27dfe0cadf01a7bec4d8f5223b8160b7c6407c3bf49de1b05d45689c6195",
+        "label": "74b2c8be8cf6ce4ada00b6df7e468a250226c03ed8cc4bb7fbe3ea545b41a16e"
+      },
+      "prediction_status": "ok",
+      "propagation_prompts": {
+        "21": [
+          [
+            166.0,
+            290.0,
+            606.0,
+            764.0
+          ]
+        ],
+        "22": [
+          [
+            145,
+            273,
+            580,
+            740
+          ]
+        ],
+        "23": [
+          [
+            148,
+            276,
+            561,
+            723
+          ]
+        ],
+        "24": [
+          [
+            153,
+            291,
+            535,
+            707
+          ]
+        ],
+        "25": [
+          [
+            165,
+            291,
+            514,
+            682
+          ]
+        ],
+        "26": [
+          [
+            175,
+            305,
+            482,
+            654
+          ]
+        ],
+        "27": [
+          [
+            181,
+            341,
+            455,
+            629
+          ]
+        ],
+        "20": [
+          [
+            143,
+            271,
+            572,
+            744
+          ]
+        ],
+        "19": [
+          [
+            138,
+            268,
+            538,
+            736
+          ]
+        ],
+        "18": [
+          [
+            140,
+            270,
+            509,
+            723
+          ]
+        ],
+        "17": [
+          [
+            141,
+            267,
+            481,
+            705
+          ]
+        ],
+        "16": [
+          [
+            145,
+            273,
+            446,
+            690
+          ]
+        ],
+        "15": [
+          [
+            147,
+            277,
+            413,
+            675
+          ]
+        ],
+        "14": [
+          [
+            148,
+            282,
+            390,
+            660
+          ]
+        ],
+        "13": [
+          [
+            149,
+            289,
+            369,
+            645
+          ]
+        ],
+        "12": [
+          [
+            150,
+            300,
+            351,
+            633
+          ]
+        ],
+        "11": [
+          [
+            151,
+            307,
+            331,
+            621
+          ]
+        ],
+        "10": [
+          [
+            152,
+            318,
+            309,
+            611
+          ]
+        ],
+        "9": [
+          [
+            151,
+            335,
+            290,
+            602
+          ]
+        ],
+        "8": [
+          [
+            150,
+            348,
+            271,
+            591
+          ]
+        ],
+        "7": [
+          [
+            151,
+            363,
+            254,
+            582
+          ]
+        ],
+        "6": [
+          [
+            152,
+            380,
+            240,
+            574
+          ]
+        ],
+        "5": [
+          [
+            152,
+            394,
+            229,
+            563
+          ]
+        ],
+        "4": [
+          [
+            153,
+            409,
+            218,
+            554
+          ]
+        ],
+        "3": [
+          [
+            154,
+            432,
+            206,
+            546
+          ]
+        ],
+        "2": [
+          [
+            156,
+            456,
+            197,
+            537
+          ]
+        ],
+        "1": [
+          [
+            159,
+            475,
+            191,
+            531
+          ]
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "dice": {
+      "mean": 0.8334989869386027,
+      "valid_count": 4,
+      "undefined_count": 0
+    },
+    "nsd": {
+      "mean": 0.2844020668513916,
+      "valid_count": 4,
+      "undefined_count": 0
+    },
+    "hd95_mm": {
+      "mean": 27.796553482949,
+      "valid_count": 4,
+      "undefined_count": 0
+    },
+    "foreground_recall": {
+      "mean": 0.8442010263912184,
+      "valid_count": 4,
+      "undefined_count": 0
+    },
+    "foreground_precision": {
+      "mean": 0.8290704603150882,
+      "valid_count": 4,
+      "undefined_count": 0
+    },
+    "false_positive_ml": {
+      "mean": 267.8935670131115,
+      "valid_count": 4,
+      "undefined_count": 0
+    }
+  },
+  "finished_utc": "2026-10-07T10:41:43.881300+00:00"
+}
